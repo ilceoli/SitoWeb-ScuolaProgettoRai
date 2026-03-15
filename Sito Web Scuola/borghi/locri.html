@@ -3,118 +3,549 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locri - Polo Tecnico Professionale</title>
+    <title>Locri - Polo Tecnico Professionale Marconi</title>
+    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp">
     <!-- Google Fonts e Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* ============================================
+           POLO TECNICO PROFESSIONALE - STYLE.CSS
+           Design Elegante e Professionale
+           ============================================ */
+
+        /* RESET E BASE */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: "Inter", sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f9fafc;
+            color: #1a1a2e;
+            background-color: #fafbfc;
+            overflow-x: hidden;
         }
+
+        /* ============================================
+           VARIABILI COLORE - PALETTE REFINED
+           ============================================ */
         :root {
-            --primary: #0a3b5b;
-            --primary-light: #1e4f6e;
-            --accent: #eab308;
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --primary-dark: #1e2b3a;
+            --accent: #e67e22;
+            --accent-light: #f39c12;
+            --accent-dark: #c96e1c;
+            --secondary: #5c7c9a;
+            --gray-light: #f0f2f5;
+            --gray: #9ca3af;
             --text-light: #6b7280;
+            --text-dark: #1f2937;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+            --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --transition: 0.3s ease;
+            --transition-slow: 0.5s ease;
         }
+
+        /* ============================================
+           LAYOUT GENERALE
+           ============================================ */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-        /* Header */
+
+        /* ============================================
+           HEADER E NAVIGAZIONE
+           ============================================ */
         header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 15px 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all var(--transition);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
+
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 18px 0;
+            transition: padding var(--transition);
         }
+
         .logo h1 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
-            color: var(--primary);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: transform var(--transition);
         }
+
+        .logo h1:hover {
+            transform: translateX(5px);
+        }
+
         .logo span {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-light);
             display: block;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            margin-top: 2px;
         }
+
         .back-link a {
-            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gray-light);
+            color: var(--text-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: all var(--transition);
         }
+
         .back-link a:hover {
-            color: var(--accent);
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: translateX(-5px);
         }
-        /* Hero piccolo */
-        .hero-small {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: white;
-            padding: 40px 0;
+
+        /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero-borgo {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            color: var(--white);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 44, 74, 0.85) 0%, rgba(26, 61, 92, 0.85) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .hero-borgo .container {
+            position: relative;
+            z-index: 3;
             text-align: center;
         }
-        .hero-small h2 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+
+        .hero-borgo h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
-        /* Contenuto */
-        .content {
-            padding: 60px 0;
+
+        .hero-borgo p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
-        .description {
-            margin-bottom: 40px;
+
+        /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
         }
-        .description p {
+
+        .content-section.reverse {
+            direction: rtl;
+        }
+
+        .content-section.reverse > * {
+            direction: ltr;
+        }
+
+        .content-text {
+            padding: 20px;
+        }
+
+        .content-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
             margin-bottom: 20px;
-            color: var(--text-light);
+            font-weight: 700;
         }
-        /* Galleria */
-        .gallery {
+
+        .content-text p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .content-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ============================================
+           INFO CARDS
+           ============================================ */
+        .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 24px;
+            margin-top: 40px;
         }
-        .gallery-item {
-            border-radius: 12px;
+
+        .info-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .info-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+        .tradizioni-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .tradizione-card {
+            background: var(--white);
+            border-radius: 20px;
             overflow: hidden;
-            height: 200px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+            padding: 30px 24px;
+            text-align: center;
         }
+
+        .tradizione-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform var(--transition);
+            transform-origin: left;
+        }
+
+        .tradizione-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tradizione-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .tradizione-card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            transition: transform var(--transition);
+        }
+
+        .tradizione-card:hover i {
+            transform: scale(1.1);
+        }
+
+        .tradizione-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .tradizione-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* ============================================
+           GALLERY
+           ============================================ */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 220px;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-slow);
+            position: relative;
+        }
+
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.8s;
         }
+
         .gallery-item:hover img {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
-        /* Footer */
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-accent);
+            color: var(--text-dark);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all var(--transition);
+            box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+        }
+
+        .btn i {
+            transition: transform var(--transition);
+        }
+
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .btn-center {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
         footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
+            background: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 70px 0 30px;
+            position: relative;
+            overflow: hidden;
         }
-        footer a {
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+
+        .footer-content {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .footer-content p {
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-content a {
             color: var(--accent);
             text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        .footer-content a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .content-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-borgo h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-borgo p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-borgo {
+                min-height: 300px;
+            }
+            
+            .hero-borgo h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -126,38 +557,255 @@
                 <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
             </div>
             <div class="back-link">
-                <a href="../index.html"><i class="fas fa-arrow-left"></i> Torna alla home</a>
+                <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
             </div>
         </div>
     </header>
 
-    <section class="hero-small">
-        <div class="container">
-            <h2>Locri</h2>
-            <p>L'antica colonia greca</p>
-        </div>
-    </section>
-
-    <section class="content">
-        <div class="container">
-            <div class="description">
-                <p><strong>Locri</strong> (anticamente Locri Epizefiri) è una delle più importanti colonie della Magna Grecia. Fondata nel VII secolo a.C., conserva un patrimonio archeologico di inestimabile valore: il Parco Archeologico Nazionale di Locri Epizefiri ospita il celebre Teatro Greco, il Tempio di Marasà e le mura antiche.</p>
-                <p>Oggi Locri è un vivace centro moderno, ma il suo passato riecheggia in ogni angolo. Il Museo Nazionale di Locri, situato nei pressi degli scavi, raccoglie reperti unici, tra cui le famose tavolette in bronzo con iscrizioni in greco.</p>
-                <p>Il territorio circostante offre anche bellezze naturali, tra colline e costa ionica. La città è un punto di riferimento culturale per tutta la Locride, con eventi, mostre e rappresentazioni teatrali.</p>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-borgo" style="background-image: url('https://picsum.photos/1200/600?random=31'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h2>Locri</h2>
+                <p>Antica colonia greca con il famoso Teatro e il Museo Nazionale. Un polo culturale di rilievo nella Locride.</p>
             </div>
-            <div class="gallery">
-                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=50" alt="Locri 1"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=51" alt="Locri 2"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=52" alt="Locri 3"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=53" alt="Locri 4"></div>
+        </section>
+
+        <!-- INFO CARDS -->
+        <section>
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-history"></i>
+                        <h4>Fondazione</h4>
+                        <p>VIII-VII sec. a.C.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-landmark"></i>
+                        <h4>Antico Nome</h4>
+                        <p>Locri Epizefiri</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Abitanti</h4>
+                        <p>Circa 8.500</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-pin"></i>
+                        <h4>Zona</h4>
+                        <p>Riviera dei Gelsomini</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORIA E FONDATORI -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">La Storia di Locri</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>La Culla della Grecità Calabrese</h3>
+                        <p>Situata sulla splendida Riviera dei Gelsomini, affacciata sul Mar Ionio, Locri è una città ricca di storia e cultura. Fondata tra l'VIII e il VII secolo a.C. dai Greci della Locride con il nome di Locri Epizefiri, fu uno dei più importanti centri della Magna Grecia.</p>
+                        <p>È la terra del legislatore Zaleuco, considerato il primo legislatore del mondo occidentale, e della poetessa Nosside, una delle voci più raffinate della lirica greca antica. La città rappresenta uno dei fulcri principali della civiltà ellenica in Italia meridionale.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=311');"></div>
+                </div>
+                
+                <div class="content-section reverse">
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=312');"></div>
+                    <div class="content-text">
+                        <h3>Zaleuco e Nosside</h3>
+                        <p>Zaleuco, il legislatore di Locri Epizefiri, è considerato il primo a formulare un vero e proprio codice di leggi scritte nel mondo occidentale. Le sue leggi, note come "Leggi di Zaleuco", furono in vigore nel VII secolo a.C. e influenzarono il pensiero giuridico greco e romano.</p>
+                        <p>La poetessa Nosside, vissuta nel III secolo a.C., fu una delle figure più importanti della lirica greca. Le sue composizioni, sebbene pervenute solo in frammenti, testimoniano l'elevato livello culturale della società locrese e il ruolo importante delle donne nell'ambiente intellettuale dell'epoca.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MUSEO E PARCO ARCHEOLOGICO -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Museo e Parco Archeologico</h2>
+                <div class="content-section">
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=313');"></div>
+                    <div class="content-text">
+                        <h3>Il Cuore della Magna Grecia</h3>
+                        <p>Il Museo e il Parco Archeologico di Locri Epizefiri rappresentano oggi uno dei più importanti complessi archeologici della Calabria, testimoniando la ricchezza culturale della città dalla Magna Grecia fino all'epoca romana.</p>
+                        <p>Il Museo è interamente dedicato all'antica polis della Magna Grecia e conserva alcuni dei reperti più significativi provenienti dagli scavi dell'area archeologica. Tra questi si trovano vasi, pinakes votivi, strumenti della vita quotidiana e resti architettonici che raccontano oltre mille anni di storia.</p>
+                    </div>
+                </div>
+                
+                <div class="content-section reverse">
+                    <div class="content-text">
+                        <h3>La Donna Locrese</h3>
+                        <p>Una sezione particolarmente interessante del museo è dedicata alla figura della donna locrese, con la ricostruzione di un antico telaio e oggetti legati alla vita domestica e alle attività femminili dell'epoca. Questa esposizione dimostra come le donne locresi godessero di una posizione sociale particolarmente elevata rispetto ad altre città greche dell'epoca.</p>
+                        <p>I reperti esposti testimoniano l'importanza della tessitura, della ceramica e delle attività artistiche femminili nella società locrese, confermando la tradizione della discendenza matrilineare che caratterizzava la città.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=314');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MUSEO ROMANO -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Il Museo Romano</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>Casino Macrì</h3>
+                        <p>All'interno del Parco Archeologico si trova anche il Museo Romano di Locri (Casino Macrì). L'edificio, originariamente una masseria costruita tra XVIII e XIX secolo sopra strutture romane, conserva ancora ambienti antichi come una sala con copertura a volta.</p>
+                        <p>Oggi ospita la collezione dei reperti di epoca romana provenienti dal territorio locrese, che testimoniano come la città mantenesse la sua importanza anche dopo la conquista romana. Le esposizioni comprendono sculture, iscrizioni, ceramiche e oggetti di uso quotidiano.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=315');"></div>
+                </div>
+                
+                <div class="content-section reverse">
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=316');"></div>
+                    <div class="content-text">
+                        <h3>Dal Museo del Territorio</h3>
+                        <p>Nel centro storico, il Museo del Territorio di Palazzo Nieddu del Rio racconta invece l'evoluzione della città e delle sue tradizioni, collegando l'antica polis greca alla storia più recente del territorio.</p>
+                        <p>Questo museo offre una visione completa dell'evoluzione urbana di Locri, dalle origini greche fino ai giorni nostri, attraverso documenti, fotografie, oggetti d'arte e testimonianze della vita quotidiana locale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEATRO GRECO -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Il Teatro Greco</h2>
+                <div class="content-section">
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=317');"></div>
+                    <div class="content-text">
+                        <h3>Joyce e il Teatro di Locri</h3>
+                        <p>Uno dei simboli più celebri di Locri è il suo teatro greco, costruito nel IV secolo a.C. e ristrutturato nel II secolo d.C. L'anfiteatro, scavato nella roccia calcarea, offre uno dei panorami più spettacolari della costa ionica.</p>
+                        <p>Il teatro è stato teatro di importanti eventi culturali e fu visitato da James Joyce, che lo descrisse come "uno dei più belli del mondo". Oggi è uno dei luoghi più suggestivi della città e ospita ogni estate il Festival Locr@Magna, con spettacoli teatrali e musicali.</p>
+                    </div>
+                </div>
+                
+                <div class="content-section reverse">
+                    <div class="content-text">
+                        <h3>Architettura e Acustica</h3>
+                        <p>La struttura del teatro dimostra l'elevata competenza tecnica degli architetti greci nell'utilizzo del territorio. Scavato nel fianco di una collina, sfrutta naturalmente l'acustica del luogo e offre una capacità per circa 6.000 spettatori.</p>
+                        <p>I materiali utilizzati, prevalentemente pietra calcarea locale, si integrano armoniosamente con il paesaggio circostante, creando un'opera architettonica che sembra nata dalla terra stessa.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=318');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRADIZIONI E CULTURA -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Tradizioni e Cultura</h2>
+                <div class="tradizioni-grid">
+                    <div class="tradizione-card">
+                        <i class="fas fa-theater-masks"></i>
+                        <h4>Festival Locr@Magna</h4>
+                        <p>Ogni estate il teatro greco ospita questo prestigioso festival che riunisce artisti nazionali e internazionali in spettacoli teatrali e musicali.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-book"></i>
+                        <h4>Convegni Storici</h4>
+                        <p>Locri è sede di importanti convegni sull'antichità classica, con studiosi provenienti da tutto il mondo che studiano la Magna Grecia.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-seedling"></i>
+                        <h4>Enogastronomia</h4>
+                        <p>La tradizione culinaria locrese combina influenze greche e romane con le specialità locali: olive nere, cipolle di Tropea, e vini DOC della zona.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-camera"></i>
+                        <h4>Fotografia d'Autore</h4>
+                        <p>Il contrasto tra l'antico e il moderno, tra mare e rovine, ha ispirato fotografi internazionali che espongono le loro opere nella città.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERIA FOTO -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Galleria Fotografica</h2>
+                <div class="gallery">
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=321" alt="Teatro Greco di Locri"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=322" alt="Museo Archeologico"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=323" alt="Vasi greci antichi"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=324" alt="Pinakes votivi"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=325" alt="Centro storico"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=326" alt="Vista panoramica"></div>
+                </div>
+            </div>
+        </section>
+
+       <!-- INFO UTILI -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Info Utili</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-car"></i>
+                <h4>Come Arrivare</h4>
+                <p><strong>In Auto</strong><br>
+                SS106 Jonica, uscita Locri<br>
+                Parcheggio gratuito nei pressi dei musei<br><br>
+                <strong>In Pullman</strong><br>
+                Linea Cotral Reggio-Locri<br>
+                Fermata Piazza Municipio</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-globe"></i>
+                <h4>Comune e Informazioni</h4>
+                <p><strong>Comune di Locri</strong><br>
+                Piazza Municipio, 1<br>
+                89043 Locri (RC)<br>
+                Tel: 0964 21111<br>
+                Fax: 0964 22447<br>
+                Email: protocollo@comune.locri.rc.it<br>
+                Sito web: <a href="http://www.comune.locri.rc.it" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">www.comune.locri.rc.it</a></p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-landmark"></i>
+                <h4>Musei e Orari</h4>
+                <p><strong>Museo Nazionale di Locri</strong><br>
+                Mar-Sab 9:00-19:00, Dom 9:00-14:00<br>
+                Chiuso: Lunedì<br>
+                Tel: 0964 21222<br><br>
+                <strong>Museo Romano (Casino Macrì)</strong><br>
+                Mar-Sab 9:00-18:00<br>
+                Chiuso: Lunedì e Domenica</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-train"></i>
+                <h4>Trasporti</h4>
+                <p><strong>Stazione Ferroviaria</strong><br>
+                Stazione di Locri<br>
+                Linea Jonica Reggio Calabria-Taranto<br><br>
+                <strong>Trasporto Locale</strong><br>
+                Autobus navetta dal parcheggio<br>
+                Servizio taxi disponibile<br>
+                Noleggio biciclette in piazza</p>
             </div>
         </div>
-    </section>
+        <div class="btn-center">
+            <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
+        </div>
+    </div>
+</section>
 
+
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
-            <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti</p>
+            <div class="footer-content">
+                <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
+                <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.</p>
+            </div>
+            <div class="copyright">
+                Sito realizzato dagli studenti del progetto scolastico
+            </div>
         </div>
     </footer>
 </body>

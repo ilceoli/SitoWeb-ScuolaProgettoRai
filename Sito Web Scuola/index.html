@@ -439,145 +439,156 @@ header {
             animation: fadeInUp 0.6s ease-out 0.1s both;
         }
 
-        /* CARD GRID (corsi, borghi) */
-        .card-grid, .borghi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-            margin-top: 40px;
-        }
+       /* ============================================
+   CARD GRID (corsi, borghi)
+   ============================================ */
+.card-grid, .borghi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
 
-        .card, .borgo-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all var(--transition-slow);
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            position: relative;
-        }
+.card, .borgo-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all var(--transition-slow);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    position: relative;
+    height: 100%; /* Tutte le card stessa altezza */
+    display: flex;
+    flex-direction: column;
+}
 
-        .card::before, .borgo-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-accent);
-            transform: scaleX(0);
-            transition: transform var(--transition);
-            transform-origin: left;
-        }
+.card::before, .borgo-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-accent);
+    transform: scaleX(0);
+    transition: transform var(--transition);
+    transform-origin: left;
+}
 
-        .card:hover, .borgo-card:hover {
-            transform: translateY(-12px);
-            box-shadow: var(--shadow-hover);
-        }
+.card:hover, .borgo-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-hover);
+}
 
-        .card:hover::before, .borgo-card:hover::before {
-            transform: scaleX(1);
-        }
+.card:hover::before, .borgo-card:hover::before {
+    transform: scaleX(1);
+}
 
-        .card-image, .borgo-image {
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            overflow: hidden;
-        }
+.card-image, .borgo-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
 
-        .card-image::after, .borgo-image::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%);
-        }
+.card-image::after, .borgo-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%);
+}
 
-        .card-image img, .borgo-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s;
-        }
+.card-image img, .borgo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s;
+}
 
-        .card:hover .card-image img, .borgo-card:hover .borgo-image img {
-            transform: scale(1.1);
-        }
+.card:hover .card-image img, .borgo-card:hover .borgo-image img {
+    transform: scale(1.1);
+}
 
-        .card-content, .borgo-content {
-            padding: 28px 24px;
-        }
+.card-content, .borgo-content {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Occupa tutto lo spazio rimanente nella card */
+}
 
-        .card-content h3, .borgo-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-            color: var(--primary);
-            font-weight: 600;
-        }
+.card-content h3, .borgo-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-weight: 600;
+}
 
-        .card-content p, .borgo-content p {
-            color: var(--text-light);
-            margin-bottom: 18px;
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
+.card-content p, .borgo-content p {
+    color: var(--text-light);
+    margin-bottom: 18px;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    flex: 1; /* Spinge il tag verso il basso */
+}
 
-        .tag {
-            display: inline-block;
-            background: var(--gradient-accent);
-            color: var(--text-dark);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 2px 8px rgba(212, 168, 67, 0.2);
-        }
+.tag {
+    display: inline-block;
+    background: var(--gradient-accent);
+    color: var(--text-dark);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(212, 168, 67, 0.2);
+    align-self: flex-start; /* Allineato a sinistra */
+    margin-top: auto;       /* Spinto in fondo */
+    width: fit-content;     /* Larghezza in base al contenuto */
+}
 
-        .btn-borgo {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: var(--primary);
-            padding: 8px 0;
-            border: none;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all var(--transition);
-            border-bottom: 2px solid transparent;
-        }
+.btn-borgo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--primary);
+    padding: 8px 0;
+    border: none;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--transition);
+    border-bottom: 2px solid transparent;
+}
 
-        .btn-borgo:hover {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-            transform: translateX(5px);
-        }
+.btn-borgo:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    transform: translateX(5px);
+}
 
-        .btn-borgo i {
-            font-size: 0.9rem;
-            transition: transform var(--transition);
-        }
+.btn-borgo i {
+    font-size: 0.9rem;
+    transition: transform var(--transition);
+}
 
-        .btn-borgo:hover i {
-            transform: translateX(5px);
-        }
+.btn-borgo:hover i {
+    transform: translateX(5px);
+}
 
-        /* CORSI - icone */
-        .corsi .card-image {
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 3.5rem;
-        }
-
+/* CORSI - icone */
+.corsi .card-image {
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 3.5rem;
+}
         /* GALLERIA SCUOLA */
         .gallery {
             display: grid;
@@ -1118,102 +1129,102 @@ header {
     </section>
 
         <!-- CORSI DI STUDIO (offerta completa) -->
-        <section id="corsi" style="background-color: white;">
-            <div class="container">
-                <h2 class="section-title">I nostri corsi</h2>
-                <p class="section-subtitle">Cinque anni per costruire il tuo futuro: percorsi tecnici e professionali</p>
-                <div class="card-grid">
-                    <!-- AFM -->
-                    <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Amministrazione, Finanza e Marketing</h3>
-                            <p>Competenze nei macro-fenomeni economici, gestione aziendale e strumenti digitali.</p>
-                            <span class="tag">Tecnico</span>
-                        </div>
-                    </div>
-                    <!-- SIA -->
-                    <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Sistemi Informativi Aziendali</h3>
-                            <p>Informatica gestionale, programmazione e sistemi aziendali avanzati.</p>
-                            <span class="tag">Tecnico</span>
-                        </div>
-                    </div>
-                    <!-- CAT -->
-                    <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            <i class="fas fa-draw-polygon"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Costruzioni, Ambiente e Territorio</h3>
-                            <p>Progettazione edilizia, topografia, estimo e sicurezza.</p>
-                            <span class="tag">Tecnico</span>
-                        </div>
-                    </div>
-                    <!-- Turismo -->
-                    <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            <i class="fas fa-umbrella-beach"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Turismo</h3>
-                            <p>Lingue straniere, legislazione turistica e tecniche di accoglienza.</p>
-                            <span class="tag">Tecnico</span>
-                        </div>
-                    </div>
-                    <!-- Logistica -->
-                    <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Logistica e Trasporti</h3>
-                            <p>Supply chain, magazzino, normativa e pianificazione dei trasporti.</p>
-                            <span class="tag">Tecnico</span>
-                        </div>
-                    </div>
-                    <!-- Moda per il Made in Italy -->
-                    <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            <i class="fas fa-tshirt"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Moda per il Made in Italy</h3>
-                            <p>Dalla progettazione alla realizzazione di capi, artigianato digitale e tradizione sartoriale.</p>
-                            <span class="tag">Professionale</span>
-                        </div>
-                    </div>
-                    <!-- Odontotecnico -->
-                    <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            <i class="fas fa-tooth"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Odontotecnico</h3>
-                            <p>Protesi dentaria, collaborazione con odontoiatri, materiali e laboratorio.</p>
-                            <span class="tag">Professionale</span>
-                        </div>
-                    </div>
-                    <!-- Manutenzione e Assistenza Tecnica -->
-                    <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3>Manutenzione e Assistenza Tecnica</h3>
-                            <p>Impianti, automazione, riparazione di veicoli e manutenzione industriale.</p>
-                            <span class="tag">Professionale</span>
-                        </div>
-                    </div>
+<section id="corsi" style="background-color: white;">
+    <div class="container">
+        <h2 class="section-title">I nostri corsi</h2>
+        <p class="section-subtitle">Cinque anni per costruire il tuo futuro: percorsi tecnici e professionali</p>
+        <div class="card-grid">
+            <!-- AFM -->
+            <div class="card">
+                <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Amministrazione, Finanza e Marketing</h3>
+                    <p>Competenze in economia aziendale, gestione finanziaria, marketing e strumenti digitali per l'impresa.</p>
+                    <span class="tag">Tecnico</span>
                 </div>
             </div>
-        </section>
+            <!-- SIA -->
+            <div class="card">
+                <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Sistemi Informativi Aziendali</h3>
+                    <p>Sviluppo software, basi di dati, sistemi informativi e analisi dei processi aziendali.</p>
+                    <span class="tag">Tecnico</span>
+                </div>
+            </div>
+            <!-- CAT -->
+            <div class="card">
+                <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                    <i class="fas fa-draw-polygon"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Costruzioni, Ambiente e Territorio</h3>
+                    <p>Progettazione edilizia, topografia, estimo, sicurezza e gestione sostenibile del territorio.</p>
+                    <span class="tag">Tecnico</span>
+                </div>
+            </div>
+            <!-- Turismo -->
+            <div class="card">
+                <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                    <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Turismo</h3>
+                    <p>Lingue straniere, legislazione turistica, tecniche di accoglienza e marketing territoriale.</p>
+                    <span class="tag">Tecnico</span>
+                </div>
+            </div>
+            <!-- Logistica -->
+            <div class="card">
+                <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Logistica e Trasporti</h3>
+                    <p>Supply chain, gestione magazzino, trasporti, normativa e pianificazione dei flussi.</p>
+                    <span class="tag">Tecnico</span>
+                </div>
+            </div>
+            <!-- Moda per il Made in Italy -->
+            <div class="card">
+                <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Moda per il Made in Italy</h3>
+                    <p>Progettazione e realizzazione di capi, artigianato digitale e tradizione sartoriale.</p>
+                    <span class="tag">Professionale</span>
+                </div>
+            </div>
+            <!-- Odontotecnico -->
+            <div class="card">
+                <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Odontotecnico</h3>
+                    <p>Protesi dentaria, materiali dentali, collaborazione con odontoiatri e tecniche di laboratorio.</p>
+                    <span class="tag">Professionale</span>
+                </div>
+            </div>
+            <!-- Manutenzione e Assistenza Tecnica -->
+            <div class="card">
+                <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Manutenzione e Assistenza Tecnica</h3>
+                    <p>Impianti meccanici ed elettrici, automazione, diagnostica e manutenzione industriale.</p>
+                    <span class="tag">Professionale</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- SERVIZI (ampliati) -->
         <section id="servizi">

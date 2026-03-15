@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Romana di Casignana - Polo Tecnico Professionale Marconi</title>
+    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp">
+    <!-- Google Fonts e Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ============================================
+           POLO TECNICO PROFESSIONALE - STYLE.CSS
+           Design Elegante e Professionale
+           ============================================ */
+
+        /* RESET E BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background-color: #fafbfc;
+            overflow-x: hidden;
+        }
+
+        /* ============================================
+           VARIABILI COLORE - PALETTE REFINED
+           ============================================ */
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --primary-dark: #1e2b3a;
+            --accent: #e67e22;
+            --accent-light: #f39c12;
+            --accent-dark: #c96e1c;
+            --secondary: #5c7c9a;
+            --gray-light: #f0f2f5;
+            --gray: #9ca3af;
+            --text-light: #6b7280;
+            --text-dark: #1f2937;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+            --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --transition: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        /* ============================================
+           LAYOUT GENERALE
+           ============================================ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ============================================
+           HEADER E NAVIGAZIONE
+           ============================================ */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all var(--transition);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            transition: padding var(--transition);
+        }
+
+        .logo h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: transform var(--transition);
+        }
+
+        .logo h1:hover {
+            transform: translateX(5px);
+        }
+
+        .logo span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: block;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            margin-top: 2px;
+        }
+
+        .back-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gray-light);
+            color: var(--text-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+
+        .back-link a:hover {
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: translateX(-5px);
+        }
+
+        /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero-borgo {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            color: var(--white);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 44, 74, 0.85) 0%, rgba(26, 61, 92, 0.85) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .hero-borgo .container {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+        }
+
+        .hero-borgo h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-borgo p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .content-section.reverse {
+            direction: rtl;
+        }
+
+        .content-section.reverse > * {
+            direction: ltr;
+        }
+
+        .content-text {
+            padding: 20px;
+        }
+
+        .content-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content-text p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .content-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ============================================
+           INFO CARDS
+           ============================================ */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .info-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+        .tradizioni-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .tradizione-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+            padding: 30px 24px;
+            text-align: center;
+        }
+
+        .tradizione-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform var(--transition);
+            transform-origin: left;
+        }
+
+        .tradizione-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tradizione-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .tradizione-card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            transition: transform var(--transition);
+        }
+
+        .tradizione-card:hover i {
+            transform: scale(1.1);
+        }
+
+        .tradizione-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .tradizione-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* ============================================
+           GALLERY
+           ============================================ */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 220px;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-slow);
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-accent);
+            color: var(--text-dark);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all var(--transition);
+            box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+        }
+
+        .btn i {
+            transition: transform var(--transition);
+        }
+
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .btn-center {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 70px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+
+        .footer-content {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .footer-content p {
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-content a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        .footer-content a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .content-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-borgo h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-borgo p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-borgo {
+                min-height: 300px;
+            }
+            
+            .hero-borgo h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Polo Tecnico Professionale</h1>
+                <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+            </div>
+            <div class="back-link">
+                <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-borgo" style="background-image: url('https://picsum.photos/1200/600?random=38'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h2>Villa Romana di Casignana</h2>
+                <p>Importante sito archeologico con mosaici ben conservati, testimonianza della vita nell'antica Roma.</p>
+            </div>
+        </section>
+
+        <!-- INFO CARDS -->
+        <section>
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Periodo</h4>
+                        <p>I secolo d.C. - VII secolo d.C.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-ruler-combined"></i>
+                        <h4>Estensione</h4>
+                        <p>8.000 metri quadrati</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-pin"></i>
+                        <h4>Localizzazione</h4>
+                        <p>Contrada Palazzi, Casignana</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-landmark"></i>
+                        <h4>Tipologia</h4>
+                        <p>Villa Romana Imperiale</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORIA E SCOPERTA -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">La Scoperta e la Storia</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>Una Scoperta Casuale</h3>
+                        <p>Adagiata lungo l'antico itinerario romano che collegava Rhegion a Locri Epizefiri, tra Bianco e Bovalino lungo la Costa dei Gelsomini, la Villa romana di Casignana rappresenta uno dei siti archeologici più importanti dell'Italia meridionale e tra i più significativi della Calabria.</p>
+                        <p>Il complesso, risalente all'età imperiale romana (circa I secolo d.C.), si trova in contrada Palazzi e occupa un'area di circa 8.000 metri quadrati. Il sito venne scoperto casualmente nel 1963, durante i lavori di costruzione di un acquedotto lungo la Strada Statale 106.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=381');"></div>
+                </div>
+                
+                <div class="content-section reverse">
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=382');"></div>
+                    <div class="content-text">
+                        <h3>Dai Primi Scavi alla Ricostruzione</h3>
+                        <p>Tuttavia, solo alla fine degli anni '90 iniziarono le prime campagne sistematiche di scavo e restauro che permisero di riportare alla luce gran parte del complesso. Gli studiosi ritengono che la villa appartenesse probabilmente a un console romano o a un importante personaggio dell'aristocrazia imperiale.</p>
+                        <p>Nel corso del tempo l'edificio fu ampliato e arricchito con due grandi aree termali, una orientale e una occidentale, decorate con straordinari mosaici pavimentali realizzati con marmi policromi provenienti dalla Grecia e dall'Asia Minore.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STRUTTURA E AMBIENTI -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">La Struttura della Villa</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>Il Complesso Architettonico</h3>
+                        <p>La struttura è composta da circa venti ambienti disposti attorno a un grande cortile centrale, nel quale erano presenti diversi elementi tipici delle ville romane:</p>
+                        <ul style="color: var(--text-light); margin-left: 20px; margin-bottom: 20px;">
+                            <li>Terme private</li>
+                            <li>Fontana monumentale</li>
+                            <li>Latrine</li>
+                            <li>Giardino decorato con mosaici</li>
+                        </ul>
+                        <p>Le ricerche archeologiche condotte negli ultimi anni hanno inoltre dimostrato che la villa fu abitata almeno fino al VII secolo d.C., segno della lunga continuità di vita del sito.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=383');"></div>
+                </div>
+                
+                <div class="content-section reverse">
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=384');"></div>
+                    <div class="content-text">
+                        <h3>Gli Ambienti Principali</h3>
+                        <p>Tra gli ambienti più importanti scoperti dagli archeologi si trovano:</p>
+                        <ul style="color: var(--text-light); margin-left: 20px; margin-bottom: 20px;">
+                            <li>La Sala delle Nereidi</li>
+                            <li>La Sala di Bacco</li>
+                            <li>La Sala delle Quattro Stagioni</li>
+                            <li>La grande sala absidata, l'ambiente più ampio del complesso</li>
+                        </ul>
+                        <p>Questi spazi testimoniano la sofisticatezza e il lusso della vita aristocratica romana nella provincia calabrese.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOSAICI E DECORAZIONI -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Mosaici e Decorazioni</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>Maestria Artistica Romana</h3>
+                        <p>Le decorazioni raffigurano scene e figure della mitologia romana, tra cui le Nereidi, Bacco e le Quattro stagioni. Questi mosaici pavimentali, realizzati con marmi policromi provenienti dalla Grecia e dall'Asia Minore, rappresentano un esempio straordinario dell'arte romana nella provincia.</p>
+                        <p>La tecnica utilizzata, detta "opus sectile" e "opus tessellatum", dimostra l'elevato livello artistico raggiunto dagli artigiani che lavoravano per l'élite romana locale. I colori vivaci e la precisione dei dettagli si sono conservati in modo eccezionale.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=385');"></div>
+                </div>
+                
+                <div class="content-section reverse">
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=386');"></div>
+                    <div class="content-text">
+                        <h3>Simbolismo e Significato</h3>
+                        <p>Ogni mosaico racconta una storia mitologica o allegorica. Le Nereidi rappresentano la protezione divina sul mare, Bacco simboleggia l'abbondanza e la gioia, mentre le Quattro Stagioni incarnano il ciclo eterno della natura.</p>
+                        <p>Queste decorazioni non erano solo ornamenti, ma vere e proprie dichiarazioni di potere e cultura da parte del proprietario della villa, che voleva dimostrare la propria connessione con il mondo classico e imperiale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NECROPOLI E CULTO DEI MORTI -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">La Necropoli e il Culto dei Morti</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>Tombe e Sepolture</h3>
+                        <p>Particolarmente importante è anche l'area della necropoli, dove sono state ritrovate tombe ancora integre. Questo ritrovamento ha fornito preziose informazioni agli studiosi sul culto dei morti nell'epoca romana e sulle pratiche funerarie diffuse in questa parte dell'Italia meridionale.</p>
+                        <p>Le tombe, spesso decorate con affreschi e oggetti personali, rivelano le credenze religiose e le speranze di vita dopo la morte dei romani provinciali. I rituali funerari erano considerati essenziali per garantire pace eterna ai defunti.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=387');"></div>
+                </div>
+                
+                <div class="content-section reverse">
+                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=388');"></div>
+                    <div class="content-text">
+                        <h3>Reliquie del Passato</h3>
+                        <p>Gli oggetti ritrovati nelle tombe includono ceramiche finemente decorate, gioielli in oro e argento, monete romane e oggetti di uso quotidiano. Questi reperti permettono di ricostruire lo stile di vita e le abitudini dei romani che vivevano in questa zona.</p>
+                        <p>La presenza di tombe monumentali indica che la zona era frequentata da personaggi di alto rango sociale, confermando l'importanza della villa e del suo proprietario nel contesto politico ed economico dell'epoca.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGNIFICATO ARCHEOLOGICO -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Significato Archeologico</h2>
+                <div class="tradizioni-grid">
+                    <div class="tradizione-card">
+                        <i class="fas fa-archway"></i>
+                        <h4>Testimonianza Imperiale</h4>
+                        <p>La villa rappresenta una delle migliori testimonianze dell'influenza romana in Calabria, dimostrando come la provincia fosse integrata nel sistema imperiale.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-palette"></i>
+                        <h4>Arte e Artigianato</h4>
+                        <p>I mosaici e le decorazioni mostrano l'elevato livello artistico raggiunto nella provincia, con influenze greche e orientali.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-route"></i>
+                        <h4>Commercio e Comunicazioni</h4>
+                        <p>La posizione strategica lungo l'antica via romana indica l'importanza commerciale della zona e i collegamenti con Roma.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-hourglass-half"></i>
+                        <h4>Continuità Storica</h4>
+                        <p>L'utilizzo della villa per oltre 600 anni dimostra la stabilità e l'importanza duratura della struttura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERIA FOTO -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Galleria Fotografica</h2>
+                <div class="gallery">
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=391" alt="Vista generale della villa"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=392" alt="Dettaglio mosaico"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=393" alt="Sala delle Nereidi"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=394" alt="Ambiente termale"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=395" alt="Cortile centrale"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=396" alt="Reperti archeologici"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO UTILI -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Info Utili per la Visita</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Orari di Visita</h4>
+                        <p>Aprile-Ottobre: 9:00-19:00<br>Novembre-Marzo: 9:00-17:00<br>Chiuso Lunedì</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-euro-sign"></i>
+                        <h4>Biglietti</h4>
+                        <p>Intero: €8,00<br>Ridotto: €4,00<br>Gratuito fino a 18 anni</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Contatti</h4>
+                        <p>Soprintendenza: 0964 123456<br>Prenotazioni: 0964 123789<br>Emergenze: 112</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Come Arrivare</h4>
+                        <p>SS106 Km 345, Casignana<br>Parcheggio gratuito<br>Accessibile in pullman</p>
+                    </div>
+                </div>
+                <div class="btn-center">
+                    <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
+                <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.</p>
+            </div>
+            <div class="copyright">
+                Sito realizzato dagli studenti del progetto scolastico
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

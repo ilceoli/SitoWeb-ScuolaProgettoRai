@@ -1,0 +1,23 @@
+# File di sistema macOS
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# File di sistema Windows
+Thumbs.db
+ehthumbs.db
+
+# Cartelle di editor di testo
+.vscode/
+.idea/
+*.sublime-*
+
+# File di log (se ne hai)
+*.log
+
+# Cartella node_modules (nel caso in futuro usassi npm)
+node_modules/
+
+# File temporanei
+*.tmp
+*.temp

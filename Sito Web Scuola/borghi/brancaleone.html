@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brancaleone - Polo Tecnico Professionale</title>
+    <!-- Google Fonts e Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --accent: #e67e22;
+            --accent-light: #f39c12;
+            --gray-light: #ecf0f1;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Animazioni */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: block;
+            font-weight: 400;
+        }
+
+        .back-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 20px;
+            border-radius: 30px;
+            background-color: var(--gray-light);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-link a:hover {
+            background-color: var(--accent);
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        /* Hero */
+        .hero-borgo {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-borgo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://picsum.photos/1200/800?random=401') center/cover;
+            opacity: 0.1;
+            mix-blend-mode: overlay;
+        }
+
+        .hero-borgo h2 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-borgo .sottotitolo {
+            font-size: 1.5rem;
+            font-style: italic;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+            text-align: center;
+        }
+
+        /* Sezioni */
+        section {
+            padding: 70px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--white);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 2px;
+        }
+
+        .section-title-center {
+            text-align: center;
+        }
+
+        .section-title-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /* ✅ TESTO GIUSTIFICATO SOLO QUI (paragrafi principali) */
+        .section-content p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .section-content img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .section-content img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Info card */
+        .info-card {
+            background: linear-gradient(135deg, var(--white), var(--gray-light));
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s;
+        }
+
+        .info-item:hover {
+            background: white;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .info-item i {
+            font-size: 2rem;
+            color: var(--accent);
+            width: 40px;
+        }
+
+        /* Info item (testo breve) - NON giustificato */
+        .info-item div {
+            text-align: left;
+        }
+
+        /* Luoghi grid */
+        .luoghi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .luogo-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luogo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+            transform-origin: left;
+        }
+
+        .luogo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .luogo-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .luogo-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .luogo-card:hover i {
+            transform: scale(1.1);
+        }
+
+        .luogo-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Card testo breve - centrato (come pagina Bianco) */
+        .luogo-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        /* Galleria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 220px;
+            box-shadow: var(--shadow);
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .gallery-item:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Feature special */
+        .feature-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+            background: linear-gradient(135deg, var(--off-white), var(--white));
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-content {
+            padding: 40px;
+        }
+
+        .feature-content h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-content i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        /* ✅ TESTO GIUSTIFICATO ANCHE NELLE FEATURE */
+        .feature-content p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .feature-image {
+            min-height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Bottone */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.5);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-borgo h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-borgo .sottotitolo {
+                font-size: 1.2rem;
+            }
+
+            .section-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .feature-block {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Polo Tecnico Professionale</h1>
+                <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+            </div>
+            <div class="back-link">
+                <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-borgo">
+        <div class="container">
+            <h2>Brancaleone</h2>
+            <p class="sottotitolo">La città dei gelsomini e delle tartarughe marine</p>
+        </div>
+    </section>
+
+    <section style="background-color: white; padding: 30px 0;">
+        <div class="container">
+            <div class="info-card">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-mountain"></i>
+                        <div>
+                            <strong>Altitudine</strong><br>
+                            0 – 311 m s.l.m.
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>Abitanti</strong><br>
+                            Circa 3.200
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <strong>Zona</strong><br>
+                            Costa dei Gelsomini
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-flag"></i>
+                        <div>
+                            <strong>Nome antico</strong><br>
+                            Sperlonga / Sperlinga
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3 class="section-title">La Storia</h3>
+            <div class="section-content">
+                <div>
+                    <p><strong>Origini bizantine e il nome Sperlonga</strong><br>
+                    Le origini di Brancaleone risalgono al VI-VII secolo d.C., durante la dominazione bizantina. L'antico insediamento, chiamato Sperlonga o Sperlinga, sorse su un colle di arenaria a 311 metri sul livello del mare, dove numerose grotte naturali offrivano rifugio a monaci eremiti provenienti dall'Oriente.</p>
+                    
+                    <p><strong>Il castello e i feudatari</strong><br>
+                    Il castello di Brancaleone fu sede dal 1364 al 1515 dei Ruffo, poi passò agli Ayerbo d'Aragona, Conti di Brancaleone, successivamente agli Spatafora e infine ai Carafa, che rimasero fino al 1806. Nel 1774 Vincenzo VII Marchese di Brancaleone fu l'ultimo feudatario.</p>
+                    
+                    <p><strong>Terremoti e abbandono</strong><br>
+                    Il borgo fu più volte distrutto dai devastanti terremoti del 1783, 1905, 1907 e 1908. L'alluvione del 1953 costrinse gli ultimi abitanti a trasferirsi definitivamente a valle, dove già sorgeva il nuovo centro di Brancaleone Marina. Oggi l'antico borgo è un suggestivo Parco Archeologico Urbano, un "paese fantasma" che affascina visitatori da tutta Italia.</p>
+                    
+                    <p><strong>Cesare Pavese a Brancaleone</strong><br>
+                    Tra il 1935 e il 1936, lo scrittore Cesare Pavese fu confinato a Brancaleone dal regime fascista per sospetta attività antifascista. Qui scrisse pagine importanti del suo diario "Il mestiere di vivere" e il romanzo "Il carcere". La casa dove soggiornò, lungo il corso principale, è oggi un museo e centro culturale.</p>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/500/350?random=402" alt="Brancaleone Vetus borgo abbandonato">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: white;">
+        <div class="container">
+            <h3 class="section-title">Brancaleone Vetus: il borgo fantasma</h3>
+            <div class="section-content">
+                <div>
+                    <img src="https://picsum.photos/500/350?random=403" alt="Grotte chiese di Brancaleone Vetus">
+                </div>
+                <div>
+                    <p><strong>Un parco archeologico urbano</strong><br>
+                    Arroccato su una collina di arenaria a 311 metri, Brancaleone Vetus è oggi un Parco Archeologico Urbano di straordinario fascino. Il borgo conserva l'antica struttura medievale, con i resti del castello, delle mura di cinta e delle abitazioni scavate nella roccia.</p>
+                    
+                    <p><strong>Le grotte-chiese</strong><br>
+                    Di particolare interesse sono le numerose grotte antropiche, utilizzate dai monaci basiliani tra l'VIII e il X secolo come luoghi di meditazione e preghiera. Tra queste spiccano quattro grotte-chiese, che conservano incisioni sacre di chiara matrice armena. La grotta dell'Albero della Vita è una delle più suggestive.</p>
+                    
+                    <p><strong>I silos granai</strong><br>
+                    Nel borgo sono ancora visibili i silos-granai scavati nella pietra, utilizzati per la conservazione dei cereali e dell'acqua, testimonianza dell'ingegno e dell'adattamento delle antiche comunità.</p>
+                    
+                    <p><strong>Le chiese dell'Annunziata</strong><br>
+                    Due sono le chiese dedicate all'Annunziata: la Chiesa Matrice, di cui resta il pavimento, e la Chiesa Arcipretale, costruita nel Seicento sui resti del Monastero dei Cappuccini, che conserva un altare in marmi policromi del Cinquecento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3 class="section-title">La città dei gelsomini</h3>
+            <div class="feature-block">
+                <div class="feature-content">
+                    <h3><i class="fas fa-seedling"></i> Il profumo della Calabria</h3>
+                    <p>Brancaleone è conosciuta come la "città dei gelsomini". Fu qui che nel 1927-1928 vennero importate dalla Liguria le prime piante di gelsomino, grazie anche al lavoro della Stazione Sperimentale delle Essenze di Reggio Calabria.</p>
+                    <p>Per decenni, lunghi filari di gelsomini hanno caratterizzato il paesaggio e l'economia locale, insieme al bergamotto. I fiori venivano raccolti quotidianamente da centinaia di "gelsominaie" provenienti dai paesi vicini e trasformati nelle distillerie in essenze pregiate esportate in tutto il mondo per profumerie, farmacie e dolcerie.</p>
+                    <p>Ancora oggi, alcune antiche distillerie sono custodite come preziose testimonianze di questa tradizione, e il profumo dei gelsomini continua a caratterizzare l'intera Costa dei Gelsomini.</p>
+                </div>
+                <div class="feature-image" style="background-image: url('https://picsum.photos/600/400?random=404');"></div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: white;">
+        <div class="container">
+            <h3 class="section-title">Il paese delle tartarughe marine</h3>
+            <div class="feature-block">
+                <div class="feature-image" style="background-image: url('https://picsum.photos/600/400?random=405');"></div>
+                <div class="feature-content">
+                    <h3><i class="fas fa-turtle"></i> Caretta Calabria Conservation</h3>
+                    <p>Brancaleone è uno dei siti più importanti del Mediterraneo per la nidificazione della tartaruga marina Caretta caretta. Le sue spiagge, inserite nel Parco Marino Regionale "Costa dei Gelsomini", rappresentano un ecosistema prezioso per la salvaguardia e la riproduzione di questa specie minacciata.</p>
+                    <p>Dal 2000, l'associazione Caretta Calabria Conservation svolge un instancabile lavoro di monitoraggio, soccorso e cura degli esemplari feriti. Il Centro Recupero Tartarughe Marine di Brancaleone è un vero e proprio "ospedale delle tartarughe", dotato di vasche di quarantena e riabilitazione, sala raggi, ambulatorio veterinario e sala chirurgica.</p>
+                    <p>Ogni anno vengono individuati circa dieci nidi: dal 2016 sono stati protetti oltre 130 nidi, dai quali sono nati circa 6.000 piccoli di tartaruga. I visitatori possono osservare da vicino il lavoro dei volontari e, con un po' di fortuna, assistere alla magica corsa delle neonate tartarughe verso il mare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3 class="section-title">Cosa Vedere</h3>
+            <div class="luoghi-grid">
+                <div class="luogo-card">
+                    <i class="fas fa-history"></i>
+                    <h4>Brancaleone Vetus</h4>
+                    <p>Il borgo medievale abbandonato, con le sue grotte-chiese, i silos e i resti del castello. Un luogo sospeso nel tempo.</p>
+                </div>
+                <div class="luogo-card">
+                    <i class="fas fa-home"></i>
+                    <h4>Casa di Cesare Pavese</h4>
+                    <p>La casa dove lo scrittore visse al confino dal 1935 al 1936. Oggi museo e centro culturale lungo il corso principale.</p>
+                </div>
+                <div class="luogo-card">
+                    <i class="fas fa-fish"></i>
+                    <h4>Museo del Mare</h4>
+                    <p>Vicino al Municipio, offre un percorso didattico sulla navigazione e sulla conservazione marina, con una sala dedicata alla Caretta caretta.</p>
+                </div>
+                <div class="luogo-card">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <h4>Torre di Galati</h4>
+                    <p>Antica torre costiera situata lungo la valle del torrente Aranghìa, testimonianza del sistema difensivo contro i pirati.</p>
+                </div>
+                <div class="luogo-card">
+                    <i class="fas fa-lighthouse"></i>
+                    <h4>Faro di Capo Spartivento</h4>
+                    <p>All'estremità della spiaggia, uno dei fari più suggestivi della Calabria, in un paesaggio incontaminato.</p>
+                </div>
+                <div class="luogo-card">
+                    <i class="fas fa-industry"></i>
+                    <h4>Antiche distillerie</h4>
+                    <p>Testimonianze della lavorazione del gelsomino e del bergamotto, custodi di una tradizione profumiera secolare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: white;">
+        <div class="container">
+            <h3 class="section-title">Mare e Natura</h3>
+            <div class="section-content">
+                <div>
+                    <p><strong>Spiagge da sogno</strong><br>
+                    Brancaleone si estende per circa 10 chilometri lungo la Costa dei Gelsomini, da Capo Spartivento fino alla Fiumara di Bruzzano. La spiaggia è caratterizzata da sabbia fine e dorata e da un mare cristallino, più volte premiato per la qualità delle acque.</p>
+                    
+                    <p><strong>Capo Spartivento</strong><br>
+                    Il punto più meridionale della costa, dove il mare incontra la roccia in un paesaggio selvaggio e incontaminato. Il faro domina la scena, offrendo tramonti indimenticabili.</p>
+                    
+                    <p><strong>La fiumara e i calanchi</strong><br>
+                    L'entroterra è caratterizzato dai caratteristici calanchi chiamati "Trubi", sedimenti marini che creano un paesaggio quasi lunare. Il torrente Altalia forma le suggestive "Gole del Diavolo" con salti e cascate.</p>
+                    
+                    <p><strong>Attività all'aria aperta</strong><br>
+                    Immersioni subacquee nei fondali cristallini, escursioni a Brancaleone Vetus, trekking tra i profumi dei gelsomini e delle essenze di bergamotto, e la possibilità di partecipare alle attività di monitoraggio delle tartarughe marine.</p>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/500/350?random=406" alt="Spiaggia di Brancaleone">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3 class="section-title">Cultura e Tradizioni</h3>
+            <div class="luoghi-grid">
+                <div class="luogo-card">
+                    <i class="fas fa-seedling"></i>
+                    <h4>La cultura del gelsomino</h4>
+                    <p>La raccolta dei gelsomini ha segnato per decenni la vita e l'economia locale, con le "gelsominaie" che ogni giorno percorrevano i lunghi filari per raccogliere i profumatissimi fiori.</p>
+                </div>
+                <div class="luogo-card">
+                    <i class="fas fa-turtle"></i>
+                    <h4>La tutela delle tartarughe</h4>
+                    <p>La comunità è fortemente impegnata nella protezione della Caretta caretta, con attività di sensibilizzazione e volontariato che coinvolgono residenti e turisti.</p>
+                </div>
+                <div class="luogo-card">
+                    <i class="fas fa-book"></i>
+                    <h4>Il confino di Pavese</h4>
+                    <p>La presenza dello scrittore ha lasciato un segno profondo: ogni anno iniziative culturali ricordano il suo passaggio e la sua opera.</p>
+                </div>
+                <div class="luogo-card">
+                    <i class="fas fa-utensils"></i>
+                    <h4>Sapori locali</h4>
+                    <p>La cucina unisce i prodotti del mare come il pesce azzurro e le fritture, con i sapori della terra: olio d'oliva, agrumi, e i profumi del bergamotto e del gelsomino.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: white;">
+        <div class="container">
+            <h3 class="section-title">Galleria</h3>
+            <div class="gallery">
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=411" alt="Brancaleone Vetus"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=412" alt="Spiaggia di Brancaleone"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=413" alt="Casa di Cesare Pavese"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=414" alt="Gelsomini in fiore"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=415" alt="Tartaruga Caretta caretta"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=416" alt="Faro di Capo Spartivento"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=417" alt="Grotte chiese di Brancaleone Vetus"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=418" alt="Tramonto sulla costa"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3 class="section-title">Info Utili</h3>
+            <div class="info-card" style="background: linear-gradient(135deg, #ecf0f1, #ffffff);">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-car"></i>
+                        <div>
+                            <strong>Come arrivare</strong><br>
+                            Sulla SS106 Jonica, uscita Brancaleone. Dista circa 35 km da Siderno e 60 km da Reggio Calabria.
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-train"></i>
+                        <div>
+                            <strong>Stazione ferroviaria</strong><br>
+                            Stazione di Brancaleone, sulla linea Jonica Reggio Calabria-Taranto.
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Contatti</strong><br>
+                            Comune: 0964 933008<br>Pro Loco: 0964 934760
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong>Sito web</strong><br>
+                            www.comune.brancaleone.rc.it
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
+            <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TITOLO DINAMICO: Sostituisci [Nome Borgo] -->
+    <title>[Nome Borgo] - Polo Tecnico Professionale</title>
+    <!-- Google Fonts e Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* RESET E VARIABILI (coerenti con il sito principale) */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9fafc;
+      }
+
+      :root {
+        --primary: #0a3b5b;
+        --primary-light: #1e4f6e;
+        --accent: #eab308;
+        --text-light: #6b7280;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* HEADER (IDENTICO AL SITO PRINCIPALE) */
+      header {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .logo span {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        display: block;
+      }
+
+      .back-link a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .back-link a:hover {
+        color: var(--accent);
+      }
+
+      /* HERO SECTION (CON IMMAGINE DI COPERTINA) */
+      .hero-borgo {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-light) 100%
+        );
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        position: relative;
+      }
+
+      .hero-borgo h2 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-borgo .sottotitolo {
+        font-size: 1.3rem;
+        font-style: italic;
+        opacity: 0.9;
+      }
+
+      /* SEZIONI GENERALI */
+      section {
+        padding: 50px 0;
+      }
+
+      section:nth-child(even) {
+        background-color: white;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--accent);
+      }
+
+      .section-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+
+      .section-content p {
+        margin-bottom: 20px;
+        color: var(--text-light);
+      }
+
+      /* GALLERIA */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .gallery-item {
+        border-radius: 12px;
+        overflow: hidden;
+        height: 200px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      /* SCHEDA INFO (Dati rapidi) */
+      .info-card {
+        background-color: var(--gray-light);
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .info-item i {
+        font-size: 1.5rem;
+        color: var(--primary);
+        width: 30px;
+      }
+
+      /* PRODOTTI E TRADIZIONI (card) */
+      .tradizioni-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .tradizione-card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eee;
+      }
+
+      .tradizione-card i {
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .tradizione-card h4 {
+        color: var(--primary);
+        margin-bottom: 10px;
+      }
+
+      /* BOTTONE PER MAPPA */
+      .btn-map {
+        display: inline-block;
+        background-color: var(--primary);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 30px;
+        transition: background 0.3s;
+      }
+
+      .btn-map:hover {
+        background-color: var(--primary-light);
+      }
+
+      /* FOOTER (IDENTICO AL SITO PRINCIPALE) */
+      footer {
+        background-color: var(--primary);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .hero-borgo h2 {
+          font-size: 2.2rem;
+        }
+
+        .section-content {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <h1>Polo Tecnico Professionale</h1>
+          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+        </div>
+        <div class="back-link">
+          <a href="../index.html#borghi"
+            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO CON NOME BORGO -->
+    <section class="hero-borgo">
+      <div class="container">
+        <!-- DINAMICO: Nome del borgo e sottotitolo -->
+        <h2>[NOME BORGO]</h2>
+        <p class="sottotitolo">
+          [Breve frase di impatto, es. "Perla della Locride tra storia e
+          natura"]
+        </p>
+      </div>
+    </section>
+
+    <!-- SCHEDA RIASSUNTIVA (dati rapidi) -->
+    <section style="background-color: white; padding: 30px 0">
+      <div class="container">
+        <div class="info-card">
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fas fa-mountain"></i>
+              <div>
+                <strong>Altitudine</strong><br />
+                [XXX] m s.l.m.
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-users"></i>
+              <div>
+                <strong>Abitanti</strong><br />
+                [Numero] circa
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-pin"></i>
+              <div>
+                <strong>Zona</strong><br />
+                [Zona/Valle di appartenenza]
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-flag"></i>
+              <div>
+                <strong>Nome antico</strong><br />
+                [Eventuale nome storico]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORIA -->
+    <section>
+      <div class="container">
+        <h3 class="section-title">La Storia</h3>
+        <div class="section-content">
+          <div>
+            <p>
+              <strong>Origini e periodo antico</strong><br />
+              [Qui inserisci le informazioni sulle origini del borgo: epoca
+              greca, romana, medievale. Esempio: "Le origini di [Borgo]
+              risalgono al ..."]
+            </p>
+
+            <p>
+              <strong>Medioevo e Rinascimento</strong><br />
+              [Sviluppo del borgo, famiglie nobili, castelli, eventi storici
+              significativi.]
+            </p>
+
+            <p>
+              <strong>Epoca moderna e contemporanea</strong><br />
+              [Terremoti, unità d'Italia, eventi del '900, rinascita.]
+            </p>
+          </div>
+          <div>
+            <!-- Eventuale immagine storica o iconica -->
+            <img
+              src="https://picsum.photos/500/350?random=[NUMERO]"
+              alt="Storia di [Borgo]"
+              style="
+                width: 100%;
+                border-radius: 12px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GEOGRAFIA E TERRITORIO -->
+    <section style="background-color: white">
+      <div class="container">
+        <h3 class="section-title">Geografia e Territorio</h3>
+        <div class="section-content">
+          <div>
+            <p>
+              <strong>Posizione</strong><br />
+              [Descrizione della posizione: collina, mare, montagna, valle.
+              Coordinate o punti di riferimento.]
+            </p>
+
+            <p>
+              <strong>Paesaggio e natura</strong><br />
+              [Caratteristiche naturali: fiumi, boschi, montagne, vista
+              panoramica, aree protette.]
+            </p>
+
+            <p>
+              <strong>Clima</strong><br />
+              [Breve nota sul clima: mediterraneo, appenninico, ecc.]
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://picsum.photos/500/350?random=[NUMERO]"
+              alt="Paesaggio di [Borgo]"
+              style="width: 100%; border-radius: 12px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTE E ARCHITETTURA (luoghi di interesse) -->
+    <section>
+      <div class="container">
+        <h3 class="section-title">Cosa Vedere</h3>
+        <div class="section-content">
+          <div>
+            <p>
+              <strong>Chiese e luoghi di culto</strong><br />
+              [Elenco e descrizione delle chiese principali, cripte, santuari.]
+            </p>
+
+            <p>
+              <strong>Palazzi e architetture storiche</strong><br />
+              [Castelli, palazzi nobiliari, torri, mura, porte antiche.]
+            </p>
+
+            <p>
+              <strong>Musei e siti archeologici</strong><br />
+              [Musei, aree archeologiche, collezioni.]
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://picsum.photos/500/350?random=[NUMERO]"
+              alt="Arte a [Borgo]"
+              style="width: 100%; border-radius: 12px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CULTURA E TRADIZIONI -->
+    <section style="background-color: white">
+      <div class="container">
+        <h3 class="section-title">Cultura e Tradizioni</h3>
+        <div class="tradizioni-grid">
+          <div class="tradizione-card">
+            <i class="fas fa-mask"></i>
+            <h4>Feste e Sagre</h4>
+            <p>[Principali feste patronali, carnevali, sagre]</p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-utensils"></i>
+            <h4>Prodotti Tipici</h4>
+            <p>[Olio, vino, formaggi, salumi, pane, dolci]</p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-paint-brush"></i>
+            <h4>Artigianato</h4>
+            <p>[Tessuti, ceramiche, ferro battuto, oggetti in legno]</p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-ghost"></i>
+            <h4>Leggende e Folklore</h4>
+            <p>[Racconti popolari, miti, personaggi leggendari]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NATURA E DINTORNI -->
+    <section>
+      <div class="container">
+        <h3 class="section-title">Natura e Dintorni</h3>
+        <div class="section-content">
+          <div>
+            <p>
+              <strong>Parchi e riserve</strong><br />
+              [Aree naturali protette, sentieri, percorsi trekking]
+            </p>
+
+            <p>
+              <strong>Punti panoramici</strong><br />
+              [Belvedere, terrazze naturali]
+            </p>
+
+            <p>
+              <strong>Attività all'aria aperta</strong><br />
+              [Escursioni, mountain bike, birdwatching, passeggiate a cavallo]
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://picsum.photos/500/350?random=[NUMERO]"
+              alt="Natura a [Borgo]"
+              style="width: 100%; border-radius: 12px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERIA FOTO (4-6 immagini) -->
+    <section style="background-color: white">
+      <div class="container">
+        <h3 class="section-title">Galleria</h3>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img
+              src="https://picsum.photos/400/300?random=[NUM1]"
+              alt="Foto 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://picsum.photos/400/300?random=[NUM2]"
+              alt="Foto 2"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://picsum.photos/400/300?random=[NUM3]"
+              alt="Foto 3"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://picsum.photos/400/300?random=[NUM4]"
+              alt="Foto 4"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://picsum.photos/400/300?random=[NUM5]"
+              alt="Foto 5"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://picsum.photos/400/300?random=[NUM6]"
+              alt="Foto 6"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMAZIONI UTILI (come arrivare, contatti) -->
+    <section>
+      <div class="container">
+        <h3 class="section-title">Info Utili</h3>
+        <div class="info-card" style="background-color: #eef2f7">
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fas fa-car"></i>
+              <div>
+                <strong>Come arrivare</strong><br />
+                [Indicazioni stradali, distanza da Siderno, da Locri]
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-train"></i>
+              <div>
+                <strong>Stazione ferroviaria</strong><br />
+                [Stazione più vicina]
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <strong>Contatti</strong><br />
+                [Telefono Comune / Pro Loco]
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-globe"></i>
+              <div>
+                <strong>Sito web</strong><br />
+                [Eventuale sito turistico]
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px">
+          <a href="../index.html#borghi" class="btn-map"
+            ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
+          <a href="../index.html">Home</a>
+        </p>
+        <p>
+          &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

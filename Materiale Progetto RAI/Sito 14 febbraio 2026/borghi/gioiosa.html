@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioiosa Ionica - Polo Tecnico Professionale</title>
+    <!-- Google Fonts e Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafc;
+        }
+        :root {
+            --primary: #0a3b5b;
+            --primary-light: #1e4f6e;
+            --accent: #eab308;
+            --text-light: #6b7280;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: block;
+        }
+        .back-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .back-link a:hover {
+            color: var(--accent);
+        }
+        /* Hero piccolo */
+        .hero-small {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .hero-small h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        /* Contenuto */
+        .content {
+            padding: 60px 0;
+        }
+        .description {
+            margin-bottom: 40px;
+        }
+        .description p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        /* Galleria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 200px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Polo Tecnico Professionale</h1>
+                <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+            </div>
+            <div class="back-link">
+                <a href="../index.html"><i class="fas fa-arrow-left"></i> Torna alla home</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-small">
+        <div class="container">
+            <h2>Gioiosa Ionica</h2>
+            <p>Tra storia e panorami sullo Ionio</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="description">
+                <p><strong>Gioiosa Ionica</strong> sorge su una collina a pochi chilometri dal mare. Il suo centro storico, di origine medievale, conserva un'atmosfera suggestiva con vicoli stretti, chiese antiche e palazzi nobiliari. Il Castello, risalente al periodo normanno, domina la città e offre una vista mozzafiato sulla costa.</p>
+                <p>La parte moderna si estende verso il mare, con lido e strutture turistiche. Gioiosa è anche nota per le tradizioni artigianali e culinarie, e per la sua vivace scena culturale, con eventi che si svolgono durante tutto l'anno.</p>
+                <p>Il territorio circostante offre possibilità di escursioni tra natura e borghi, rendendo Gioiosa una meta ideale per chi ama storia e paesaggi.</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=60" alt="Gioiosa 1"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=61" alt="Gioiosa 2"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=62" alt="Gioiosa 3"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=63" alt="Gioiosa 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
+            <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti</p>
+        </div>
+    </footer>
+</body>
+</html>

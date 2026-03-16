@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <!-- Google Fonts e Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* ============================================
@@ -33,6 +36,8 @@
             color: #1a1a2e;
             background-color: #fafbfc;
             overflow-x: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* ============================================
@@ -154,7 +159,7 @@
             font-size: 2.8rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             letter-spacing: -0.5px;
         }
 
@@ -225,13 +230,18 @@
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
         }
 
         .content-section.reverse {
             direction: rtl;
         }
 
-        .content-section.reverse > * {
+        .content-section.reverse>* {
             direction: ltr;
         }
 
@@ -269,6 +279,10 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
             margin-top: 40px;
+        }
+
+        .info-grid.contact-grid {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         }
 
         .info-card {
@@ -432,7 +446,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.6s;
         }
 
@@ -515,15 +529,15 @@
             .content-section {
                 grid-template-columns: 1fr;
             }
-            
+
             .hero-borgo h2 {
                 font-size: 2.5rem;
             }
-            
+
             .hero-borgo p {
                 font-size: 1.1rem;
             }
-            
+
             .section-title {
                 font-size: 2.2rem;
             }
@@ -533,22 +547,23 @@
             .hero-borgo {
                 min-height: 300px;
             }
-            
+
             .hero-borgo h2 {
                 font-size: 2rem;
             }
-            
+
             .btn {
                 padding: 12px 24px;
                 font-size: 0.95rem;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container header-content">
@@ -564,7 +579,8 @@
 
     <main>
         <!-- HERO SECTION -->
-        <section class="hero-borgo" style="background-image: url('https://picsum.photos/1200/600?random=35'); background-size: cover; background-position: center;">
+        <section class="hero-borgo"
+            style="background-image: url('https://picsum.photos/1200/600?random=35'); background-size: cover; background-position: center;">
             <div class="hero-overlay"></div>
             <div class="container">
                 <h2>Brancaleone</h2>
@@ -607,18 +623,29 @@
                 <div class="content-section">
                     <div class="content-text">
                         <h3>Dalle Origini Bizantine</h3>
-                        <p>Brancaleone è una località di straordinaria bellezza naturalistica situata lungo la Costa dei Gelsomini, in Calabria. Le origini del borgo risalgono al VI-VII secolo, durante il periodo bizantino, anche se si ritiene che l'area fosse abitata già in epoche precedenti nell'antico insediamento di Sperlonga.</p>
-                        <p>Proprio qui sorge oggi Brancaleone Superiore, un affascinante borgo medievale abbandonato alla fine degli anni '50 ma ancora visitabile per i suoi suggestivi resti.</p>
+                        <p>Brancaleone è una località di straordinaria bellezza naturalistica situata lungo la Costa dei
+                            Gelsomini, in Calabria. Le origini del borgo risalgono al VI-VII secolo, durante il periodo
+                            bizantino, anche se si ritiene che l'area fosse abitata già in epoche precedenti nell'antico
+                            insediamento di Sperlonga.</p>
+                        <p>Proprio qui sorge oggi Brancaleone Superiore, un affascinante borgo medievale abbandonato
+                            alla fine degli anni '50 ma ancora visitabile per i suoi suggestivi resti.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=351');"></div>
+                    <div class="content-image"
+                        style="background-image: url('../images/brancaleone/brancaleone-1.jpg');"></div>
                 </div>
-                
+
                 <div class="content-section reverse">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=352');"></div>
+                    <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone.jpg');">
+                    </div>
                     <div class="content-text">
                         <h3>Il Borgo Abbandonato</h3>
-                        <p>L'attuale Brancaleone Marina si sviluppa lungo la costa ionica per circa 10 chilometri, da Capo Spartivento fino alla Fiumara di Bruzzano. Il borgo era diviso in due zone principali: una vicino alla nuova chiesa dell'Annunziata (oggi Centro di Documentazione) e un'altra più a nord, dove sorgeva il nucleo abitato attorno all'antica chiesa protopapale arcipretale dell'Annunziata.</p>
-                        <p>Molte strutture del paese sono scavate o costruite direttamente nella roccia arenaria che circonda l'abitato, rendendo il luogo particolarmente suggestivo.</p>
+                        <p>L'attuale Brancaleone Marina si sviluppa lungo la costa ionica per circa 10 chilometri, da
+                            Capo Spartivento fino alla Fiumara di Bruzzano. Il borgo era diviso in due zone principali:
+                            una vicino alla nuova chiesa dell'Annunziata (oggi Centro di Documentazione) e un'altra più
+                            a nord, dove sorgeva il nucleo abitato attorno all'antica chiesa protopapale arcipretale
+                            dell'Annunziata.</p>
+                        <p>Molte strutture del paese sono scavate o costruite direttamente nella roccia arenaria che
+                            circonda l'abitato, rendendo il luogo particolarmente suggestivo.</p>
                     </div>
                 </div>
             </div>
@@ -629,28 +656,36 @@
             <div class="container">
                 <h2 class="section-title">Luoghi da Visitare</h2>
                 <div class="content-section">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=353');"></div>
+                    <div class="content-image"
+                        style="background-image: url('https://picsum.photos/500/350?random=353');"></div>
                     <div class="content-text">
                         <h3>I Siti Archeologici</h3>
                         <p>Tra i luoghi più interessanti dell'antico borgo si trovano:</p>
                         <ul style="color: var(--text-light); margin-left: 20px; margin-bottom: 20px;">
                             <li>La grotta-chiesa dell'Albero della Vita</li>
-                            <li>Il sito archeologico dei silos-granai, utilizzati per la conservazione dei cereali e dell'acqua</li>
+                            <li>Il sito archeologico dei silos-granai, utilizzati per la conservazione dei cereali e
+                                dell'acqua</li>
                             <li>La Grotta della Madonna del Riposo, con affreschi seicenteschi</li>
                             <li>La Piazzetta del Ponte</li>
                             <li>I resti dell'antica Chiesa dell'Annunziata di Brancaleone</li>
                         </ul>
-                        <p>Il Museo del Mare di Brancaleone, vicino al municipio, racconta la storia marittima del paese e la sua forte connessione con il mare.</p>
+                        <p>Il Museo del Mare di Brancaleone, vicino al municipio, racconta la storia marittima del paese
+                            e la sua forte connessione con il mare.</p>
                     </div>
                 </div>
-                
+
                 <div class="content-section reverse">
                     <div class="content-text">
                         <h3>La Torre di Galati</h3>
-                        <p>Lungo la valle del torrente Aranghìa si trova la Torre di Galati, importante testimonianza difensiva del territorio. Questa struttura domina il paesaggio e offre uno dei punti panoramici più suggestivi della zona.</p>
-                        <p>Il Caretta Calabria Conservation, centro dedicato alla tutela delle tartarughe marine, è un punto di riferimento per chi vuole conoscere le attività di protezione della fauna marina locale.</p>
+                        <p>Lungo la valle del torrente Aranghìa si trova la Torre di Galati, importante testimonianza
+                            difensiva del territorio. Questa struttura domina il paesaggio e offre uno dei punti
+                            panoramici più suggestivi della zona.</p>
+                        <p>Il Caretta Calabria Conservation, centro dedicato alla tutela delle tartarughe marine, è un
+                            punto di riferimento per chi vuole conoscere le attività di protezione della fauna marina
+                            locale.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=354');"></div>
+                    <div class="content-image"
+                        style="background-image: url('https://picsum.photos/500/350?random=354');"></div>
                 </div>
             </div>
         </section>
@@ -662,18 +697,30 @@
                 <div class="content-section">
                     <div class="content-text">
                         <h3>Protettori delle Tartarughe Marine</h3>
-                        <p>Brancaleone rappresenta uno dei luoghi più importanti della Calabria per la nidificazione della Caretta-Caretta. Ogni anno vengono individuati circa dieci nidi e, grazie all'attività dell'associazione Caretta Calabria Conservation, dal 2016 sono stati protetti oltre 130 nidi, dai quali sono nati circa 6000 piccoli esemplari.</p>
-                        <p>Le spiagge di Brancaleone, con il loro mare limpido e sabbia fine e dorata, offrono l'habitat ideale per la deposizione delle uova. Il progetto di conservazione ha fatto di Brancaleone un punto di riferimento internazionale per la protezione di questa specie a rischio.</p>
+                        <p>Brancaleone rappresenta uno dei luoghi più importanti della Calabria per la nidificazione
+                            della Caretta-Caretta. Ogni anno vengono individuati circa dieci nidi e, grazie all'attività
+                            dell'associazione Caretta Calabria Conservation, dal 2016 sono stati protetti oltre 130
+                            nidi, dai quali sono nati circa 6000 piccoli esemplari.</p>
+                        <p>Le spiagge di Brancaleone, con il loro mare limpido e sabbia fine e dorata, offrono l'habitat
+                            ideale per la deposizione delle uova. Il progetto di conservazione ha fatto di Brancaleone
+                            un punto di riferimento internazionale per la protezione di questa specie a rischio.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=355');"></div>
+                    <div class="content-image"
+                        style="background-image: url('../images/brancaleone/brancaleone-2.jpg');"></div>
                 </div>
-                
+
                 <div class="content-section reverse">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=356');"></div>
+                    <div class="content-image"
+                        style="background-image: url('../images/brancaleone/brancaleone-1.jpg');"></div>
                     <div class="content-text">
                         <h3>Il Profumo dei Gelsomini</h3>
-                        <p>Per molti anni Brancaleone è stata conosciuta come la "città dei gelsomini". Questo fiore, insieme al Bergamotto di Reggio Calabria, è stato una delle coltivazioni più caratteristiche della regione e uno dei profumi più apprezzati grazie anche al lavoro della Stazione Sperimentale delle Essenze di Reggio Calabria.</p>
-                        <p>Ancora oggi lunghi filari di gelsomini decorano il territorio e alcune antiche distillerie vengono custodite come preziose testimonianze della tradizione locale. Il profumo dei gelsomini accompagna i visitatori lungo tutto il lungomare, creando un'atmosfera unica.</p>
+                        <p>Per molti anni Brancaleone è stata conosciuta come la "città dei gelsomini". Questo fiore,
+                            insieme al Bergamotto di Reggio Calabria, è stato una delle coltivazioni più caratteristiche
+                            della regione e uno dei profumi più apprezzati grazie anche al lavoro della Stazione
+                            Sperimentale delle Essenze di Reggio Calabria.</p>
+                        <p>Ancora oggi lunghi filari di gelsomini decorano il territorio e alcune antiche distillerie
+                            vengono custodite come preziose testimonianze della tradizione locale. Il profumo dei
+                            gelsomini accompagna i visitatori lungo tutto il lungomare, creando un'atmosfera unica.</p>
                     </div>
                 </div>
             </div>
@@ -684,21 +731,31 @@
             <div class="container">
                 <h2 class="section-title">La Costa dei Gelsomini</h2>
                 <div class="content-section">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=357');"></div>
+                    <div class="content-image"
+                        style="background-image: url('../images/brancaleone/brancaleone-3.jpg');"></div>
                     <div class="content-text">
                         <h3>Terra di Profumi e Tradizioni</h3>
-                        <p>La Costa dei Gelsomini, conosciuta anche come Locride, è una delle destinazioni più affascinanti della Calabria. Si estende lungo la costa ionica della Città metropolitana di Reggio Calabria, tra Punta Stilo e Capo Spartivento.</p>
-                        <p>Qui il mare cristallino, la storia millenaria e il profumo del gelsomino creano un'esperienza autentica e memorabile. Il nome "Costa dei Gelsomini" nasce dalla storica coltivazione del Gelsomino, diffusa lungo tutta la fascia costiera.</p>
+                        <p>La Costa dei Gelsomini, conosciuta anche come Locride, è una delle destinazioni più
+                            affascinanti della Calabria. Si estende lungo la costa ionica della Città metropolitana di
+                            Reggio Calabria, tra Punta Stilo e Capo Spartivento.</p>
+                        <p>Qui il mare cristallino, la storia millenaria e il profumo del gelsomino creano un'esperienza
+                            autentica e memorabile. Il nome "Costa dei Gelsomini" nasce dalla storica coltivazione del
+                            Gelsomino, diffusa lungo tutta la fascia costiera.</p>
                     </div>
                 </div>
-                
+
                 <div class="content-section reverse">
                     <div class="content-text">
                         <h3>Le Gelsominaie e l'Oro Liquido</h3>
-                        <p>I fiori del gelsomino venivano raccolti dalle "gelsominaie", donne che all'alba raccoglievano i delicati boccioli destinati all'industria dei profumi. Questi preziosi fiori venivano esportati soprattutto in Francia, patria della profumeria, contribuendo a rendere la zona un punto di riferimento internazionale per le essenze naturali.</p>
-                        <p>Brancaleone, con i suoi 10 chilometri di costa, rappresenta il cuore pulsante di questa tradizione olfattiva che ha reso celebre l'intera regione.</p>
+                        <p>I fiori del gelsomino venivano raccolti dalle "gelsominaie", donne che all'alba raccoglievano
+                            i delicati boccioli destinati all'industria dei profumi. Questi preziosi fiori venivano
+                            esportati soprattutto in Francia, patria della profumeria, contribuendo a rendere la zona un
+                            punto di riferimento internazionale per le essenze naturali.</p>
+                        <p>Brancaleone, con i suoi 10 chilometri di costa, rappresenta il cuore pulsante di questa
+                            tradizione olfattiva che ha reso celebre l'intera regione.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=358');"></div>
+                    <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone.jpg');">
+                    </div>
                 </div>
             </div>
         </section>
@@ -711,22 +768,29 @@
                     <div class="tradizione-card">
                         <i class="fas fa-fish"></i>
                         <h4>Pesca e Mare</h4>
-                        <p>Brancaleone è profondamente legata al mare. La tradizione della pesca artigianale, la cucina a base di pesce fresco e le feste marineristiche rendono il paese unico nella sua identità costiera.</p>
+                        <p>Brancaleone è profondamente legata al mare. La tradizione della pesca artigianale, la cucina
+                            a base di pesce fresco e le feste marineristiche rendono il paese unico nella sua identità
+                            costiera.</p>
                     </div>
                     <div class="tradizione-card">
                         <i class="fas fa-star"></i>
                         <h4>Notte delle Stelle</h4>
-                        <p>Ogni estate, quando il cielo è particolarmente limpido, si organizzano osservazioni astronomiche lungo il lungomare. L'assenza di inquinamento luminoso rende Brancaleone ideale per ammirare la Via Lattea.</p>
+                        <p>Ogni estate, quando il cielo è particolarmente limpido, si organizzano osservazioni
+                            astronomiche lungo il lungomare. L'assenza di inquinamento luminoso rende Brancaleone ideale
+                            per ammirare la Via Lattea.</p>
                     </div>
                     <div class="tradizione-card">
                         <i class="fas fa-leaf"></i>
                         <h4>Gelsomini e Profumi</h4>
-                        <p>La raccolta dei gelsomini, avvenuta tradizionalmente all'alba, è ancora celebrata con piccole mostre e degustazioni di prodotti derivati da questo prezioso fiore che profuma tutto il territorio.</p>
+                        <p>La raccolta dei gelsomini, avvenuta tradizionalmente all'alba, è ancora celebrata con piccole
+                            mostre e degustazioni di prodotti derivati da questo prezioso fiore che profuma tutto il
+                            territorio.</p>
                     </div>
                     <div class="tradizione-card">
                         <i class="fas fa-paw"></i>
                         <h4>Tartarughe Marine</h4>
-                        <p>Il progetto di salvaguardia delle Caretta-Caretta coinvolge tutta la comunità. Ogni anno volontari e turisti partecipano alle attività di monitoraggio e protezione dei nidi.</p>
+                        <p>Il progetto di salvaguardia delle Caretta-Caretta coinvolge tutta la comunità. Ogni anno
+                            volontari e turisti partecipano alle attività di monitoraggio e protezione dei nidi.</p>
                     </div>
                 </div>
             </div>
@@ -737,12 +801,36 @@
             <div class="container">
                 <h2 class="section-title">Galleria Fotografica</h2>
                 <div class="gallery">
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=361" alt="Borgo Superiore"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=362" alt="Spiagge di Brancaleone"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=363" alt="Gelsomini in fiore"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=364" alt="Tartaruga Caretta-Caretta"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=365" alt="Torre di Galati"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=366" alt="Museo del Mare"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-1.jpg"
+                            alt="Brancaleone galleria 1"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-2.jpg"
+                            alt="Brancaleone galleria 2"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-3.jpg"
+                            alt="Brancaleone galleria 3"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-4.jpg"
+                            alt="Brancaleone galleria 4"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-5.jpg"
+                            alt="Brancaleone galleria 5"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-6.jpg"
+                            alt="Brancaleone galleria 6"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-7.jpg"
+                            alt="Brancaleone galleria 7"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-8.jpg"
+                            alt="Brancaleone galleria 8"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-9.jpg"
+                            alt="Brancaleone galleria 9"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-10.jpg"
+                            alt="Brancaleone galleria 10"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-11.jpg"
+                            alt="Brancaleone galleria 11"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-12.jpg"
+                            alt="Brancaleone galleria 12"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-13.jpg"
+                            alt="Brancaleone galleria 13"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-14.jpg"
+                            alt="Brancaleone galleria 14"></div>
+                    <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-15.jpg"
+                            alt="Brancaleone galleria 15"></div>
                 </div>
             </div>
         </section>
@@ -751,7 +839,7 @@
         <section style="background-color: white;">
             <div class="container">
                 <h2 class="section-title">Info Utili</h2>
-                <div class="info-grid">
+                <div class="info-grid contact-grid">
                     <div class="info-card">
                         <i class="fas fa-car"></i>
                         <h4>Come Arrivare</h4>
@@ -772,10 +860,11 @@
                             <strong>Comune di Brancaleone</strong><br>
                             Piazza Municipio, 1<br>
                             89040 Brancaleone (RC)<br>
-                            Tel: 0964 911111<br>
-                            Fax: 0964 911222<br>
-                            Email: protocollo@comune.brancaleone.rc.it<br>
-                            Sito web: <a href="http://www.comune.brancaleone.rc.it" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">www.comune.brancaleone.rc.it</a>
+                            Tel: 0964 933008<br>
+                            Pec: <a href="mailto:protocollo.brancaleone@asmepec.it"
+                                style="color: var(--text-light); text-decoration: none;">protocollo.brancaleone@asmepec.it</a><br>
+                            Sito web: <a href="https://www.comune.brancaleone.rc.it" target="_blank"
+                                style="color: var(--accent); text-decoration: none; font-weight: 600;">www.comune.brancaleone.rc.it</a>
                         </p>
                     </div>
                     <div class="info-card">
@@ -797,8 +886,11 @@
                         <p>
                             <strong>Caretta Conservation</strong><br>
                             Centro di recupero tartarughe marine<br>
-                            Tel: 0964 911333<br>
-                            Sito: <a href="http://www.carettacalabria.it" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">www.carettacalabria.it</a><br><br>
+                            Tel: +39 327 047 6383<br>
+                            Email: <a href="mailto:info@carettacalabriaconservation.org"
+                                style="color: var(--text-light); text-decoration: none;">info@carettacalabriaconservation.org</a><br>
+                            Sito: <a href="http://carettacalabriaconservation.org/" target="_blank"
+                                style="color: var(--accent); text-decoration: none; font-weight: 600;">www.carettacalabria.it</a><br><br>
                             <strong>Spiagge</strong><br>
                             10 km di costa con sabbia dorata<br>
                             Acqua cristallina, ideale per nidificazione
@@ -806,7 +898,8 @@
                     </div>
                 </div>
                 <div class="btn-center">
-                    <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
+                    <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla
+                        mappa</a>
                 </div>
             </div>
         </section>
@@ -816,7 +909,8 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
+                <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a>
+                </p>
                 <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.</p>
             </div>
             <div class="copyright">
@@ -825,4 +919,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -20,6 +20,8 @@ body {
   color: #1a1a2e;
   background-color: #fafbfc;
   overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ============================================

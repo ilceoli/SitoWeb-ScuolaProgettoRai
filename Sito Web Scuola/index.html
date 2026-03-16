@@ -1,229 +1,191 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Polo Tecnico Professionale Marconi - Ipsia Art - Zanotti</title>
-    <link rel="icon" type="image/webp" href="images/logo-flavicon.webp" />
-    <!-- Google Fonts e Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css"/>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- Leaflet CSS per la mappa -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="container header-content">
-        <div
-          class="logo"
-          style="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polo Tecnico Professionale Marconi - Ipsia Art - Zanotti</title>
+  <link rel="icon" type="image/webp" href="images/logo-flavicon.webp" />
+  <!-- Google Fonts e Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Leaflet CSS per la mappa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo" style="
             display: flex;
             align-items: center;
             gap: 10px;
             margin-left: -30px;
-          "
-        >
-          <img
-            src="images/logo.svg"
-            alt="Logo Repubblica Italiana"
-            style="height: 50px; width: auto"
-          />
-          <div>
-            <h1>Polo Tecnico Professionale</h1>
-            <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-          </div>
+          ">
+        <img src="images/logo.svg" alt="Logo Repubblica Italiana" style="height: 50px; width: auto" />
+        <div>
+          <h1>Polo Tecnico Professionale</h1>
+          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
         </div>
-        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#scuola">La scuola</a></li>
-          <li><a href="#corsi">Corsi</a></li>
-          <li><a href="#servizi">Servizi</a></li>
-          <li><a href="#borghi">Borghi</a></li>
-        </ul>
       </div>
-    </header>
+      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#scuola">La scuola</a></li>
+        <li><a href="#corsi">Corsi</a></li>
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#borghi">Borghi</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <main>
-      <!-- HOME / HERO (SLIDESHOW) -->
-      <section id="home" class="hero">
-        <!-- Due layer per le immagini (si alternano con fade) -->
-        <div class="hero-slideshow-layer" id="heroLayer1"></div>
-        <div class="hero-slideshow-layer" id="heroLayer2"></div>
-        <!-- Gradiente di sovrapposizione -->
-        <div class="hero-overlay"></div>
-        <!-- Contenuto testuale -->
-        <div class="container hero-content">
-          <h2>Benvenuti nel nuovo Polo Tecnico Professionale</h2>
-          <p>
-            Dal 2024/2025 l’IIS Marconi, l’IPSIA di Siderno e parte dello
-            Zanotti Bianco si uniscono per offrire un’offerta formativa ancora
-            più ricca e moderna.
-          </p>
-          <div class="hero-buttons">
-            <a href="#corsi" class="btn"
-              >Scopri i corsi <i class="fas fa-arrow-right"></i
-            ></a>
-            <a
-              href="https://www.iismarconisiderno.edu.it"
-              target="_blank"
-              class="btn btn-white"
-              >Visita il sito ufficiale <i class="fas fa-external-link-alt"></i
-            ></a>
-          </div>
+  <main>
+    <!-- HOME / HERO (SLIDESHOW) -->
+    <section id="home" class="hero">
+      <!-- Due layer per le immagini (si alternano con fade) -->
+      <div class="hero-slideshow-layer" id="heroLayer1"></div>
+      <div class="hero-slideshow-layer" id="heroLayer2"></div>
+      <!-- Gradiente di sovrapposizione -->
+      <div class="hero-overlay"></div>
+      <!-- Contenuto testuale -->
+      <div class="container hero-content">
+        <h2>Benvenuti nel nuovo Polo Tecnico Professionale</h2>
+        <p>
+          Dal 2024/2025 l’IIS Marconi, l’IPSIA di Siderno e parte dello
+          Zanotti Bianco si uniscono per offrire un’offerta formativa ancora
+          più ricca e moderna.
+        </p>
+        <div class="hero-buttons">
+          <a href="#corsi" class="btn">Scopri i corsi <i class="fas fa-arrow-right"></i></a>
+          <a href="https://www.iismarconisiderno.edu.it" target="_blank" class="btn btn-white">Visita il sito ufficiale
+            <i class="fas fa-external-link-alt"></i></a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- LA SCUOLA: storia, numeri, spazi -->
-      <section id="scuola">
-        <div class="container">
-          <h2 class="section-title">La scuola</h2>
-          <div
-            style="
+    <!-- LA SCUOLA: storia, numeri, spazi -->
+    <section id="scuola">
+      <div class="container">
+        <h2 class="section-title">La scuola</h2>
+        <div style="
               display: grid;
               grid-template-columns: 1fr 1fr;
               gap: 40px;
               align-items: start;
-            "
-          >
-            <!-- Colonna sinistra: timeline arricchita -->
-            <div>
-              <h3
-                style="
+            ">
+          <!-- Colonna sinistra: timeline arricchita -->
+          <div>
+            <h3 style="
                   color: var(--primary);
                   font-size: 1.8rem;
                   margin-bottom: 20px;
-                "
-              >
-                Oltre 75 anni di storia
-              </h3>
-              <ul class="timeline">
-                <li>
-                  <strong>1946</strong> – L’Amministrazione Comunale di Siderno,
-                  guidata dal sindaco Francesco Macrì, avvia l’iniziativa per
-                  istituire una scuola superiore. Nasce così il germe
-                  dell'istruzione secondaria nella Locride.
-                </li>
-                <li>
-                  <strong>1949/50</strong> – L'istituto apre come scuola privata
-                  gestita dal Comune, ospitata in locali provvisori. Le prime
-                  classi sono poche decine di studenti, ma l'entusiasmo è
-                  grande.
-                </li>
-                <li>
-                  <strong>1951</strong> – Diventa scuola pubblica come sezione
-                  staccata del Liceo Ginnasio "Michele Piria" di Reggio
-                  Calabria. È il primo riconoscimento statale.
-                </li>
-                <li>
-                  <strong>1952</strong> – Conquista l'autonomia didattica e
-                  amministrativa: nasce ufficialmente la scuola superiore di
-                  Siderno.
-                </li>
-                <li>
-                  <strong>1956/57</strong> – Viene intitolata a "Giuseppe
-                  Garibaldi", eroe dei due mondi, in omaggio ai valori
-                  risorgimentali. Il Preside Vito Papaluca commissiona
-                  all'artista Remo Argirò il ritratto di Garibaldi, che ancora
-                  oggi fa parte del patrimonio dell'istituto.
-                </li>
-                <li>
-                  <strong>1958/59</strong> – La nuova Preside, prof.ssa Maria
-                  Fenoglio, decide di intitolare la scuola a "Guglielmo
-                  Marconi", genio delle telecomunicazioni. Remo Argirò dipinge
-                  anche il ritratto di Marconi, che è ancora esposto nella
-                  presidenza. Nello stesso anno vengono assorbite le classi
-                  dell'Istituto Tecnico per Geometri, ampliando l'offerta
-                  formativa.
-                </li>
-                <li>
-                  <strong>2007/2009</strong> – Dopo decenni in diverse sedi (via
-                  Reggio, via Garibaldi), la scuola si trasferisce nella nuova e
-                  moderna sede di viale Sasso Marconi, progettata per accogliere
-                  studenti e laboratori all'avanguardia.
-                </li>
-                <li>
-                  <strong>2012/2013</strong> – Fusione con l'I.T.G. "Pitagora":
-                  nasce l'I.I.S. "G. Marconi", un istituto sempre più radicato
-                  nel territorio.
-                </li>
-                <li>
-                  <strong>2024/2025</strong> – Nasce il Polo Tecnico
-                  Professionale "Marconi – Ipsia Art – Zanotti", dall'unione con
-                  l'IPSIA di Siderno e parte dello Zanotti Bianco di Marina di
-                  Gioiosa Ionica. Una nuova era per la formazione tecnica e
-                  professionale della Locride.
-                </li>
-              </ul>
-            </div>
-            <!-- Colonna destra: foto + box informativo -->
-            <div style="display: flex; flex-direction: column; gap: 20px">
-              <!-- Ritratto di Marconi con margine superiore per spostarlo in basso -->
-              <div
-                style="
+                ">
+              Oltre 75 anni di storia
+            </h3>
+            <ul class="timeline">
+              <li>
+                <strong>1946</strong> – L’Amministrazione Comunale di Siderno,
+                guidata dal sindaco Francesco Macrì, avvia l’iniziativa per
+                istituire una scuola superiore. Nasce così il germe
+                dell'istruzione secondaria nella Locride.
+              </li>
+              <li>
+                <strong>1949/50</strong> – L'istituto apre come scuola privata
+                gestita dal Comune, ospitata in locali provvisori. Le prime
+                classi sono poche decine di studenti, ma l'entusiasmo è
+                grande.
+              </li>
+              <li>
+                <strong>1951</strong> – Diventa scuola pubblica come sezione
+                staccata del Liceo Ginnasio "Michele Piria" di Reggio
+                Calabria. È il primo riconoscimento statale.
+              </li>
+              <li>
+                <strong>1952</strong> – Conquista l'autonomia didattica e
+                amministrativa: nasce ufficialmente la scuola superiore di
+                Siderno.
+              </li>
+              <li>
+                <strong>1956/57</strong> – Viene intitolata a "Giuseppe
+                Garibaldi", eroe dei due mondi, in omaggio ai valori
+                risorgimentali. Il Preside Vito Papaluca commissiona
+                all'artista Remo Argirò il ritratto di Garibaldi, che ancora
+                oggi fa parte del patrimonio dell'istituto.
+              </li>
+              <li>
+                <strong>1958/59</strong> – La nuova Preside, prof.ssa Maria
+                Fenoglio, decide di intitolare la scuola a "Guglielmo
+                Marconi", genio delle telecomunicazioni. Remo Argirò dipinge
+                anche il ritratto di Marconi, che è ancora esposto nella
+                presidenza. Nello stesso anno vengono assorbite le classi
+                dell'Istituto Tecnico per Geometri, ampliando l'offerta
+                formativa.
+              </li>
+              <li>
+                <strong>2007/2009</strong> – Dopo decenni in diverse sedi (via
+                Reggio, via Garibaldi), la scuola si trasferisce nella nuova e
+                moderna sede di viale Sasso Marconi, progettata per accogliere
+                studenti e laboratori all'avanguardia.
+              </li>
+              <li>
+                <strong>2012/2013</strong> – Fusione con l'I.T.G. "Pitagora":
+                nasce l'I.I.S. "G. Marconi", un istituto sempre più radicato
+                nel territorio.
+              </li>
+              <li>
+                <strong>2024/2025</strong> – Nasce il Polo Tecnico
+                Professionale "Marconi – Ipsia Art – Zanotti", dall'unione con
+                l'IPSIA di Siderno e parte dello Zanotti Bianco di Marina di
+                Gioiosa Ionica. Una nuova era per la formazione tecnica e
+                professionale della Locride.
+              </li>
+            </ul>
+          </div>
+          <!-- Colonna destra: foto + box informativo -->
+          <div style="display: flex; flex-direction: column; gap: 20px">
+            <!-- Ritratto di Marconi con margine superiore per spostarlo in basso -->
+            <div style="
                   background: var(--white);
                   border-radius: 20px;
                   overflow: hidden;
                   box-shadow: var(--shadow-lg);
                   border: 1px solid rgba(0, 0, 0, 0.04);
                   margin-top: 40px;
-                "
-              >
-                <img
-                  src="images/guglielmomarconi.webp"
-                  alt="Guglielmo Marconi"
-                  style="width: 100%; height: auto; display: block"
-                />
-                <div
-                  style="
+                ">
+              <img src="images/guglielmomarconi.webp" alt="Guglielmo Marconi"
+                style="width: 100%; height: auto; display: block" />
+              <div style="
                     padding: 20px;
                     background: var(--white);
                     text-align: center;
-                  "
-                >
-                  <p
-                    style="
+                  ">
+                <p style="
                       color: var(--text-light);
                       font-size: 0.95rem;
                       margin-bottom: 5px;
-                    "
-                  >
-                    <i
-                      class="fas fa-quote-left"
-                      style="
+                    ">
+                  <i class="fas fa-quote-left" style="
                         color: var(--accent);
                         opacity: 0.5;
                         margin-right: 5px;
-                      "
-                    ></i>
-                    Il ritratto di Guglielmo Marconi. Dal 1958 l'istituto porta
-                    il suo nome.
-                    <i
-                      class="fas fa-quote-right"
-                      style="
+                      "></i>
+                  Il ritratto di Guglielmo Marconi. Dal 1958 l'istituto porta
+                  il suo nome.
+                  <i class="fas fa-quote-right" style="
                         color: var(--accent);
                         opacity: 0.5;
                         margin-left: 5px;
-                      "
-                    ></i>
-                  </p>
-                </div>
+                      "></i>
+                </p>
               </div>
-              <!-- Breve box informativo -->
-              <div
-                style="
+            </div>
+            <!-- Breve box informativo -->
+            <div style="
                   background: linear-gradient(
                     145deg,
                     var(--primary-dark),
@@ -233,363 +195,323 @@
                   padding: 25px;
                   color: white;
                   text-align: center;
-                "
-              >
-                <i
-                  class="fas fa-gem"
-                  style="
+                ">
+              <i class="fas fa-gem" style="
                     font-size: 2rem;
                     color: var(--accent);
                     margin-bottom: 10px;
-                  "
-                ></i>
-                <h4 style="font-size: 1.2rem; margin-bottom: 10px">
-                  Un patrimonio di arte e storia
-                </h4>
-                <p style="opacity: 0.9; font-size: 0.95rem">
-                  I due dipinti di Remo Argirò, realizzati a distanza di un anno
-                  l'uno dall'altro, sono custoditi nella presidenza e
-                  rappresentano la memoria artistica e culturale dell'istituto.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Galleria foto (sostituire con le vostre) -->
-          <div class="gallery">
-            <div class="gallery-item">
-              <img
-                src="https://picsum.photos/400/300?random=10"
-                alt="Foto scuola 1"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="https://picsum.photos/400/300?random=11"
-                alt="Foto scuola 2"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="https://picsum.photos/400/300?random=12"
-                alt="Foto scuola 3"
-              />
-            </div>
-          </div>
-
-          <!-- Numeri aggiornati -->
-          <div class="stats-grid">
-            <div class="stat-item">
-              <div class="stat-number">915</div>
-              <div class="stat-label">Studenti</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">48</div>
-              <div class="stat-label">Classi</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">4</div>
-              <div class="stat-label">Plessi</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Laboratori</div>
+                  "></i>
+              <h4 style="font-size: 1.2rem; margin-bottom: 10px">
+                Un patrimonio di arte e storia
+              </h4>
+              <p style="opacity: 0.9; font-size: 0.95rem">
+                I due dipinti di Remo Argirò, realizzati a distanza di un anno
+                l'uno dall'altro, sono custoditi nella presidenza e
+                rappresentano la memoria artistica e culturale dell'istituto.
+              </p>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- CORSI DI STUDIO (offerta completa) -->
-      <section id="corsi" style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">I nostri corsi</h2>
-          <p class="section-subtitle">
-            Cinque anni per costruire il tuo futuro: percorsi tecnici e
-            professionali
-          </p>
-          <div class="card-grid">
-            <!-- AFM -->
-            <div class="card">
-              <div
-                class="card-image"
-                style="
+        <!-- Galleria foto (sostituire con le vostre) -->
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="https://picsum.photos/400/300?random=10" alt="Foto scuola 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://picsum.photos/400/300?random=11" alt="Foto scuola 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://picsum.photos/400/300?random=12" alt="Foto scuola 3" />
+          </div>
+        </div>
+
+        <!-- Numeri aggiornati -->
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">915</div>
+            <div class="stat-label">Studenti</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">48</div>
+            <div class="stat-label">Classi</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Plessi</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Laboratori</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORSI DI STUDIO (offerta completa) -->
+    <section id="corsi" style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">I nostri corsi</h2>
+        <p class="section-subtitle">
+          Cinque anni per costruire il tuo futuro: percorsi tecnici e
+          professionali
+        </p>
+        <div class="card-grid">
+          <!-- AFM -->
+          <div class="card">
+            <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   color: white;
                   font-size: 3rem;
-                "
-              >
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <div class="card-content">
-                <h3>Amministrazione, Finanza e Marketing</h3>
-                <p>
-                  Competenze in economia aziendale, gestione finanziaria,
-                  marketing e strumenti digitali per l'impresa.
-                </p>
-                <span class="tag">Tecnico</span>
-              </div>
+                ">
+              <i class="fas fa-chart-line"></i>
             </div>
-            <!-- SIA -->
-            <div class="card">
-              <div
-                class="card-image"
-                style="
-                  background-color: var(--primary-light);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: white;
-                  font-size: 3rem;
-                "
-              >
-                <i class="fas fa-laptop-code"></i>
-              </div>
-              <div class="card-content">
-                <h3>Sistemi Informativi Aziendali</h3>
-                <p>
-                  Sviluppo software, basi di dati, sistemi informativi e analisi
-                  dei processi aziendali.
-                </p>
-                <span class="tag">Tecnico</span>
-              </div>
+            <div class="card-content">
+              <h3>Amministrazione, Finanza e Marketing</h3>
+              <p>
+                Competenze in economia aziendale, gestione finanziaria,
+                marketing e strumenti digitali per l'impresa.
+              </p>
+              <span class="tag">Tecnico</span>
             </div>
-            <!-- CAT -->
-            <div class="card">
-              <div
-                class="card-image"
-                style="
+          </div>
+          <!-- SIA -->
+          <div class="card">
+            <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   color: white;
                   font-size: 3rem;
-                "
-              >
-                <i class="fas fa-draw-polygon"></i>
-              </div>
-              <div class="card-content">
-                <h3>Costruzioni, Ambiente e Territorio</h3>
-                <p>
-                  Progettazione edilizia, topografia, estimo, sicurezza e
-                  gestione sostenibile del territorio.
-                </p>
-                <span class="tag">Tecnico</span>
-              </div>
+                ">
+              <i class="fas fa-laptop-code"></i>
             </div>
-            <!-- Turismo -->
-            <div class="card">
-              <div
-                class="card-image"
-                style="
-                  background-color: var(--primary-light);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: white;
-                  font-size: 3rem;
-                "
-              >
-                <i class="fas fa-umbrella-beach"></i>
-              </div>
-              <div class="card-content">
-                <h3>Turismo</h3>
-                <p>
-                  Lingue straniere, legislazione turistica, tecniche di
-                  accoglienza e marketing territoriale.
-                </p>
-                <span class="tag">Tecnico</span>
-              </div>
+            <div class="card-content">
+              <h3>Sistemi Informativi Aziendali</h3>
+              <p>
+                Sviluppo software, basi di dati, sistemi informativi e analisi
+                dei processi aziendali.
+              </p>
+              <span class="tag">Tecnico</span>
             </div>
-            <!-- Logistica -->
-            <div class="card">
-              <div
-                class="card-image"
-                style="
+          </div>
+          <!-- CAT -->
+          <div class="card">
+            <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   color: white;
                   font-size: 3rem;
-                "
-              >
-                <i class="fas fa-truck"></i>
-              </div>
-              <div class="card-content">
-                <h3>Logistica e Trasporti</h3>
-                <p>
-                  Supply chain, gestione magazzino, trasporti, normativa e
-                  pianificazione dei flussi.
-                </p>
-                <span class="tag">Tecnico</span>
-              </div>
+                ">
+              <i class="fas fa-draw-polygon"></i>
             </div>
-            <!-- Moda per il Made in Italy -->
-            <div class="card">
-              <div
-                class="card-image"
-                style="
-                  background-color: var(--primary-light);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: white;
-                  font-size: 3rem;
-                "
-              >
-                <i class="fas fa-tshirt"></i>
-              </div>
-              <div class="card-content">
-                <h3>Moda per il Made in Italy</h3>
-                <p>
-                  Progettazione e realizzazione di capi, artigianato digitale e
-                  tradizione sartoriale.
-                </p>
-                <span class="tag">Professionale</span>
-              </div>
+            <div class="card-content">
+              <h3>Costruzioni, Ambiente e Territorio</h3>
+              <p>
+                Progettazione edilizia, topografia, estimo, sicurezza e
+                gestione sostenibile del territorio.
+              </p>
+              <span class="tag">Tecnico</span>
             </div>
-            <!-- Odontotecnico -->
-            <div class="card">
-              <div
-                class="card-image"
-                style="
+          </div>
+          <!-- Turismo -->
+          <div class="card">
+            <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   color: white;
                   font-size: 3rem;
-                "
-              >
-                <i class="fas fa-tooth"></i>
-              </div>
-              <div class="card-content">
-                <h3>Odontotecnico</h3>
-                <p>
-                  Protesi dentaria, materiali dentali, collaborazione con
-                  odontoiatri e tecniche di laboratorio.
-                </p>
-                <span class="tag">Professionale</span>
-              </div>
+                ">
+              <i class="fas fa-umbrella-beach"></i>
             </div>
-            <!-- Manutenzione e Assistenza Tecnica -->
-            <div class="card">
-              <div
-                class="card-image"
-                style="
+            <div class="card-content">
+              <h3>Turismo</h3>
+              <p>
+                Lingue straniere, legislazione turistica, tecniche di
+                accoglienza e marketing territoriale.
+              </p>
+              <span class="tag">Tecnico</span>
+            </div>
+          </div>
+          <!-- Logistica -->
+          <div class="card">
+            <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   color: white;
                   font-size: 3rem;
-                "
-              >
-                <i class="fas fa-cogs"></i>
-              </div>
-              <div class="card-content">
-                <h3>Manutenzione e Assistenza Tecnica</h3>
-                <p>
-                  Impianti meccanici ed elettrici, automazione, diagnostica e
-                  manutenzione industriale.
-                </p>
-                <span class="tag">Professionale</span>
-              </div>
+                ">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="card-content">
+              <h3>Logistica e Trasporti</h3>
+              <p>
+                Supply chain, gestione magazzino, trasporti, normativa e
+                pianificazione dei flussi.
+              </p>
+              <span class="tag">Tecnico</span>
+            </div>
+          </div>
+          <!-- Moda per il Made in Italy -->
+          <div class="card">
+            <div class="card-image" style="
+                  background-color: var(--primary-light);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: white;
+                  font-size: 3rem;
+                ">
+              <i class="fas fa-tshirt"></i>
+            </div>
+            <div class="card-content">
+              <h3>Moda per il Made in Italy</h3>
+              <p>
+                Progettazione e realizzazione di capi, artigianato digitale e
+                tradizione sartoriale.
+              </p>
+              <span class="tag">Professionale</span>
+            </div>
+          </div>
+          <!-- Odontotecnico -->
+          <div class="card">
+            <div class="card-image" style="
+                  background-color: var(--primary-light);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: white;
+                  font-size: 3rem;
+                ">
+              <i class="fas fa-tooth"></i>
+            </div>
+            <div class="card-content">
+              <h3>Odontotecnico</h3>
+              <p>
+                Protesi dentaria, materiali dentali, collaborazione con
+                odontoiatri e tecniche di laboratorio.
+              </p>
+              <span class="tag">Professionale</span>
+            </div>
+          </div>
+          <!-- Manutenzione e Assistenza Tecnica -->
+          <div class="card">
+            <div class="card-image" style="
+                  background-color: var(--primary-light);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: white;
+                  font-size: 3rem;
+                ">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="card-content">
+              <h3>Manutenzione e Assistenza Tecnica</h3>
+              <p>
+                Impianti meccanici ed elettrici, automazione, diagnostica e
+                manutenzione industriale.
+              </p>
+              <span class="tag">Professionale</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SERVIZI (ampliati) -->
-      <section id="servizi">
-        <div class="container">
-          <h2 class="section-title">Servizi</h2>
-          <p class="section-subtitle">Per studenti, genitori e personale</p>
-          <div class="servizi-grid">
-            <div class="servizio-item">
-              <div class="servizio-icon">
-                <i class="fas fa-calendar-alt"></i>
-              </div>
-              <h3>Segreteria digitale</h3>
-              <p>
-                Registro elettronico (Scuolaattiva), circolari e modulistica
-                online.
-              </p>
+    <!-- SERVIZI (ampliati) -->
+    <section id="servizi">
+      <div class="container">
+        <h2 class="section-title">Servizi</h2>
+        <p class="section-subtitle">Per studenti, genitori e personale</p>
+        <div class="servizi-grid">
+          <div class="servizio-item">
+            <div class="servizio-icon">
+              <i class="fas fa-calendar-alt"></i>
             </div>
-            <div class="servizio-item">
-              <div class="servizio-icon"><i class="fas fa-clock"></i></div>
-              <h3>Orari lezioni</h3>
-              <p>Orario scolastico aggiornato per tutte le classi (PDF).</p>
+            <h3>Segreteria digitale</h3>
+            <p>
+              Registro elettronico (Scuolaattiva), circolari e modulistica
+              online.
+            </p>
+          </div>
+          <div class="servizio-item">
+            <div class="servizio-icon"><i class="fas fa-clock"></i></div>
+            <h3>Orari lezioni</h3>
+            <p>Orario scolastico aggiornato per tutte le classi (PDF).</p>
+          </div>
+          <div class="servizio-item">
+            <div class="servizio-icon"><i class="fas fa-laptop"></i></div>
+            <h3>Piattaforme e-learning</h3>
+            <p>Google Workspace, Classroom e materiali didattici.</p>
+          </div>
+          <div class="servizio-item">
+            <div class="servizio-icon"><i class="fas fa-compass"></i></div>
+            <h3>Orientamento in entrata</h3>
+            <p>
+              Open day, visite guidate e materiale informativo per le medie.
+            </p>
+          </div>
+          <div class="servizio-item">
+            <div class="servizio-icon"><i class="fas fa-book"></i></div>
+            <h3>Biblioteca</h3>
+            <p>
+              10.000 volumi, 6.000 brani musicali, 3.500 e-book, 100
+              audiolibri. Prestito digitale MLOL.
+            </p>
+          </div>
+          <div class="servizio-item">
+            <div class="servizio-icon">
+              <i class="fas fa-certificate"></i>
             </div>
-            <div class="servizio-item">
-              <div class="servizio-icon"><i class="fas fa-laptop"></i></div>
-              <h3>Piattaforme e-learning</h3>
-              <p>Google Workspace, Classroom e materiali didattici.</p>
-            </div>
-            <div class="servizio-item">
-              <div class="servizio-icon"><i class="fas fa-compass"></i></div>
-              <h3>Orientamento in entrata</h3>
-              <p>
-                Open day, visite guidate e materiale informativo per le medie.
-              </p>
-            </div>
-            <div class="servizio-item">
-              <div class="servizio-icon"><i class="fas fa-book"></i></div>
-              <h3>Biblioteca</h3>
-              <p>
-                10.000 volumi, 6.000 brani musicali, 3.500 e-book, 100
-                audiolibri. Prestito digitale MLOL.
-              </p>
-            </div>
-            <div class="servizio-item">
-              <div class="servizio-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <h3>Sede ECDL</h3>
-              <p>Accreditata per esami Patente Europea del Computer.</p>
-            </div>
-            <div class="servizio-item">
-              <div class="servizio-icon"><i class="fas fa-gift"></i></div>
-              <h3>Comodato d'uso libri</h3>
-              <p>Prestito gratuito dei libri di testo per gli studenti.</p>
-            </div>
-            <div class="servizio-item">
-              <div class="servizio-icon"><i class="fas fa-heart"></i></div>
-              <h3>Sportello d'ascolto</h3>
-              <p>Supporto psicologico per alunni e genitori.</p>
-            </div>
+            <h3>Sede ECDL</h3>
+            <p>Accreditata per esami Patente Europea del Computer.</p>
+          </div>
+          <div class="servizio-item">
+            <div class="servizio-icon"><i class="fas fa-gift"></i></div>
+            <h3>Comodato d'uso libri</h3>
+            <p>Prestito gratuito dei libri di testo per gli studenti.</p>
+          </div>
+          <div class="servizio-item">
+            <div class="servizio-icon"><i class="fas fa-heart"></i></div>
+            <h3>Sportello d'ascolto</h3>
+            <p>Supporto psicologico per alunni e genitori.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE BORGHI (mappa interattiva + schede) -->
-      <section id="borghi" style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">I Borghi del Territorio</h2>
-          <p class="section-subtitle">
-            Scopri i borghi e le località della Locride: clicca sui marker per
-            visitare le pagine dedicate
-          </p>
+    <!-- SEZIONE BORGHI (mappa interattiva + schede) -->
+    <section id="borghi" style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">I Borghi del Territorio</h2>
+        <p class="section-subtitle">
+          Scopri i borghi e le località della Locride: clicca sui marker per
+          visitare le pagine dedicate
+        </p>
 
-          <!-- Contenitore mappa -->
-          <div
-            id="map"
-            style="
+        <!-- Contenitore mappa -->
+        <div id="map" style="
               height: 500px;
               border-radius: 12px;
               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
               margin-bottom: 40px;
-            "
-          ></div>
+            "></div>
 
-          <!-- Schede descrittive dei borghi (14 card) -->
-          <div class="borghi-grid">
-            <!-- Siderno -->
-            <!-- <div class="borgo-card">
+        <!-- Schede descrittive dei borghi (14 card) -->
+        <div class="borghi-grid">
+          <!-- Siderno -->
+          <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=30');"></div>
                         <div class="borgo-content">
                             <h3>Siderno</h3>
@@ -597,25 +519,22 @@
                             <a href="borghi/siderno.html" class="btn-borgo">Scopri Siderno →</a>
                         </div>
                     </div> -->
-            <!-- Locri -->
-            <div class="borgo-card">
-              <div
-                class="borgo-image"
-                style="
-                  background-image: url(&quot;https://picsum.photos/400/200?random=31&quot;);
-                "
-              ></div>
-              <div class="borgo-content">
-                <h3>Locri</h3>
-                <p>
-                  Antica colonia greca con il famoso Teatro e il Museo
-                  Nazionale. Un polo culturale di rilievo nella Locride.
-                </p>
-                <a href="borghi/locri.html" class="btn-borgo">Scopri Locri →</a>
-              </div>
+          <!-- Locri -->
+          <div class="borgo-card">
+            <div class="borgo-image" style="
+                  background-image: url('images/locri/locri.jpg');
+                "></div>
+            <div class="borgo-content">
+              <h3>Locri</h3>
+              <p>
+                Antica colonia greca con il famoso Teatro e il Museo
+                Nazionale. Un polo culturale di rilievo nella Locride.
+              </p>
+              <a href="borghi/locri.html" class="btn-borgo">Scopri Locri →</a>
             </div>
-            <!-- Gioiosa Ionica -->
-            <!-- <div class="borgo-card">
+          </div>
+          <!-- Gioiosa Ionica -->
+          <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=32');"></div>
                         <div class="borgo-content">
                             <h3>Gioiosa Ionica</h3>
@@ -623,27 +542,22 @@
                             <a href="borghi/gioiosa.html" class="btn-borgo">Scopri Gioiosa →</a>
                         </div>
                     </div> -->
-            <!-- Bianco -->
-            <div class="borgo-card">
-              <div
-                class="borgo-image"
-                style="
-                  background-image: url(&quot;https://picsum.photos/400/200?random=33&quot;);
-                "
-              ></div>
-              <div class="borgo-content">
-                <h3>Bianco</h3>
-                <p>
-                  Comune costiero noto per le spiagge e il centro storico. Ricco
-                  di tradizioni e legato alla figura del pittore e scultore.
-                </p>
-                <a href="borghi/bianco.html" class="btn-borgo"
-                  >Scopri Bianco →</a
-                >
-              </div>
+          <!-- Bianco -->
+          <div class="borgo-card">
+            <div class="borgo-image" style="
+                  background-image: url('images/bianco/bianco.jpg');
+                "></div>
+            <div class="borgo-content">
+              <h3>Bianco</h3>
+              <p>
+                Comune costiero noto per le spiagge e il centro storico. Ricco
+                di tradizioni e legato alla figura del pittore e scultore.
+              </p>
+              <a href="borghi/bianco.html" class="btn-borgo">Scopri Bianco →</a>
             </div>
-            <!-- Stilo -->
-            <!-- <div class="borgo-card">
+          </div>
+          <!-- Stilo -->
+          <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=34');"></div>
                         <div class="borgo-content">
                             <h3>Stilo</h3>
@@ -651,84 +565,62 @@
                             <a href="borghi/stilo.html" class="btn-borgo">Scopri Stilo →</a>
                         </div>
                     </div> -->
-            <!-- Brancaleone -->
-            <div class="borgo-card">
-              <div
-                class="borgo-image"
-                style="
-                  background-image: url(&quot;https://picsum.photos/400/200?random=35&quot;);
-                "
-              ></div>
-              <div class="borgo-content">
-                <h3>Brancaleone</h3>
-                <p>
-                  Città natale del celebre regista e attore. Spiagge dorate e
-                  tradizioni legate al mare.
-                </p>
-                <a href="borghi/brancaleone.html" class="btn-borgo"
-                  >Scopri Brancaleone →</a
-                >
-              </div>
+          <!-- Brancaleone -->
+          <div class="borgo-card">
+            <div class="borgo-image" style="background-image: url('images/brancaleone/brancaleone.jpg');"></div>
+            <div class="borgo-content">
+              <h3>Brancaleone</h3>
+              <p>
+                Città natale del celebre regista e attore. Spiagge dorate e
+                tradizioni legate al mare.
+              </p>
+              <a href="borghi/brancaleone.html" class="btn-borgo">Scopri Brancaleone →</a>
             </div>
-            <!-- Caulonia -->
-            <div class="borgo-card">
-              <div
-                class="borgo-image"
-                style="
-                  background-image: url(&quot;https://picsum.photos/400/200?random=36&quot;);
-                "
-              ></div>
-              <div class="borgo-content">
-                <h3>Caulonia</h3>
-                <p>
-                  Antica Caulonia, ricca di storia e arte. Il centro storico
-                  conserva palazzi e chiese di pregio.
-                </p>
-                <a href="borghi/caulonia.html" class="btn-borgo"
-                  >Scopri Caulonia →</a
-                >
-              </div>
+          </div>
+          <!-- Caulonia -->
+          <div class="borgo-card">
+            <div class="borgo-image" style="
+                  background-image: url('images/caulonia/caulonia.jpg');
+                "></div>
+            <div class="borgo-content">
+              <h3>Caulonia</h3>
+              <p>
+                Antica Caulonia, ricca di storia e arte. Il centro storico
+                conserva palazzi e chiese di pregio.
+              </p>
+              <a href="borghi/caulonia.html" class="btn-borgo">Scopri Caulonia →</a>
             </div>
-            <!-- Cimina -->
-            <div class="borgo-card">
-              <div
-                class="borgo-image"
-                style="
-                  background-image: url(&quot;https://picsum.photos/400/200?random=37&quot;);
-                "
-              ></div>
-              <div class="borgo-content">
-                <h3>Cimina</h3>
-                <p>
-                  Piccolo borgo immerso nel verde, con antichi mestieri e
-                  tradizioni agroalimentari.
-                </p>
-                <a href="borghi/cimina.html" class="btn-borgo"
-                  >Scopri Cimina →</a
-                >
-              </div>
+          </div>
+          <!-- Cimina -->
+          <div class="borgo-card">
+            <div class="borgo-image" style="
+                  background-image: url('images/cimina/cimina.jpg');
+                "></div>
+            <div class="borgo-content">
+              <h3>Cimina</h3>
+              <p>
+                Piccolo borgo immerso nel verde, con antichi mestieri e
+                tradizioni agroalimentari.
+              </p>
+              <a href="borghi/cimina.html" class="btn-borgo">Scopri Cimina →</a>
             </div>
-            <!-- Villa romana di Casignana -->
-            <div class="borgo-card">
-              <div
-                class="borgo-image"
-                style="
-                  background-image: url(&quot;https://picsum.photos/400/200?random=38&quot;);
-                "
-              ></div>
-              <div class="borgo-content">
-                <h3>Villa Romana di Casignana</h3>
-                <p>
-                  Importante sito archeologico con mosaici ben conservati,
-                  testimonianza della vita nell'antica Roma.
-                </p>
-                <a href="borghi/casignana.html" class="btn-borgo"
-                  >Scopri Casignana →</a
-                >
-              </div>
+          </div>
+          <!-- Villa romana di Casignana -->
+          <div class="borgo-card">
+            <div class="borgo-image" style="
+                  background-image: url('images/casignana/casignana.jpg');
+                "></div>
+            <div class="borgo-content">
+              <h3>Villa Romana di Casignana</h3>
+              <p>
+                Importante sito archeologico con mosaici ben conservati,
+                testimonianza della vita nell'antica Roma.
+              </p>
+              <a href="borghi/casignana.html" class="btn-borgo">Scopri Casignana →</a>
             </div>
-            <!-- Riace -->
-            <!-- <div class="borgo-card">
+          </div>
+          <!-- Riace -->
+          <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=39');"></div>
                         <div class="borgo-content">
                             <h3>Riace</h3>
@@ -736,8 +628,8 @@
                             <a href="borghi/riace.html" class="btn-borgo">Scopri Riace →</a>
                         </div>
                     </div> -->
-            <!-- Roccella -->
-            <!-- <div class="borgo-card">
+          <!-- Roccella -->
+          <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=40');"></div>
                         <div class="borgo-content">
                             <h3>Roccella Ionica</h3>
@@ -745,8 +637,8 @@
                             <a href="borghi/roccella.html" class="btn-borgo">Scopri Roccella →</a>
                         </div>
                     </div> -->
-            <!-- Samo -->
-            <!-- <div class="borgo-card">
+          <!-- Samo -->
+          <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=41');"></div>
                         <div class="borgo-content">
                             <h3>Samo</h3>
@@ -754,8 +646,8 @@
                             <a href="borghi/samo.html" class="btn-borgo">Scopri Samo →</a>
                         </div>
                     </div> -->
-            <!-- San Luca -->
-            <!-- <div class="borgo-card">
+          <!-- San Luca -->
+          <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=42');"></div>
                         <div class="borgo-content">
                             <h3>San Luca</h3>
@@ -763,8 +655,8 @@
                             <a href="borghi/sanluca.html" class="btn-borgo">Scopri San Luca →</a>
                         </div>
                     </div> -->
-            <!-- Valle delle Grandi Pietre (Pietra Cappa) -->
-            <!-- <div class="borgo-card">
+          <!-- Valle delle Grandi Pietre (Pietra Cappa) -->
+          <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=43');"></div>
                         <div class="borgo-content">
                             <h3>Valle delle Grandi Pietre</h3>
@@ -772,223 +664,222 @@
                             <a href="borghi/valle-grandi-pietre.html" class="btn-borgo">Scopri la Valle →</a>
                         </div>
                     </div> -->
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- FOOTER AGGIORNATO (3 colonne) -->
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <!-- Colonna 1: Scuola e contatti -->
-          <div class="footer-col">
-            <h4>Polo Tecnico Professionale</h4>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> Viale Sasso Marconi, 89048
-              Siderno (RC)
-            </p>
-            <p><i class="fas fa-phone-alt"></i> 0964 048031</p>
-            <p><i class="fas fa-envelope"></i> RCIS03100L@ISTRUZIONE.IT</p>
-            <p>
-              <i class="fas fa-envelope-open-text"></i> PEC:
-              rcis03100l@pec.istruzione.it
-            </p>
-            <p><i class="fas fa-globe"></i> www.iismarconisiderno.edu.it</p>
-            <p><i class="fas fa-user-tie"></i> Dirigente: Gaetano Pedullà</p>
-          </div>
-
-          <!-- Colonna 2: Orari segreteria (ordinari) -->
-          <div class="footer-col">
-            <h4>Orari Segreteria</h4>
-            <div class="orario-row">
-              <span class="giorni">Lunedì - Venerdì</span>
-              <span class="orari">08:30 - 13:30</span>
-            </div>
-            <div class="orario-row">
-              <span class="giorni">Martedì e Giovedì</span>
-              <span class="orari"
-                >15:00 - 17:00 <span class="nota">(su appuntamento)</span></span
-              >
-            </div>
-            <div class="orario-row">
-              <span class="giorni">Sabato (periodo iscrizioni)</span>
-              <span class="orari">09:00 - 12:00</span>
-            </div>
-          </div>
-
-          <!-- Colonna 3: Progetto Rai Marzo 2026 -->
-          <div class="footer-col">
-            <h4>Progetto Rai Marzo 2026</h4>
-            <p style="margin-bottom: 15px">
-              Un'iniziativa degli studenti per raccontare il territorio
-              attraverso i borghi della Locride.
-            </p>
-          </div>
-        </div>
-        <div class="copyright">
-          &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti.
-          Tutti i diritti riservati.
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
+  <!-- FOOTER AGGIORNATO (3 colonne) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Colonna 1: Scuola e contatti -->
+        <div class="footer-col">
+          <h4>Polo Tecnico Professionale</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Viale Sasso Marconi, 89048
+            Siderno (RC)
+          </p>
+          <p><i class="fas fa-phone-alt"></i> 0964 048031</p>
+          <p><i class="fas fa-envelope"></i> RCIS03100L@ISTRUZIONE.IT</p>
+          <p>
+            <i class="fas fa-envelope-open-text"></i> PEC:
+            rcis03100l@pec.istruzione.it
+          </p>
+          <p><i class="fas fa-globe"></i> www.iismarconisiderno.edu.it</p>
+          <p><i class="fas fa-user-tie"></i> Dirigente: Gaetano Pedullà</p>
+        </div>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-      // Menu mobile toggle
-      const hamburger = document.getElementById("hamburger");
-      const navMenu = document.getElementById("nav-menu");
+        <!-- Colonna 2: Orari segreteria (ordinari) -->
+        <div class="footer-col">
+          <h4>Orari Segreteria</h4>
+          <div class="orario-row">
+            <span class="giorni">Lunedì - Venerdì</span>
+            <span class="orari">08:30 - 13:30</span>
+          </div>
+          <div class="orario-row">
+            <span class="giorni">Martedì e Giovedì</span>
+            <span class="orari">15:00 - 17:00 <span class="nota">(su appuntamento)</span></span>
+          </div>
+          <div class="orario-row">
+            <span class="giorni">Sabato (periodo iscrizioni)</span>
+            <span class="orari">09:00 - 12:00</span>
+          </div>
+        </div>
 
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
+        <!-- Colonna 3: Progetto Rai Marzo 2026 -->
+        <div class="footer-col">
+          <h4>Progetto Rai Marzo 2026</h4>
+          <p style="margin-bottom: 15px">
+            Un'iniziativa degli studenti per raccontare il territorio
+            attraverso i borghi della Locride.
+          </p>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti.
+        Tutti i diritti riservati.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Menu mobile toggle
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
       });
+    });
 
-      document.querySelectorAll(".nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("active");
-        });
-      });
+    // Header scroll effect
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
 
-      // Header scroll effect
-      window.addEventListener("scroll", () => {
-        const header = document.querySelector("header");
-        if (window.scrollY > 50) {
-          header.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
-        }
-      });
+    // ============================================
+    // SLIDESHOW HERO (fade, 5 secondi)
+    // ============================================
+    const layer1 = document.getElementById("heroLayer1");
+    const layer2 = document.getElementById("heroLayer2");
 
-      // ============================================
-      // SLIDESHOW HERO (fade, 5 secondi)
-      // ============================================
-      const layer1 = document.getElementById("heroLayer1");
-      const layer2 = document.getElementById("heroLayer2");
+    // Array con i percorsi delle immagini (nella cartella images/)
+    const images = [
+      'url("images/sede-marconi.webp")',
+      'url("images/sede-ipsia-siderno.webp")',
+      'url("images/sede-ipsia-locri.webp")',
+    ];
 
-      // Array con i percorsi delle immagini (nella cartella images/)
-      const images = [
-        'url("images/sede-marconi.webp")',
-        'url("images/sede-ipsia-siderno.webp")',
-        'url("images/sede-ipsia-locri.webp")',
-      ];
+    let currentIndex = 0;
+    let activeLayer = layer1; // layer attualmente visibile
+    let nextLayer = layer2; // layer che diventerà visibile
 
-      let currentIndex = 0;
-      let activeLayer = layer1; // layer attualmente visibile
-      let nextLayer = layer2; // layer che diventerà visibile
+    // Imposta la prima immagine su entrambi i layer
+    layer1.style.backgroundImage = images[0];
+    layer2.style.backgroundImage = images[1];
+    layer1.classList.add("active"); // mostra il primo layer
 
-      // Imposta la prima immagine su entrambi i layer
-      layer1.style.backgroundImage = images[0];
-      layer2.style.backgroundImage = images[1];
-      layer1.classList.add("active"); // mostra il primo layer
+    function changeImageWithFade() {
+      // Prepara il prossimo indice
+      currentIndex = (currentIndex + 1) % images.length;
+      const nextIndex = (currentIndex + 1) % images.length;
 
-      function changeImageWithFade() {
-        // Prepara il prossimo indice
-        currentIndex = (currentIndex + 1) % images.length;
-        const nextIndex = (currentIndex + 1) % images.length;
+      // Imposta l'immagine sul layer che diventerà attivo
+      nextLayer.style.backgroundImage = images[currentIndex];
 
-        // Imposta l'immagine sul layer che diventerà attivo
-        nextLayer.style.backgroundImage = images[currentIndex];
-
-        // Prepara il layer inattivo con l'immagine successiva (per il prossimo ciclo)
-        if (activeLayer === layer1) {
-          layer2.style.backgroundImage = images[nextIndex];
-        } else {
-          layer1.style.backgroundImage = images[nextIndex];
-        }
-
-        // Scambia i ruoli: attivo diventa inattivo e viceversa
-        activeLayer.classList.remove("active");
-        nextLayer.classList.add("active");
-
-        // Aggiorna i riferimenti
-        [activeLayer, nextLayer] = [nextLayer, activeLayer];
+      // Prepara il layer inattivo con l'immagine successiva (per il prossimo ciclo)
+      if (activeLayer === layer1) {
+        layer2.style.backgroundImage = images[nextIndex];
+      } else {
+        layer1.style.backgroundImage = images[nextIndex];
       }
 
-      // Cambia immagine ogni 5 secondi (5000 ms)
-      setInterval(changeImageWithFade, 5000);
+      // Scambia i ruoli: attivo diventa inattivo e viceversa
+      activeLayer.classList.remove("active");
+      nextLayer.classList.add("active");
 
-      // ============================================
-      // MAPPA LEAFET
-      // ============================================
-      var map = L.map("map").setView([38.267, 16.3], 10);
+      // Aggiorna i riferimenti
+      [activeLayer, nextLayer] = [nextLayer, activeLayer];
+    }
 
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }).addTo(map);
+    // Cambia immagine ogni 5 secondi (5000 ms)
+    setInterval(changeImageWithFade, 5000);
 
-      var redIcon = L.icon({
-        iconUrl:
-          "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
-        shadowUrl:
-          "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41],
+    // ============================================
+    // MAPPA LEAFET
+    // ============================================
+    var map = L.map("map").setView([38.267, 16.3], 10);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+
+    var redIcon = L.icon({
+      iconUrl:
+        "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
+      shadowUrl:
+        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41],
+    });
+
+    var borghi = [
+      //{ nome: "Siderno", lat: 38.267, lng: 16.3, link: "borghi/siderno.html" },
+      { nome: "Locri", lat: 38.233, lng: 16.267, link: "borghi/locri.html" },
+      //{ nome: "Gioiosa Ionica", lat: 38.333, lng: 16.317, link: "borghi/gioiosa.html" },
+      {
+        nome: "Bianco",
+        lat: 38.092,
+        lng: 16.153,
+        link: "borghi/bianco.html",
+      },
+      // { nome: "Stilo", lat: 38.476, lng: 16.468, link: "borghi/stilo.html" },
+      {
+        nome: "Brancaleone",
+        lat: 38.0,
+        lng: 16.1,
+        link: "borghi/brancaleone.html",
+      },
+      {
+        nome: "Caulonia",
+        lat: 38.383,
+        lng: 16.4,
+        link: "borghi/caulonia.html",
+      },
+      {
+        nome: "Cimina",
+        lat: 38.266,
+        lng: 16.083,
+        link: "borghi/cimina.html",
+      },
+      {
+        nome: "Casignana (Villa Romana)",
+        lat: 38.116,
+        lng: 16.083,
+        link: "borghi/casignana.html",
+      },
+      // { nome: "Riace", lat: 38.417, lng: 16.483, link: "borghi/riace.html" },
+      // { nome: "Roccella Ionica", lat: 38.317, lng: 16.4, link: "borghi/roccella.html" },
+      // { nome: "Samo", lat: 38.067, lng: 16.067, link: "borghi/samo.html" },
+      // { nome: "San Luca", lat: 38.15, lng: 16.0, link: "borghi/sanluca.html" },
+      // { nome: "Valle delle Grandi Pietre", lat: 38.217, lng: 16.05, link: "borghi/valle-grandi-pietre.html" }
+    ];
+
+    borghi.forEach(function (borgo) {
+      var marker = L.marker([borgo.lat, borgo.lng], { icon: redIcon }).addTo(
+        map,
+      );
+      marker.on("click", function () {
+        window.location.href = borgo.link;
       });
+      marker.bindTooltip(borgo.nome, { permanent: false, direction: "top" });
+    });
 
-      var borghi = [
-        //{ nome: "Siderno", lat: 38.267, lng: 16.3, link: "borghi/siderno.html" },
-        { nome: "Locri", lat: 38.233, lng: 16.267, link: "borghi/locri.html" },
-        //{ nome: "Gioiosa Ionica", lat: 38.333, lng: 16.317, link: "borghi/gioiosa.html" },
-        {
-          nome: "Bianco",
-          lat: 38.092,
-          lng: 16.153,
-          link: "borghi/bianco.html",
-        },
-        // { nome: "Stilo", lat: 38.476, lng: 16.468, link: "borghi/stilo.html" },
-        {
-          nome: "Brancaleone",
-          lat: 38.0,
-          lng: 16.1,
-          link: "borghi/brancaleone.html",
-        },
-        {
-          nome: "Caulonia",
-          lat: 38.383,
-          lng: 16.4,
-          link: "borghi/caulonia.html",
-        },
-        {
-          nome: "Cimina",
-          lat: 38.266,
-          lng: 16.083,
-          link: "borghi/cimina.html",
-        },
-        {
-          nome: "Casignana (Villa Romana)",
-          lat: 38.116,
-          lng: 16.083,
-          link: "borghi/casignana.html",
-        },
-        // { nome: "Riace", lat: 38.417, lng: 16.483, link: "borghi/riace.html" },
-        // { nome: "Roccella Ionica", lat: 38.317, lng: 16.4, link: "borghi/roccella.html" },
-        // { nome: "Samo", lat: 38.067, lng: 16.067, link: "borghi/samo.html" },
-        // { nome: "San Luca", lat: 38.15, lng: 16.0, link: "borghi/sanluca.html" },
-        // { nome: "Valle delle Grandi Pietre", lat: 38.217, lng: 16.05, link: "borghi/valle-grandi-pietre.html" }
-      ];
+    // Disabilita il ripristino automatico della posizione di scroll
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
 
-      borghi.forEach(function (borgo) {
-        var marker = L.marker([borgo.lat, borgo.lng], { icon: redIcon }).addTo(
-          map,
-        );
-        marker.on("click", function () {
-          window.location.href = borgo.link;
-        });
-        marker.bindTooltip(borgo.nome, { permanent: false, direction: "top" });
-      });
+    // Forza la pagina a partire dall'alto dopo ogni caricamento
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
 
-      // Disabilita il ripristino automatico della posizione di scroll
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
-
-      // Forza la pagina a partire dall'alto dopo ogni caricamento
-      window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-      });
-    </script>
-  </body>
 </html>

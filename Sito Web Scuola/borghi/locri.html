@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <!-- Google Fonts e Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* ============================================
@@ -33,6 +36,8 @@
             color: #1a1a2e;
             background-color: #fafbfc;
             overflow-x: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* ============================================
@@ -154,7 +159,7 @@
             font-size: 2.8rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             letter-spacing: -0.5px;
         }
 
@@ -225,13 +230,18 @@
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
         }
 
         .content-section.reverse {
             direction: rtl;
         }
 
-        .content-section.reverse > * {
+        .content-section.reverse>* {
             direction: ltr;
         }
 
@@ -269,6 +279,14 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
             margin-top: 40px;
+        }
+
+        .info-grid.contact-grid {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        }
+
+        .info-grid.contact-grid {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         }
 
         .info-card {
@@ -432,7 +450,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.6s;
         }
 
@@ -515,15 +533,15 @@
             .content-section {
                 grid-template-columns: 1fr;
             }
-            
+
             .hero-borgo h2 {
                 font-size: 2.5rem;
             }
-            
+
             .hero-borgo p {
                 font-size: 1.1rem;
             }
-            
+
             .section-title {
                 font-size: 2.2rem;
             }
@@ -533,22 +551,23 @@
             .hero-borgo {
                 min-height: 300px;
             }
-            
+
             .hero-borgo h2 {
                 font-size: 2rem;
             }
-            
+
             .btn {
                 padding: 12px 24px;
                 font-size: 0.95rem;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container header-content">
@@ -564,11 +583,13 @@
 
     <main>
         <!-- HERO SECTION -->
-        <section class="hero-borgo" style="background-image: url('https://picsum.photos/1200/600?random=31'); background-size: cover; background-position: center;">
+        <section class="hero-borgo"
+            style="background-image: url('../images/locri/locri.jpg'); background-size: cover; background-position: center;">
             <div class="hero-overlay"></div>
             <div class="container">
                 <h2>Locri</h2>
-                <p>Antica colonia greca con il famoso Teatro e il Museo Nazionale. Un polo culturale di rilievo nella Locride.</p>
+                <p>Antica colonia greca con il famoso Teatro e il Museo Nazionale. Un polo culturale di rilievo nella
+                    Locride.</p>
             </div>
         </section>
 
@@ -607,18 +628,30 @@
                 <div class="content-section">
                     <div class="content-text">
                         <h3>La Culla della Grecità Calabrese</h3>
-                        <p>Situata sulla splendida Riviera dei Gelsomini, affacciata sul Mar Ionio, Locri è una città ricca di storia e cultura. Fondata tra l'VIII e il VII secolo a.C. dai Greci della Locride con il nome di Locri Epizefiri, fu uno dei più importanti centri della Magna Grecia.</p>
-                        <p>È la terra del legislatore Zaleuco, considerato il primo legislatore del mondo occidentale, e della poetessa Nosside, una delle voci più raffinate della lirica greca antica. La città rappresenta uno dei fulcri principali della civiltà ellenica in Italia meridionale.</p>
+                        <p>Situata sulla splendida Riviera dei Gelsomini, affacciata sul Mar Ionio, Locri è una città
+                            ricca di storia e cultura. Fondata tra l'VIII e il VII secolo a.C. dai Greci della Locride
+                            con il nome di Locri Epizefiri, fu uno dei più importanti centri della Magna Grecia.</p>
+                        <p>È la terra del legislatore Zaleuco, considerato il primo legislatore del mondo occidentale, e
+                            della poetessa Nosside, una delle voci più raffinate della lirica greca antica. La città
+                            rappresenta uno dei fulcri principali della civiltà ellenica in Italia meridionale.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=311');"></div>
+                    <div class="content-image" style="background-image: url('../images/locri/locri_zaleuco.jpg');">
+                    </div>
                 </div>
-                
+
                 <div class="content-section reverse">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=312');"></div>
+                    <div class="content-image" style="background-image: url('../images/locri/locri_nosside.png');">
+                    </div>
                     <div class="content-text">
                         <h3>Zaleuco e Nosside</h3>
-                        <p>Zaleuco, il legislatore di Locri Epizefiri, è considerato il primo a formulare un vero e proprio codice di leggi scritte nel mondo occidentale. Le sue leggi, note come "Leggi di Zaleuco", furono in vigore nel VII secolo a.C. e influenzarono il pensiero giuridico greco e romano.</p>
-                        <p>La poetessa Nosside, vissuta nel III secolo a.C., fu una delle figure più importanti della lirica greca. Le sue composizioni, sebbene pervenute solo in frammenti, testimoniano l'elevato livello culturale della società locrese e il ruolo importante delle donne nell'ambiente intellettuale dell'epoca.</p>
+                        <p>Zaleuco, il legislatore di Locri Epizefiri, è considerato il primo a formulare un vero e
+                            proprio codice di leggi scritte nel mondo occidentale. Le sue leggi, note come "Leggi di
+                            Zaleuco", furono in vigore nel VII secolo a.C. e influenzarono il pensiero giuridico greco e
+                            romano.</p>
+                        <p>La poetessa Nosside, vissuta nel III secolo a.C., fu una delle figure più importanti della
+                            lirica greca. Le sue composizioni, sebbene pervenute solo in frammenti, testimoniano
+                            l'elevato livello culturale della società locrese e il ruolo importante delle donne
+                            nell'ambiente intellettuale dell'epoca.</p>
                     </div>
                 </div>
             </div>
@@ -629,21 +662,32 @@
             <div class="container">
                 <h2 class="section-title">Museo e Parco Archeologico</h2>
                 <div class="content-section">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=313');"></div>
+                    <div class="content-image" style="background-image: url('../images/locri/locri_museo.jpg');"></div>
                     <div class="content-text">
                         <h3>Il Cuore della Magna Grecia</h3>
-                        <p>Il Museo e il Parco Archeologico di Locri Epizefiri rappresentano oggi uno dei più importanti complessi archeologici della Calabria, testimoniando la ricchezza culturale della città dalla Magna Grecia fino all'epoca romana.</p>
-                        <p>Il Museo è interamente dedicato all'antica polis della Magna Grecia e conserva alcuni dei reperti più significativi provenienti dagli scavi dell'area archeologica. Tra questi si trovano vasi, pinakes votivi, strumenti della vita quotidiana e resti architettonici che raccontano oltre mille anni di storia.</p>
+                        <p>Il Museo e il Parco Archeologico di Locri Epizefiri rappresentano oggi uno dei più importanti
+                            complessi archeologici della Calabria, testimoniando la ricchezza culturale della città
+                            dalla Magna Grecia fino all'epoca romana.</p>
+                        <p>Il Museo è interamente dedicato all'antica polis della Magna Grecia e conserva alcuni dei
+                            reperti più significativi provenienti dagli scavi dell'area archeologica. Tra questi si
+                            trovano vasi, pinakes votivi, strumenti della vita quotidiana e resti architettonici che
+                            raccontano oltre mille anni di storia.</p>
                     </div>
                 </div>
-                
+
                 <div class="content-section reverse">
                     <div class="content-text">
                         <h3>La Donna Locrese</h3>
-                        <p>Una sezione particolarmente interessante del museo è dedicata alla figura della donna locrese, con la ricostruzione di un antico telaio e oggetti legati alla vita domestica e alle attività femminili dell'epoca. Questa esposizione dimostra come le donne locresi godessero di una posizione sociale particolarmente elevata rispetto ad altre città greche dell'epoca.</p>
-                        <p>I reperti esposti testimoniano l'importanza della tessitura, della ceramica e delle attività artistiche femminili nella società locrese, confermando la tradizione della discendenza matrilineare che caratterizzava la città.</p>
+                        <p>Una sezione particolarmente interessante del museo è dedicata alla figura della donna
+                            locrese, con la ricostruzione di un antico telaio e oggetti legati alla vita domestica e
+                            alle attività femminili dell'epoca. Questa esposizione dimostra come le donne locresi
+                            godessero di una posizione sociale particolarmente elevata rispetto ad altre città greche
+                            dell'epoca.</p>
+                        <p>I reperti esposti testimoniano l'importanza della tessitura, della ceramica e delle attività
+                            artistiche femminili nella società locrese, confermando la tradizione della discendenza
+                            matrilineare che caratterizzava la città.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=314');"></div>
+                    <div class="content-image" style="background-image: url('../images/locri/locri_donna.png');"></div>
                 </div>
             </div>
         </section>
@@ -655,18 +699,27 @@
                 <div class="content-section">
                     <div class="content-text">
                         <h3>Casino Macrì</h3>
-                        <p>All'interno del Parco Archeologico si trova anche il Museo Romano di Locri (Casino Macrì). L'edificio, originariamente una masseria costruita tra XVIII e XIX secolo sopra strutture romane, conserva ancora ambienti antichi come una sala con copertura a volta.</p>
-                        <p>Oggi ospita la collezione dei reperti di epoca romana provenienti dal territorio locrese, che testimoniano come la città mantenesse la sua importanza anche dopo la conquista romana. Le esposizioni comprendono sculture, iscrizioni, ceramiche e oggetti di uso quotidiano.</p>
+                        <p>All'interno del Parco Archeologico si trova anche il Museo Romano di Locri (Casino Macrì).
+                            L'edificio, originariamente una masseria costruita tra XVIII e XIX secolo sopra strutture
+                            romane, conserva ancora ambienti antichi come una sala con copertura a volta.</p>
+                        <p>Oggi ospita la collezione dei reperti di epoca romana provenienti dal territorio locrese, che
+                            testimoniano come la città mantenesse la sua importanza anche dopo la conquista romana. Le
+                            esposizioni comprendono sculture, iscrizioni, ceramiche e oggetti di uso quotidiano.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=315');"></div>
+                    <div class="content-image" style="background-image: url('../images/locri/locri_casino.jpg');"></div>
                 </div>
-                
+
                 <div class="content-section reverse">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=316');"></div>
+                    <div class="content-image" style="background-image: url('../images/locri/locri_territorio.jpg');">
+                    </div>
                     <div class="content-text">
                         <h3>Dal Museo del Territorio</h3>
-                        <p>Nel centro storico, il Museo del Territorio di Palazzo Nieddu del Rio racconta invece l'evoluzione della città e delle sue tradizioni, collegando l'antica polis greca alla storia più recente del territorio.</p>
-                        <p>Questo museo offre una visione completa dell'evoluzione urbana di Locri, dalle origini greche fino ai giorni nostri, attraverso documenti, fotografie, oggetti d'arte e testimonianze della vita quotidiana locale.</p>
+                        <p>Nel centro storico, il Museo del Territorio di Palazzo Nieddu del Rio racconta invece
+                            l'evoluzione della città e delle sue tradizioni, collegando l'antica polis greca alla storia
+                            più recente del territorio.</p>
+                        <p>Questo museo offre una visione completa dell'evoluzione urbana di Locri, dalle origini greche
+                            fino ai giorni nostri, attraverso documenti, fotografie, oggetti d'arte e testimonianze
+                            della vita quotidiana locale.</p>
                     </div>
                 </div>
             </div>
@@ -677,21 +730,30 @@
             <div class="container">
                 <h2 class="section-title">Il Teatro Greco</h2>
                 <div class="content-section">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=317');"></div>
+                    <div class="content-image" style="background-image: url('../images/locri/locri_teatro.jpg');"></div>
                     <div class="content-text">
                         <h3>Joyce e il Teatro di Locri</h3>
-                        <p>Uno dei simboli più celebri di Locri è il suo teatro greco, costruito nel IV secolo a.C. e ristrutturato nel II secolo d.C. L'anfiteatro, scavato nella roccia calcarea, offre uno dei panorami più spettacolari della costa ionica.</p>
-                        <p>Il teatro è stato teatro di importanti eventi culturali e fu visitato da James Joyce, che lo descrisse come "uno dei più belli del mondo". Oggi è uno dei luoghi più suggestivi della città e ospita ogni estate il Festival Locr@Magna, con spettacoli teatrali e musicali.</p>
+                        <p>Uno dei simboli più celebri di Locri è il suo teatro greco, costruito nel IV secolo a.C. e
+                            ristrutturato nel II secolo d.C. L'anfiteatro, scavato nella roccia calcarea, offre uno dei
+                            panorami più spettacolari della costa ionica.</p>
+                        <p>Il teatro è stato teatro di importanti eventi culturali e fu visitato da James Joyce, che lo
+                            descrisse come "uno dei più belli del mondo". Oggi è uno dei luoghi più suggestivi della
+                            città e ospita ogni estate il Festival Locr@Magna, con spettacoli teatrali e musicali.</p>
                     </div>
                 </div>
-                
+
                 <div class="content-section reverse">
                     <div class="content-text">
                         <h3>Architettura e Acustica</h3>
-                        <p>La struttura del teatro dimostra l'elevata competenza tecnica degli architetti greci nell'utilizzo del territorio. Scavato nel fianco di una collina, sfrutta naturalmente l'acustica del luogo e offre una capacità per circa 6.000 spettatori.</p>
-                        <p>I materiali utilizzati, prevalentemente pietra calcarea locale, si integrano armoniosamente con il paesaggio circostante, creando un'opera architettonica che sembra nata dalla terra stessa.</p>
+                        <p>La struttura del teatro dimostra l'elevata competenza tecnica degli architetti greci
+                            nell'utilizzo del territorio. Scavato nel fianco di una collina, sfrutta naturalmente
+                            l'acustica del luogo e offre una capacità per circa 6.000 spettatori.</p>
+                        <p>I materiali utilizzati, prevalentemente pietra calcarea locale, si integrano armoniosamente
+                            con il paesaggio circostante, creando un'opera architettonica che sembra nata dalla terra
+                            stessa.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=318');"></div>
+                    <div class="content-image" style="background-image: url('../images/locri/locri_teatro2.jpg');">
+                    </div>
                 </div>
             </div>
         </section>
@@ -704,22 +766,26 @@
                     <div class="tradizione-card">
                         <i class="fas fa-theater-masks"></i>
                         <h4>Festival Locr@Magna</h4>
-                        <p>Ogni estate il teatro greco ospita questo prestigioso festival che riunisce artisti nazionali e internazionali in spettacoli teatrali e musicali.</p>
+                        <p>Ogni estate il teatro greco ospita questo prestigioso festival che riunisce artisti nazionali
+                            e internazionali in spettacoli teatrali e musicali.</p>
                     </div>
                     <div class="tradizione-card">
                         <i class="fas fa-book"></i>
                         <h4>Convegni Storici</h4>
-                        <p>Locri è sede di importanti convegni sull'antichità classica, con studiosi provenienti da tutto il mondo che studiano la Magna Grecia.</p>
+                        <p>Locri è sede di importanti convegni sull'antichità classica, con studiosi provenienti da
+                            tutto il mondo che studiano la Magna Grecia.</p>
                     </div>
                     <div class="tradizione-card">
                         <i class="fas fa-seedling"></i>
                         <h4>Enogastronomia</h4>
-                        <p>La tradizione culinaria locrese combina influenze greche e romane con le specialità locali: olive nere, cipolle di Tropea, e vini DOC della zona.</p>
+                        <p>La tradizione culinaria locrese combina influenze greche e romane con le specialità locali:
+                            olive nere, cipolle di Tropea, e vini DOC della zona.</p>
                     </div>
                     <div class="tradizione-card">
                         <i class="fas fa-camera"></i>
                         <h4>Fotografia d'Autore</h4>
-                        <p>Il contrasto tra l'antico e il moderno, tra mare e rovine, ha ispirato fotografi internazionali che espongono le loro opere nella città.</p>
+                        <p>Il contrasto tra l'antico e il moderno, tra mare e rovine, ha ispirato fotografi
+                            internazionali che espongono le loro opere nella città.</p>
                     </div>
                 </div>
             </div>
@@ -730,83 +796,131 @@
             <div class="container">
                 <h2 class="section-title">Galleria Fotografica</h2>
                 <div class="gallery">
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=321" alt="Teatro Greco di Locri"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=322" alt="Museo Archeologico"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=323" alt="Vasi greci antichi"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=324" alt="Pinakes votivi"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=325" alt="Centro storico"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=326" alt="Vista panoramica"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-1.jpg"
+                            alt="Teatro Greco di Locri"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-2.jpg"
+                            alt="Museo Archeologico"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-3.jpg"
+                            alt="Vasi greci antichi"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-4.jpg"
+                            alt="Pinakes votivi">
+                    </div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-5.jpg"
+                            alt="Centro storico">
+                    </div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-6.jpg"
+                            alt="Vista panoramica"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-7.jpg"
+                            alt="Moneta antica greca"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-8.jpg"
+                            alt="Dettaglio Pinax Ade e Persefone"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-9.jpg"
+                            alt="Terrecotte della Magna Grecia"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-10.jpg"
+                            alt="Ceramica antica"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-11.jpg"
+                            alt="Panorama della costa ionica"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-12.jpg"
+                            alt="Spiaggia e mare di Locri"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-13.jpg"
+                            alt="Casino Macrì - Museo Romano"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-14.jpg"
+                            alt="Vista panoramica verso Gerace"></div>
+                    <div class="gallery-item"><img src="../images/locri/galleria/galleria-locri-15.jpg"
+                            alt="Orizzonte del Mar Ionio"></div>
                 </div>
             </div>
         </section>
 
-       <!-- INFO UTILI -->
-<section>
-    <div class="container">
-        <h2 class="section-title">Info Utili</h2>
-        <div class="info-grid">
-            <div class="info-card">
-                <i class="fas fa-car"></i>
-                <h4>Come Arrivare</h4>
-                <p><strong>In Auto</strong><br>
-                SS106 Jonica, uscita Locri<br>
-                Parcheggio gratuito nei pressi dei musei<br><br>
-                <strong>In Pullman</strong><br>
-                Linea Cotral Reggio-Locri<br>
-                Fermata Piazza Municipio</p>
+        <!-- INFO UTILI -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Info Utili</h2>
+                <div class="info-grid contact-grid">
+                    <div class="info-card">
+                        <i class="fas fa-car"></i>
+                        <h4>Come Arrivare</h4>
+                        <p><strong>In Auto</strong><br>
+                            SS106 Jonica, uscita Locri<br>
+                            Parcheggio gratuito nei pressi dei musei<br><br>
+                            <strong>In Pullman</strong><br>
+                            Servizio Federico da Reggio Calabria<br>
+                            Fermate: Piazza Stazione, Piazza Municipio
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-globe"></i>
+                        <h4>Comune e Informazioni</h4>
+                        <p><strong>Comune di Locri</strong><br>
+                            Via Giacomo Matteotti, 1<br>
+                            89044 Locri (RC)<br>
+                            <strong>Tel: </strong>0964 391400<br>
+                            <strong>Email: </strong><a href="mailto:ufficioprotocollo.comunelocri@asmepec.it"
+                                style="color: var(--text-light); text-decoration: none;">ufficioprotocollo.comunelocri@asmepec.it</a><br>
+                            <strong>Sito web: </strong><a href="https://www.comune.locri.rc.it" target="_blank"
+                                style="color: var(--accent); text-decoration: none; font-weight: 600;">www.comune.locri.rc.it</a>
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-landmark"></i>
+                        <h4>Musei e Orari</h4>
+
+                        <p><strong>Museo Nazionale di Locri</strong><br>
+                            Ospita reperti archeologici dall'antica colonia greca di Locri Epizefiri, tra cui ceramiche,
+                            bronzi e terrecotte votive.</p>
+                        <br>
+                        <p><strong>Museo Romano di Locri Epizefiri (Casino Macrì)</strong><br>
+                            Il parco archeologico conserva i resti del teatro greco, del tempio ionico e di abitazioni
+                            dell'antica città. Ingresso da Contrada Marasà.</p>
+
+                        <br>
+                        <p><strong>Info e prenotazioni:</strong> 0964 390023<br>
+                            <small>(Per orari aggiornati e visite guidate)</small>
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-train"></i>
+                        <h4>Trasporti</h4>
+
+                        <p><strong>Stazione Ferroviaria di Locri</strong><br>
+                            Corso Umberto I<br>
+                            Linea Jonica Reggio Calabria-Taranto<br>
+                            Collegamenti frequenti per Siderno, Gioiosa Jonica e Reggio Calabria<br>
+                            Biglietteria automatica e sala d'attesa</p>
+
+                        <br>
+                        <p><strong>Navetta Stazione-Ospedale</strong><br>
+                            Attiva dal lunedì al sabato, 26 corse/giorno (6:00-19:22)<br>
+                            Fermate: Piazza don Bosco, Via Garibaldi</p>
+
+                        <br>
+                        <p><strong>Autobus extraurbani</strong><br>
+                            Autolinee Federico e Audino Venturino<br>
+                            Fermate: Piazza Re Umberto, Via Margherita di Savoia</p>
+                    </div>
+                </div>
+                <div class="btn-center">
+                    <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla
+                        mappa</a>
+                </div>
             </div>
-            <div class="info-card">
-                <i class="fas fa-globe"></i>
-                <h4>Comune e Informazioni</h4>
-                <p><strong>Comune di Locri</strong><br>
-                Piazza Municipio, 1<br>
-                89043 Locri (RC)<br>
-                Tel: 0964 21111<br>
-                Fax: 0964 22447<br>
-                Email: protocollo@comune.locri.rc.it<br>
-                Sito web: <a href="http://www.comune.locri.rc.it" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">www.comune.locri.rc.it</a></p>
-            </div>
-            <div class="info-card">
-                <i class="fas fa-landmark"></i>
-                <h4>Musei e Orari</h4>
-                <p><strong>Museo Nazionale di Locri</strong><br>
-                Mar-Sab 9:00-19:00, Dom 9:00-14:00<br>
-                Chiuso: Lunedì<br>
-                Tel: 0964 21222<br><br>
-                <strong>Museo Romano (Casino Macrì)</strong><br>
-                Mar-Sab 9:00-18:00<br>
-                Chiuso: Lunedì e Domenica</p>
-            </div>
-            <div class="info-card">
-                <i class="fas fa-train"></i>
-                <h4>Trasporti</h4>
-                <p><strong>Stazione Ferroviaria</strong><br>
-                Stazione di Locri<br>
-                Linea Jonica Reggio Calabria-Taranto<br><br>
-                <strong>Trasporto Locale</strong><br>
-                Autobus navetta dal parcheggio<br>
-                Servizio taxi disponibile<br>
-                Noleggio biciclette in piazza</p>
-            </div>
-        </div>
-        <div class="btn-center">
-            <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
-        </div>
-    </div>
-</section>
+        </section>
 
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
-                <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.</p>
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a
+                            href="../index.html">Home</a></p>
+                    <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.
+                    </p>
+                </div>
+                <div class="copyright">
+                    Sito realizzato dagli studenti del progetto scolastico
+                </div>
             </div>
-            <div class="copyright">
-                Sito realizzato dagli studenti del progetto scolastico
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
+
 </html>

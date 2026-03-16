@@ -21,13 +21,8 @@
 <body>
   <header>
     <div class="container header-content">
-      <div class="logo" style="
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-left: -30px;
-          ">
-        <img src="images/logo.svg" alt="Logo Repubblica Italiana" style="height: 50px; width: auto" />
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo Repubblica Italiana" />
         <div>
           <h1>Polo Tecnico Professionale</h1>
           <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
@@ -72,12 +67,7 @@
     <section id="scuola">
       <div class="container">
         <h2 class="section-title">La scuola</h2>
-        <div style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 40px;
-              align-items: start;
-            ">
+        <div class="scuola-grid">
           <!-- Colonna sinistra: timeline arricchita -->
           <div>
             <h3 style="
@@ -510,20 +500,30 @@
 
         <!-- Schede descrittive dei borghi (14 card) -->
         <div class="borghi-grid">
-          <!-- Siderno -->
-          <!-- <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=30');"></div>
-                        <div class="borgo-content">
-                            <h3>Siderno</h3>
-                            <p>Città costiera, famosa per il lungomare e il centro storico. Sede del nostro istituto, offre bellezze architettoniche e una vivace tradizione culturale.</p>
-                            <a href="borghi/siderno.html" class="btn-borgo">Scopri Siderno →</a>
-                        </div>
-                    </div> -->
+          <!-- Valle delle Grandi Pietre (Pietra Cappa) -->
+          <div class="borgo-card">
+            <div class="borgo-image"
+              style="background-image: url('images/valledellegrandipietre/valle-pietra-cappa.jpg');"></div>
+            <div class="borgo-content">
+              <h3>Valle delle Grandi Pietre</h3>
+              <p>Pietra Cappa è il più grande monolite d'Europa, meta di escursioni e trekking tra natura e storia.</p>
+              <a href="borghi/valledellegrandipietre.html" class="btn-borgo">Scopri la Valle →</a>
+            </div>
+          </div>
+          <!-- Villa Romana del Naniglio (Gioiosa Ionica) -->
+          <div class="borgo-card">
+            <div class="borgo-image"
+              style="background-image: url('images/villaromanadelnaniglio/naniglio-esterno.jpg');"></div>
+            <div class="borgo-content">
+              <h3>Villa Romana del Naniglio (Gioiosa Ionica)</h3>
+              <p>Paese collinare con centro storico medievale e castello. Noto per le tradizioni e la posizione
+                panoramica sullo Ionio.</p>
+              <a href="borghi/villaromanadelnaniglio.html" class="btn-borgo">Scopri la Villa →</a>
+            </div>
+          </div>
           <!-- Locri -->
           <div class="borgo-card">
-            <div class="borgo-image" style="
-                  background-image: url('images/locri/locri.jpg');
-                "></div>
+            <div class="borgo-image" style="background-image: url('images/locri/locri.jpg');"></div>
             <div class="borgo-content">
               <h3>Locri</h3>
               <p>
@@ -533,17 +533,18 @@
               <a href="borghi/locri.html" class="btn-borgo">Scopri Locri →</a>
             </div>
           </div>
-          <!-- Gioiosa Ionica -->
+          <!-- Siderno -->
           <!-- <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=32');"></div>
-                        <div class="borgo-content">
-                            <h3>Gioiosa Ionica</h3>
-                            <p>Paese collinare con centro storico medievale e castello. Noto per le tradizioni e la posizione panoramica sullo Ionio.</p>
-                            <a href="borghi/gioiosa.html" class="btn-borgo">Scopri Gioiosa →</a>
-                        </div>
-                    </div> -->
+            <div class="borgo-image" style="background-image: url('images/siderno/siderno.jpg');"></div>
+            <div class="borgo-content">
+              <h3>Siderno</h3>
+              <p>Città costiera, famosa per il lungomare e il centro storico. Sede del nostro istituto, offre bellezze
+                architettoniche e una vivace tradizione culturale.</p>
+              <a href="borghi/siderno.html" class="btn-borgo">Scopri Siderno →</a>
+            </div>
+          </div> -->
           <!-- Bianco -->
-          <div class="borgo-card">
+          <!-- <div class="borgo-card">
             <div class="borgo-image" style="
                   background-image: url('images/bianco/bianco.jpg');
                 "></div>
@@ -555,7 +556,7 @@
               </p>
               <a href="borghi/bianco.html" class="btn-borgo">Scopri Bianco →</a>
             </div>
-          </div>
+          </div> -->
           <!-- Stilo -->
           <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=34');"></div>
@@ -566,7 +567,7 @@
                         </div>
                     </div> -->
           <!-- Brancaleone -->
-          <div class="borgo-card">
+          <!-- <div class="borgo-card">
             <div class="borgo-image" style="background-image: url('images/brancaleone/brancaleone.jpg');"></div>
             <div class="borgo-content">
               <h3>Brancaleone</h3>
@@ -576,9 +577,9 @@
               </p>
               <a href="borghi/brancaleone.html" class="btn-borgo">Scopri Brancaleone →</a>
             </div>
-          </div>
+          </div> -->
           <!-- Caulonia -->
-          <div class="borgo-card">
+          <!-- <div class="borgo-card">
             <div class="borgo-image" style="
                   background-image: url('images/caulonia/caulonia.jpg');
                 "></div>
@@ -590,9 +591,9 @@
               </p>
               <a href="borghi/caulonia.html" class="btn-borgo">Scopri Caulonia →</a>
             </div>
-          </div>
+          </div> -->
           <!-- Cimina -->
-          <div class="borgo-card">
+          <!-- <div class="borgo-card">
             <div class="borgo-image" style="
                   background-image: url('images/cimina/cimina.jpg');
                 "></div>
@@ -604,9 +605,9 @@
               </p>
               <a href="borghi/cimina.html" class="btn-borgo">Scopri Cimina →</a>
             </div>
-          </div>
+          </div> -->
           <!-- Villa romana di Casignana -->
-          <div class="borgo-card">
+          <!-- <div class="borgo-card">
             <div class="borgo-image" style="
                   background-image: url('images/casignana/casignana.jpg');
                 "></div>
@@ -618,7 +619,7 @@
               </p>
               <a href="borghi/casignana.html" class="btn-borgo">Scopri Casignana →</a>
             </div>
-          </div>
+          </div> -->
           <!-- Riace -->
           <!-- <div class="borgo-card">
                         <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=39');"></div>
@@ -655,19 +656,11 @@
                             <a href="borghi/sanluca.html" class="btn-borgo">Scopri San Luca →</a>
                         </div>
                     </div> -->
-          <!-- Valle delle Grandi Pietre (Pietra Cappa) -->
-          <!-- <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=43');"></div>
-                        <div class="borgo-content">
-                            <h3>Valle delle Grandi Pietre</h3>
-                            <p>Pietra Cappa è il più grande monolite d'Europa, meta di escursioni e trekking tra natura e storia.</p>
-                            <a href="borghi/valle-grandi-pietre.html" class="btn-borgo">Scopri la Valle →</a>
-                        </div>
-                    </div> -->
         </div>
       </div>
     </section>
   </main>
+
   <!-- FOOTER AGGIORNATO (3 colonne) -->
   <footer>
     <div class="container">
@@ -680,12 +673,30 @@
             Siderno (RC)
           </p>
           <p><i class="fas fa-phone-alt"></i> 0964 048031</p>
-          <p><i class="fas fa-envelope"></i> RCIS03100L@ISTRUZIONE.IT</p>
-          <p>
-            <i class="fas fa-envelope-open-text"></i> PEC:
-            rcis03100l@pec.istruzione.it
+          <!-- Email ordinaria -->
+          <p><i class="fas fa-envelope"></i>
+            <a href="mailto:RCIS03100L@ISTRUZIONE.IT"
+              style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">
+              RCIS03100L@ISTRUZIONE.IT
+            </a>
           </p>
-          <p><i class="fas fa-globe"></i> www.iismarconisiderno.edu.it</p>
+
+          <!-- PEC (già cliccabile) -->
+          <p>
+            <i class="fas fa-envelope-open-text"></i>
+            <a href="mailto:rcis03100l@pec.istruzione.it" target="_blank" rel="noopener noreferrer"
+              style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">
+              rcis03100l@pec.istruzione.it
+            </a>
+          </p>
+
+          <!-- Sito web (già cliccabile) -->
+          <p><i class="fas fa-globe"></i>
+            <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener noreferrer"
+              style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">
+              www.iismarconisiderno.edu.it
+            </a>
+          </p>
           <p><i class="fas fa-user-tie"></i> Dirigente: Gaetano Pedullà</p>
         </div>
 
@@ -698,7 +709,7 @@
           </div>
           <div class="orario-row">
             <span class="giorni">Martedì e Giovedì</span>
-            <span class="orari">15:00 - 17:00 <span class="nota">(su appuntamento)</span></span>
+            <span class="orari">15:00 - 17:00 su appuntamento</span>
           </div>
           <div class="orario-row">
             <span class="giorni">Sabato (periodo iscrizioni)</span>
@@ -819,40 +830,41 @@
     });
 
     var borghi = [
-      //{ nome: "Siderno", lat: 38.267, lng: 16.3, link: "borghi/siderno.html" },
+      { nome: "Valle delle Grandi Pietre", lat: 38.178638, lng: 16.032729, link: "borghi/valledellegrandipietre.html" },
+      { nome: "Villa Romana del Naniglio", lat: 38.328154, lng: 16.299167, link: "borghi/villaromanadelnaniglio.html" },
       { nome: "Locri", lat: 38.233, lng: 16.267, link: "borghi/locri.html" },
-      //{ nome: "Gioiosa Ionica", lat: 38.333, lng: 16.317, link: "borghi/gioiosa.html" },
-      {
-        nome: "Bianco",
-        lat: 38.092,
-        lng: 16.153,
-        link: "borghi/bianco.html",
-      },
+      //{ nome: "Siderno", lat: 38.267, lng: 16.3, link: "borghi/siderno.html" },
+      // {
+      //   nome: "Bianco",
+      //   lat: 38.092,
+      //   lng: 16.153,
+      //   link: "borghi/bianco.html",
+      // },
       // { nome: "Stilo", lat: 38.476, lng: 16.468, link: "borghi/stilo.html" },
-      {
-        nome: "Brancaleone",
-        lat: 38.0,
-        lng: 16.1,
-        link: "borghi/brancaleone.html",
-      },
-      {
-        nome: "Caulonia",
-        lat: 38.383,
-        lng: 16.4,
-        link: "borghi/caulonia.html",
-      },
-      {
-        nome: "Cimina",
-        lat: 38.266,
-        lng: 16.083,
-        link: "borghi/cimina.html",
-      },
-      {
-        nome: "Casignana (Villa Romana)",
-        lat: 38.116,
-        lng: 16.083,
-        link: "borghi/casignana.html",
-      },
+      // {
+      //   nome: "Brancaleone",
+      //   lat: 38.0,
+      //   lng: 16.1,
+      //   link: "borghi/brancaleone.html",
+      // },
+      // {
+      //   nome: "Caulonia",
+      //   lat: 38.383,
+      //   lng: 16.4,
+      //   link: "borghi/caulonia.html",
+      // },
+      // {
+      //   nome: "Cimina",
+      //   lat: 38.266,
+      //   lng: 16.083,
+      //   link: "borghi/cimina.html",
+      // },
+      // {
+      //   nome: "Casignana (Villa Romana)",
+      //   lat: 38.116,
+      //   lng: 16.083,
+      //   link: "borghi/casignana.html",
+      // },
       // { nome: "Riace", lat: 38.417, lng: 16.483, link: "borghi/riace.html" },
       // { nome: "Roccella Ionica", lat: 38.317, lng: 16.4, link: "borghi/roccella.html" },
       // { nome: "Samo", lat: 38.067, lng: 16.067, link: "borghi/samo.html" },

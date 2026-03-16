@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valle delle Grandi Pietre - Polo Tecnico Professionale Marconi</title>
+    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp">
+    <!-- Google Fonts e Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ============================================
+           POLO TECNICO PROFESSIONALE - STYLE.CSS
+           Design Elegante e Professionale
+           ============================================ */
+
+        /* RESET E BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background-color: #fafbfc;
+            overflow-x: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* ============================================
+           VARIABILI COLORE - PALETTE REFINED
+           ============================================ */
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --primary-dark: #1e2b3a;
+            --accent: #e67e22;
+            --accent-light: #f39c12;
+            --accent-dark: #c96e1c;
+            --secondary: #5c7c9a;
+            --gray-light: #f0f2f5;
+            --gray: #9ca3af;
+            --text-light: #6b7280;
+            --text-dark: #1f2937;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+            --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --transition: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        /* ============================================
+           LAYOUT GENERALE
+           ============================================ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ============================================
+           HEADER E NAVIGAZIONE
+           ============================================ */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all var(--transition);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            transition: padding var(--transition);
+        }
+
+        .logo h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: transform var(--transition);
+        }
+
+        .logo h1:hover {
+            transform: translateX(5px);
+        }
+
+        .logo span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: block;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            margin-top: 2px;
+        }
+
+        .back-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gray-light);
+            color: var(--text-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+
+        .back-link a:hover {
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: translateX(-5px);
+        }
+
+        /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero-borgo {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            color: var(--white);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 44, 74, 0.85) 0%, rgba(26, 61, 92, 0.85) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .hero-borgo .container {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+        }
+
+        .hero-borgo h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-borgo p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-section.reverse {
+            direction: rtl;
+        }
+
+        .content-section.reverse>* {
+            direction: ltr;
+        }
+
+        .content-text {
+            padding: 20px;
+        }
+
+        .content-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content-text p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .content-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ============================================
+           INFO CARDS
+           ============================================ */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .info-grid.contact-grid {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        }
+
+        .info-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .info-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+        .tradizioni-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .tradizione-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+            padding: 30px 24px;
+            text-align: center;
+        }
+
+        .tradizione-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform var(--transition);
+            transform-origin: left;
+        }
+
+        .tradizione-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tradizione-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .tradizione-card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            transition: transform var(--transition);
+        }
+
+        .tradizione-card:hover i {
+            transform: scale(1.1);
+        }
+
+        .tradizione-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .tradizione-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* ============================================
+           GALLERY
+           ============================================ */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 220px;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-slow);
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-accent);
+            color: var(--text-dark);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all var(--transition);
+            box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+        }
+
+        .btn i {
+            transition: transform var(--transition);
+        }
+
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .btn-center {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 70px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+
+        .footer-content {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .footer-content p {
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-content a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        .footer-content a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .content-section {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-borgo h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-borgo p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-borgo {
+                min-height: 300px;
+            }
+
+            .hero-borgo h2 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Polo Tecnico Professionale</h1>
+                <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+            </div>
+            <div class="back-link">
+                <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-borgo"
+            style="background-image: url('../images/valledellegrandipietre/valle-pietra-cappa.jpg'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h2>Valle delle Grandi Pietre</h2>
+                <p>Un paesaggio geologico unico, tra monoliti imponenti, eremi bizantini e leggende millenarie nel cuore dell'Aspromonte.</p>
+            </div>
+        </section>
+
+        <!-- INFO CARDS -->
+        <section>
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-mountain"></i>
+                        <h4>Monolite più alto</h4>
+                        <p>Pietra Cappa: 140 m di altezza</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Epoca insediamenti</h4>
+                        <p>VII-IX sec. d.C. (Monaci Basiliani)</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-globe"></i>
+                        <h4>Riconoscimento</h4>
+                        <p>Geoparco UNESCO - Geosito internazionale</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-tree"></i>
+                        <h4>Superficie</h4>
+                        <p>4 ettari (solo Pietra Cappa)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESCRIZIONE GENERALE -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Un Paesaggio Unico al Mondo</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>La Valle dei Giganti di Pietra</h3>
+                        <p>La Valle delle Grandi Pietre è una suggestiva area naturale situata nel Parco Nazionale dell'Aspromonte, tra i territori di San Luca e Careri. Questa valle è famosa per i suoi imponenti monoliti di roccia conglomerata che si ergono maestosi nel paesaggio montano, offrendo scenari unici per escursioni e ammirazione della natura.</p>
+                        <p>Tra le fiumare Careri a nord e Bonamico a sud, una serie di ciclopiche pietre grigio-brune dalle forme più diverse si stagliano contro il cielo emergendo da una lussureggiante e fitta vegetazione: Pietra Cappa, le Rocche di San Pietro, Pietra Tonda, Pietra Lunga, Pietra Stranghiolo, Pietra di Febo, Pietra Castello.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('../images/valledellegrandipietre/valle-foto-3.jpg');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PIETRA CAPPA - IL MONOLITE SIMBOLO -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Pietra Cappa: Il Gigante d'Europa</h2>
+                <div class="content-section">
+                    <div class="content-image" style="background-image: url('../images/valledellegrandipietre/valle-foto-4.jpg');"></div>
+                    <div class="content-text">
+                        <h3>Il Monolito più Alto d'Europa</h3>
+                        <p>Con i suoi oltre 140 metri d'altezza e 4 ettari di estensione, Pietra Cappa è il monolite più alto d'Europa, simbolo del Parco Nazionale dell'Aspromonte e cuore della Valle delle Grandi Pietre. La sua imponente forma tondeggiante a "panettone" contrasta con la morfologia selvaggia dell'Aspromonte, spiccando nel verde dei boschi circostanti.</p>
+                        <p>La sua forma a "butte" (collina isolata con fianchi ripidi e sommità pianeggiante) è dovuta alla sua composizione geologica: conglomerati e arenarie ben cementati risalenti all'Oligocene (33-23 milioni di anni fa). Pietra Cappa è un geosito di rilevanza internazionale, incluso nell'Aspromonte Geopark, inserito nella Rete Globale dei Geoparchi UNESCO.</p>
+                    </div>
+                </div>
+
+                <div class="content-section reverse">
+                    <div class="content-text">
+                        <h3>L'Origine del Nome tra Mito e Storia</h3>
+                        <p>Il nome "Pietra Cappa" ha origini antichissime. Significa "coppa rovesciata", per la grotta che nasconde nelle sue viscere. In alcuni antichi documenti medievali viene definita "Pietra Gauca", ovvero "pietra vuota", in riferimento alle numerose cavità presenti non solo in questo monolito ma in tutta la zona circostante, caratterizzata da insediamenti rupestri che ricordano i paesaggi della Cappadocia.</p>
+                        <p>Secondo una leggenda, Pietra Cappa avrebbe avuto un ruolo nella storia dei Cavalieri Templari: i suoi misteriosi cunicoli che si inoltrano nelle viscere della terra avrebbero offerto nascondiglio ai monaci guerrieri, e qui sarebbe avvenuta la rivelazione del Graal. Un'altra leggenda narra che nella cavità interna sia stato rinchiuso Malco, il servo del Sommo Sacerdote a cui San Pietro mozzò un orecchio.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('../images/valledellegrandipietre/valle-foto-2.jpg');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MONACI BASILIANI E INSEDIAMENTI RUPESTRI -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Eremi e Spiritualità</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>Le Rocche di San Pietro</h3>
+                        <p>Tra il VII e il IX secolo d.C., monaci basiliani in fuga dall'oriente a causa delle persecuzioni dell'imperatore Leone III Isaurico, si spinsero in Calabria alla r  icerca di luoghi solitari dove lavorare e pregare. Scelsero proprio questa vallata, consegnando alla storia luoghi sorprendenti come le Rocche di San Pietro e Pietra Castello.</p>
+                        <p>Le Rocche di San Pietro sono un complesso conglomeratico modellato dall'erosione, dove i monaci scavarono nella roccia grotte utilizzate come asceterio (luoghi di preghiera e ritiro spirituale). Si distinguono una grotta principale a due piani intercomunicanti e altre grotte minori, con incisioni, fosse e cavità che testimoniano la presenza umana.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('../images/valledellegrandipietre/pietra-san-pietro.jpg');"></div>
+                </div>
+
+                <div class="content-section reverse">
+                    <div class="content-image" style="background-image: url('../images/valledellegrandipietre/pietra-castello.jpg');"></div>
+                    <div class="content-text">
+                        <h3>Pietra Castello e la Chiesa di San Giorgio</h3>
+                        <p>Pietra Castello è un agglomerato di enormi rocce il cui nome deriva dalla posizione arroccata e dalla presenza di ruderi di un castello risalente al periodo bizantino. Qui sono state ritrovate monete bizantine (395-453 d.C.) conservate al Museo di Reggio Calabria, che attestano la datazione del sito. Corrado Alvaro la definì "un dito proteso verso il cielo".</p>
+                        <p>Poco distante, si trovano i ruderi della chiesetta di San Giorgio, una chiesa lauritica (punto di riferimento per i monaci eremiti dei dintorni). La chiesa aveva un prezioso pavimento in marmo policromo, smontato nel 1936 e oggi conservato (ma non esposto) al Museo Nazionale della Magna Grecia di Reggio Calabria. La sua struttura, con cupola centrale e quattro cupole agli angoli (tetrakionio), era simile alla Cattolica di Stilo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GEOLOGIA E PAESAGGIO -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Geologia e Natura</h2>
+                <div class="content-section">
+                    <div class="content-image" style="background-image: url('../images/valledellegrandipietre/geologia.jpg');"></div>
+                    <div class="content-text">
+                        <h3>Un Laboratorio Geologico a Cielo Aperto</h3>
+                        <p>La Valle delle Grandi Pietre appartiene alla Formazione di Stilo-Capo d'Orlando, estesa fino ai monti Peloritani in Sicilia. Si tratta di rocce sedimentarie terrigene, conglomerati poligenici compresi tra le unità tettoniche del basamento cristallino e le argille varicolori. Modellati per milioni di anni dall'azione erosiva di acqua e vento, questi conglomerati hanno assunto forme uniche, con superfici lisce, curve e cavità chiamate "tafoni".</p>
+                        <p>La zona è ricca di biodiversità: boschi di leccio, querce, castagni secolari, macchia mediterranea. Tra la fauna, si segnalano la rarissima aquila reale, il lupo (recentemente tornato), il gatto selvatico, cinghiali e istrici. In primavera, l'Aspromonte è un importante punto di transito per migliaia di rapaci che migrano dall'Africa verso l'Europa.</p>
+                    </div>
+                </div>
+
+                <div class="content-section reverse">
+                    <div class="content-text">
+                        <h3>I Monoliti della Valle</h3>
+                        <p>Oltre a Pietra Cappa, la valle ospita numerosi altri monoliti:</p>
+                        <p><strong>Pietra Lunga</strong> - caratterizzata da una forma allungata che le conferisce il nome.<br>
+                        <strong>Pietra Stranghiolo</strong> - nome dialettale che indica la sua forma particolare.<br>
+                        <strong>Pietra Castello</strong> - con i ruderi della fortezza bizantina sulla sommità.<br>
+                        <strong>Pietra di Febo</strong> - dedicata al dio Apollo, avvolta nel mito.<br>
+                        <strong>Rocche di San Pietro</strong> - il complesso rupestre più importante per la presenza degli eremi basiliani.</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('../images/valledellegrandipietre/pietra-lunga.jpg');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESCURSIONI E TREKKING -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Escursioni e Trekking</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>Itinerari nel Cuore della Valle</h3>
+                        <p>La Valle delle Grandi Pietre offre numerosi percorsi per gli amanti del trekking, immersi in una natura rigogliosa e selvaggia. Il percorso più suggestivo parte da Natile Vecchio e raggiunge Pietra Cappa, attraversando boschi di leccio e macchia mediterranea, con una deviazione per visitare le affascinanti Rocche di San Pietro.</p>
+                        <p>L'escursione ha una durata di circa 6 ore, con un dislivello di 400 metri, ed è di livello escursionistico (E), richiedendo un buon allenamento fisico. È consigliabile affidarsi a guide ufficiali del Parco Nazionale dell'Aspromonte o ad associazioni escursionistiche per scoprire gli aspetti meno noti di questo "sentiero dello spirito".</p>
+                    </div>
+                    <div class="content-image" style="background-image: url('../images/valledellegrandipietre/trekking.jpg');"></div>
+                </div>
+
+                <div class="content-section reverse">
+                    <div class="content-image" style="background-image: url('../images/valledellegrandipietre/escursione.jpg');"></div>
+                    <div class="content-text">
+                        <h3>Informazioni per l'escursione</h3>
+                        <p><strong>Partenza:</strong> Natile Vecchio (o in alternativa San Luca).<br>
+                        <strong>Durata:</strong> 6 ore circa.<br>
+                        <strong>Difficoltà:</strong> E (Escursionistico).<br>
+                        <strong>Segnaletica:</strong> Sentieri 105 e 124 del catasto sentieri del Parco Nazionale dell'Aspromonte.<br>
+                        <strong>Attrezzatura necessaria:</strong> Scarpe con suola scolpita, abbigliamento a strati, giacca impermeabile, almeno 1 litro d'acqua, colazione al sacco.</p>
+                        <p>È possibile prenotare escursioni guidate contattando le guide ufficiali del Parco.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRADIZIONI E LEGGENDE -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Tradizioni e Leggende</h2>
+                <div class="tradizioni-grid">
+                    <div class="tradizione-card">
+                        <i class="fas fa-dragon"></i>
+                        <h4>La Legenda del Graal</h4>
+                        <p>Secondo una leggenda, Pietra Cappa custodirebbe il segreto del Graal. I Cavalieri Templari avrebbero nascosto nei suoi cunicoli sotterranei la mitica coppa del sangue di Cristo, rivelata proprio in questo luogo.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-cross"></i>
+                        <h4>I Monaci Basiliani</h4>
+                        <p>La valle conserva la memoria dei monaci orientali che qui trovarono rifugio tra il VII e il IX secolo, scavando chiese-grotte e vivendo in eremitaggio. Le Rocche di San Pietro e Pietra Castello sono le testimonianze più importanti di questa civiltà.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-book"></i>
+                        <h4>Corrado Alvaro</h4>
+                        <p>Il grande scrittore calabrese Corrado Alvaro rimase affascinato da questi luoghi, definendo Pietra Castello "un dito proteso verso il cielo" e contribuendo a raccontare la storia e le leggende della valle.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-ghost"></i>
+                        <h4>Il Mito di Malco</h4>
+                        <p>La tradizione popolare narra che nella cavità interna di Pietra Cappa sia stato rinchiuso Malco, il servo del Sommo Sacerdote che schiaffeggiò Gesù e al quale San Pietro mozzò un orecchio. Una leggenda che unisce la valle alla Passione di Cristo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERIA FOTO -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Galleria Fotografica</h2>
+                <div class="gallery">
+                    <div class="gallery-item"><img src="../images/valledellegrandipietre/valle-foto-4.jpg" alt="Pietra Cappa primo piano"></div>
+                    <div class="gallery-item"><img src="../images/valledellegrandipietre/pietra-san-pietro.jpg" alt="Rocche di San Pietro"></div>
+                    <div class="gallery-item"><img src="../images/valledellegrandipietre/valle-foto-2.jpg" alt="Pietra Cappa al tramonto"></div>
+                    <div class="gallery-item"><img src="../images/valledellegrandipietre/valle-foto-3.jpg" alt="Panorama Valle delle Grandi Pietre"></div>
+                    <div class="gallery-item"><img src="../images/valledellegrandipietre/pietra-lunga.jpg" alt="Pietra Lunga"></div>
+                    <div class="gallery-item"><img src="../images/valledellegrandipietre/pietra-castello.jpg" alt="Pietra Castello"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO UTILI -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Info Utili</h2>
+                <div class="info-grid contact-grid">
+                    <div class="info-card">
+                        <i class="fas fa-car"></i>
+                        <h4>Come Arrivare</h4>
+                        <p><strong>In Auto:</strong> SS106 Jonica, seguire indicazioni per San Luca o Careri. Da qui, proseguire verso Natile Vecchio, punto di partenza ideale per le escursioni.<br>
+                        Dista circa 30-40 km da Siderno.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-signs"></i>
+                        <h4>Comuni di Riferimento</h4>
+                        <p><strong>San Luca (RC)</strong><br>
+                        Via Roma, 89030 San Luca<br>
+                        <strong>Careri (RC)</strong><br>
+                        Via Nazionale, 89030 Careri</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Ente Parco Nazionale dell'Aspromonte</h4>
+                        <p><strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo Stefano Aspromonte (RC)<br>
+                        <strong>Tel:</strong> 0965 743060<br>
+                        <strong>Email:</strong> info.posta@parconazionaleaspromonte.it<br>
+                        <strong>Sito web:</strong> <a href="https://www.parconazionaleaspromonte.it" target="_blank" style="color: var(--accent);">www.parconazionaleaspromonte.it</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-hiking"></i>
+                        <h4>Guide e Escursioni</h4>
+                        <p><strong>Cl.MA.GR.E.CA SRLS</strong><br>
+                        Via Temesa 16, 89132 Reggio Calabria<br>
+                        <strong>Tel:</strong> +39 320 0380867<br>
+                        <strong>Email:</strong> cimagreca@hotmail.com<br>
+                        Escursioni su prenotazione a Pietra Cappa (min. 10 persone, €15 a persona).</p>
+                    </div>
+                </div>
+                <div class="btn-center">
+                    <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
+                    <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.</p>
+                </div>
+                <div class="copyright">
+                    Sito realizzato dagli studenti del progetto scolastico
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

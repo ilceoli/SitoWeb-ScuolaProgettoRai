@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bianco - Polo Tecnico Professionale Marconi</title>
+    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp">
+    <!-- Google Fonts e Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ============================================
+           POLO TECNICO PROFESSIONALE - STYLE.CSS
+           Design Elegante e Professionale
+           ============================================ */
+
+        /* RESET E BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background-color: #fafbfc;
+            overflow-x: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* ============================================
+           VARIABILI COLORE - PALETTE REFINED
+           ============================================ */
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --primary-dark: #1e2b3a;
+            --accent: #e67e22;
+            --accent-light: #f39c12;
+            --accent-dark: #c96e1c;
+            --secondary: #5c7c9a;
+            --gray-light: #f0f2f5;
+            --gray: #9ca3af;
+            --text-light: #6b7280;
+            --text-dark: #1f2937;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+            --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --transition: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        /* ============================================
+           LAYOUT GENERALE
+           ============================================ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ============================================
+           HEADER E NAVIGAZIONE
+           ============================================ */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all var(--transition);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            transition: padding var(--transition);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: transform var(--transition);
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .logo h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .logo span {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            display: block;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            margin-top: 1px;
+        }
+
+        .back-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gray-light);
+            color: var(--text-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+
+        .back-link a:hover {
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: translateX(-5px);
+        }
+
+        /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        section:nth-child(even) {
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero-borgo {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            color: var(--white);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 44, 74, 0.85) 0%, rgba(26, 61, 92, 0.85) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .hero-borgo .container {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+        }
+
+        .hero-borgo h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-borgo p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-section.reverse {
+            direction: rtl;
+        }
+
+        .content-section.reverse>* {
+            direction: ltr;
+        }
+
+        .content-text {
+            padding: 20px;
+        }
+
+        .content-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content-text p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .content-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ============================================
+           INFO CARDS
+           ============================================ */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .info-grid.contact-grid {
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+        }
+
+        .info-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .info-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+        .tradizioni-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .tradizione-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+            padding: 30px 24px;
+            text-align: center;
+        }
+
+        .tradizione-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform var(--transition);
+            transform-origin: left;
+        }
+
+        .tradizione-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tradizione-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .tradizione-card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            transition: transform var(--transition);
+        }
+
+        .tradizione-card:hover i {
+            transform: scale(1.1);
+        }
+
+        .tradizione-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .tradizione-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* ============================================
+           GALLERY
+           ============================================ */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 220px;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-slow);
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-accent);
+            color: var(--text-dark);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all var(--transition);
+            box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+        }
+
+        .btn i {
+            transition: transform var(--transition);
+        }
+
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .btn-center {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 70px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+
+        .footer-content {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .footer-content p {
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-content a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        .footer-content a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 32px 0;
+            }
+            .logo {
+                gap: 8px;
+            }
+            .logo img {
+                height: 35px;
+            }
+            .logo h1 {
+                font-size: 1rem;
+            }
+            .logo span {
+                font-size: 0.6rem;
+                display: block;
+                opacity: 0.8;
+            }
+
+            .content-section {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                direction: ltr !important;
+            }
+
+            .content-text {
+                order: 1;
+                padding: 0;
+            }
+
+            .content-image {
+                order: 2;
+                width: 100%;
+            }
+
+            .hero-borgo h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-borgo p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            .logo h1 {
+                font-size: 0.8rem;
+                white-space: nowrap;
+            }
+            .logo span {
+                display: block;
+                font-size: 0.5rem;
+                opacity: 0.9;
+            }
+
+            .logo img {
+                height: 28px;
+            }
+
+            .hero-borgo {
+                min-height: 250px;
+                height: 40vh;
+            }
+
+            .hero-borgo h2 {
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+
+            .hero-borgo p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                margin-bottom: 40px;
+            }
+
+            .content-section {
+                gap: 25px;
+                margin-bottom: 40px;
+            }
+
+            .content-text h3 {
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+            }
+
+            .content-text p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+            .content-image {
+                height: 250px;
+                border-radius: 12px;
+            }
+
+            .info-grid,
+            .info-grid.contact-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .info-card {
+                padding: 20px;
+            }
+
+            .info-card i {
+                font-size: 2rem;
+            }
+
+            .gallery {
+                gap: 12px;
+                margin-top: 30px;
+            }
+
+            .gallery-item {
+                height: 180px;
+            }
+
+            .back-link a {
+                padding: 8px 24px;
+                font-size: 0.75rem;
+                gap: 5px;
+            }
+            .back-link i {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+                <div>
+                    <h1>Polo Tecnico Professionale</h1>
+                    <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+                </div>
+            </div>
+            <div class="back-link">
+                <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-borgo"
+            style="background-image: url('../images/bianco/bianco-paesaggio.jpeg'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h2>Bianco</h2>
+                <p>Antico borgo della Costa dei Gelsomini, tra storia millenaria, il celebre vino Greco di Bianco e spiagge da Bandiera Blu.</p>
+            </div>
+        </section>
+
+        <!-- INFO CARDS -->
+        <section>
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-mountain"></i>
+                        <h4>Altitudine</h4>
+                        <p>Centro: 12 m | Bianco Vecchio: 260 m</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Abitanti</h4>
+                        <p>4.284</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-pin"></i>
+                        <h4>Zona</h4>
+                        <p>Costa dei Gelsomini</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-history"></i>
+                        <h4>Origini</h4>
+                        <p>X secolo d.C.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IL BORGO ANTICO: BIANCO VECCHIO -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Bianco Vecchio: Il Cuore Medievale</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>Un Borgo Arroccato sul Colle</h3>
+                        <p>A 260 metri di altitudine, su un colle che domina la fiumara La Verde, sorge Bianco Vecchio, il nucleo originario del paese. Il borgo, fondato probabilmente in epoca bizantina e poi ingrandito in epoca normanna, conserva ancora oggi l'atmosfera silenziosa e suggestiva dei vecchi insediamenti medievali. Le sue case in pietra, le viuzze strette e i resti delle mura di cinta raccontano secoli di vita contadina e pastorale.</p>
+                        <p>Nel 1194 il centro viene menzionato come "Mocta Blanci" in un diploma di Enrico VI di Svevia, a testimonianza della sua importanza strategica in epoca normanna. Il borgo fu feudo di importanti famiglie nobili, tra cui i Ruffo, i Marullo e i Carafa di Roccella Jonica.</p>
+                    </div>
+                    <div class="content-image"
+                        style="background-image: url('../images/bianco/bianco-vecchio.jpg');"></div>
+                </div>
+
+                <div class="content-section reverse">
+                    <div class="content-image"
+                        style="background-image: url('../images/bianco/bianco-chiesavecchia.jpg');"></div>
+                    <div class="content-text">
+                        <h3>La Chiesa di Santa Maria del Soccorso</h3>
+                        <p>Nel cuore di Bianco Vecchio sorge la Chiesa di Santa Maria del Soccorso, risalente all'XI secolo e più volte restaurata. Il suo campanile ottagonale è un elemento architettonico distintivo che svetta sul paesaggio circostante. La chiesa custodiva pregevoli opere d'arte sacra, oggi in parte trasferite nel nuovo centro abitato.</p>
+                        <p>Poco distante si trovano i ruderi del Convento di Santa Maria della Vittoria, edificato nel 1622 e andato in rovina dopo un incendio. I resti del convento, immersi nella vegetazione, evocano la presenza della comunità religiosa che per secoli ha animato queste colline.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORIA E TRADIZIONI DEL BORGO -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Storia e Tradizioni del Borgo</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>Dalle Origini Greche ai Moti Risorgimentali</h3>
+                        <p>Il territorio di Bianco era già frequentato in epoca greca: l'antico insediamento di Butroto, situato a circa 4 km dal mare, fungeva probabilmente da porto per Locri Epizefiri. Dopo la distruzione di Butroto, la popolazione si ritirò sulle colline, fondando il borgo medievale. A testimonianza di questa storia, restano ancora oggi alcune incisioni armene e i silos-granai scavati nella roccia.</p>
+                        <p>Nel corso dei secoli, Bianco fu al centro di importanti eventi storici. Nel 1847, durante i moti risorgimentali, il giovane patriota Domenico Salvadori di Bianco partecipò alle insurrezioni che portarono alla fucilazione dei Cinque Martiri di Gerace. Il suo sacrificio è ancora ricordato dalla comunità.</p>
+                    </div>
+                    <div class="content-image"
+                        style="background-image: url('../images/bianco/bianco-storia.jpg');"></div>
+                </div>
+
+                <div class="content-section reverse">
+                    <div class="content-image"
+                        style="background-image: url('../images/bianco/bianco-terremoto.jpg');"></div>
+                    <div class="content-text">
+                        <h3>I Terremoti e la Rinascita sul Mare</h3>
+                        <p>Il devastante terremoto del 1783 rase al suolo gran parte di Bianco Vecchio. La popolazione cominciò a trasferirsi gradualmente più vicino alla costa, dando vita all'attuale centro di Bianco Marina. Il terremoto del 1908 completò questo spostamento: il vecchio borgo fu definitivamente abbandonato e nacque il nuovo abitato moderno, organizzato intorno alla nuova parrocchia.</p>
+                        <p>Questo doppio evento ha lasciato un segno profondo nell'identità locale: da un lato la memoria del borgo antico, dall'altro la vocazione marinara del nuovo centro, arricchita dall'arrivo di immigrati calabro-siculi che hanno mescolato la cultura contadina con quella del mare.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IL CENTRO MODERNO E I SUOI MONUMENTI -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Il Centro Moderno e i Suoi Monumenti</h2>
+                <div class="content-section">
+                    <div class="content-image"
+                        style="background-image: url('../images/bianco/bianco-duomo.jpg');"></div>
+                    <div class="content-text">
+                        <h3>Il Duomo di Tutti i Santi</h3>
+                        <p>Il cuore religioso di Bianco Marina è il Duomo di Tutti i Santi, caratterizzato da un elegante porticato che accoglie i fedeli. L'edificio, costruito dopo il terremoto del 1783, conserva al suo interno pregevoli opere d'arte sacra provenienti dalle antiche chiese del borgo distrutto.</p>
+                        <p>La piazza antistante è il luogo di ritrovo della comunità e ospita le principali manifestazioni civili e religiose, tra cui la festa patronale della Madonna di Pugliano, che si svolge nella prima metà di agosto e culmina il 15 con la solenne processione e i tradizionali fuochi d'artificio.</p>
+                    </div>
+                </div>
+
+                <div class="content-section reverse">
+                    <div class="content-text">
+                        <h3>Il Santuario della Madonna di Pugliano</h3>
+                        <p>Sulle colline che sovrastano il centro abitato sorge il Santuario della Madonna di Pugliano, edificato tra il 1500 e il 1600 su un preesistente luogo di culto basiliano. Il santuario, meta di pellegrinaggi, offre uno dei punti panoramici più suggestivi della zona, con vista sulla costa e sull'entroterra aspromontano.</p>
+                        <p>All'interno si conservano preziose testimonianze artistiche, tra cui affreschi e statue lignee che raccontano la devozione popolare per la Vergine, proclamata patrona di Bianco.</p>
+                    </div>
+                    <div class="content-image"
+                        style="background-image: url('../images/bianco/bianco-santuario.jpg');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LE ECCELLENZE DEL TERRITORIO -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Le Eccellenze del Territorio</h2>
+                <div class="content-section">
+                    <div class="content-image"
+                        style="background-image: url('../images/bianco/bianco-capo-bruzzano.jpg');"></div>
+                    <div class="content-text">
+                        <h3>Spiagge da Bandiera Blu</h3>
+                        <p>Bianco è famoso per le sue spiagge di sabbia dorata e il mare cristallino. Capo Bruzzano, con la sua scogliera scolpita dal vento, è stato inserito da Legambiente tra le undici spiagge più belle d'Italia. Nel 2002 le spiagge di Bianco hanno ottenuto il prestigioso riconoscimento della Bandiera Blu per la qualità delle acque e dei servizi.</p>
+                        <p>I litorali di Africo e Capo Bruzzano offrono fondali limpidi ideali per immersioni e snorkeling, mentre i 10 km di costa sono punteggiati da stabilimenti balneari e aree attrezzate per il turismo estivo.</p>
+                    </div>
+                </div>
+
+                <div class="content-section reverse">
+                    <div class="content-text">
+                        <h3>Il Greco di Bianco DOC: il Vino più Antico d'Italia</h3>
+                        <p>Il Greco di Bianco è un vino passito considerato il più antico d'Italia: già il poeta Esiodo, nel VII secolo a.C., ne lodava le qualità. Ottenuto da uve fatte appassire su graticci, ha un colore dorato e un profumo intenso. Ha ottenuto la DOC nel 1980 e oggi è prodotto secondo metodi tradizionali che si tramandano da generazioni.</p>
+                        <p>Oltre al celebre Greco, le colline di Bianco producono anche l'ottimo Mantonico, il cui nome deriva dal greco e significa "profeta", particolarmente apprezzato fin dall'antichità. Le cantine locali offrono degustazioni e visite guidate per scoprire questi tesori enologici.</p>
+                    </div>
+                    <div class="content-image"
+                        style="background-image: url('../images/bianco/bianco-vigneti.jpg');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRADIZIONI E CULTURA -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Tradizioni e Cultura</h2>
+                <div class="tradizioni-grid">
+                    <div class="tradizione-card">
+                        <i class="fas fa-wine-bottle"></i>
+                        <h4>Greco di Bianco DOC</h4>
+                        <p>Il vino simbolo del territorio, ritenuto il più antico d'Italia. Ottenuto da uve passite, ha un sapore morbido e armonico, perfetto con pasticceria secca e formaggi stagionati.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Cucina Locale</h4>
+                        <p>La tradizione culinaria unisce sapori di terra e di mare: pesce azzurro, fritture, olio d'oliva, formaggi pecorini e i dolci tipici a base di mandorle.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-fire"></i>
+                        <h4>Notte Bianca</h4>
+                        <p>Il 15 agosto il paese si anima con la festa patronale, che culmina in uno spettacolare spettacolo pirotecnico tra i più rinomati della Locride, con fuochi esplosi anche in acqua.</p>
+                    </div>
+                    <div class="tradizione-card">
+                        <i class="fas fa-ship"></i>
+                        <h4>Identità Costiera</h4>
+                        <p>Dopo i terremoti, la popolazione si è mescolata con genti di mare, creando un'identità unica che fonde la cultura contadina dell'entroterra con quella marinara della costa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERIA FOTO -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">Galleria Fotografica</h2>
+                <div class="gallery">
+                    <div class="gallery-item"><img src="../images/bianco/galleria/galleria-bianco-1.jpeg"></div>
+                    <div class="gallery-item"><img src="../images/bianco/galleria/bianco-vecchio.jpg" alt="Bianco Vecchio"></div>
+                    <div class="gallery-item"><img src="../images/bianco/galleria/bianco-duomo.jpg" alt="Duomo di Tutti i Santi"></div>
+                    <div class="gallery-item"><img src="../images/bianco/galleria/bianco-capo-bruzzano.jpg" alt="Capo Bruzzano"></div>
+                    <div class="gallery-item"><img src="../images/bianco/galleria/bianco-vigneti.jpg" alt="Vigneti di Greco di Bianco"></div>
+                    <div class="gallery-item"><img src="../images/bianco/galleria/bianco-fuochi.jpg" alt="Notte Bianca"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO UTILI -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Info Utili</h2>
+                <div class="info-grid contact-grid">
+                    <div class="info-card">
+                        <i class="fas fa-car"></i>
+                        <h4>Come Arrivare</h4>
+                        <p>
+                            <strong>In Auto</strong><br>
+                            SS106 Jonica, uscita Bianco<br>
+                            Dista circa 15 km da Siderno e 50 km da Reggio Calabria<br>
+                            Parcheggio gratuito lungo il lungomare<br><br>
+                            <strong>In Treno</strong><br>
+                            Stazione di Bianco (linea Jonica RC-Taranto)
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-globe"></i>
+                        <h4>Comune e Informazioni</h4>
+                        <p>
+                            <strong>Comune di Bianco</strong><br>
+                            Piazza Cinque Martiri<br>
+                            89032 Bianco (RC)<br>
+                            <strong>Tel:</strong> 0964 911002<br>
+                            <strong>PEC:</strong> comune.bianco@asmepec.it<br>
+                            <strong>Sito web:</strong> <a href="https://www.comune.bianco.rc.it" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none; font-weight: 600;">www.comune.bianco.rc.it</a><br>
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-train"></i>
+                        <h4>Trasporti</h4>
+                        <p>
+                            <strong>Stazione Ferroviaria</strong><br>
+                            Stazione di Bianco (linea Jonica)<br>
+                            Collegamenti con Reggio Calabria e Taranto<br><br>
+                            <strong>Trasporto Locale</strong><br>
+                            Servizio taxi disponibile<br>
+                            Noleggio biciclette lungo il lungomare
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h4>Spiagge e Turismo</h4>
+                        <p>
+                            <strong>Bandiera Blu</strong> (2002)<br>
+                            10 km di costa sabbiosa<br>
+                            Capo Bruzzano: scogliera e acque cristalline<br>
+                            <strong>Info turistiche:</strong> Pro Loco Bianco<br>
+                            <a href="mailto:info@prolocobianco.it" style="color: var(--text-light);">info@prolocobianco.it</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="btn-center">
+                    <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
+                <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.</p>
+            </div>
+            <div class="copyright">
+                Sito realizzato dagli studenti del progetto scolastico
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        window.addEventListener("load", function () {
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+
+</html>

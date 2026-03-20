@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caulonia - Polo Tecnico Professionale Marconi</title>
+    <title>Costa dei Gelsomini - Polo Tecnico Professionale Marconi</title>
     <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp">
     <!-- Google Fonts e Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* ============================================
@@ -33,6 +36,8 @@
             color: #1a1a2e;
             background-color: #fafbfc;
             overflow-x: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* ============================================
@@ -95,27 +100,36 @@
             transition: padding var(--transition);
         }
 
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: transform var(--transition);
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
         .logo h1 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             font-weight: 700;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            transition: transform var(--transition);
-        }
-
-        .logo h1:hover {
-            transform: translateX(5px);
+            line-height: 1.2;
         }
 
         .logo span {
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             color: var(--text-light);
             display: block;
             font-weight: 400;
             letter-spacing: 0.3px;
-            margin-top: 2px;
+            margin-top: 1px;
         }
 
         .back-link a {
@@ -145,6 +159,12 @@
             position: relative;
         }
 
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+        }
+
         section:nth-child(even) {
             background-color: var(--white);
         }
@@ -154,7 +174,7 @@
             font-size: 2.8rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             letter-spacing: -0.5px;
         }
 
@@ -225,18 +245,24 @@
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
         }
 
         .content-section.reverse {
             direction: rtl;
         }
 
-        .content-section.reverse > * {
+        .content-section.reverse>* {
             direction: ltr;
         }
 
         .content-text {
             padding: 20px;
+            text-align: justify;
         }
 
         .content-text h3 {
@@ -269,6 +295,10 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
             margin-top: 40px;
+        }
+
+        .info-grid.contact-grid {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         }
 
         .info-card {
@@ -432,7 +462,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.6s;
         }
 
@@ -512,49 +542,173 @@
            RESPONSIVE
            ============================================ */
         @media (max-width: 768px) {
-            .content-section {
-                grid-template-columns: 1fr;
+            .header-content {
+                padding: 32px 0;
             }
-            
+
+            .logo {
+                gap: 8px;
+            }
+
+            .logo img {
+                height: 35px;
+            }
+
+            .logo h1 {
+                font-size: 1rem;
+            }
+
+            .logo span {
+                font-size: 0.6rem;
+                display: block;
+                opacity: 0.8;
+            }
+
+            .content-section {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                direction: ltr !important;
+            }
+
+            .content-text {
+                order: 1;
+                padding: 0;
+            }
+
+            .content-image {
+                order: 2;
+                width: 100%;
+            }
+
             .hero-borgo h2 {
                 font-size: 2.5rem;
             }
-            
+
             .hero-borgo p {
                 font-size: 1.1rem;
             }
-            
+
             .section-title {
                 font-size: 2.2rem;
             }
         }
 
         @media (max-width: 480px) {
-            .hero-borgo {
-                min-height: 300px;
+            .container {
+                padding: 0 20px;
             }
-            
+
+            .logo h1 {
+                font-size: 0.8rem;
+                white-space: nowrap;
+            }
+
+            .logo span {
+                display: block;
+                font-size: 0.5rem;
+                opacity: 0.9;
+            }
+
+            .logo img {
+                height: 28px;
+            }
+
+            .hero-borgo {
+                min-height: 250px;
+                height: 40vh;
+            }
+
             .hero-borgo h2 {
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+
+            .hero-borgo p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                margin-bottom: 40px;
+            }
+
+            .content-section {
+                gap: 25px;
+                margin-bottom: 40px;
+            }
+
+            .content-text h3 {
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+            }
+
+            .content-text p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+            .content-image {
+                height: 250px;
+                border-radius: 12px;
+            }
+
+            .info-grid,
+            .info-grid.contact-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .info-card {
+                padding: 20px;
+            }
+
+            .info-card i {
                 font-size: 2rem;
             }
-            
-            .btn {
-                padding: 12px 24px;
-                font-size: 0.95rem;
+
+            .gallery {
+                gap: 12px;
+                margin-top: 30px;
             }
-            
-            .section-title {
-                font-size: 1.8rem;
+
+            .gallery-item {
+                height: 180px;
+            }
+
+            .back-link a {
+                padding: 8px 24px;
+                font-size: 0.75rem;
+                gap: 5px;
+            }
+
+            .back-link i {
+                font-size: 0.7rem;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
-                <h1>Polo Tecnico Professionale</h1>
-                <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+                <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+                <div>
+                    <h1>Polo Tecnico Professionale</h1>
+                    <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+                </div>
             </div>
             <div class="back-link">
                 <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
@@ -564,11 +718,12 @@
 
     <main>
         <!-- HERO SECTION -->
-        <section class="hero-borgo" style="background-image: url('https://picsum.photos/1200/600?random=36'); background-size: cover; background-position: center;">
+        <section class="hero-borgo"
+            style="background-image: url('../images/costa-gelsomini/panorama-costa.jpg'); background-size: cover; background-position: center;">
             <div class="hero-overlay"></div>
             <div class="container">
-                <h2>Caulonia</h2>
-                <p>Antica Caulonia, ricca di storia e arte. Il centro storico conserva palazzi e chiese di pregio.</p>
+                <h2>Costa dei Gelsomini</h2>
+                <p>Dove il profumo del gelsomino incontra il mare cristallino, tra storia millenaria e natura incontaminata.</p>
             </div>
         </section>
 
@@ -577,149 +732,149 @@
             <div class="container">
                 <div class="info-grid">
                     <div class="info-card">
-                        <i class="fas fa-mountain"></i>
-                        <h4>Altitudine</h4>
-                        <p>50 - 200 m s.l.m.</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-users"></i>
-                        <h4>Abitanti</h4>
-                        <p>Circa 2.800</p>
-                    </div>
-                    <div class="info-card">
                         <i class="fas fa-map-pin"></i>
-                        <h4>Zona</h4>
-                        <p>Valle dello Stilaro</p>
+                        <h4>Estensione</h4>
+                        <p>Da Punta Stilo a Capo Spartivento</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-flower"></i>
+                        <h4>Simbolo</h4>
+                        <p>Il gelsomino (Jasminum grandiflorum)</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-turtle"></i>
+                        <h4>Biodiversità</h4>
+                        <p>Nidificazione Caretta caretta</p>
                     </div>
                     <div class="info-card">
                         <i class="fas fa-history"></i>
-                        <h4>Origini</h4>
-                        <p>Antica Kaulon (VII sec. a.C.)</p>
+                        <h4>Civiltà</h4>
+                        <p>Greca, Romana, Bizantina, Normanna</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- STORIA E ORIGINI -->
+        <!-- PRIMA SEZIONE: Il Profumo dei Gelsomini -->
         <section>
             <div class="container">
-                <h2 class="section-title">La Storia di Caulonia</h2>
+                <h2 class="section-title">Il Profumo dei Gelsomini</h2>
                 <div class="content-section">
                     <div class="content-text">
-                        <h3>Dalle Origini Magnogreche</h3>
-                        <p>Il borgo di Caulonia, situato tra la valle dei torrenti Stilaro e Allaro e la costa dello Mar Ionio, era anticamente chiamato Castelvetere. Il suo nome attuale richiama l'antica città magnogreca di Kaulon, distrutta da Dionigi di Siracusa, dalla quale, secondo la tradizione, provenivano i superstiti che fondarono il borgo.</p>
-                        <p>L'antica Kaulon fu una delle colonie greche più importanti della Locride, fondata nel VII secolo a.C. La città prosperò per secoli grazie alla sua posizione strategica tra mare e monti, che favoriva sia il commercio marittimo che l'agricoltura.</p>
+                        <h3>La Storia di un'Essenza</h3>
+                        <p>Il nome "Costa dei Gelsomini" nasce dalla storica coltivazione del gelsomino, diffusa lungo tutta la fascia costiera della Locride. Questa pianta, introdotta probabilmente in epoca araba, trovò nel clima mite e nei terreni ben drenati il suo habitat ideale, trasformando il paesaggio in una distesa di fiori bianchi dal profumo inconfondibile.</p>
+                        <p>Le "gelsominaie" – donne esperte nella raccolta – si alzavano all'alba per cogliere i delicati boccioli ancora chiusi, destinati all'industria dei profumi. I fiori venivano esportati soprattutto in Francia, patria della profumeria. La **Stazione Sperimentale delle Essenze**, istituita a Reggio Calabria nel 1928, fu un centro di ricerca fondamentale per la selezione e la promozione di queste colture, rendendo la zona un punto di riferimento internazionale per le essenze naturali.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=361');"></div>
-                </div>
-                
-                <div class="content-section reverse">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=362');"></div>
-                    <div class="content-text">
-                        <h3>Dalla Distruzione alla Rinascita</h3>
-                        <p>Dopo la distruzione operata da Dionigi di Siracusa nel IV secolo a.C., la città cadde in rovina. Solo nel Medioevo, intorno all'XI secolo, sulle rovine dell'antica Kaulon sorse il borgo medievale di Castelvetere, che prese il nome attuale di Caulonia solo nel XVIII secolo.</p>
-                        <p>Il borgo mantenne sempre un forte legame con la sua storia antica, tanto che molti reperti archeologici sono stati ritrovati nel territorio e sono ora esposti nel museo locale.</p>
-                    </div>
+                    <div class="content-image"
+                        style="background-image: url('../images/costa-gelsomini/gelsominaie.jpg');"></div>
                 </div>
             </div>
         </section>
 
-        <!-- IL CENTRO STORICO -->
+        <!-- SECONDA SEZIONE (inversa): Biodiversità e Tartarughe Marine -->
         <section style="background-color: white;">
             <div class="container">
-                <h2 class="section-title">Il Centro Storico</h2>
-                <div class="content-section">
-                    <div class="content-text">
-                        <h3>Architetture di Pregio</h3>
-                        <p>Caulonia conserva un centro storico di grande fascino, con palazzi nobiliari, chiese barocche e viuzze caratteristiche che raccontano secoli di storia. Il nucleo antico si sviluppa su due livelli: il borgo alto e il borgo basso, collegati da scalinate e rampe che rendono il paese particolarmente suggestivo.</p>
-                        <p>Le case in pietra locale, molti palazzi signorili e le chiese parrocchiali testimoniano l'evoluzione architettonica del borgo attraverso i secoli, dall'epoca medievale fino al Barocco settecentesco.</p>
-                    </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=363');"></div>
-                </div>
-                
+                <h2 class="section-title">Un Santuario per la Biodiversità</h2>
                 <div class="content-section reverse">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=364');"></div>
+                    <div class="content-image"
+                        style="background-image: url('../images/costa-gelsomini/tartaruga-caretta.jpg');"></div>
                     <div class="content-text">
-                        <h3>Chiese e Monumenti</h3>
-                        <p>Tra le chiese più importanti spicca la Chiesa Madre dedicata a San Nicola, con un imponente campanile e un interno decorato in stile barocco. Degna di nota è anche la Chiesa di San Biagio, costruita nel XVI secolo.</p>
-                        <p>Nel centro storico si possono ammirare anche il Palazzo comunale, sede del municipio, e numerosi palazzi nobiliari con stemmi e decorazioni che ricordano le antiche famiglie del luogo.</p>
+                        <h3>La Caretta caretta a Brancaleone</h3>
+                        <p>La Costa dei Gelsomini è uno dei siti più preziosi del Mediterraneo per la conservazione della tartaruga marina Caretta caretta. Ogni anno, da maggio ad agosto, le femmine emergono di notte sulle spiagge di sabbia fine per deporre le uova. Brancaleone, con le sue spiagge protette, è un **Sito di Importanza Comunitaria (SIC)** e uno dei luoghi simbolo di questa straordinaria nidificazione.</p>
+                        <p>Dal 2016, l'associazione Caretta Calabria Conservation ha monitorato e protetto oltre 130 nidi, dai quali sono nati circa 6000 piccoli esemplari. Un progetto che coinvolge volontari, pescatori e turisti in un impegno comune per la salvaguardia di questa specie a rischio.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- LA TARANTELLA E LA CULTURA -->
+        <!-- TERZA SEZIONE: Magna Grecia – Tra Locri e Kaulon -->
         <section>
             <div class="container">
-                <h2 class="section-title">La Tarantella e la Cultura Popolare</h2>
+                <h2 class="section-title">Le Radici della Magna Grecia</h2>
                 <div class="content-section">
                     <div class="content-text">
-                        <h3>Culla della Tarantella Calabrese</h3>
-                        <p>Oggi Caulonia è conosciuta come una delle culle della tarantella calabrese e ogni estate ospita il celebre Kaulonia Tarantella Festival, con spettacoli e laboratori musicali che attirano visitatori da tutta Italia.</p>
-                        <p>La tradizione della tarantella a Caulonia è particolarmente radicata nel territorio e viene tramandata di generazione in generazione. La musica popolare calabrese trova qui una delle sue espressioni più autentiche e vibranti.</p>
+                        <h3>Locri Epizefiri e Kaulon</h3>
+                        <p>La Costa dei Gelsomini è un museo a cielo aperto dell'antica Grecia. A Locri Epizefiri sorgeva una delle più importanti colonie greche. Qui, intorno al 660 a.C., il legislatore **Zaleuco** scrisse il primo codice di leggi della storia occidentale. La città era anche nota per il ruolo centrale delle donne nella società, con una discendenza matrilineare unica nel mondo antico.</p>
+                        <p>Più a nord, Kaulon fioriva sul promontorio di Punta Stilo. L'antica colonia achea fu distrutta dal tiranno di Siracusa Dionigi nel 389-388 a.C. La sua area sacra conserva i resti di un imponente tempio dorico del V secolo a.C. e i mosaici della Casa del Drago, il più grande mosaico ellenistico d'Italia. Oggi queste rovine raccontano il passato glorioso della Magna Grecia nel Sud Italia.</p>
                     </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=365');"></div>
+                    <div class="content-image"
+                        style="background-image: url('../images/costa-gelsomini/tempio-kaulon.jpg');"></div>
                 </div>
-                
+            </div>
+        </section>
+
+        <!-- QUARTA SEZIONE (inversa): Epoca Romana – Naniglio e Casignana -->
+        <section style="background-color: white;">
+            <div class="container">
+                <h2 class="section-title">L'Eredità Romana</h2>
                 <div class="content-section reverse">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=366');"></div>
+                    <div class="content-image"
+                        style="background-image: url('../images/costa-gelsomini/villa-casignana.jpg');"></div>
                     <div class="content-text">
-                        <h3>Il Kaulonia Tarantella Festival</h3>
-                        <p>Il festival annuale, che si svolge ogni luglio e agosto, è diventato un appuntamento imperdibile per gli appassionati di musica popolare. L'evento comprende concerti, balli tradizionali, mostre di strumenti musicali e laboratori per bambini e adulti.</p>
-                        <p>Oltre alla tarantella, il festival celebra tutte le tradizioni musicali calabresi, con particolare attenzione ai canti a stornello, alle serenate e alle danze popolari che caratterizzano il folklore locale.</p>
+                        <h3>Ville e Mosaici Imperiali</h3>
+                        <p>L'epoca romana ha lasciato testimonianze straordinarie. La **Villa Romana di Casignana**, risalente al I secolo d.C., con i suoi mosaici policromi, è uno dei complessi più importanti del Sud Italia, seconda solo a Piazza Armerina in Sicilia. Qui sono visibili pavimenti musivi a motivi geometrici, scene di caccia e figure mitologiche.</p>
+                        <p>Nell'entroterra di Gioiosa Ionica, il complesso del **Naniglio** (II-III secolo d.C.) offre una cisterna ipogea unica nel suo genere e un ninfeo dedicato al culto delle acque, a testimonianza della raffinatezza della vita rurale romana nella Locride. Il sito è stato segnalato in numerose edizioni del censimento "I Luoghi del Cuore" del FAI.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TRADIZIONI E FESTE -->
+        <!-- QUINTA SEZIONE: Periodo Bizantino e Medievale -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Il Segno dell'Oriente</h2>
+                <div class="content-section">
+                    <div class="content-text">
+                        <h3>La Cattolica di Stilo e la Cattedrale di Gerace</h3>
+                        <p>Tra il VII e il IX secolo, monaci basiliani in fuga dalle persecuzioni iconoclaste portarono in Calabria l'arte bizantina. Ne sono testimonianza la **Cattolica di Stilo**, un gioiello architettonico del X secolo con cupola centrale e quattro colonne angolari, e la **Cattedrale di Gerace**, consacrata nel 1045, la più grande della Calabria.</p>
+                        <p>Questi luoghi rappresentano alcune delle testimonianze più suggestive dell'arte bizantina nel Sud Italia, dove i riti orientali si fusero con la tradizione latina, creando un patrimonio spirituale e artistico unico.</p>
+                    </div>
+                    <div class="content-image"
+                        style="background-image: url('../images/costa-gelsomini/cattolica-stilo.jpg');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SESTA SEZIONE (inversa): Arte Contemporanea – Parco Museo Santa Barbara -->
         <section style="background-color: white;">
             <div class="container">
-                <h2 class="section-title">Tradizioni e Feste</h2>
+                <h2 class="section-title">Arte Contemporanea nel Cuore della Calabria</h2>
+                <div class="content-section reverse">
+                    <div class="content-image"
+                        style="background-image: url('../images/costa-gelsomini/parco-santa-barbara.jpg');"></div>
+                    <div class="content-text">
+                        <h3>Il Parco Museo Santa Barbara (MuSaBa)</h3>
+                        <p>Un'esperienza unica è il **Parco Museo Santa Barbara (MuSaBa)**, fondato nel 1969 dai coniugi Nik Spatari e Hiske Maas su un antico complesso monastico del X secolo. Questo museo immerso nella natura, situato nei pressi di Mammola, è considerato da molti critici uno dei più importanti parchi museali di arte contemporanea a livello internazionale.</p>
+                        <p>Le opere, realizzate in pietre, mosaici e ceramiche, si integrano perfettamente con il paesaggio, creando un dialogo tra arte antica e moderna. Il parco è anche un laboratorio di ricerca artistica e un centro di promozione culturale, attirando visitatori da tutto il mondo. Nik Spatari, scomparso nel 2020, ha lasciato un'eredità artistica unica nel suo genere.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Tradizioni e Cultura</h2>
                 <div class="tradizioni-grid">
                     <div class="tradizione-card">
-                        <i class="fas fa-drum"></i>
-                        <h4>Festa di San Nicola</h4>
-                        <p>La festa patronale di San Nicola, celebrata il 6 dicembre, è l'occasione più importante dell'anno. Si svolgono processioni, concerti e una grande sagra con prodotti tipici locali.</p>
+                        <i class="fas fa-music"></i>
+                        <h4>Tarantella Calabrese</h4>
+                        <p>Il ritmo incalzante della lira e della zampogna anima le feste paesane. Il Kaulonia Tarantella Festival a Caulonia (ultima settimana di agosto) è uno degli eventi più importanti d'Italia per la musica popolare.</p>
                     </div>
                     <div class="tradizione-card">
-                        <i class="fas fa-seedling"></i>
-                        <h4>Sagra della Cipolla</h4>
-                        <p>A settembre si celebra la sagra della cipolla di Caulonia, un prodotto tipico del territorio coltivato da secoli nelle valli circostanti.</p>
+                        <i class="fas fa-cheese"></i>
+                        <h4>Caciocavallo di Ciminà</h4>
+                        <p>Presidio Slow Food dal 2011, questo formaggio a due testine è prodotto con latte crudo di vacca e caglio naturale di capretto, custodendo un'antica tradizione casearia.</p>
                     </div>
                     <div class="tradizione-card">
                         <i class="fas fa-wine-bottle"></i>
-                        <h4>Vino e Enogastronomia</h4>
-                        <p>La produzione vinicola locale, con vini rossi e bianchi di qualità, è celebrata durante l'autunno con degustazioni e visite alle cantine artigianali.</p>
+                        <h4>Greco di Bianco DOC</h4>
+                        <p>Il vino passito più antico d'Italia, citato già da Esiodo nel VII secolo a.C. Ha ottenuto la DOC nel 1980. Un nettare dal colore dorato, prodotto con uve appassite su graticci.</p>
                     </div>
                     <div class="tradizione-card">
-                        <i class="fas fa-hands"></i>
-                        <h4>Artigianato Locale</h4>
-                        <p>L'artigianato tradizionale, dalle ceramiche alle lavorazioni del legno, viene valorizzato attraverso mostre e mercatini artigianali durante l'estate.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- NATURA E PAESAGGI -->
-        <section>
-            <div class="container">
-                <h2 class="section-title">Natura e Paesaggi</h2>
-                <div class="content-section">
-                    <div class="content-text">
-                        <h3>Monti e Valli</h3>
-                        <p>Caulonia si trova in una posizione privilegiata tra mare e monti, con il Parco Nazionale dell'Aspromonte che si estende poco distante. Il territorio è caratterizzato da colline dolci e valli fertili, ideali per escursioni e passeggiate.</p>
-                        <p>La valle del fiume Stilaro offre paesaggi mozzafiato, specialmente durante la primavera quando i fiori selvatici ricoprono i prati e le colline si tingono di verde.</p>
-                    </div>
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=367');"></div>
-                </div>
-                
-                <div class="content-section reverse">
-                    <div class="content-image" style="background-image: url('https://picsum.photos/500/350?random=368');"></div>
-                    <div class="content-text">
-                        <h3>Sentieri e Itinerari</h3>
-                        <p>Numerosi sentieri escursionistici partono dal borgo e conducono attraverso boschi di querce, uliveti secolari e vigneti a terrazza. I percorsi più gettonati conducono alle rovine dell'antica Kaulon e offrono panoramiche mozzafiato sul mare.</p>
-                        <p>Il trekking nella zona è particolarmente apprezzato per la varietà della flora mediterranea e per la possibilità di avvistare fauna selvatica come volpi, tassi e numerosissime specie di uccelli.</p>
+                        <i class="fas fa-hiking"></i>
+                        <h4>Sentieri dell'Aspromonte</h4>
+                        <p>Dai borghi alle vette, numerosi percorsi escursionistici attraversano gole, cascate e boschi secolari, offrendo panorami unici sul Mar Ionio. Il Parco Nazionale dell'Aspromonte è punto di riferimento per gli amanti del trekking.</p>
                     </div>
                 </div>
             </div>
@@ -730,12 +885,12 @@
             <div class="container">
                 <h2 class="section-title">Galleria Fotografica</h2>
                 <div class="gallery">
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=371" alt="Centro storico di Caulonia"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=372" alt="Chiesa Madre"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=373" alt="Festival della Tarantella"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=374" alt="Vista panoramica"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=375" alt="Vigneti locali"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=376" alt="Antiche rovine"></div>
+                    <div class="gallery-item"><img src="../images/costa-gelsomini/galleria/panorama-costa.jpg" alt="Panorama della costa"></div>
+                    <div class="gallery-item"><img src="../images/costa-gelsomini/galleria/gelsomini-fiori.jpg" alt="Gelsomini in fiore"></div>
+                    <div class="gallery-item"><img src="../images/costa-gelsomini/galleria/tartaruga-caretta.jpg" alt="Tartaruga Caretta caretta"></div>
+                    <div class="gallery-item"><img src="../images/costa-gelsomini/galleria/teatro-locri.jpg" alt="Teatro greco di Locri"></div>
+                    <div class="gallery-item"><img src="../images/costa-gelsomini/galleria/mosaico-casignana.jpg" alt="Mosaico Villa Romana di Casignana"></div>
+                    <div class="gallery-item"><img src="../images/costa-gelsomini/galleria/parco-santa-barbara.jpg" alt="Parco Museo Santa Barbara"></div>
                 </div>
             </div>
         </section>
@@ -744,26 +899,43 @@
         <section>
             <div class="container">
                 <h2 class="section-title">Info Utili</h2>
-                <div class="info-grid">
+                <div class="info-grid contact-grid">
                     <div class="info-card">
                         <i class="fas fa-car"></i>
                         <h4>Come Arrivare</h4>
-                        <p>Da Reggio Calabria: SS106 per 45 km<br>Da Siderno: 25 km<br>Parcheggio gratuito nel borgo</p>
+                        <p><strong>In Auto:</strong> SS106 Jonica collega i principali centri della costa. Uscite consigliate: Roccella, Siderno, Locri, Bianco, Bovalino, Monasterace.<br>
+                        <strong>In Treno:</strong> Linea Jonica Reggio Calabria-Taranto con stazioni in ogni comune.<br>
+                        <strong>In Aereo:</strong> Aeroporto di Reggio Calabria (Tito Minniti) o Lamezia Terme.</p>
                     </div>
+
                     <div class="info-card">
-                        <i class="fas fa-calendar-alt"></i>
-                        <h4>Eventi</h4>
-                        <p>Kaulonia Tarantella Festival: Luglio-Agosto<br>Festa di San Nicola: 6 dicembre<br>Sagra della Cipolla: Settembre</p>
+                        <i class="fas fa-globe"></i>
+                        <h4>Informazioni Turistiche</h4>
+                        <p><strong>Consorzio di Promozione Turistica della Locride</strong><br>
+                            Sede: Piazza Garibaldi, 1 - Locri<br>
+                            <strong>Sito web:</strong> <a href="http://www.locride.info" target="_blank" style="color: var(--accent);">www.locride.info</a><br>
+                            <strong>Pro Loco dei singoli comuni:</strong> Consultare i siti istituzionali per orari e contatti aggiornati.
+                        </p>
                     </div>
+
                     <div class="info-card">
-                        <i class="fas fa-phone-alt"></i>
-                        <h4>Contatti</h4>
-                        <p>Comune: 0964 931111<br>Pro Loco: 0964 931222<br>Info Festival: 0964 931333</p>
+                        <i class="fas fa-leaf"></i>
+                        <h4>Ente Parco Nazionale dell'Aspromonte</h4>
+                        <p><strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo Stefano Aspromonte (RC)<br>
+                            <strong>Tel:</strong> 0965 743060<br>
+                            <strong>Email:</strong> info.posta@parconazionaleaspromonte.it<br>
+                            <strong>Sito web:</strong> <a href="https://www.parconazionaleaspromonte.it" target="_blank" style="color: var(--accent);">www.parconazionaleaspromonte.it</a><br>
+                            <small>Per informazioni su sentieri e aree naturali</small>
+                        </p>
                     </div>
+
                     <div class="info-card">
-                        <i class="fas fa-utensils"></i>
-                        <h4>Ristoranti</h4>
-                        <p>4 trattorie tipiche<br>2 enoteche<br>Prodotti locali certificati</p>
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h4>Spiagge Bandiera Blu</h4>
+                        <p>La Costa dei Gelsomini vanta numerosi riconoscimenti di qualità ambientale.<br>
+                            Comuni che hanno ricevuto la Bandiera Blu: <strong>Roccella Ionica, Caulonia, Siderno, Riace, Bianco, Africo, Bova Marina</strong>.<br>
+                            Spiagge attrezzate, fondali bassi ideali per famiglie, aree libere per chi cerca tranquillità.
+                        </p>
                     </div>
                 </div>
                 <div class="btn-center">
@@ -785,5 +957,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        window.addEventListener("load", function () {
+            window.scrollTo(0, 0);
+        });
+    </script>
 </body>
+
 </html>

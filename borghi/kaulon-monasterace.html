@@ -1,1007 +1,1240 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monasterace - Kaulon - Polo Tecnico Professionale Marconi</title>
-    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp">
+    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
     <!-- Google Fonts e Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
-        /* ============================================
+      /* ============================================
            POLO TECNICO PROFESSIONALE - STYLE.CSS
            Design Elegante e Professionale
            ============================================ */
 
-        /* RESET E BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /* RESET E BASE */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        html {
-            scroll-behavior: smooth;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        body {
-            font-family: "Inter", sans-serif;
-            line-height: 1.6;
-            color: #1a1a2e;
-            background-color: #fafbfc;
-            overflow-x: hidden;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #1a1a2e;
+        background-color: #fafbfc;
+        overflow-x: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
 
-        /* ============================================
+      /* ============================================
            VARIABILI COLORE - PALETTE REFINED
            ============================================ */
-        :root {
-            --primary: #2c3e50;
-            --primary-light: #34495e;
-            --primary-dark: #1e2b3a;
-            --accent: #e67e22;
-            --accent-light: #f39c12;
-            --accent-dark: #c96e1c;
-            --secondary: #5c7c9a;
-            --gray-light: #f0f2f5;
-            --gray: #9ca3af;
-            --text-light: #6b7280;
-            --text-dark: #1f2937;
-            --white: #ffffff;
-            --off-white: #f8f9fa;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
-            --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
-            --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            --transition: 0.3s ease;
-            --transition-slow: 0.5s ease;
-        }
+      :root {
+        --primary: #2c3e50;
+        --primary-light: #34495e;
+        --primary-dark: #1e2b3a;
+        --accent: #e67e22;
+        --accent-light: #f39c12;
+        --accent-dark: #c96e1c;
+        --secondary: #5c7c9a;
+        --gray-light: #f0f2f5;
+        --gray: #9ca3af;
+        --text-light: #6b7280;
+        --text-dark: #1f2937;
+        --white: #ffffff;
+        --off-white: #f8f9fa;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+        --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+        --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+        --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+        --gradient-primary: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-light) 100%
+        );
+        --gradient-accent: linear-gradient(
+          135deg,
+          var(--accent) 0%,
+          var(--accent-light) 100%
+        );
+        --transition: 0.3s ease;
+        --transition-slow: 0.5s ease;
+      }
 
-        /* ============================================
+      /* ============================================
            LAYOUT GENERALE
            ============================================ */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
 
-        /* ============================================
+      /* ============================================
            HEADER E NAVIGAZIONE
            ============================================ */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px) saturate(180%);
-            box-shadow: var(--shadow-sm);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: all var(--transition);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
+      header {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px) saturate(180%);
+        box-shadow: var(--shadow-sm);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: all var(--transition);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 0;
-            transition: padding var(--transition);
-        }
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+        transition: padding var(--transition);
+      }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: transform var(--transition);
-        }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transition: transform var(--transition);
+      }
 
-        .logo img {
-            height: 45px;
-            width: auto;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-        }
+      .logo img {
+        height: 45px;
+        width: auto;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+      }
 
-        .logo h1 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
+      .logo h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.2;
+      }
 
-        .logo span {
-            font-size: 0.7rem;
-            color: var(--text-light);
-            display: block;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-            margin-top: 1px;
-        }
+      .logo span {
+        font-size: 0.7rem;
+        color: var(--text-light);
+        display: block;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        margin-top: 1px;
+      }
 
-        .back-link a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--gray-light);
-            color: var(--text-dark);
-            padding: 8px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all var(--transition);
-        }
+      .back-link a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--gray-light);
+        color: var(--text-dark);
+        padding: 8px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all var(--transition);
+      }
 
-        .back-link a:hover {
-            background: var(--gradient-primary);
-            color: var(--white);
-            transform: translateX(-5px);
-        }
+      .back-link a:hover {
+        background: var(--gradient-primary);
+        color: var(--white);
+        transform: translateX(-5px);
+      }
 
-        /* ============================================
+      /* ============================================
            SEZIONI GENERALI
            ============================================ */
+      section {
+        padding: 100px 0;
+        position: relative;
+      }
+
+      @media (max-width: 768px) {
         section {
-            padding: 100px 0;
-            position: relative;
+          padding: 60px 0;
         }
+      }
 
-        @media (max-width: 768px) {
-            section {
-                padding: 60px 0;
-            }
-        }
+      section:nth-child(even) {
+        background-color: var(--white);
+      }
 
-        section:nth-child(even) {
-            background-color: var(--white);
-        }
+      .section-title {
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 40px;
+        letter-spacing: -0.5px;
+      }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 40px;
-            letter-spacing: -0.5px;
-        }
+      .section-subtitle {
+        text-align: center;
+        color: var(--text-light);
+        margin-bottom: 60px;
+        font-size: 1.15rem;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.8;
+      }
 
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-light);
-            margin-bottom: 60px;
-            font-size: 1.15rem;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-        }
-
-        /* ============================================
+      /* ============================================
            HERO SECTION
            ============================================ */
-        .hero-borgo {
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-            color: var(--white);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
+      .hero-borgo {
+        position: relative;
+        height: 60vh;
+        min-height: 400px;
+        color: var(--white);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+      }
 
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(15, 44, 74, 0.70) 0%, rgba(26, 61, 92, 0.70) 100%);
-            z-index: 2;
-            pointer-events: none;
-        }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(15, 44, 74, 0.7) 0%,
+          rgba(26, 61, 92, 0.7) 100%
+        );
+        z-index: 2;
+        pointer-events: none;
+      }
 
-        .hero-borgo .container {
-            position: relative;
-            z-index: 3;
-            text-align: center;
-        }
+      .hero-borgo .container {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+      }
 
-        .hero-borgo h2 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 24px;
-            line-height: 1.1;
-            letter-spacing: -1px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
+      .hero-borgo h2 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 24px;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
 
-        .hero-borgo p {
-            font-size: 1.25rem;
-            max-width: 750px;
-            margin: 0 auto 40px;
-            opacity: 0.95;
-            line-height: 1.8;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
+      .hero-borgo p {
+        font-size: 1.25rem;
+        max-width: 750px;
+        margin: 0 auto 40px;
+        opacity: 0.95;
+        line-height: 1.8;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
 
-        /* ============================================
+      /* ============================================
            CONTENT SECTIONS
            ============================================ */
-        .content-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 60px;
-        }
+      .content-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 60px;
+      }
 
-        .content-section:last-child {
-            margin-bottom: 0;
-        }
+      .content-section:last-child {
+        margin-bottom: 0;
+      }
 
-        .content-section.reverse {
-            direction: rtl;
-        }
+      .content-section.reverse {
+        direction: rtl;
+      }
 
-        .content-section.reverse>* {
-            direction: ltr;
-        }
+      .content-section.reverse > * {
+        direction: ltr;
+      }
 
-        .content-text {
+      .content-text {
         padding: 20px;
         text-align: justify;
       }
-        .content-text h3 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-weight: 700;
+      .content-text h3 {
+        font-size: 1.8rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .content-text p {
+        color: var(--text-light);
+        margin-bottom: 15px;
+        line-height: 1.8;
+      }
+
+      .content-image {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        height: 350px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* ============================================
+           INFO CARDS
+           ============================================ */
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+        margin-top: 40px;
+      }
+
+      .info-grid.contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      }
+
+      .info-card {
+        background: var(--white);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: var(--shadow);
+        transition: all var(--transition-slow);
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        text-align: center;
+      }
+
+      .info-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .info-card i {
+        font-size: 2.5rem;
+        color: var(--accent);
+        margin-bottom: 20px;
+      }
+
+      .info-card h4 {
+        font-size: 1.2rem;
+        color: var(--primary);
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .info-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+      .tradizioni-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 32px;
+        margin-top: 40px;
+      }
+
+      .tradizione-card {
+        background: var(--white);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all var(--transition-slow);
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        position: relative;
+        padding: 30px 24px;
+        text-align: center;
+      }
+
+      .tradizione-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-accent);
+        transform: scaleX(0);
+        transition: transform var(--transition);
+        transform-origin: left;
+      }
+
+      .tradizione-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .tradizione-card:hover {
+        transform: translateY(-12px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .tradizione-card i {
+        font-size: 3rem;
+        color: var(--accent);
+        margin-bottom: 20px;
+        transition: transform var(--transition);
+      }
+
+      .tradizione-card:hover i {
+        transform: scale(1.1);
+      }
+
+      .tradizione-card h4 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      .tradizione-card p {
+        color: var(--text-light);
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
+
+      /* ============================================
+           GALLERY
+           ============================================ */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        margin-top: 50px;
+      }
+
+      .gallery-item {
+        border-radius: 16px;
+        overflow: hidden;
+        height: 220px;
+        box-shadow: var(--shadow-md);
+        transition: all var(--transition-slow);
+        position: relative;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.15);
+      }
+
+      /* ============================================
+           BUTTONS
+           ============================================ */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--gradient-accent);
+        color: var(--text-dark);
+        padding: 14px 32px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all var(--transition);
+        box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+        border: none;
+        position: relative;
+        overflow: hidden;
+        justify-content: center;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.6s;
+      }
+
+      .btn:hover::before {
+        left: 100%;
+      }
+
+      .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+      }
+
+      .btn i {
+        transition: transform var(--transition);
+      }
+
+      .btn:hover i {
+        transform: translateX(5px);
+      }
+
+      .btn-center {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      /* ============================================
+           FOOTER
+           ============================================ */
+      footer {
+        background: var(--primary-dark);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 70px 0 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-accent);
+      }
+
+      .footer-content {
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      .footer-content p {
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-content a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: all var(--transition);
+      }
+
+      .footer-content a:hover {
+        color: var(--white);
+      }
+
+      .copyright {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 30px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* ============================================
+           RESPONSIVE
+           ============================================ */
+      @media (max-width: 768px) {
+        .header-content {
+          padding: 32px 0;
         }
 
-        .content-text p {
-            color: var(--text-light);
-            margin-bottom: 15px;
-            line-height: 1.8;
+        .logo {
+          gap: 8px;
+        }
+
+        .logo img {
+          height: 35px;
+        }
+
+        .logo h1 {
+          font-size: 1rem;
+        }
+
+        .logo span {
+          font-size: 0.6rem;
+          display: block;
+          opacity: 0.8;
+        }
+
+        .content-section {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          direction: ltr !important;
+        }
+
+        .content-text {
+          order: 1;
+          padding: 0;
         }
 
         .content-image {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            height: 350px;
-            background-size: cover;
-            background-position: center;
+          order: 2;
+          width: 100%;
         }
 
-        /* ============================================
-           INFO CARDS
-           ============================================ */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-            gap: 24px;
-            margin-top: 40px;
+        .hero-borgo h2 {
+          font-size: 2.5rem;
         }
 
+        .hero-borgo p {
+          font-size: 1.1rem;
+        }
+
+        .section-title {
+          font-size: 2.2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 20px;
+        }
+
+        .logo h1 {
+          font-size: 0.8rem;
+          white-space: nowrap;
+        }
+
+        .logo span {
+          display: block;
+          font-size: 0.5rem;
+          opacity: 0.9;
+        }
+
+        .logo img {
+          height: 28px;
+        }
+
+        .hero-borgo {
+          min-height: 250px;
+          height: 40vh;
+        }
+
+        .hero-borgo h2 {
+          font-size: 1.8rem;
+          margin-bottom: 12px;
+        }
+
+        .hero-borgo p {
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+
+        .btn {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+
+        .section-title {
+          font-size: 1.6rem;
+          margin-bottom: 30px;
+        }
+
+        .section-subtitle {
+          font-size: 1rem;
+          margin-bottom: 40px;
+        }
+
+        .content-section {
+          gap: 25px;
+          margin-bottom: 40px;
+        }
+
+        .content-text h3 {
+          font-size: 1.4rem;
+          margin-bottom: 15px;
+        }
+
+        .content-text p {
+          font-size: 0.9rem;
+          line-height: 1.6;
+        }
+
+        .content-image {
+          height: 250px;
+          border-radius: 12px;
+        }
+
+        .info-grid,
         .info-grid.contact-grid {
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+          grid-template-columns: 1fr;
+          gap: 16px;
         }
 
         .info-card {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            transition: all var(--transition-slow);
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            text-align: center;
-        }
-
-        .info-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
+          padding: 20px;
         }
 
         .info-card i {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 20px;
+          font-size: 2rem;
         }
 
-        .info-card h4 {
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .info-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* ============================================
-           TRADITIONS GRID
-           ============================================ */
-        .tradizioni-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 32px;
-            margin-top: 40px;
-        }
-
-        .tradizione-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all var(--transition-slow);
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            position: relative;
-            padding: 30px 24px;
-            text-align: center;
-        }
-
-        .tradizione-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-accent);
-            transform: scaleX(0);
-            transition: transform var(--transition);
-            transform-origin: left;
-        }
-
-        .tradizione-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .tradizione-card:hover {
-            transform: translateY(-12px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .tradizione-card i {
-            font-size: 3rem;
-            color: var(--accent);
-            margin-bottom: 20px;
-            transition: transform var(--transition);
-        }
-
-        .tradizione-card:hover i {
-            transform: scale(1.1);
-        }
-
-        .tradizione-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .tradizione-card p {
-            color: var(--text-light);
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        /* ============================================
-           GALLERY
-           ============================================ */
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 50px;
+          gap: 12px;
+          margin-top: 30px;
         }
 
         .gallery-item {
-            border-radius: 16px;
-            overflow: hidden;
-            height: 220px;
-            box-shadow: var(--shadow-md);
-            transition: all var(--transition-slow);
-            position: relative;
+          height: 180px;
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s;
+        .back-link a {
+          padding: 8px 24px;
+          font-size: 0.75rem;
+          gap: 5px;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.15);
+        .back-link i {
+          font-size: 0.7rem;
         }
-
-        /* ============================================
-           BUTTONS
-           ============================================ */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--gradient-accent);
-            color: var(--text-dark);
-            padding: 14px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all var(--transition);
-            box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
-            border: none;
-            position: relative;
-            overflow: hidden;
-            justify-content: center;
-        }
-
-        .btn::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
-        }
-
-        .btn i {
-            transition: transform var(--transition);
-        }
-
-        .btn:hover i {
-            transform: translateX(5px);
-        }
-
-        .btn-center {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-        }
-
-        /* ============================================
-           FOOTER
-           ============================================ */
-        footer {
-            background: var(--primary-dark);
-            color: rgba(255, 255, 255, 0.8);
-            padding: 70px 0 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        footer::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-accent);
-        }
-
-        .footer-content {
-            text-align: center;
-            padding-bottom: 30px;
-        }
-
-        .footer-content p {
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .footer-content a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: all var(--transition);
-        }
-
-        .footer-content a:hover {
-            color: var(--white);
-        }
-
-        .copyright {
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (max-width: 768px) {
-            .header-content {
-                padding: 32px 0;
-            }
-
-            .logo {
-                gap: 8px;
-            }
-
-            .logo img {
-                height: 35px;
-            }
-
-            .logo h1 {
-                font-size: 1rem;
-            }
-
-            .logo span {
-                font-size: 0.6rem;
-                display: block;
-                opacity: 0.8;
-            }
-
-            .content-section {
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
-                direction: ltr !important;
-            }
-
-            .content-text {
-                order: 1;
-                padding: 0;
-            }
-
-            .content-image {
-                order: 2;
-                width: 100%;
-            }
-
-            .hero-borgo h2 {
-                font-size: 2.5rem;
-            }
-
-            .hero-borgo p {
-                font-size: 1.1rem;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 20px;
-            }
-
-            .logo h1 {
-                font-size: 0.8rem;
-                white-space: nowrap;
-            }
-
-            .logo span {
-                display: block;
-                font-size: 0.5rem;
-                opacity: 0.9;
-            }
-
-            .logo img {
-                height: 28px;
-            }
-
-            .hero-borgo {
-                min-height: 250px;
-                height: 40vh;
-            }
-
-            .hero-borgo h2 {
-                font-size: 1.8rem;
-                margin-bottom: 12px;
-            }
-
-            .hero-borgo p {
-                font-size: 0.95rem;
-                line-height: 1.6;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
-                margin-bottom: 30px;
-            }
-
-            .section-subtitle {
-                font-size: 1rem;
-                margin-bottom: 40px;
-            }
-
-            .content-section {
-                gap: 25px;
-                margin-bottom: 40px;
-            }
-
-            .content-text h3 {
-                font-size: 1.4rem;
-                margin-bottom: 15px;
-            }
-
-            .content-text p {
-                font-size: 0.9rem;
-                line-height: 1.6;
-            }
-
-            .content-image {
-                height: 250px;
-                border-radius: 12px;
-            }
-
-            .info-grid, 
-            .info-grid.contact-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .info-card {
-                padding: 20px;
-            }
-
-            .info-card i {
-                font-size: 2rem;
-            }
-
-            .gallery {
-                gap: 12px;
-                margin-top: 30px;
-            }
-
-            .gallery-item {
-                height: 180px;
-            }
-
-            .back-link a {
-                padding: 8px 24px;
-                font-size: 0.75rem;
-                gap: 5px;
-            }
-
-            .back-link i {
-                font-size: 0.7rem;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container header-content">
-            <div class="logo">
-                <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
-                <div>
-                    <h1>Polo Tecnico Professionale</h1>
-                    <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-                </div>
-            </div>
-            <div class="back-link">
-                <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
-            </div>
+      <div class="container header-content">
+        <div class="logo">
+          <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+          <div>
+            <h1>Polo Tecnico Professionale</h1>
+            <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+          </div>
         </div>
+        <div class="back-link">
+          <a href="../index.html#borghi"
+            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
+          >
+        </div>
+      </div>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
-        <section class="hero-borgo"
-            style="background-image: url('../images/monasterace/kaulon-tempio.jpg'); background-size: cover; background-position: center;">
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <h2>Monasterace - Kaulon</h2>
-                <p>Tra le onde dello Ionio e le pietre millenarie, l'antica colonia greca che custodisce il più grande mosaico ellenistico d'Italia.</p>
+      <!-- HERO SECTION -->
+      <section
+        class="hero-borgo"
+        style="
+          background-image: url(&quot;../images/monasterace/kaulon-tempio.jpg&quot;);
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <h2>Monasterace - Kaulon</h2>
+          <p>
+            Tra le onde dello Ionio e le pietre millenarie, l'antica colonia
+            greca che custodisce il più grande mosaico ellenistico d'Italia.
+          </p>
+        </div>
+      </section>
+
+      <!-- INFO CARDS -->
+      <section>
+        <div class="container">
+          <div class="info-grid">
+            <div class="info-card">
+              <i class="fas fa-calendar-alt"></i>
+              <h4>Fondazione</h4>
+              <p>VII secolo a.C.</p>
             </div>
-        </section>
-
-        <!-- INFO CARDS -->
-        <section>
-            <div class="container">
-                <div class="info-grid">
-                    <div class="info-card">
-                        <i class="fas fa-calendar-alt"></i>
-                        <h4>Fondazione</h4>
-                        <p>VII secolo a.C.</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-columns"></i>
-                        <h4>Tempio Dorico</h4>
-                        <p>V secolo a.C.</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-water"></i>
-                        <h4>Area Subacquea</h4>
-                        <p>Oltre 200 reperti</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-mosaic"></i>
-                        <h4>Mosaico più grande</h4>
-                        <p>25 mq - Drago e Delfini</p>
-                    </div>
-                </div>
+            <div class="info-card">
+              <i class="fas fa-columns"></i>
+              <h4>Tempio Dorico</h4>
+              <p>V secolo a.C.</p>
             </div>
-        </section>
-
-        <!-- DESCRIZIONE GENERALE -->
-        <section>
-            <div class="container">
-                <h2 class="section-title">Un Paesaggio Archeologico Straordinario</h2>
-                <div class="content-section">
-                    <div class="content-text">
-                        <h3>Kaulon, la città sul mare</h3>
-                        <p>Monasterace, situata lungo la splendida Costa dei Gelsomini, custodisce uno dei siti archeologici più importanti della Magna Grecia calabrese. Qui sorgevano le antiche mura di Kaulon, colonia greca fondata nel VII secolo a.C. che dominava il promontorio di Punta Stilo con il Mar Ionio davanti.</p>
-                        <p>Il borgo moderno di Monasterace si è sviluppato attorno a questo straordinario patrimonio, creando un connubio unico tra storia antica e vita contemporanea. Le sue strade accoglienti e i suoi panorami mozzafiato sul mare rendono questa località una meta imperdibile per gli amanti dell'archeologia e della cultura classica.</p>
-                    </div>
-                    <div class="content-image"
-                        style="background-image: url('../images/monasterace/kaulon-panorama.jpg');"></div>
-                </div>
+            <div class="info-card">
+              <i class="fas fa-water"></i>
+              <h4>Area Subacquea</h4>
+              <p>Oltre 200 reperti</p>
             </div>
-        </section>
-
-        <!-- KAULON E IL TEMPIO DORICO -->
-        <section style="background-color: white;">
-            <div class="container">
-                <h2 class="section-title">Kaulon e il Tempio Dorico</h2>
-                <div class="content-section">
-                    <div class="content-image"
-                        style="background-image: url('../images/monasterace/kaulon-tempio-dorico.jpg');"></div>
-                    <div class="content-text">
-                        <h3>Il Tempio Dorico Periptero</h3>
-                        <p>Di particolare pregio sono i resti rinvenuti nell'area sacra dell'antica Kaulon, tra cui spicca un Tempio Dorico periptero risalente al V sec. a.C. Questo tempio rappresenta uno dei capolavori dell'architettura greca nella Calabria meridionale.</p>
-                        <p>Le colonne in pietra calcarea, alcune ancora in piedi, testimoniano l'elevato livello tecnico e artistico raggiunto dagli architetti kauloniti. L'orientamento del tempio verso il mare riflette la concezione cosmologica greca e la stretta connessione tra la città e il dio Poseidone.</p>
-                    </div>
-                </div>
-
-                <div class="content-section reverse">
-                    <div class="content-text">
-                        <h3>Scavi e Restauro Continui</h3>
-                        <p>Gli scavi archeologici condotti nel corso del XX secolo hanno riportato alla luce gran parte della struttura del tempio e dell'area sacra circostante. Il restauro continuo permette di conservare questa preziosa testimonianza del passato classico.</p>
-                        <p>Oggi il tempio è visibile al pubblico e costituisce uno degli elementi più suggestivi del Parco Archeologico, con la sua imponente silhouette che si staglia contro il mare Ionio.</p>
-                    </div>
-                    <div class="content-image"
-                        style="background-image: url('../images/monasterace/kaulon-scavi.jpg');"></div>
-                </div>
+            <div class="info-card">
+              <i class="fas fa-mosaic"></i>
+              <h4>Mosaico più grande</h4>
+              <p>25 mq - Drago e Delfini</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- I DUE DRAGHI DI KAULON - MOSAICI -->
-        <section>
-            <div class="container">
-                <h2 class="section-title">I Due Draghi di Kaulon</h2>
-                <div class="content-section">
-                    <div class="content-text">
-                        <h3>Il Mosaico della Casa Matta</h3>
-                        <p>Quello rinvenuto nel sito di Casa Matta non è l'unico drago di Kaulon. All'interno del parco, infatti, sono conservati i resti di un'antica abitazione di lusso che custodiva al suo interno un'opera musiva pavimentale raffigurante un drago marino, databile al III sec., ora conservata presso il Museo di Monasterace.</p>
-                        <p>È compresa nel Parco anche una vasta area archeologica subacquea che si estende tra il tempio dorico e l'attuale corso della fiumara Assi, con oltre 200 reperti recuperati dal fondale.</p>
-                    </div>
-                    <div class="content-image"
-                        style="background-image: url('../images/monasterace/kaulon-mosaico-drago.jpg');"></div>
-                </div>
-
-                <div class="content-section reverse">
-                    <div class="content-image"
-                        style="background-image: url('../images/monasterace/kaulon-mosaico-drago-dettaglio.jpg');"></div>
-                    <div class="content-text">
-                        <h3>Il Mosaico Policromo di 25 mq</h3>
-                        <p>Il sito di Casa Matta custodisce un reperto di enorme valore storico-archeologico: un mosaico policromo di 25 mq di superficie raffigurante un drago, dei delfini e motivi floreali, ritenuto il più grande mosaico risalente all'epoca ellenistica mai ritrovato in Italia.</p>
-                        <p>Questo straordinario pavimento musivo dimostra la raffinatezza artistica e la ricchezza della società kaulonite, capace di commissionare opere di tale portata e bellezza.</p>
-                    </div>
-                </div>
+      <!-- DESCRIZIONE GENERALE -->
+      <section>
+        <div class="container">
+          <h2 class="section-title">Un Paesaggio Archeologico Straordinario</h2>
+          <div class="content-section">
+            <div class="content-text">
+              <h3>Kaulon, la città sul mare</h3>
+              <p>
+                Monasterace, situata lungo la splendida Costa dei Gelsomini,
+                custodisce uno dei siti archeologici più importanti della Magna
+                Grecia calabrese. Qui sorgevano le antiche mura di Kaulon,
+                colonia greca fondata nel VII secolo a.C. che dominava il
+                promontorio di Punta Stilo con il Mar Ionio davanti.
+              </p>
+              <p>
+                Il borgo moderno di Monasterace si è sviluppato attorno a questo
+                straordinario patrimonio, creando un connubio unico tra storia
+                antica e vita contemporanea. Le sue strade accoglienti e i suoi
+                panorami mozzafiato sul mare rendono questa località una meta
+                imperdibile per gli amanti dell'archeologia e della cultura
+                classica.
+              </p>
             </div>
-        </section>
+            <div
+              class="content-image"
+              style="
+                background-image: url(&quot;../images/monasterace/kaulon-panorama.jpg&quot;);
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
 
-        <!-- IL MUSEO ARCHEOLOGICO -->
-        <section style="background-color: white;">
-            <div class="container">
-                <h2 class="section-title">Il Museo Archeologico MAK</h2>
-                <div class="content-section">
-                    <div class="content-image"
-                        style="background-image: url('../images/monasterace/mak-museo.jpg');"></div>
-                    <div class="content-text">
-                        <h3>Conservazione e Valorizzazione</h3>
-                        <p>Ciò che è riaffiorato a seguito degli scavi e dal recupero subacqueo nell'area è conservato presso il Museo Archeologico di Monasterace Marina (MAK). Il museo ospita una collezione straordinaria di reperti che raccontano oltre mille anni di storia kaulonite.</p>
-                        <p>Dalle ceramiche greche alle monete bizantine, dai gioielli antichi ai mosaici policromi, ogni reperto contribuisce a ricostruire il quadro della vita quotidiana e della cultura di questa importante colonia greca.</p>
-                    </div>
-                </div>
-
-                <div class="content-section reverse">
-                    <div class="content-text">
-                        <h3>Itinerari Espositivi</h3>
-                        <p>Il museo propone itinerari espositivi che accompagnano il visitatore attraverso le diverse epoche storiche di Kaulon, dall'età arcaica fino al periodo romano. Le sale espositive sono illuminate in modo da valorizzare al massimo i materiali esposti e creare un'atmosfera suggestiva.</p>
-                    </div>
-                    <div class="content-image"
-                        style="background-image: url('../images/monasterace/mak-interno.jpg');"></div>
-                </div>
+      <!-- KAULON E IL TEMPIO DORICO -->
+      <section style="background-color: white">
+        <div class="container">
+          <h2 class="section-title">Kaulon e il Tempio Dorico</h2>
+          <div class="content-section">
+            <div
+              class="content-image"
+              style="
+                background-image: url(&quot;../images/monasterace/kaulon-tempio-dorico.jpg&quot;);
+              "
+            ></div>
+            <div class="content-text">
+              <h3>Il Tempio Dorico Periptero</h3>
+              <p>
+                Di particolare pregio sono i resti rinvenuti nell'area sacra
+                dell'antica Kaulon, tra cui spicca un Tempio Dorico periptero
+                risalente al V sec. a.C. Questo tempio rappresenta uno dei
+                capolavori dell'architettura greca nella Calabria meridionale.
+              </p>
+              <p>
+                Le colonne in pietra calcarea, alcune ancora in piedi,
+                testimoniano l'elevato livello tecnico e artistico raggiunto
+                dagli architetti kauloniti. L'orientamento del tempio verso il
+                mare riflette la concezione cosmologica greca e la stretta
+                connessione tra la città e il dio Poseidone.
+              </p>
             </div>
-        </section>
+          </div>
 
-        <!-- ESCURSIONI E TREKKING ARCHEOLOGICO -->
-        <section>
-            <div class="container">
-                <h2 class="section-title">Escursioni e Trekking Archeologico</h2>
-                <div class="content-section">
-                    <div class="content-text">
-                        <h3>Percorsi Guidati nel Parco</h3>
-                        <p>Il Parco Archeologico di Kaulon offre percorsi guidati che permettono di scoprire tutti i segreti dell'antica città greca. Esperti archeologi accompagnano i visitatori attraverso i resti delle mura, le fondazioni del tempio e le aree residenziali.</p>
-                        <p>I percorsi si snodano tra ulivi secolari e profumi mediterranei, creando un'esperienza sensoriale unica che unisce storia e natura.</p>
-                    </div>
-                    <div class="content-image"
-                        style="background-image: url('../images/monasterace/kaulon-escursione.jpg');"></div>
-                </div>
-
-                <div class="content-section reverse">
-                    <div class="content-image"
-                        style="background-image: url('../images/monasterace/kaulon-area-subacquea.jpg');"></div>
-                    <div class="content-text">
-                        <h3>Area Subacquea e Reperti</h3>
-                        <p>Il percorso comprende anche la visita all'area subacquea con oltre 200 reperti recuperati dal fondo marino. Questi oggetti raccontano la storia di una città che per secoli ha dominato il commercio marittimo della costa ionica.</p>
-                    </div>
-                </div>
+          <div class="content-section reverse">
+            <div class="content-text">
+              <h3>Scavi e Restauro Continui</h3>
+              <p>
+                Gli scavi archeologici condotti nel corso del XX secolo hanno
+                riportato alla luce gran parte della struttura del tempio e
+                dell'area sacra circostante. Il restauro continuo permette di
+                conservare questa preziosa testimonianza del passato classico.
+              </p>
+              <p>
+                Oggi il tempio è visibile al pubblico e costituisce uno degli
+                elementi più suggestivi del Parco Archeologico, con la sua
+                imponente silhouette che si staglia contro il mare Ionio.
+              </p>
             </div>
-        </section>
+            <div
+              class="content-image"
+              style="
+                background-image: url(&quot;../images/monasterace/kaulon-scavi.jpg&quot;);
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
 
-        <!-- TRADIZIONI E LEGGENDE LOCALI -->
-        <section style="background-color: white;">
-            <div class="container">
-                <h2 class="section-title">Tradizioni e Leggende Locali</h2>
-                <div class="tradizioni-grid">
-                    <div class="tradizione-card">
-                        <i class="fas fa-archway"></i>
-                        <h4>Il Mito di Kaulon</h4>
-                        <p>Secondo la tradizione, Kaulon deve il suo nome al mitico fondatore Kaulos, figlio di un re locale. La città divenne famosa per il suo tempio dedicato a Poseidone, dio del mare, che proteggeva i naviganti e i pescatori della zona.</p>
-                    </div>
-                    <div class="tradizione-card">
-                        <i class="fas fa-mosaic"></i>
-                        <h4>L'Arte dei Mosaici</h4>
-                        <p>La tradizione della ceramica e dei mosaici di Monasterace si tramanda ancora oggi attraverso artigiani locali che utilizzano tecniche antiche per creare opere uniche ispirate ai capolavori kauloniti.</p>
-                    </div>
-                    <div class="tradizione-card">
-                        <i class="fas fa-church"></i>
-                        <h4>La Benedizione del Mare</h4>
-                        <p>Ogni anno, durante la festa patronale, la comunità di Monasterace celebra la benedizione del mare, un rituale che ricorda l'antica devozione verso Poseidone e la protezione divina sulle acque.</p>
-                    </div>
-                    <div class="tradizione-card">
-                        <i class="fas fa-book"></i>
-                        <h4>Corrado Alvaro e Kaulon</h4>
-                        <p>Lo scrittore calabrese Corrado Alvaro rimase affascinato dalla bellezza di Monasterace e dalle sue rovine antiche, definendola "una finestra sul passato classico" e contribuendo a far conoscere questa meraviglia archeologica a livello internazionale.</p>
-                    </div>
-                </div>
+      <!-- I DUE DRAGHI DI KAULON - MOSAICI -->
+      <section>
+        <div class="container">
+          <h2 class="section-title">I Due Draghi di Kaulon</h2>
+          <div class="content-section">
+            <div class="content-text">
+              <h3>Il Mosaico della Casa Matta</h3>
+              <p>
+                Quello rinvenuto nel sito di Casa Matta non è l'unico drago di
+                Kaulon. All'interno del parco, infatti, sono conservati i resti
+                di un'antica abitazione di lusso che custodiva al suo interno
+                un'opera musiva pavimentale raffigurante un drago marino,
+                databile al III sec., ora conservata presso il Museo di
+                Monasterace.
+              </p>
+              <p>
+                È compresa nel Parco anche una vasta area archeologica subacquea
+                che si estende tra il tempio dorico e l'attuale corso della
+                fiumara Assi, con oltre 200 reperti recuperati dal fondale.
+              </p>
             </div>
-        </section>
+            <div
+              class="content-image"
+              style="
+                background-image: url(&quot;../images/monasterace/kaulon-mosaico-drago.jpg&quot;);
+              "
+            ></div>
+          </div>
 
-        <!-- GALLERIA FOTO -->
-        <section>
-            <div class="container">
-                <h2 class="section-title">Galleria Fotografica</h2>
-                <div class="gallery">
-                    <div class="gallery-item"><img src="../images/monasterace/kaulon-tempio-dorico.jpg" alt="Tempio Dorico di Kaulon"></div>
-                    <div class="gallery-item"><img src="../images/monasterace/kaulon-mosaico-drago.jpg" alt="Mosaico del Drago"></div>
-                    <div class="gallery-item"><img src="../images/monasterace/mak-museo.jpg" alt="Museo Archeologico MAK"></div>
-                    <div class="gallery-item"><img src="../images/monasterace/kaulon-panorama.jpg" alt="Panorama da Punta Stilo"></div>
-                    <div class="gallery-item"><img src="../images/monasterace/kaulon-mura.jpg" alt="Resti delle mura antiche"></div>
-                    <div class="gallery-item"><img src="../images/monasterace/kaulon-area-subacquea.jpg" alt="Area subacquea e reperti"></div>
-                </div>
+          <div class="content-section reverse">
+            <div
+              class="content-image"
+              style="
+                background-image: url(&quot;../images/monasterace/kaulon-mosaico-drago-dettaglio.jpg&quot;);
+              "
+            ></div>
+            <div class="content-text">
+              <h3>Il Mosaico Policromo di 25 mq</h3>
+              <p>
+                Il sito di Casa Matta custodisce un reperto di enorme valore
+                storico-archeologico: un mosaico policromo di 25 mq di
+                superficie raffigurante un drago, dei delfini e motivi floreali,
+                ritenuto il più grande mosaico risalente all'epoca ellenistica
+                mai ritrovato in Italia.
+              </p>
+              <p>
+                Questo straordinario pavimento musivo dimostra la raffinatezza
+                artistica e la ricchezza della società kaulonite, capace di
+                commissionare opere di tale portata e bellezza.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- INFO UTILI -->
-        <section style="background-color: white;">
-            <div class="container">
-                <h2 class="section-title">Info Utili</h2>
-                <div class="info-grid contact-grid">
-                    <div class="info-card">
-                        <i class="fas fa-car"></i>
-                        <h4>Come Arrivare</h4>
-                        <p><strong>In Auto:</strong> SS106 Jonica, uscita Monasterace. Proseguire verso il mare seguendo le indicazioni per il Parco Archeologico di Kaulon.<br>
-                        Dista circa 35 km da Siderno e 80 km da Reggio Calabria.<br>
-                        Parcheggio gratuito disponibile nei pressi del Museo.</p>
-                    </div>
-
-                    <div class="info-card">
-                        <i class="fas fa-globe"></i>
-                        <h4>Comune e Informazioni</h4>
-                        <p><strong>Comune di Monasterace</strong><br>
-                            Piazza C. Placanica<br>
-                            89040 Monasterace (RC)<br>
-                            <strong>Tel:</strong> 0964 739025<br>
-                            <strong>Email:</strong> <a href="mailto:amministrativo@comune.monasterace.rc.it"
-                                style="color: var(--text-light); text-decoration: none;">amministrativo@comune.monasterace.rc.it</a><br>
-                            <strong>PEC:</strong> protocollo.monasterace@asmepec.it<br>
-                            <strong>Sito web:</strong> <a href="https://www.comune.monasterace.rc.it" target="_blank"
-                                style="color: var(--accent); text-decoration: none; font-weight: 600;">www.comune.monasterace.rc.it</a>
-                        </p>
-                    </div>
-
-                    <div class="info-card">
-                        <i class="fas fa-landmark"></i>
-                        <h4>Parco Archeologico e Museo MAK</h4>
-                        <p><strong>Museo e Parco Archeologico dell'Antica Kaulon (MAK)</strong><br>
-                            Strada Statale 106 Ionica, 89040 Monasterace Marina (RC)<br>
-                            <strong>Orari:</strong> Mar-Dom 9:00-20:00, Lunedì chiuso<br>
-                            <strong>Tel:</strong> 0964 735154<br>
-                            <strong>Email:</strong> <a href="mailto:drm-cal.kauolon@cultura.gov.it"
-                                style="color: var(--text-light); text-decoration: none;">drm-cal.kauolon@cultura.gov.it</a><br>
-                        </p>
-                    </div>
-
-                    <div class="info-card">
-                        <i class="fas fa-train"></i>
-                        <h4>Trasporti</h4>
-                        <p><strong>Stazione Ferroviaria di Monasterache</strong><br>
-                            Linea Jonica Reggio Calabria-Taranto<br>
-                            Collegamenti frequenti con Reggio Calabria e Siderno<br>
-                            <br>
-                            <strong>Trasporto Locale:</strong> Autolinee da Reggio Calabria e Siderno<br>
-                            Servizio taxi disponibile
-                        </p>
-                    </div>
-                </div>
-                <div class="btn-center">
-                    <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla
-                        mappa</a>
-                </div>
+      <!-- IL MUSEO ARCHEOLOGICO -->
+      <section style="background-color: white">
+        <div class="container">
+          <h2 class="section-title">Il Museo Archeologico MAK</h2>
+          <div class="content-section">
+            <div
+              class="content-image"
+              style="
+                background-image: url(&quot;../images/monasterace/mak-museo.jpg&quot;);
+              "
+            ></div>
+            <div class="content-text">
+              <h3>Conservazione e Valorizzazione</h3>
+              <p>
+                Ciò che è riaffiorato a seguito degli scavi e dal recupero
+                subacqueo nell'area è conservato presso il Museo Archeologico di
+                Monasterace Marina (MAK). Il museo ospita una collezione
+                straordinaria di reperti che raccontano oltre mille anni di
+                storia kaulonite.
+              </p>
+              <p>
+                Dalle ceramiche greche alle monete bizantine, dai gioielli
+                antichi ai mosaici policromi, ogni reperto contribuisce a
+                ricostruire il quadro della vita quotidiana e della cultura di
+                questa importante colonia greca.
+              </p>
             </div>
-        </section>
+          </div>
 
-        <!-- FOOTER -->
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a
-                            href="../index.html">Home</a></p>
-                    <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.
-                    </p>
-                </div>
-                <div class="copyright">
-                    Sito realizzato dagli studenti del progetto scolastico
-                </div>
+          <div class="content-section reverse">
+            <div class="content-text">
+              <h3>Itinerari Espositivi</h3>
+              <p>
+                Il museo propone itinerari espositivi che accompagnano il
+                visitatore attraverso le diverse epoche storiche di Kaulon,
+                dall'età arcaica fino al periodo romano. Le sale espositive sono
+                illuminate in modo da valorizzare al massimo i materiali esposti
+                e creare un'atmosfera suggestiva.
+              </p>
             </div>
-        </footer>
+            <div
+              class="content-image"
+              style="
+                background-image: url(&quot;../images/monasterace/mak-interno.jpg&quot;);
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESCURSIONI E TREKKING ARCHEOLOGICO -->
+      <section>
+        <div class="container">
+          <h2 class="section-title">Escursioni e Trekking Archeologico</h2>
+          <div class="content-section">
+            <div class="content-text">
+              <h3>Percorsi Guidati nel Parco</h3>
+              <p>
+                Il Parco Archeologico di Kaulon offre percorsi guidati che
+                permettono di scoprire tutti i segreti dell'antica città greca.
+                Esperti archeologi accompagnano i visitatori attraverso i resti
+                delle mura, le fondazioni del tempio e le aree residenziali.
+              </p>
+              <p>
+                I percorsi si snodano tra ulivi secolari e profumi mediterranei,
+                creando un'esperienza sensoriale unica che unisce storia e
+                natura.
+              </p>
+            </div>
+            <div
+              class="content-image"
+              style="
+                background-image: url(&quot;../images/monasterace/kaulon-escursione.jpg&quot;);
+              "
+            ></div>
+          </div>
+
+          <div class="content-section reverse">
+            <div
+              class="content-image"
+              style="
+                background-image: url(&quot;../images/monasterace/kaulon-area-subacquea.jpg&quot;);
+              "
+            ></div>
+            <div class="content-text">
+              <h3>Area Subacquea e Reperti</h3>
+              <p>
+                Il percorso comprende anche la visita all'area subacquea con
+                oltre 200 reperti recuperati dal fondo marino. Questi oggetti
+                raccontano la storia di una città che per secoli ha dominato il
+                commercio marittimo della costa ionica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRADIZIONI E LEGGENDE LOCALI -->
+      <section style="background-color: white">
+        <div class="container">
+          <h2 class="section-title">Tradizioni e Leggende Locali</h2>
+          <div class="tradizioni-grid">
+            <div class="tradizione-card">
+              <i class="fas fa-archway"></i>
+              <h4>Il Mito di Kaulon</h4>
+              <p>
+                Secondo la tradizione, Kaulon deve il suo nome al mitico
+                fondatore Kaulos, figlio di un re locale. La città divenne
+                famosa per il suo tempio dedicato a Poseidone, dio del mare, che
+                proteggeva i naviganti e i pescatori della zona.
+              </p>
+            </div>
+            <div class="tradizione-card">
+              <i class="fas fa-mosaic"></i>
+              <h4>L'Arte dei Mosaici</h4>
+              <p>
+                La tradizione della ceramica e dei mosaici di Monasterace si
+                tramanda ancora oggi attraverso artigiani locali che utilizzano
+                tecniche antiche per creare opere uniche ispirate ai capolavori
+                kauloniti.
+              </p>
+            </div>
+            <div class="tradizione-card">
+              <i class="fas fa-church"></i>
+              <h4>La Benedizione del Mare</h4>
+              <p>
+                Ogni anno, durante la festa patronale, la comunità di
+                Monasterace celebra la benedizione del mare, un rituale che
+                ricorda l'antica devozione verso Poseidone e la protezione
+                divina sulle acque.
+              </p>
+            </div>
+            <div class="tradizione-card">
+              <i class="fas fa-book"></i>
+              <h4>Corrado Alvaro e Kaulon</h4>
+              <p>
+                Lo scrittore calabrese Corrado Alvaro rimase affascinato dalla
+                bellezza di Monasterace e dalle sue rovine antiche, definendola
+                "una finestra sul passato classico" e contribuendo a far
+                conoscere questa meraviglia archeologica a livello
+                internazionale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERIA FOTO -->
+      <section>
+        <div class="container">
+          <h2 class="section-title">Galleria Fotografica</h2>
+          <div class="gallery">
+            <div class="gallery-item">
+              <img
+                src="../images/monasterace/kaulon-tempio-dorico.jpg"
+                alt="Tempio Dorico di Kaulon"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="../images/monasterace/kaulon-mosaico-drago.jpg"
+                alt="Mosaico del Drago"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="../images/monasterace/mak-museo.jpg"
+                alt="Museo Archeologico MAK"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="../images/monasterace/kaulon-panorama.jpg"
+                alt="Panorama da Punta Stilo"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="../images/monasterace/kaulon-mura.jpg"
+                alt="Resti delle mura antiche"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="../images/monasterace/kaulon-area-subacquea.jpg"
+                alt="Area subacquea e reperti"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFO UTILI -->
+      <section style="background-color: white">
+        <div class="container">
+          <h2 class="section-title">Info Utili</h2>
+          <div class="info-grid contact-grid">
+            <div class="info-card">
+              <i class="fas fa-car"></i>
+              <h4>Come Arrivare</h4>
+              <p>
+                <strong>In Auto:</strong> SS106 Jonica, uscita Monasterace.
+                Proseguire verso il mare seguendo le indicazioni per il Parco
+                Archeologico di Kaulon.<br />
+                Dista circa 35 km da Siderno e 80 km da Reggio Calabria.<br />
+                Parcheggio gratuito disponibile nei pressi del Museo.
+              </p>
+            </div>
+
+            <div class="info-card">
+              <i class="fas fa-globe"></i>
+              <h4>Comune e Informazioni</h4>
+              <p>
+                <strong>Comune di Monasterace</strong><br />
+                Piazza C. Placanica<br />
+                89040 Monasterace (RC)<br />
+                <strong>Tel:</strong> 0964 739025<br />
+                <strong>Email:</strong>
+                <a
+                  href="mailto:amministrativo@comune.monasterace.rc.it"
+                  style="color: var(--text-light); text-decoration: none"
+                  >amministrativo@comune.monasterace.rc.it</a
+                ><br />
+                <strong>PEC:</strong> protocollo.monasterace@asmepec.it<br />
+                <strong>Sito web:</strong>
+                <a
+                  href="https://www.comune.monasterace.rc.it"
+                  target="_blank"
+                  style="
+                    color: var(--accent);
+                    text-decoration: none;
+                    font-weight: 600;
+                  "
+                  >www.comune.monasterace.rc.it</a
+                >
+              </p>
+            </div>
+
+            <div class="info-card">
+              <i class="fas fa-landmark"></i>
+              <h4>Parco Archeologico e Museo MAK</h4>
+              <p>
+                <strong
+                  >Museo e Parco Archeologico dell'Antica Kaulon (MAK)</strong
+                ><br />
+                Strada Statale 106 Ionica, 89040 Monasterace Marina (RC)<br />
+                <strong>Orari:</strong> Mar-Dom 9:00-20:00, Lunedì chiuso<br />
+                <strong>Tel:</strong> 0964 735154<br />
+                <strong>Email:</strong>
+                <a
+                  href="mailto:drm-cal.kauolon@cultura.gov.it"
+                  style="color: var(--text-light); text-decoration: none"
+                  >drm-cal.kauolon@cultura.gov.it</a
+                ><br />
+              </p>
+            </div>
+
+            <div class="info-card">
+              <i class="fas fa-train"></i>
+              <h4>Trasporti</h4>
+              <p>
+                <strong>Stazione Ferroviaria di Monasterache</strong><br />
+                Linea Jonica Reggio Calabria-Taranto<br />
+                Collegamenti frequenti con Reggio Calabria e Siderno<br />
+                <br />
+                <strong>Trasporto Locale:</strong> Autolinee da Reggio Calabria
+                e Siderno<br />
+                Servizio taxi disponibile
+              </p>
+            </div>
+          </div>
+          <div class="btn-center">
+            <a href="../index.html#borghi" class="btn"
+              ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="container">
+          <div class="footer-content">
+            <p>
+              <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
+              <a href="../index.html">Home</a>
+            </p>
+            <p>
+              &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
+              Zanotti. Tutti i diritti riservati.
+            </p>
+          </div>
+          <div class="copyright">
+            Sito realizzato dagli studenti del progetto scolastico
+          </div>
+        </div>
+      </footer>
     </main>
 
     <script>
-        // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-        if ("scrollRestoration" in history) {
-            history.scrollRestoration = "manual";
-        }
+      // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
 
-        window.addEventListener("load", function () {
-            window.scrollTo(0, 0);
-        });
+      window.addEventListener("load", function () {
+        window.scrollTo(0, 0);
+      });
     </script>
-</body>
-
+  </body>
 </html>

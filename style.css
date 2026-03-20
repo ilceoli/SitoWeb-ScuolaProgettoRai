@@ -302,7 +302,11 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(15, 44, 74, 0.70) 0%, rgba(26, 61, 92, 0.70) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 44, 74, 0.7) 0%,
+    rgba(26, 61, 92, 0.7) 100%
+  );
   z-index: 2;
   pointer-events: none;
 }
@@ -1062,13 +1066,13 @@ footer::before {
   .scuola-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     width: 100%;
     max-width: 300px;
   }
-  
+
   .hero-buttons .btn {
     width: 100%;
     justify-content: center;
@@ -1079,19 +1083,19 @@ footer::before {
   .header-content {
     padding: 20px 0;
   }
-  
+
   .logo {
     gap: 8px;
   }
-  
+
   .logo img {
     height: 40px;
   }
-  
+
   .logo h1 {
     font-size: 1.1rem;
   }
-  
+
   .logo span {
     font-size: 0.65rem;
     display: block;
@@ -1154,12 +1158,12 @@ footer::before {
   .hero h2 {
     font-size: 1.8rem;
   }
-  
+
   .logo h1 {
     font-size: 0.9rem;
     white-space: nowrap;
   }
-  
+
   .logo span {
     display: block;
     font-size: 0.6rem;

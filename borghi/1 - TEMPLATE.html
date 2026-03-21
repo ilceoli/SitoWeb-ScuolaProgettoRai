@@ -740,12 +740,13 @@
     </header>
 
     <main>
-      <!-- HERO SECTION -->
-      <!-- SOSTITUIRE: sfondo, titolo e sottotitolo -->
+      <!-- ============================================
+           HERO SECTION
+           ============================================ -->
       <section
         class="hero-borgo"
         style="
-          background-image: url(&quot;../images/[nome-cartella]/[nome-immagine-hero].jpg&quot;);
+          background-image: url('../images/[nome-cartella]/[nome-immagine-hero].jpg');
           background-size: cover;
           background-position: center;
         "
@@ -753,201 +754,237 @@
         <div class="hero-overlay"></div>
         <div class="container">
           <h2>[NOME BORGO]</h2>
-          <p>[Breve frase di impatto che descrive il borgo in poche parole.]</p>
+          <p>
+            [Frase evocativa che descrive il borgo in poche parole, evidenziando
+            il suo carattere distintivo.]
+          </p>
         </div>
       </section>
 
-      <!-- INFO CARDS (4 card con dati chiave) -->
-      <!-- SOSTITUIRE: icone, titoli e testi -->
+      <!-- ============================================
+           INFO CARDS (4 card con i dati principali)
+           ============================================ -->
       <section>
         <div class="container">
           <div class="info-grid">
             <div class="info-card">
-              <i class="fas fa-[icona1]"></i>
-              <h4>[Titolo 1]</h4>
-              <p>[Valore 1]</p>
+              <i class="fas fa-mountain"></i>
+              <h4>Altitudine</h4>
+              <p>[Valore] m s.l.m.</p>
             </div>
             <div class="info-card">
-              <i class="fas fa-[icona2]"></i>
-              <h4>[Titolo 2]</h4>
-              <p>[Valore 2]</p>
+              <i class="fas fa-calendar-alt"></i>
+              <h4>[Evento / Fondazione]</h4>
+              <p>[Dato corrispondente]</p>
             </div>
             <div class="info-card">
-              <i class="fas fa-[icona3]"></i>
-              <h4>[Titolo 3]</h4>
-              <p>[Valore 3]</p>
+              <i class="fas fa-users"></i>
+              <h4>Abitanti</h4>
+              <p>Circa [numero]</p>
             </div>
             <div class="info-card">
-              <i class="fas fa-[icona4]"></i>
-              <h4>[Titolo 4]</h4>
-              <p>[Valore 4]</p>
+              <i class="fas fa-trophy"></i>
+              <h4>Riconoscimento</h4>
+              <p>[Premio / caratteristica]</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- PRIMA SEZIONE DESCRITTIVA (testo + immagine) -->
-      <!-- SOSTITUIRE: titolo, testi, immagine -->
+      <!-- ============================================
+           SEZIONE 1 (due blocchi: primo normale, secondo reverse)
+           ============================================ -->
       <section>
         <div class="container">
           <h2 class="section-title">[Titolo prima sezione]</h2>
+
+          <!-- Primo blocco: testo a sinistra, immagine a destra -->
           <div class="content-section">
             <div class="content-text">
-              <h3>[Sottotitolo 1]</h3>
-              <p>[Testo descrittivo 1 - più paragrafi se necessario]</p>
-              <p>[Testo descrittivo 2]</p>
+              <h3>[Sottotitolo 1A]</h3>
+              <p>[Testo descrittivo 1 – almeno un paragrafo]</p>
+              <p>[Testo descrittivo 2 – secondo paragrafo]</p>
             </div>
             <div
               class="content-image"
               style="
-                background-image: url(&quot;../images/[nome-cartella]/[immagine1].jpg&quot;);
+                background-image: url('../images/[nome-cartella]/[immagine1].jpg');
               "
             ></div>
+          </div>
+
+          <!-- Secondo blocco: immagine a sinistra, testo a destra (reverse) -->
+          <div class="content-section reverse">
+            <div
+              class="content-image"
+              style="
+                background-image: url('../images/[nome-cartella]/[immagine2].jpg');
+              "
+            ></div>
+            <div class="content-text">
+              <h3>[Sottotitolo 1B]</h3>
+              <p>[Testo descrittivo 3 – almeno un paragrafo]</p>
+              <p>[Testo descrittivo 4 – secondo paragrafo]</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- SECONDA SEZIONE (inversa: immagine + testo) -->
-      <!-- SOSTITUIRE: titolo, testi, immagine -->
+      <!-- ============================================
+           SEZIONE 2 (sfondo bianco, due blocchi)
+           ============================================ -->
       <section style="background-color: white">
         <div class="container">
           <h2 class="section-title">[Titolo seconda sezione]</h2>
-          <div class="content-section reverse">
-            <div
+
+          <!-- Primo blocco: testo a sinistra, immagine a destra -->
+          <div class="content-section">
+                        <div
               class="content-image"
               style="
-                background-image: url(&quot;../images/[nome-cartella]/[immagine2].jpg&quot;);
+                background-image: url('../images/[nome-cartella]/[immagine3].jpg');
               "
             ></div>
             <div class="content-text">
-              <h3>[Sottotitolo 2]</h3>
-              <p>[Testo descrittivo 3]</p>
-              <p>[Testo descrittivo 4]</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TERZA SEZIONE (normale) - se necessaria -->
-      <!-- SOSTITUIRE: titolo, testi, immagine -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">[Titolo terza sezione]</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>[Sottotitolo 3]</h3>
+              <h3>[Sottotitolo 2A]</h3>
               <p>[Testo descrittivo 5]</p>
               <p>[Testo descrittivo 6]</p>
             </div>
-            <div
+          </div>
+
+          <!-- Secondo blocco: immagine a sinistra, testo a destra (reverse) -->
+          <div class="content-section reverse">
+            <div class="content-text">
+              <h3>[Sottotitolo 2B]</h3>
+              <p>[Testo descrittivo 7]</p>
+              <p>[Testo descrittivo 8]</p>
+            </div>
+                        <div
               class="content-image"
               style="
-                background-image: url(&quot;../images/[nome-cartella]/[immagine3].jpg&quot;);
+                background-image: url('../images/[nome-cartella]/[immagine4].jpg');
               "
             ></div>
           </div>
         </div>
       </section>
 
-      <!-- QUARTA SEZIONE (inversa) - se necessaria -->
-      <!-- SOSTITUIRE: titolo, testi, immagine -->
-      <section style="background-color: white">
+      <!-- ============================================
+           SEZIONE 3 (se necessaria) – stesso schema delle precedenti
+           ============================================ -->
+      <section>
         <div class="container">
-          <h2 class="section-title">[Titolo quarta sezione]</h2>
+          <h2 class="section-title">[Titolo terza sezione]</h2>
+
+          <div class="content-section">
+            <div class="content-text">
+              <h3>[Sottotitolo 3A]</h3>
+              <p>[Testo descrittivo 9]</p>
+            </div>
+            <div
+              class="content-image"
+              style="
+                background-image: url('../images/[nome-cartella]/[immagine5].jpg');
+              "
+            ></div>
+          </div>
+
           <div class="content-section reverse">
             <div
               class="content-image"
               style="
-                background-image: url(&quot;../images/[nome-cartella]/[immagine4].jpg&quot;);
+                background-image: url('../images/[nome-cartella]/[immagine6].jpg');
               "
             ></div>
             <div class="content-text">
-              <h3>[Sottotitolo 4]</h3>
-              <p>[Testo descrittivo 7]</p>
-              <p>[Testo descrittivo 8]</p>
+              <h3>[Sottotitolo 3B]</h3>
+              <p>[Testo descrittivo 10]</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
-      <!-- SOSTITUIRE: icone, titoli e testi -->
+      <!-- ============================================
+           TRADIZIONI E CULTURA (4 card)
+           ============================================ -->
       <section>
         <div class="container">
-          <h2 class="section-title">Tradizioni e Leggende</h2>
+          <h2 class="section-title">Tradizioni e Cultura</h2>
           <div class="tradizioni-grid">
             <div class="tradizione-card">
-              <i class="fas fa-[icona5]"></i>
-              <h4>[Titolo tradizione 1]</h4>
-              <p>[Testo tradizione 1]</p>
+              <i class="fas fa-calendar-alt"></i>
+              <h4>[Nome festa / tradizione 1]</h4>
+              <p>[Breve descrizione della tradizione 1]</p>
             </div>
             <div class="tradizione-card">
-              <i class="fas fa-[icona6]"></i>
-              <h4>[Titolo tradizione 2]</h4>
-              <p>[Testo tradizione 2]</p>
+              <i class="fas fa-utensils"></i>
+              <h4>[Gastronomia / prodotto tipico]</h4>
+              <p>[Descrizione di sapori o piatti caratteristici]</p>
             </div>
             <div class="tradizione-card">
-              <i class="fas fa-[icona7]"></i>
-              <h4>[Titolo tradizione 3]</h4>
-              <p>[Testo tradizione 3]</p>
+              <i class="fas fa-hands"></i>
+              <h4>[Artigianato / mestiere antico]</h4>
+              <p>[Descrizione dell'artigianato locale]</p>
             </div>
             <div class="tradizione-card">
-              <i class="fas fa-[icona8]"></i>
-              <h4>[Titolo tradizione 4]</h4>
-              <p>[Testo tradizione 4]</p>
+              <i class="fas fa-hiking"></i>
+              <h4>[Natura / sentieri]</h4>
+              <p>[Descrizione delle opportunità naturalistiche]</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- GALLERIA FOTO -->
-      <!-- SOSTITUIRE: 6 immagini con percorsi corretti -->
+      <!-- ============================================
+           GALLERIA FOTOGRAFICA
+           ============================================ -->
       <section style="background-color: white">
         <div class="container">
           <h2 class="section-title">Galleria Fotografica</h2>
           <div class="gallery">
             <div class="gallery-item">
               <img
-                src="../images/[nome-cartella]/[foto1].jpg"
-                alt="[descrizione 1]"
+                src="../images/[nome-cartella]/galleria/[foto1].jpg"
+                alt="[Descrizione 1]"
               />
             </div>
             <div class="gallery-item">
               <img
-                src="../images/[nome-cartella]/[foto2].jpg"
-                alt="[descrizione 2]"
+                src="../images/[nome-cartella]/galleria/[foto2].jpg"
+                alt="[Descrizione 2]"
               />
             </div>
             <div class="gallery-item">
               <img
-                src="../images/[nome-cartella]/[foto3].jpg"
-                alt="[descrizione 3]"
+                src="../images/[nome-cartella]/galleria/[foto3].jpg"
+                alt="[Descrizione 3]"
               />
             </div>
             <div class="gallery-item">
               <img
-                src="../images/[nome-cartella]/[foto4].jpg"
-                alt="[descrizione 4]"
+                src="../images/[nome-cartella]/galleria/[foto4].jpg"
+                alt="[Descrizione 4]"
               />
             </div>
             <div class="gallery-item">
               <img
-                src="../images/[nome-cartella]/[foto5].jpg"
-                alt="[descrizione 5]"
+                src="../images/[nome-cartella]/galleria/[foto5].jpg"
+                alt="[Descrizione 5]"
               />
             </div>
             <div class="gallery-item">
               <img
-                src="../images/[nome-cartella]/[foto6].jpg"
-                alt="[descrizione 6]"
+                src="../images/[nome-cartella]/galleria/[foto6].jpg"
+                alt="[Descrizione 6]"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- INFO UTILI -->
-      <!-- SOSTITUIRE: tutte le informazioni pratiche (come arrivare, comune, museo, trasporti) -->
+      <!-- ============================================
+           INFO UTILI (contatti, come arrivare, trasporti)
+           ============================================ -->
       <section>
         <div class="container">
           <h2 class="section-title">Info Utili</h2>
@@ -956,8 +993,9 @@
               <i class="fas fa-car"></i>
               <h4>Come Arrivare</h4>
               <p>
-                <strong>In Auto:</strong> [indicazioni stradali].<br />
-                Dista circa [XX] km da Siderno e [XX] km da Reggio Calabria.<br />
+                <strong>In Auto:</strong> SS106 Jonica, uscita [nome uscita].
+                Seguire le indicazioni per [nome borgo].<br />
+                Dista circa [XX] km da Siderno e [YY] km da Reggio Calabria.<br />
                 Parcheggio [disponibilità].
               </p>
             </div>
@@ -967,16 +1005,15 @@
               <h4>Comune e Informazioni</h4>
               <p>
                 <strong>Comune di [Nome]</strong><br />
-                [Indirizzo]<br />
+                [Indirizzo completo]<br />
                 [CAP] [Località] (RC)<br />
-                <strong>Tel:</strong> [telefono]<br />
+                <strong>Tel:</strong> [numero telefono]<br />
                 <strong>Email:</strong>
                 <a
                   href="mailto:[email]"
                   style="color: var(--text-light); text-decoration: none"
                   >[email]</a
                 ><br />
-                <strong>PEC:</strong> [pec]<br />
                 <strong>Sito web:</strong>
                 <a
                   href="[url]"
@@ -986,25 +1023,19 @@
                     text-decoration: none;
                     font-weight: 600;
                   "
-                  >[sito web]</a
+                  >[www.comune...]</a
                 >
               </p>
             </div>
 
             <div class="info-card">
               <i class="fas fa-landmark"></i>
-              <h4>[Museo / Luogo principale]</h4>
+              <h4>[Museo / Luogo d'interesse principale]</h4>
               <p>
                 <strong>[Nome struttura]</strong><br />
                 [Indirizzo]<br />
-                <strong>Orari:</strong> [orari]<br />
+                <strong>Orari:</strong> [orari di apertura]<br />
                 <strong>Tel:</strong> [telefono]<br />
-                <strong>Email:</strong>
-                <a
-                  href="mailto:[email]"
-                  style="color: var(--text-light); text-decoration: none"
-                  >[email]</a
-                ><br />
                 <strong>Sito web:</strong>
                 <a
                   href="[url]"
@@ -1023,11 +1054,10 @@
               <i class="fas fa-train"></i>
               <h4>Trasporti</h4>
               <p>
-                <strong>Stazione Ferroviaria più vicina:</strong> [nome
-                stazione] (linea Jonica RC-Taranto)<br />
-                [Indirizzo o note]<br />
-                <br />
-                <strong>Trasporto Locale:</strong> [autolinee / taxi / bus]
+                <strong>Stazione Ferroviaria:</strong> [nome stazione] (linea
+                Jonica Reggio Calabria-Taranto)<br />
+                <strong>Autobus:</strong> [linee extraurbane]<br />
+                <strong>Trasporto Locale:</strong> [servizio taxi / navetta]
               </p>
             </div>
           </div>
@@ -1040,7 +1070,7 @@
       </section>
     </main>
 
-    <!-- FOOTER (lasciare invariato) -->
+    <!-- FOOTER (invariato) -->
     <footer>
       <div class="container">
         <div class="footer-content">

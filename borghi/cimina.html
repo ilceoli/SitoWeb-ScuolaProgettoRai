@@ -1,1231 +1,1164 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ciminà - Polo Tecnico Professionale Marconi</title>
-    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
-    <!-- Google Fonts e Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      /* ============================================
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciminà - Polo Tecnico Professionale Marconi</title>
+  <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
+  <!-- Google Fonts e Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ============================================
            POLO TECNICO PROFESSIONALE - STYLE.CSS
            Design Elegante e Professionale
            ============================================ */
 
-      /* RESET E BASE */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    /* RESET E BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        color: #1a1a2e;
-        background-color: #fafbfc;
-        overflow-x: hidden;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background-color: #fafbfc;
+      overflow-x: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
-      /* ============================================
+    /* ============================================
            VARIABILI COLORE - PALETTE REFINED
            ============================================ */
-      :root {
-        --primary: #2c3e50;
-        --primary-light: #34495e;
-        --primary-dark: #1e2b3a;
-        --accent: #e67e22;
-        --accent-light: #f39c12;
-        --accent-dark: #c96e1c;
-        --secondary: #5c7c9a;
-        --gray-light: #f0f2f5;
-        --gray: #9ca3af;
-        --text-light: #6b7280;
-        --text-dark: #1f2937;
-        --white: #ffffff;
-        --off-white: #f8f9fa;
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-        --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
-        --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
-        --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-        --gradient-primary: linear-gradient(
-          135deg,
+    :root {
+      --primary: #2c3e50;
+      --primary-light: #34495e;
+      --primary-dark: #1e2b3a;
+      --accent: #e67e22;
+      --accent-light: #f39c12;
+      --accent-dark: #c96e1c;
+      --secondary: #5c7c9a;
+      --gray-light: #f0f2f5;
+      --gray: #9ca3af;
+      --text-light: #6b7280;
+      --text-dark: #1f2937;
+      --white: #ffffff;
+      --off-white: #f8f9fa;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+      --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+      --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+      --gradient-primary: linear-gradient(135deg,
           var(--primary) 0%,
-          var(--primary-light) 100%
-        );
-        --gradient-accent: linear-gradient(
-          135deg,
+          var(--primary-light) 100%);
+      --gradient-accent: linear-gradient(135deg,
           var(--accent) 0%,
-          var(--accent-light) 100%
-        );
-        --transition: 0.3s ease;
-        --transition-slow: 0.5s ease;
-      }
+          var(--accent-light) 100%);
+      --transition: 0.3s ease;
+      --transition-slow: 0.5s ease;
+    }
 
-      /* ============================================
+    /* ============================================
            LAYOUT GENERALE
            ============================================ */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-      /* ============================================
+    /* ============================================
            HEADER E NAVIGAZIONE
            ============================================ */
-      header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px) saturate(180%);
-        box-shadow: var(--shadow-sm);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        transition: all var(--transition);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all var(--transition);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      transition: padding var(--transition);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition);
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .logo h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      margin-top: 1px;
+    }
+
+    .back-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gray-light);
+      color: var(--text-dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+
+    .back-link a:hover {
+      background: var(--gradient-primary);
+      color: var(--white);
+      transform: translateX(-5px);
+    }
+
+    /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 0;
+      }
+    }
+
+    section:nth-child(even) {
+      background-color: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 60px;
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+           HERO SECTION
+           ============================================ */
+    .hero-borgo {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(15, 44, 74, 0.7) 0%,
+          rgba(26, 61, 92, 0.7) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-borgo .container {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .hero-borgo h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-borgo p {
+      font-size: 1.25rem;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      opacity: 0.95;
+      line-height: 1.8;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+    .content-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .content-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section.reverse {
+      direction: rtl;
+    }
+
+    .content-section.reverse>* {
+      direction: ltr;
+    }
+
+    .content-text {
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .content-text h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .content-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .content-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ============================================
+           INFO CARDS
+           ============================================ */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .info-grid.contact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .info-card i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .info-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+    .tradizioni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .tradizione-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      position: relative;
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .tradizione-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+
+    .tradizione-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .tradizione-card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tradizione-card i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      transition: transform var(--transition);
+    }
+
+    .tradizione-card:hover i {
+      transform: scale(1.1);
+    }
+
+    .tradizione-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .tradizione-card p {
+      color: var(--text-light);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+           GALLERY
+           ============================================ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 220px;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-slow);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.15);
+    }
+
+    /* ============================================
+           BUTTONS
+           ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-accent);
+      color: var(--text-dark);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all var(--transition);
+      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent);
+      transition: left 0.6s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+    }
+
+    .btn i {
+      transition: transform var(--transition);
+    }
+
+    .btn:hover i {
+      transform: translateX(5px);
+    }
+
+    .btn-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* ============================================
+           FOOTER
+           ============================================ */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 70px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .footer-content {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .footer-content p {
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-content a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .footer-content a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ============================================
+           RESPONSIVE
+           ============================================ */
+    @media (max-width: 768px) {
       .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-        transition: padding var(--transition);
+        padding: 32px 0;
       }
 
       .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: transform var(--transition);
+        gap: 8px;
       }
 
       .logo img {
-        height: 45px;
-        width: auto;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        height: 35px;
       }
 
       .logo h1 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
+        font-size: 1rem;
       }
 
       .logo span {
-        font-size: 0.7rem;
-        color: var(--text-light);
+        font-size: 0.6rem;
         display: block;
-        font-weight: 400;
-        letter-spacing: 0.3px;
-        margin-top: 1px;
+        opacity: 0.8;
       }
 
-      .back-link a {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--gray-light);
-        color: var(--text-dark);
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all var(--transition);
-      }
-
-      .back-link a:hover {
-        background: var(--gradient-primary);
-        color: var(--white);
-        transform: translateX(-5px);
-      }
-
-      /* ============================================
-           SEZIONI GENERALI
-           ============================================ */
-      section {
-        padding: 100px 0;
-        position: relative;
-      }
-
-      @media (max-width: 768px) {
-        section {
-          padding: 60px 0;
-        }
-      }
-
-      section:nth-child(even) {
-        background-color: var(--white);
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 40px;
-        letter-spacing: -0.5px;
-      }
-
-      .section-subtitle {
-        text-align: center;
-        color: var(--text-light);
-        margin-bottom: 60px;
-        font-size: 1.15rem;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      /* ============================================
-           HERO SECTION
-           ============================================ */
-      .hero-borgo {
-        position: relative;
-        height: 60vh;
-        min-height: 400px;
-        color: var(--white);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 44, 74, 0.7) 0%,
-          rgba(26, 61, 92, 0.7) 100%
-        );
-        z-index: 2;
-        pointer-events: none;
-      }
-
-      .hero-borgo .container {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-      }
-
-      .hero-borgo h2 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 24px;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .hero-borgo p {
-        font-size: 1.25rem;
-        max-width: 750px;
-        margin: 0 auto 40px;
-        opacity: 0.95;
-        line-height: 1.8;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
       .content-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-        margin-bottom: 60px;
-      }
-
-      .content-section:last-child {
-        margin-bottom: 0;
-      }
-
-      .content-section.reverse {
-        direction: rtl;
-      }
-
-      .content-section.reverse > * {
-        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        direction: ltr !important;
       }
 
       .content-text {
-        padding: 20px;
-        text-align: justify;
-      }
-
-      .content-text h3 {
-        font-size: 1.8rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .content-text p {
-        color: var(--text-light);
-        margin-bottom: 15px;
-        line-height: 1.8;
+        order: 1;
+        padding: 0;
       }
 
       .content-image {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        height: 350px;
-        background-size: cover;
-        background-position: center;
+        order: 2;
+        width: 100%;
       }
 
-      /* ============================================
-           INFO CARDS
-           ============================================ */
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin-top: 40px;
-      }
-
-      .info-grid.contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      }
-
-      .info-card {
-        background: var(--white);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        text-align: center;
-      }
-
-      .info-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .info-card i {
+      .hero-borgo h2 {
         font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 20px;
       }
 
-      .info-card h4 {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-bottom: 10px;
-        font-weight: 600;
+      .hero-borgo p {
+        font-size: 1.1rem;
       }
 
-      .info-card p {
-        color: var(--text-light);
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .logo h1 {
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      .logo span {
+        display: block;
+        font-size: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .logo img {
+        height: 28px;
+      }
+
+      .hero-borgo {
+        min-height: 250px;
+        height: 40vh;
+      }
+
+      .hero-borgo h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+      }
+
+      .hero-borgo p {
         font-size: 0.95rem;
         line-height: 1.6;
       }
 
-      /* ============================================
-           TRADITIONS GRID
-           ============================================ */
-      .tradizioni-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 32px;
-        margin-top: 40px;
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
       }
 
-      .tradizione-card {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        position: relative;
-        padding: 30px 24px;
-        text-align: center;
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
       }
 
-      .tradizione-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-        transform: scaleX(0);
-        transition: transform var(--transition);
-        transform-origin: left;
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover::before {
-        transform: scaleX(1);
+      .content-section {
+        gap: 25px;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover {
-        transform: translateY(-12px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .tradizione-card i {
-        font-size: 3rem;
-        color: var(--accent);
-        margin-bottom: 20px;
-        transition: transform var(--transition);
-      }
-
-      .tradizione-card:hover i {
-        transform: scale(1.1);
-      }
-
-      .tradizione-card h4 {
-        font-size: 1.3rem;
+      .content-text h3 {
+        font-size: 1.4rem;
         margin-bottom: 15px;
-        color: var(--primary);
-        font-weight: 600;
       }
 
-      .tradizione-card p {
-        color: var(--text-light);
-        line-height: 1.7;
-        font-size: 0.95rem;
+      .content-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
       }
 
-      /* ============================================
-           GALLERY
-           ============================================ */
+      .content-image {
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      .info-grid,
+      .info-grid.contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .info-card {
+        padding: 20px;
+      }
+
+      .info-card i {
+        font-size: 2rem;
+      }
+
       .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        margin-top: 50px;
+        gap: 12px;
+        margin-top: 30px;
       }
 
       .gallery-item {
-        border-radius: 16px;
-        overflow: hidden;
-        height: 220px;
-        box-shadow: var(--shadow-md);
-        transition: all var(--transition-slow);
-        position: relative;
+        height: 180px;
       }
 
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.8s;
+      .back-link a {
+        padding: 8px 24px;
+        font-size: 0.75rem;
+        gap: 5px;
       }
 
-      .gallery-item:hover img {
-        transform: scale(1.15);
+      .back-link i {
+        font-size: 0.7rem;
       }
+    }
+  </style>
+</head>
 
-      /* ============================================
-           BUTTONS
-           ============================================ */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: var(--gradient-accent);
-        color: var(--text-dark);
-        padding: 14px 32px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all var(--transition);
-        box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
-        border: none;
-        position: relative;
-        overflow: hidden;
-        justify-content: center;
-      }
-
-      .btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: left 0.6s;
-      }
-
-      .btn:hover::before {
-        left: 100%;
-      }
-
-      .btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
-      }
-
-      .btn i {
-        transition: transform var(--transition);
-      }
-
-      .btn:hover i {
-        transform: translateX(5px);
-      }
-
-      .btn-center {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      /* ============================================
-           FOOTER
-           ============================================ */
-      footer {
-        background: var(--primary-dark);
-        color: rgba(255, 255, 255, 0.8);
-        padding: 70px 0 30px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-      }
-
-      .footer-content {
-        text-align: center;
-        padding-bottom: 30px;
-      }
-
-      .footer-content p {
-        margin-bottom: 15px;
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .footer-content a {
-        color: var(--accent);
-        text-decoration: none;
-        transition: all var(--transition);
-      }
-
-      .footer-content a:hover {
-        color: var(--white);
-      }
-
-      .copyright {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 30px;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      /* ============================================
-           RESPONSIVE
-           ============================================ */
-      @media (max-width: 768px) {
-        .header-content {
-          padding: 32px 0;
-        }
-
-        .logo {
-          gap: 8px;
-        }
-
-        .logo img {
-          height: 35px;
-        }
-
-        .logo h1 {
-          font-size: 1rem;
-        }
-
-        .logo span {
-          font-size: 0.6rem;
-          display: block;
-          opacity: 0.8;
-        }
-
-        .content-section {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          direction: ltr !important;
-        }
-
-        .content-text {
-          order: 1;
-          padding: 0;
-        }
-
-        .content-image {
-          order: 2;
-          width: 100%;
-        }
-
-        .hero-borgo h2 {
-          font-size: 2.5rem;
-        }
-
-        .hero-borgo p {
-          font-size: 1.1rem;
-        }
-
-        .section-title {
-          font-size: 2.2rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          padding: 0 20px;
-        }
-
-        .logo h1 {
-          font-size: 0.8rem;
-          white-space: nowrap;
-        }
-
-        .logo span {
-          display: block;
-          font-size: 0.5rem;
-          opacity: 0.9;
-        }
-
-        .logo img {
-          height: 28px;
-        }
-
-        .hero-borgo {
-          min-height: 250px;
-          height: 40vh;
-        }
-
-        .hero-borgo h2 {
-          font-size: 1.8rem;
-          margin-bottom: 12px;
-        }
-
-        .hero-borgo p {
-          font-size: 0.95rem;
-          line-height: 1.6;
-        }
-
-        .btn {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-
-        .section-title {
-          font-size: 1.6rem;
-          margin-bottom: 30px;
-        }
-
-        .section-subtitle {
-          font-size: 1rem;
-          margin-bottom: 40px;
-        }
-
-        .content-section {
-          gap: 25px;
-          margin-bottom: 40px;
-        }
-
-        .content-text h3 {
-          font-size: 1.4rem;
-          margin-bottom: 15px;
-        }
-
-        .content-text p {
-          font-size: 0.9rem;
-          line-height: 1.6;
-        }
-
-        .content-image {
-          height: 250px;
-          border-radius: 12px;
-        }
-
-        .info-grid,
-        .info-grid.contact-grid {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .info-card {
-          padding: 20px;
-        }
-
-        .info-card i {
-          font-size: 2rem;
-        }
-
-        .gallery {
-          gap: 12px;
-          margin-top: 30px;
-        }
-
-        .gallery-item {
-          height: 180px;
-        }
-
-        .back-link a {
-          padding: 8px 24px;
-          font-size: 0.75rem;
-          gap: 5px;
-        }
-
-        .back-link i {
-          font-size: 0.7rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="container header-content">
-        <div class="logo">
-          <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
-          <div>
-            <h1>Polo Tecnico Professionale</h1>
-            <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-          </div>
-        </div>
-        <div class="back-link">
-          <a href="../index.html#borghi"
-            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
-          >
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+        <div>
+          <h1>Polo Tecnico Professionale</h1>
+          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
         </div>
       </div>
-    </header>
+      <div class="back-link">
+        <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section
-        class="hero-borgo"
-        style="
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-borgo" style="
           background-image: url('../images/cimina/cimina-panorama.jpg');
           background-size: cover;
           background-position: center;
-        "
-      >
-        <div class="hero-overlay"></div>
-        <div class="container">
-          <h2>Ciminà</h2>
-          <p>
-            Patria del caciocavallo, tra le montagne dell'Aspromonte e la
-            millenaria tradizione greco-balcanica.
-          </p>
-        </div>
-      </section>
+        ">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <h2>Ciminà</h2>
+        <p>
+          Patria del caciocavallo, tra le montagne dell'Aspromonte e la
+          millenaria tradizione greco-balcanica.
+        </p>
+      </div>
+    </section>
 
-      <!-- INFO CARDS -->
-      <section>
-        <div class="container">
-          <div class="info-grid">
-            <div class="info-card">
-              <i class="fas fa-mountain"></i>
-              <h4>Altitudine</h4>
-              <p>312 m s.l.m. (min 80 m, max 1045 m)</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-calendar-alt"></i>
-              <h4>Popolazione</h4>
-              <p>Circa 600 abitanti</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-cheese"></i>
-              <h4>Specialità</h4>
-              <p>Caciocavallo di Ciminà (Presidio Slow Food)</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-map-pin"></i>
-              <h4>Posizione</h4>
-              <p>Ai piedi del Monte Tre Pizzi</p>
-            </div>
+    <!-- INFO CARDS -->
+    <section>
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-mountain"></i>
+            <h4>Altitudine</h4>
+            <p>312 m s.l.m. (min 80 m, max 1045 m)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Popolazione</h4>
+            <p>Circa 600 abitanti</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-cheese"></i>
+            <h4>Specialità</h4>
+            <p>Caciocavallo di Ciminà (Presidio Slow Food)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-map-pin"></i>
+            <h4>Posizione</h4>
+            <p>Ai piedi del Monte Tre Pizzi</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 1: Un Borgo tra Monti e Tradizioni (due blocchi) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Un Borgo tra Monti e Tradizioni</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Il Cuore Verde dell'Aspromonte</h3>
-              <p>
-                Immerso nel Parco Nazionale dell'Aspromonte, il borgo di Ciminà
-                sorge a valle, ai piedi del Monte Tre Pizzi e vicino alla
-                fiumara Condojanni. Ciminà è una delle più antiche patrie del
-                caciocavallo, grazie alla sua posizione e alla fertilità del
-                territorio. È un luogo ideale per rilassarsi e immergersi nella
-                natura dei boschi circostanti, a pochi chilometri dal mare.
-              </p>
-              <p>
-                Il territorio comunale si estende per 48,77 km² e presenta
-                un'altimetria molto varia, che va da 80 metri sul livello del
-                mare fino a circa 1.045 metri di altezza in località Moleti, nel
-                versante nord-orientale dell'Aspromonte.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 1: Un Borgo tra Monti e Tradizioni (due blocchi) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Un Borgo tra Monti e Tradizioni</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Il Cuore Verde dell'Aspromonte</h3>
+            <p>
+              Immerso nel Parco Nazionale dell'Aspromonte, il borgo di Ciminà
+              sorge a valle, ai piedi del Monte Tre Pizzi e vicino alla
+              fiumara Condojanni. Ciminà è una delle più antiche patrie del
+              caciocavallo, grazie alla sua posizione e alla fertilità del
+              territorio. È un luogo ideale per rilassarsi e immergersi nella
+              natura dei boschi circostanti, a pochi chilometri dal mare.
+            </p>
+            <p>
+              Il territorio comunale si estende per 48,77 km² e presenta
+              un'altimetria molto varia, che va da 80 metri sul livello del
+              mare fino a circa 1.045 metri di altezza in località Moleti, nel
+              versante nord-orientale dell'Aspromonte.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/cimina/cimina-paesaggio.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url('../images/cimina/monte-tre-pizzi.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Paesaggi e Natura Incontaminata</h3>
-              <p>
-                Il paesaggio è caratterizzato dal rosso della sulla fiorita e dal
-                giallo del grano, interrotto dai ripidi costoni rocciosi che
-                s'innalzano quasi verticalmente. La flora arborea è formata,
-                soprattutto, da corbezzoli che offrono, in autunno, i loro
-                colorati frutti che quando cadono a terra creano un tappeto
-                giallo-rosso.
-              </p>
-              <p>
-                Il territorio è dominato da imponenti costoni rocciosi: Monte
-                Pinticudi, Monte Colacjuri, Monte Tre Pizzi, Monte Jacono, Monte
-                Petrotondo, Aria del Vento, Rocce degli Smaleditti, Rocce
-                dell'Agonia costituiscono un'imponente muraglia naturale.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Paesaggi e Natura Incontaminata</h3>
+            <p>
+              Il paesaggio è caratterizzato dal rosso della sulla fiorita e dal
+              giallo del grano, interrotto dai ripidi costoni rocciosi che
+              s'innalzano quasi verticalmente. La flora arborea è formata,
+              soprattutto, da corbezzoli che offrono, in autunno, i loro
+              colorati frutti che quando cadono a terra creano un tappeto
+              giallo-rosso.
+            </p>
+            <p>
+              Il territorio è dominato da imponenti costoni rocciosi: Monte
+              Pinticudi, Monte Colacjuri, Monte Tre Pizzi, Monte Jacono, Monte
+              Petrotondo, Aria del Vento, Rocce degli Smaleditti, Rocce
+              dell'Agonia costituiscono un'imponente muraglia naturale.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 2: Le Origini Greco-Balcaniche (due blocchi) -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Le Origini Greco-Balcaniche</h2>
-          <div class="content-section">
-                        <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 2: Le Origini Greco-Balcaniche (due blocchi) -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Le Origini Greco-Balcaniche</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url('../images/cimina/cimina-borgo.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Radici Millenarie</h3>
-              <p>
-                Il nome stesso di Ciminà deriva dal greco kyminà, ovvero "luogo
-                dove abbonda il cumino selvatico" o "ciminaia". Il borgo sorse
-                dopo il X secolo, quando popolazioni greche e balcaniche si
-                stabilirono in queste terre, portando con sé tradizioni, culture
-                e sapienti artigianali che ancora oggi caratterizzano
-                l'identità del borgo.
-              </p>
-              <p>
-                L'influenza balcanica si ritrova ancora oggi nelle tecniche di
-                lavorazione del latte e nella produzione del caciocavallo, il cui
-                antenato è il kaskaval, una pasta filata diffusa dalla Macedonia
-                alle isole dell'Egeo.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Radici Millenarie</h3>
+            <p>
+              Il nome stesso di Ciminà deriva dal greco kyminà, ovvero "luogo
+              dove abbonda il cumino selvatico" o "ciminaia". Il borgo sorse
+              dopo il X secolo, quando popolazioni greche e balcaniche si
+              stabilirono in queste terre, portando con sé tradizioni, culture
+              e sapienti artigianali che ancora oggi caratterizzano
+              l'identità del borgo.
+            </p>
+            <p>
+              L'influenza balcanica si ritrova ancora oggi nelle tecniche di
+              lavorazione del latte e nella produzione del caciocavallo, il cui
+              antenato è il kaskaval, una pasta filata diffusa dalla Macedonia
+              alle isole dell'Egeo.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Un Luogo Naturalmente Fortificato</h3>
-              <p>
-                I primi abitanti scelsero un luogo quasi naturalmente
-                fortificato, ai piedi del Monte Tre Pizzi: una posizione lontana
-                dal mare e difficilmente raggiungibile da eventuali attacchi
-                esterni, ma allo stesso tempo ideale per l'agricoltura e
-                l'allevamento. Questa scelta strategica ha permesso al borgo di
-                svilupparsi in pace per secoli, preservando la sua antica anima
-                pastorale.
-              </p>
-              <p>
-                Ancora oggi, il borgo conserva intatto il suo carattere rurale,
-                con antichi mulini ad acqua alimentati dalla fiumara Condojanni e
-                un tessuto urbano che si sviluppa in armonia con il paesaggio
-                circostante.
-              </p>
-            </div>
-                                  <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Un Luogo Naturalmente Fortificato</h3>
+            <p>
+              I primi abitanti scelsero un luogo quasi naturalmente
+              fortificato, ai piedi del Monte Tre Pizzi: una posizione lontana
+              dal mare e difficilmente raggiungibile da eventuali attacchi
+              esterni, ma allo stesso tempo ideale per l'agricoltura e
+              l'allevamento. Questa scelta strategica ha permesso al borgo di
+              svilupparsi in pace per secoli, preservando la sua antica anima
+              pastorale.
+            </p>
+            <p>
+              Ancora oggi, il borgo conserva intatto il suo carattere rurale,
+              con antichi mulini ad acqua alimentati dalla fiumara Condojanni e
+              un tessuto urbano che si sviluppa in armonia con il paesaggio
+              circostante.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/cimina/cimina-panorama.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 3: Il Caciocavallo di Ciminà (già due blocchi) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Il Caciocavallo di Ciminà</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Un Formaggio Unico nel Panorama Caseario</h3>
-              <p>
-                Il caciocavallo di Ciminà è un Presidio Slow Food dal 2011. Si
-                caratterizza per una forma unica: allungata, piccola, con due
-                testine ("a due nodi"), caso unico nel panorama caseario
-                italiano. Il peso varia da 400 grammi a 3 kg e si produce tutto
-                l'anno, con la massima produzione tra marzo e giugno.
-              </p>
-              <p>
-                Il suo antenato è il kaskaval, una pasta filata prodotta ancora
-                oggi dalla Macedonia alle isole dell'Egeo, testimonianza delle
-                antiche influenze balcaniche che hanno contaminato queste terre.
-                La lavorazione avviene con metodi tradizionali: il latte crudo
-                di vacca (Pezzata Rossa e Bruna Alpina), con una piccola
-                percentuale di latte di capra o pecora, viene coagulato con
-                caglio naturale di capretto.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 3: Il Caciocavallo di Ciminà (già due blocchi) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Il Caciocavallo di Ciminà</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Un Formaggio Unico nel Panorama Caseario</h3>
+            <p>
+              Il caciocavallo di Ciminà è un Presidio Slow Food dal 2011. Si
+              caratterizza per una forma unica: allungata, piccola, con due
+              testine ("a due nodi"), caso unico nel panorama caseario
+              italiano. Il peso varia da 400 grammi a 3 kg e si produce tutto
+              l'anno, con la massima produzione tra marzo e giugno.
+            </p>
+            <p>
+              Il suo antenato è il kaskaval, una pasta filata prodotta ancora
+              oggi dalla Macedonia alle isole dell'Egeo, testimonianza delle
+              antiche influenze balcaniche che hanno contaminato queste terre.
+              La lavorazione avviene con metodi tradizionali: il latte crudo
+              di vacca (Pezzata Rossa e Bruna Alpina), con una piccola
+              percentuale di latte di capra o pecora, viene coagulato con
+              caglio naturale di capretto.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/cimina/caciocavallo.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url('../images/cimina/produzione-formaggio.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Lavorazione Artigianale e Stagionatura</h3>
-              <p>
-                La cagliata, che i pastori chiamano "tuma", viene rotta con lo
-                spino formando coaguli grandi quanto una nocciola. Raccolta e
-                compattata per far fuoriuscire il siero, viene lasciata
-                fermentare anche più giorni, poi tagliata a fette e filata
-                nell'acqua bollente. Infine, le forme vengono passate in
-                salamoia per un giorno circa e appese ad asciugare "a
-                cavalcioni" della tradizionale pertica.
-              </p>
-              <p>
-                Il caciocavallo di Ciminà si consuma di solito fresco, entro
-                pochi giorni dalla produzione, spesso grigliato. Con qualche
-                settimana di stagionatura acquista sentori inebrianti di
-                sfalcio, fiori gialli e nocciola. Lo scopo del Presidio Slow
-                Food è incrementare la produzione di forme più grandi, destinate
-                a stagionature prolungate, per aiutare i produttori a far uscire
-                i loro formaggi dal mercato puramente locale.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Lavorazione Artigianale e Stagionatura</h3>
+            <p>
+              La cagliata, che i pastori chiamano "tuma", viene rotta con lo
+              spino formando coaguli grandi quanto una nocciola. Raccolta e
+              compattata per far fuoriuscire il siero, viene lasciata
+              fermentare anche più giorni, poi tagliata a fette e filata
+              nell'acqua bollente. Infine, le forme vengono passate in
+              salamoia per un giorno circa e appese ad asciugare "a
+              cavalcioni" della tradizionale pertica.
+            </p>
+            <p>
+              Il caciocavallo di Ciminà si consuma di solito fresco, entro
+              pochi giorni dalla produzione, spesso grigliato. Con qualche
+              settimana di stagionatura acquista sentori inebrianti di
+              sfalcio, fiori gialli e nocciola. Lo scopo del Presidio Slow
+              Food è incrementare la produzione di forme più grandi, destinate
+              a stagionature prolungate, per aiutare i produttori a far uscire
+              i loro formaggi dal mercato puramente locale.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 4: Il Patrimonio Storico e Religioso (già due blocchi) -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Il Patrimonio Storico e Religioso</h2>
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Chiesa di San Nicola di Bari</h3>
-              <p>
-                Il borgo conserva ancora oggi importanti testimonianze della sua
-                storia. Tra queste spicca la Chiesa di San Nicola di Bari,
-                risalente al XVII secolo. L'edificio è stato ristrutturato più
-                volte nel corso del tempo per riparare i danni causati dai
-                numerosi terremoti che hanno colpito la zona.
-              </p>
-              <p>
-                Oltre alla chiesa principale, il paese offre altri luoghi di
-                interesse, tra cui gli antichi mulini ad acqua, che un tempo
-                rappresentavano la principale fonte di reddito per molti
-                abitanti. Questi mulini, alimentati dalla fiumara Condojanni,
-                testimoniano l'ingegno degli antichi abitanti nell'utilizzo
-                delle risorse naturali.
-              </p>
-            </div>
-                        <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 4: Il Patrimonio Storico e Religioso (già due blocchi) -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Il Patrimonio Storico e Religioso</h2>
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Chiesa di San Nicola di Bari</h3>
+            <p>
+              Il borgo conserva ancora oggi importanti testimonianze della sua
+              storia. Tra queste spicca la Chiesa di San Nicola di Bari,
+              risalente al XVII secolo. L'edificio è stato ristrutturato più
+              volte nel corso del tempo per riparare i danni causati dai
+              numerosi terremoti che hanno colpito la zona.
+            </p>
+            <p>
+              Oltre alla chiesa principale, il paese offre altri luoghi di
+              interesse, tra cui gli antichi mulini ad acqua, che un tempo
+              rappresentavano la principale fonte di reddito per molti
+              abitanti. Questi mulini, alimentati dalla fiumara Condojanni,
+              testimoniano l'ingegno degli antichi abitanti nell'utilizzo
+              delle risorse naturali.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/cimina/chiesa-san-nicola.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section">
-                        <div
-              class="content-image"
-              style="
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url('../images/cimina/monte-tre-pizzi.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>I Monti e i Luoghi della Fede</h3>
-              <p>
-                Il paesaggio circostante è dominato da imponenti costoni
-                rocciosi, tra cui spiccano il Monte Tre Pizzi, simbolo del
-                borgo, e le suggestive Rocce degli Smaleditti. La natura
-                aspromontana offre scorci incontaminati e percorsi ideali per il
-                trekking e il birdwatching.
-              </p>
-              <p>
-                Tra gli itinerari religiosi, si segnalano il Santuario della
-                Madonna di Crochi e il Monastero di Sant'Ilarione, testimonianze
-                della profonda spiritualità che da secoli caratterizza queste
-                terre.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>I Monti e i Luoghi della Fede</h3>
+            <p>
+              Il paesaggio circostante è dominato da imponenti costoni
+              rocciosi, tra cui spiccano il Monte Tre Pizzi, simbolo del
+              borgo, e le suggestive Rocce degli Smaleditti. La natura
+              aspromontana offre scorci incontaminati e percorsi ideali per il
+              trekking e il birdwatching.
+            </p>
+            <p>
+              Tra gli itinerari religiosi, si segnalano il Santuario della
+              Madonna di Crochi e il Monastero di Sant'Ilarione, testimonianze
+              della profonda spiritualità che da secoli caratterizza queste
+              terre.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TRADIZIONI E CURIOSITÀ -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Tradizioni e Cultura</h2>
-          <div class="tradizioni-grid">
-            <div class="tradizione-card">
-              <i class="fas fa-calendar-alt"></i>
-              <h4>Sagra del Caciocavallo</h4>
-              <p>
-                Ogni anno, nella prima settimana di agosto, Ciminà celebra il
-                suo formaggio più prezioso con la Sagra del Caciocavallo.
-                Degustazioni, musica popolare e bancarelle artigiane animano il
-                borgo, richiamando visitatori da tutta la Calabria per scoprire
-                il Presidio Slow Food locale.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-utensils"></i>
-              <h4>Gastronomia Locale</h4>
-              <p>
-                Oltre al caciocavallo, spiccano il caprino e il pecorino di
-                Ciminà, i salumi artigianali, il miele di castagno e i vini
-                locali. Le ricette tradizionali vengono tramandate di
-                generazione in generazione.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-mountain"></i>
-              <h4>Monte Tre Pizzi</h4>
-              <p>
-                Il massiccio domina il paesaggio, offrendo escursioni di media
-                difficoltà con panoramiche straordinarie sull'intero Aspromonte
-                e sul Mar Ionio. Un balcone naturale sulla Locride.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-water"></i>
-              <h4>Fiumara Condojanni</h4>
-              <p>
-                Le acque della fiumara alimentavano gli antichi mulini e ancora
-                oggi creano un paesaggio ricco di biodiversità e suggestioni
-                naturali, ideale per passeggiate in riva al torrente.
-              </p>
-            </div>
+    <!-- TRADIZIONI E CURIOSITÀ -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Tradizioni e Cultura</h2>
+        <div class="tradizioni-grid">
+          <div class="tradizione-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Sagra del Caciocavallo</h4>
+            <p>
+              Ogni anno, nella prima settimana di agosto, Ciminà celebra il
+              suo formaggio più prezioso con la Sagra del Caciocavallo.
+              Degustazioni, musica popolare e bancarelle artigiane animano il
+              borgo, richiamando visitatori da tutta la Calabria per scoprire
+              il Presidio Slow Food locale.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-utensils"></i>
+            <h4>Gastronomia Locale</h4>
+            <p>
+              Oltre al caciocavallo, spiccano il caprino e il pecorino di
+              Ciminà, i salumi artigianali, il miele di castagno e i vini
+              locali. Le ricette tradizionali vengono tramandate di
+              generazione in generazione.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-mountain"></i>
+            <h4>Monte Tre Pizzi</h4>
+            <p>
+              Il massiccio domina il paesaggio, offrendo escursioni di media
+              difficoltà con panoramiche straordinarie sull'intero Aspromonte
+              e sul Mar Ionio. Un balcone naturale sulla Locride.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-water"></i>
+            <h4>Fiumara Condojanni</h4>
+            <p>
+              Le acque della fiumara alimentavano gli antichi mulini e ancora
+              oggi creano un paesaggio ricco di biodiversità e suggestioni
+              naturali, ideale per passeggiate in riva al torrente.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- GALLERIA FOTO -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Galleria Fotografica</h2>
-          <div class="gallery">
-            <div class="gallery-item">
-              <img
-                src="../images/cimina/galleria/cimina-panorama.jpg"
-                alt="Panorama del borgo con Monte Tre Pizzi"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/cimina/galleria/chiesa-san-nicola.jpg"
-                alt="Chiesa di San Nicola di Bari"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/cimina/galleria/mulino-acqua.jpg"
-                alt="Antichi mulini ad acqua"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/cimina/galleria/caciocavallo-produzione.jpg"
-                alt="Produzione artigianale del caciocavallo"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/cimina/galleria/sentieri-aspromonte.jpg"
-                alt="Sentieri montani nell'Aspromonte"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/cimina/galleria/panorama-mare.jpg"
-                alt="Vista sul Mar Ionio dalla vetta"
-              />
-            </div>
+    <!-- GALLERIA FOTO -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Galleria Fotografica</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="../images/cimina/galleria/cimina-panorama.jpg" alt="Panorama del borgo con Monte Tre Pizzi" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/cimina/galleria/chiesa-san-nicola.jpg" alt="Chiesa di San Nicola di Bari" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/cimina/galleria/mulino-acqua.jpg" alt="Antichi mulini ad acqua" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/cimina/galleria/caciocavallo-produzione.jpg"
+              alt="Produzione artigianale del caciocavallo" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/cimina/galleria/sentieri-aspromonte.jpg" alt="Sentieri montani nell'Aspromonte" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/cimina/galleria/panorama-mare.jpg" alt="Vista sul Mar Ionio dalla vetta" />
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- INFO UTILI -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Info Utili</h2>
-          <div class="info-grid contact-grid">
-            <div class="info-card">
-              <i class="fas fa-car"></i>
-              <h4>Come Arrivare</h4>
-              <p>
-                <strong>In Auto:</strong> Da Reggio Calabria prendere la SS106
-                Jonica, uscita Ardore o Bovalino. Seguire le indicazioni per
-                Ciminà (circa 20 km in direzione Aspromonte).<br />
-                Dista circa 35 km da Siderno e 75 km da Reggio Calabria.<br />
-                Strade panoramiche tortuose, consigliato navigatore GPS.<br />
-                Parcheggio disponibile nel centro abitato.
-              </p>
-            </div>
+    <!-- INFO UTILI -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Info Utili</h2>
+        <div class="info-grid contact-grid">
+          <div class="info-card">
+            <i class="fas fa-car"></i>
+            <h4>Come Arrivare</h4>
+            <p>
+              <strong>In Auto:</strong> Da Reggio Calabria prendere la SS106
+              Jonica, uscita Ardore o Bovalino. Seguire le indicazioni per
+              Ciminà (circa 20 km in direzione Aspromonte).<br />
+              Dista circa 35 km da Siderno e 75 km da Reggio Calabria.<br />
+              Strade panoramiche tortuose, consigliato navigatore GPS.<br />
+              Parcheggio disponibile nel centro abitato.
+            </p>
+          </div>
 
-            <div class="info-card">
-              <i class="fas fa-globe"></i>
-              <h4>Comune e Informazioni</h4>
-              <p>
-                <strong>Comune di Ciminà</strong><br />
-                Piazza Municipio, 1<br />
-                89040 Ciminà (RC)<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="http://www.comune.cimina.rc.it"
-                  target="_blank"
-                  style="
+          <div class="info-card">
+            <i class="fas fa-globe"></i>
+            <h4>Comune e Informazioni</h4>
+            <p>
+              <strong>Comune di Ciminà</strong><br />
+              Piazza Municipio, 1<br />
+              89040 Ciminà (RC)<br />
+              <strong>Sito web:</strong>
+              <a href="http://www.comune.cimina.rc.it" target="_blank" style="
                     color: var(--accent);
                     text-decoration: none;
                     font-weight: 600;
-                  "
-                  >www.comune.cimina.rc.it</a
-                >
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-cheese"></i>
-              <h4>Caciocavallo di Ciminà</h4>
-              <p>
-                <strong>Presidio Slow Food</strong><br />
-                Il formaggio è riconosciuto come Presidio Slow Food dal 2011.
-                Per informazioni sui produttori e sulle attività del Presidio, è
-                possibile contattare il Comune di Ciminà o consultare il sito
-                ufficiale.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-leaf"></i>
-              <h4>Ente Parco Nazionale dell'Aspromonte</h4>
-              <p>
-                <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
-                Stefano Aspromonte (RC)<br />
-                <strong>Tel:</strong> 0965 743060<br />
-                <strong>Email:</strong>
-                info.posta@parconazionaleaspromonte.it<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="https://www.parconazionaleaspromonte.it"
-                  target="_blank"
-                  style="color: var(--accent)"
-                  >www.parconazionaleaspromonte.it</a
-                ><br />
-                <small>Per informazioni su sentieri e aree naturali</small>
-              </p>
-            </div>
+                  ">www.comune.cimina.rc.it</a>
+            </p>
           </div>
-          <div class="btn-center">
-            <a href="../index.html#borghi" class="btn"
-              ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
-            >
+
+          <div class="info-card">
+            <i class="fas fa-cheese"></i>
+            <h4>Caciocavallo di Ciminà</h4>
+            <p>
+              <strong>Presidio Slow Food</strong><br />
+              Il formaggio è riconosciuto come Presidio Slow Food dal 2011.
+              Per informazioni sui produttori e sulle attività del Presidio, è
+              possibile contattare il Comune di Ciminà o consultare il sito
+              ufficiale.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-leaf"></i>
+            <h4>Ente Parco Nazionale dell'Aspromonte</h4>
+            <p>
+              <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
+              Stefano Aspromonte (RC)<br />
+              <strong>Tel:</strong> 0965 743060<br />
+              <strong>Email:</strong>
+              info.posta@parconazionaleaspromonte.it<br />
+              <strong>Sito web:</strong>
+              <a href="https://www.parconazionaleaspromonte.it" target="_blank"
+                style="color: var(--accent)">www.parconazionaleaspromonte.it</a><br />
+              <small>Per informazioni su sentieri e aree naturali</small>
+            </p>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>
-            <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
-            <a href="../index.html">Home</a>
-          </p>
-          <p>
-            &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
-            Zanotti. Tutti i diritti riservati.
-          </p>
-        </div>
-        <div class="copyright">
-          Sito realizzato dagli studenti del progetto scolastico
+        <div class="btn-center">
+          <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script>
-      // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>
+          <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
+          <a href="../index.html">Home</a>
+        </p>
+        <p>
+          &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
+          Zanotti. Tutti i diritti riservati.
+        </p>
+      </div>
+      <div class="copyright">
+        Sito realizzato dagli studenti del progetto scolastico
+      </div>
+    </div>
+  </footer>
 
-      window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-      });
-    </script>
-  </body>
+  <script>
+    // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+
 </html>

@@ -1,1275 +1,1202 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roccella Ionica - Polo Tecnico Professionale Marconi</title>
-    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
-    <!-- Google Fonts e Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      /* ============================================
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roccella Ionica - Polo Tecnico Professionale Marconi</title>
+  <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
+  <!-- Google Fonts e Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ============================================
            POLO TECNICO PROFESSIONALE - STYLE.CSS
            Design Elegante e Professionale
            ============================================ */
 
-      /* RESET E BASE */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    /* RESET E BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        color: #1a1a2e;
-        background-color: #fafbfc;
-        overflow-x: hidden;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background-color: #fafbfc;
+      overflow-x: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
-      /* ============================================
+    /* ============================================
            VARIABILI COLORE - PALETTE REFINED
            ============================================ */
-      :root {
-        --primary: #2c3e50;
-        --primary-light: #34495e;
-        --primary-dark: #1e2b3a;
-        --accent: #e67e22;
-        --accent-light: #f39c12;
-        --accent-dark: #c96e1c;
-        --secondary: #5c7c9a;
-        --gray-light: #f0f2f5;
-        --gray: #9ca3af;
-        --text-light: #6b7280;
-        --text-dark: #1f2937;
-        --white: #ffffff;
-        --off-white: #f8f9fa;
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-        --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
-        --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
-        --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-        --gradient-primary: linear-gradient(
-          135deg,
+    :root {
+      --primary: #2c3e50;
+      --primary-light: #34495e;
+      --primary-dark: #1e2b3a;
+      --accent: #e67e22;
+      --accent-light: #f39c12;
+      --accent-dark: #c96e1c;
+      --secondary: #5c7c9a;
+      --gray-light: #f0f2f5;
+      --gray: #9ca3af;
+      --text-light: #6b7280;
+      --text-dark: #1f2937;
+      --white: #ffffff;
+      --off-white: #f8f9fa;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+      --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+      --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+      --gradient-primary: linear-gradient(135deg,
           var(--primary) 0%,
-          var(--primary-light) 100%
-        );
-        --gradient-accent: linear-gradient(
-          135deg,
+          var(--primary-light) 100%);
+      --gradient-accent: linear-gradient(135deg,
           var(--accent) 0%,
-          var(--accent-light) 100%
-        );
-        --transition: 0.3s ease;
-        --transition-slow: 0.5s ease;
-      }
+          var(--accent-light) 100%);
+      --transition: 0.3s ease;
+      --transition-slow: 0.5s ease;
+    }
 
-      /* ============================================
+    /* ============================================
            LAYOUT GENERALE
            ============================================ */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-      /* ============================================
+    /* ============================================
            HEADER E NAVIGAZIONE
            ============================================ */
-      header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px) saturate(180%);
-        box-shadow: var(--shadow-sm);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        transition: all var(--transition);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all var(--transition);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      transition: padding var(--transition);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition);
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .logo h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      margin-top: 1px;
+    }
+
+    .back-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gray-light);
+      color: var(--text-dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+
+    .back-link a:hover {
+      background: var(--gradient-primary);
+      color: var(--white);
+      transform: translateX(-5px);
+    }
+
+    /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 0;
+      }
+    }
+
+    section:nth-child(even) {
+      background-color: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 60px;
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+           HERO SECTION
+           ============================================ */
+    .hero-borgo {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(15, 44, 74, 0.7) 0%,
+          rgba(26, 61, 92, 0.7) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-borgo .container {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .hero-borgo h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-borgo p {
+      font-size: 1.25rem;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      opacity: 0.95;
+      line-height: 1.8;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+    .content-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .content-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section.reverse {
+      direction: rtl;
+    }
+
+    .content-section.reverse>* {
+      direction: ltr;
+    }
+
+    .content-text {
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .content-text h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .content-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .content-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ============================================
+           INFO CARDS
+           ============================================ */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .info-grid.contact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .info-card i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .info-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+    .tradizioni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .tradizione-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      position: relative;
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .tradizione-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+
+    .tradizione-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .tradizione-card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tradizione-card i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      transition: transform var(--transition);
+    }
+
+    .tradizione-card:hover i {
+      transform: scale(1.1);
+    }
+
+    .tradizione-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .tradizione-card p {
+      color: var(--text-light);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+           GALLERY
+           ============================================ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 220px;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-slow);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.15);
+    }
+
+    /* ============================================
+           BUTTONS
+           ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-accent);
+      color: var(--text-dark);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all var(--transition);
+      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent);
+      transition: left 0.6s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+    }
+
+    .btn i {
+      transition: transform var(--transition);
+    }
+
+    .btn:hover i {
+      transform: translateX(5px);
+    }
+
+    .btn-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* ============================================
+           FOOTER
+           ============================================ */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 70px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .footer-content {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .footer-content p {
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-content a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .footer-content a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ============================================
+           RESPONSIVE
+           ============================================ */
+    @media (max-width: 768px) {
       .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-        transition: padding var(--transition);
+        padding: 32px 0;
       }
 
       .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: transform var(--transition);
+        gap: 8px;
       }
 
       .logo img {
-        height: 45px;
-        width: auto;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        height: 35px;
       }
 
       .logo h1 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
+        font-size: 1rem;
       }
 
       .logo span {
-        font-size: 0.7rem;
-        color: var(--text-light);
+        font-size: 0.6rem;
         display: block;
-        font-weight: 400;
-        letter-spacing: 0.3px;
-        margin-top: 1px;
+        opacity: 0.8;
       }
 
-      .back-link a {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--gray-light);
-        color: var(--text-dark);
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all var(--transition);
-      }
-
-      .back-link a:hover {
-        background: var(--gradient-primary);
-        color: var(--white);
-        transform: translateX(-5px);
-      }
-
-      /* ============================================
-           SEZIONI GENERALI
-           ============================================ */
-      section {
-        padding: 100px 0;
-        position: relative;
-      }
-
-      @media (max-width: 768px) {
-        section {
-          padding: 60px 0;
-        }
-      }
-
-      section:nth-child(even) {
-        background-color: var(--white);
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 40px;
-        letter-spacing: -0.5px;
-      }
-
-      .section-subtitle {
-        text-align: center;
-        color: var(--text-light);
-        margin-bottom: 60px;
-        font-size: 1.15rem;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      /* ============================================
-           HERO SECTION
-           ============================================ */
-      .hero-borgo {
-        position: relative;
-        height: 60vh;
-        min-height: 400px;
-        color: var(--white);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 44, 74, 0.7) 0%,
-          rgba(26, 61, 92, 0.7) 100%
-        );
-        z-index: 2;
-        pointer-events: none;
-      }
-
-      .hero-borgo .container {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-      }
-
-      .hero-borgo h2 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 24px;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .hero-borgo p {
-        font-size: 1.25rem;
-        max-width: 750px;
-        margin: 0 auto 40px;
-        opacity: 0.95;
-        line-height: 1.8;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
       .content-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-        margin-bottom: 60px;
-      }
-
-      .content-section:last-child {
-        margin-bottom: 0;
-      }
-
-      .content-section.reverse {
-        direction: rtl;
-      }
-
-      .content-section.reverse > * {
-        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        direction: ltr !important;
       }
 
       .content-text {
-        padding: 20px;
-        text-align: justify;
-      }
-
-      .content-text h3 {
-        font-size: 1.8rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .content-text p {
-        color: var(--text-light);
-        margin-bottom: 15px;
-        line-height: 1.8;
+        order: 1;
+        padding: 0;
       }
 
       .content-image {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        height: 350px;
-        background-size: cover;
-        background-position: center;
+        order: 2;
+        width: 100%;
       }
 
-      /* ============================================
-           INFO CARDS
-           ============================================ */
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin-top: 40px;
-      }
-
-      .info-grid.contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      }
-
-      .info-card {
-        background: var(--white);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        text-align: center;
-      }
-
-      .info-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .info-card i {
+      .hero-borgo h2 {
         font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 20px;
       }
 
-      .info-card h4 {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-bottom: 10px;
-        font-weight: 600;
+      .hero-borgo p {
+        font-size: 1.1rem;
       }
 
-      .info-card p {
-        color: var(--text-light);
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .logo h1 {
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      .logo span {
+        display: block;
+        font-size: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .logo img {
+        height: 28px;
+      }
+
+      .hero-borgo {
+        min-height: 250px;
+        height: 40vh;
+      }
+
+      .hero-borgo h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+      }
+
+      .hero-borgo p {
         font-size: 0.95rem;
         line-height: 1.6;
       }
 
-      /* ============================================
-           TRADITIONS GRID
-           ============================================ */
-      .tradizioni-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 32px;
-        margin-top: 40px;
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
       }
 
-      .tradizione-card {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        position: relative;
-        padding: 30px 24px;
-        text-align: center;
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
       }
 
-      .tradizione-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-        transform: scaleX(0);
-        transition: transform var(--transition);
-        transform-origin: left;
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover::before {
-        transform: scaleX(1);
+      .content-section {
+        gap: 25px;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover {
-        transform: translateY(-12px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .tradizione-card i {
-        font-size: 3rem;
-        color: var(--accent);
-        margin-bottom: 20px;
-        transition: transform var(--transition);
-      }
-
-      .tradizione-card:hover i {
-        transform: scale(1.1);
-      }
-
-      .tradizione-card h4 {
-        font-size: 1.3rem;
+      .content-text h3 {
+        font-size: 1.4rem;
         margin-bottom: 15px;
-        color: var(--primary);
-        font-weight: 600;
       }
 
-      .tradizione-card p {
-        color: var(--text-light);
-        line-height: 1.7;
-        font-size: 0.95rem;
+      .content-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
       }
 
-      /* ============================================
-           GALLERY
-           ============================================ */
+      .content-image {
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      .info-grid,
+      .info-grid.contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .info-card {
+        padding: 20px;
+      }
+
+      .info-card i {
+        font-size: 2rem;
+      }
+
       .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        margin-top: 50px;
+        gap: 12px;
+        margin-top: 30px;
       }
 
       .gallery-item {
-        border-radius: 16px;
-        overflow: hidden;
-        height: 220px;
-        box-shadow: var(--shadow-md);
-        transition: all var(--transition-slow);
-        position: relative;
+        height: 180px;
       }
 
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.8s;
+      .back-link a {
+        padding: 8px 24px;
+        font-size: 0.75rem;
+        gap: 5px;
       }
 
-      .gallery-item:hover img {
-        transform: scale(1.15);
+      .back-link i {
+        font-size: 0.7rem;
       }
+    }
+  </style>
+</head>
 
-      /* ============================================
-           BUTTONS
-           ============================================ */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: var(--gradient-accent);
-        color: var(--text-dark);
-        padding: 14px 32px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all var(--transition);
-        box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
-        border: none;
-        position: relative;
-        overflow: hidden;
-        justify-content: center;
-      }
-
-      .btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: left 0.6s;
-      }
-
-      .btn:hover::before {
-        left: 100%;
-      }
-
-      .btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
-      }
-
-      .btn i {
-        transition: transform var(--transition);
-      }
-
-      .btn:hover i {
-        transform: translateX(5px);
-      }
-
-      .btn-center {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      /* ============================================
-           FOOTER
-           ============================================ */
-      footer {
-        background: var(--primary-dark);
-        color: rgba(255, 255, 255, 0.8);
-        padding: 70px 0 30px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-      }
-
-      .footer-content {
-        text-align: center;
-        padding-bottom: 30px;
-      }
-
-      .footer-content p {
-        margin-bottom: 15px;
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .footer-content a {
-        color: var(--accent);
-        text-decoration: none;
-        transition: all var(--transition);
-      }
-
-      .footer-content a:hover {
-        color: var(--white);
-      }
-
-      .copyright {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 30px;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      /* ============================================
-           RESPONSIVE
-           ============================================ */
-      @media (max-width: 768px) {
-        .header-content {
-          padding: 32px 0;
-        }
-
-        .logo {
-          gap: 8px;
-        }
-
-        .logo img {
-          height: 35px;
-        }
-
-        .logo h1 {
-          font-size: 1rem;
-        }
-
-        .logo span {
-          font-size: 0.6rem;
-          display: block;
-          opacity: 0.8;
-        }
-
-        .content-section {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          direction: ltr !important;
-        }
-
-        .content-text {
-          order: 1;
-          padding: 0;
-        }
-
-        .content-image {
-          order: 2;
-          width: 100%;
-        }
-
-        .hero-borgo h2 {
-          font-size: 2.5rem;
-        }
-
-        .hero-borgo p {
-          font-size: 1.1rem;
-        }
-
-        .section-title {
-          font-size: 2.2rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          padding: 0 20px;
-        }
-
-        .logo h1 {
-          font-size: 0.8rem;
-          white-space: nowrap;
-        }
-
-        .logo span {
-          display: block;
-          font-size: 0.5rem;
-          opacity: 0.9;
-        }
-
-        .logo img {
-          height: 28px;
-        }
-
-        .hero-borgo {
-          min-height: 250px;
-          height: 40vh;
-        }
-
-        .hero-borgo h2 {
-          font-size: 1.8rem;
-          margin-bottom: 12px;
-        }
-
-        .hero-borgo p {
-          font-size: 0.95rem;
-          line-height: 1.6;
-        }
-
-        .btn {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-
-        .section-title {
-          font-size: 1.6rem;
-          margin-bottom: 30px;
-        }
-
-        .section-subtitle {
-          font-size: 1rem;
-          margin-bottom: 40px;
-        }
-
-        .content-section {
-          gap: 25px;
-          margin-bottom: 40px;
-        }
-
-        .content-text h3 {
-          font-size: 1.4rem;
-          margin-bottom: 15px;
-        }
-
-        .content-text p {
-          font-size: 0.9rem;
-          line-height: 1.6;
-        }
-
-        .content-image {
-          height: 250px;
-          border-radius: 12px;
-        }
-
-        .info-grid,
-        .info-grid.contact-grid {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .info-card {
-          padding: 20px;
-        }
-
-        .info-card i {
-          font-size: 2rem;
-        }
-
-        .gallery {
-          gap: 12px;
-          margin-top: 30px;
-        }
-
-        .gallery-item {
-          height: 180px;
-        }
-
-        .back-link a {
-          padding: 8px 24px;
-          font-size: 0.75rem;
-          gap: 5px;
-        }
-
-        .back-link i {
-          font-size: 0.7rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="container header-content">
-        <div class="logo">
-          <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
-          <div>
-            <h1>Polo Tecnico Professionale</h1>
-            <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-          </div>
-        </div>
-        <div class="back-link">
-          <a href="../index.html#borghi"
-            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
-          >
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+        <div>
+          <h1>Polo Tecnico Professionale</h1>
+          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
         </div>
       </div>
-    </header>
+      <div class="back-link">
+        <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section
-        class="hero-borgo"
-        style="
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-borgo" style="
           background-image: url('../images/roccella/roccella-panorama.jpg');
           background-size: cover;
           background-position: center;
-        "
-      >
-        <div class="hero-overlay"></div>
-        <div class="container">
-          <h2>Roccella Ionica</h2>
-          <p>
-            Perla della Costa dei Gelsomini, tra il Castello Carafa inespugnabile,
-            le spiagge Bandiera Blu e il leggendario Roccella Jazz Festival.
-          </p>
-        </div>
-      </section>
+        ">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <h2>Roccella Ionica</h2>
+        <p>
+          Perla della Costa dei Gelsomini, tra il Castello Carafa inespugnabile,
+          le spiagge Bandiera Blu e il leggendario Roccella Jazz Festival.
+        </p>
+      </div>
+    </section>
 
-      <!-- INFO CARDS -->
-      <section>
-        <div class="container">
-          <div class="info-grid">
-            <div class="info-card">
-              <i class="fas fa-mountain"></i>
-              <h4>Altitudine</h4>
-              <p>16 m s.l.m. (centro storico 104 m)</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-users"></i>
-              <h4>Abitanti</h4>
-              <p>Circa 6.500</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-umbrella-beach"></i>
-              <h4>Bandiera Blu</h4>
-              <p>Spiagge e approdi turistici</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-music"></i>
-              <h4>Evento Celebre</h4>
-              <p>Roccella Jazz Festival (dal 1981)</p>
-            </div>
+    <!-- INFO CARDS -->
+    <section>
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-mountain"></i>
+            <h4>Altitudine</h4>
+            <p>16 m s.l.m. (centro storico 104 m)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-users"></i>
+            <h4>Abitanti</h4>
+            <p>Circa 6.500</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-umbrella-beach"></i>
+            <h4>Bandiera Blu</h4>
+            <p>Spiagge e approdi turistici</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-music"></i>
+            <h4>Evento Celebre</h4>
+            <p>Roccella Jazz Festival (dal 1981)</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 1: Il Castello Carafa e le Origini -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Il Castello Carafa</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Una Fortezza Inespugnabile</h3>
-              <p>
-                Il Castello Carafa è il simbolo di Roccella Ionica. Sorge su un
-                promontorio a 104 metri sul livello del mare e domina il borgo
-                antico e la costa ionica. Fu fondato nel periodo normanno da
-                Gualtieri De Collepietro sui ruderi di un precedente castrum
-                bizantino con torre d'avvistamento.
-              </p>
-              <p>
-                Il primo documento che attesta l'esistenza del castello risale
-                al 1270, quando Carlo I d'Angiò lo donò a Gualtiero di
-                Collepietro. Nel corso dei secoli passò alle famiglie Ruffo,
-                Centelles e infine ai Carafa della Spina, che nel Settecento lo
-                restaurarono trasformandolo in residenza nobiliare.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 1: Il Castello Carafa e le Origini -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Il Castello Carafa</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Una Fortezza Inespugnabile</h3>
+            <p>
+              Il Castello Carafa è il simbolo di Roccella Ionica. Sorge su un
+              promontorio a 104 metri sul livello del mare e domina il borgo
+              antico e la costa ionica. Fu fondato nel periodo normanno da
+              Gualtieri De Collepietro sui ruderi di un precedente castrum
+              bizantino con torre d'avvistamento.
+            </p>
+            <p>
+              Il primo documento che attesta l'esistenza del castello risale
+              al 1270, quando Carlo I d'Angiò lo donò a Gualtiero di
+              Collepietro. Nel corso dei secoli passò alle famiglie Ruffo,
+              Centelles e infine ai Carafa della Spina, che nel Settecento lo
+              restaurarono trasformandolo in residenza nobiliare.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/roccella/castello-carafa.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url('../images/roccella/assedio-dragut.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>L'Assedio di Dragut Pascià</h3>
-              <p>
-                Nel 1553, il temibile pirata ottomano Dragut Pascià tentò di
-                espugnare la fortezza con un assalto, ma il castello resistette
-                eroicamente, confermandosi tra le poche roccaforti inespugnabili
-                del Mediterraneo. Questa impresa
-                accrebbe il prestigio militare del borgo e viene ancora oggi
-                ricordata nello stemma araldico, che raffigura il patrono
-                San Vittore che sconfigge un pirata turco.
-              </p>
-              <p>
-                Oggi il castello è visitabile e ospita eventi culturali. Il
-                portale d'ingresso è sormontato dallo stemma dei principi
-                Carafa della Spina, mentre all'interno un cortile in selciato
-                con otto canali a forma di stella introduce agli ambienti
-                signorili e al suggestivo balcone monumentale con mascheroni
-                scolpiti.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>L'Assedio di Dragut Pascià</h3>
+            <p>
+              Nel 1553, il temibile pirata ottomano Dragut Pascià tentò di
+              espugnare la fortezza con un assalto, ma il castello resistette
+              eroicamente, confermandosi tra le poche roccaforti inespugnabili
+              del Mediterraneo. Questa impresa
+              accrebbe il prestigio militare del borgo e viene ancora oggi
+              ricordata nello stemma araldico, che raffigura il patrono
+              San Vittore che sconfigge un pirata turco.
+            </p>
+            <p>
+              Oggi il castello è visitabile e ospita eventi culturali. Il
+              portale d'ingresso è sormontato dallo stemma dei principi
+              Carafa della Spina, mentre all'interno un cortile in selciato
+              con otto canali a forma di stella introduce agli ambienti
+              signorili e al suggestivo balcone monumentale con mascheroni
+              scolpiti.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 2: Centro Storico e Architetture Religiose -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Centro Storico e Architetture Religiose</h2>
-          <div class="content-section">
-                        <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 2: Centro Storico e Architetture Religiose -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Centro Storico e Architetture Religiose</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url('../images/roccella/centro-storico.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Vicoli, Palazzi e la Chiesa Matrice</h3>
-              <p>
-                Scendendo a piedi dal castello, ci si addentra nei vicoli del
-                centro storico, disposti ai piedi della rocca. Qui si possono
-                ammirare antichi palazzi gentilizi, tra cui la sede della Scuola
-                di Filosofia “Scholé”, e la caratteristica Torre di Pizzo
-                Falcone, testimonianza delle antiche difese costiere.
-              </p>
-              <p>
-                La Chiesa Matrice di San Nicola di Bari, in stile barocco, è
-                adiacente al castello. Al suo interno conserva affreschi
-                settecenteschi e l'altare maggiore datato 1763, mentre la volta
-                fu affrescata dal pittore roccellese Raffaele Ursini.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Vicoli, Palazzi e la Chiesa Matrice</h3>
+            <p>
+              Scendendo a piedi dal castello, ci si addentra nei vicoli del
+              centro storico, disposti ai piedi della rocca. Qui si possono
+              ammirare antichi palazzi gentilizi, tra cui la sede della Scuola
+              di Filosofia “Scholé”, e la caratteristica Torre di Pizzo
+              Falcone, testimonianza delle antiche difese costiere.
+            </p>
+            <p>
+              La Chiesa Matrice di San Nicola di Bari, in stile barocco, è
+              adiacente al castello. Al suo interno conserva affreschi
+              settecenteschi e l'altare maggiore datato 1763, mentre la volta
+              fu affrescata dal pittore roccellese Raffaele Ursini.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Il Convento dei Minimi e il Santuario</h3>
-              <p>
-                L'ex Convento dei Minimi, adiacente alla Chiesa di San Vittore,
-                è oggi adibito a sede di eventi culturali e rappresenta un
-                altro importante complesso religioso del borgo.
-              </p>
-              <p>
-                Fuori dalle mura si trova il Santuario della Madonna delle
-                Grazie, che custodisce la statua della Vergine, protagonista
-                della suggestiva processione in mare che si svolge il primo
-                weekend di luglio. Il borgo marinaro di Sant'Antonio,
-                invece, conserva antiche tradizioni legate alla pesca e la
-                caratteristica Festa Marinara.
-              </p>
-            </div>
-                        <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Il Convento dei Minimi e il Santuario</h3>
+            <p>
+              L'ex Convento dei Minimi, adiacente alla Chiesa di San Vittore,
+              è oggi adibito a sede di eventi culturali e rappresenta un
+              altro importante complesso religioso del borgo.
+            </p>
+            <p>
+              Fuori dalle mura si trova il Santuario della Madonna delle
+              Grazie, che custodisce la statua della Vergine, protagonista
+              della suggestiva processione in mare che si svolge il primo
+              weekend di luglio. Il borgo marinaro di Sant'Antonio,
+              invece, conserva antiche tradizioni legate alla pesca e la
+              caratteristica Festa Marinara.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/roccella/chiesa-san-vittore.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 3: Musica - Roccella Jazz e Summer Festival -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Musica e Festival: Roccella Jazz</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Un Festival Leggendario dal 1981</h3>
-              <p>
-                Il Roccella Jazz Festival – “Rumori Mediterranei” è uno dei più
-                antichi e prestigiosi festival jazz d'Europa. La prima edizione
-                si tenne il 2 settembre 1981, quando il pianista afroamericano
-                Randy Weston inaugurò la rassegna nel cortile delle scuole
-                elementari, location storica che oggi torna a ospitare concerti.
-              </p>
-              <p>
-                Per oltre quarant'anni, il festival ha portato a Roccella
-                artisti internazionali come Tuck & Patti, James Taylor Quartet,
-                Antonella Ruggiero, e ha dedicato edizioni a grandi figure come
-                Rino Gaetano, omaggiando il legame tra jazz e cultura
-                mediterranea.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 3: Musica - Roccella Jazz e Summer Festival -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Musica e Festival: Roccella Jazz</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Un Festival Leggendario dal 1981</h3>
+            <p>
+              Il Roccella Jazz Festival – “Rumori Mediterranei” è uno dei più
+              antichi e prestigiosi festival jazz d'Europa. La prima edizione
+              si tenne il 2 settembre 1981, quando il pianista afroamericano
+              Randy Weston inaugurò la rassegna nel cortile delle scuole
+              elementari, location storica che oggi torna a ospitare concerti.
+            </p>
+            <p>
+              Per oltre quarant'anni, il festival ha portato a Roccella
+              artisti internazionali come Tuck & Patti, James Taylor Quartet,
+              Antonella Ruggiero, e ha dedicato edizioni a grandi figure come
+              Rino Gaetano, omaggiando il legame tra jazz e cultura
+              mediterranea.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/roccella/roccella-jazz.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url('../images/roccella/summer-festival.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Roccella Summer Festival e Teatro al Castello</h3>
-              <p>
-                Oltre al jazz, Roccella è oggi sede del Roccella Summer Festival,
-                un contenitore musicale che anima le serate estive con concerti
-                di artisti nazionali e internazionali come Ghali e Irama,
-                ospitati nel moderno Teatro al Castello.
-              </p>
-              <p>
-                Il festival propone anche masterclasses, seminari di musica,
-                passeggiate musicali e il Midnight Jazz Reading, coinvolgendo
-                musicisti e pubblico in un'esperienza culturale a 360 gradi.
-                 Ingresso gratuito per molte serate, conferma la
-                vocazione inclusiva della manifestazione.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Roccella Summer Festival e Teatro al Castello</h3>
+            <p>
+              Oltre al jazz, Roccella è oggi sede del Roccella Summer Festival,
+              un contenitore musicale che anima le serate estive con concerti
+              di artisti nazionali e internazionali come Ghali e Irama,
+              ospitati nel moderno Teatro al Castello.
+            </p>
+            <p>
+              Il festival propone anche masterclasses, seminari di musica,
+              passeggiate musicali e il Midnight Jazz Reading, coinvolgendo
+              musicisti e pubblico in un'esperienza culturale a 360 gradi.
+              Ingresso gratuito per molte serate, conferma la
+              vocazione inclusiva della manifestazione.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 4: Spiagge, Mare e Bandiere Blu -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Spiagge e Mare: Bandiere Blu</h2>
-          <div class="content-section">
-                        <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 4: Spiagge, Mare e Bandiere Blu -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Spiagge e Mare: Bandiere Blu</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url('../images/roccella/spiaggia-roccella.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Un Mare da Sogno</h3>
-              <p>
-                La spiaggia di Roccella Ionica si estende per quasi 9 chilometri
-                lungo la Costa dei Gelsomini, con un alternarsi di ampi tratti
-                liberi e lidi attrezzati. Le sue acque cristalline e la qualità
-                dei servizi le hanno valso il riconoscimento della Bandiera Blu
-                per più anni consecutivi.
-              </p>
-              <p>
-                Il Lungomare Zito è la passeggiata che costeggia la spiaggia,
-                ideale per camminare all'ora del tramonto tra gelaterie, caffè
-                e locali della movida serale. Tra i lidi
-                più rinomati: Cuba Libre, Fiko Beach e Lido delle Stelle,
-                tutti premiati per la gestione ambientale.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Un Mare da Sogno</h3>
+            <p>
+              La spiaggia di Roccella Ionica si estende per quasi 9 chilometri
+              lungo la Costa dei Gelsomini, con un alternarsi di ampi tratti
+              liberi e lidi attrezzati. Le sue acque cristalline e la qualità
+              dei servizi le hanno valso il riconoscimento della Bandiera Blu
+              per più anni consecutivi.
+            </p>
+            <p>
+              Il Lungomare Zito è la passeggiata che costeggia la spiaggia,
+              ideale per camminare all'ora del tramonto tra gelaterie, caffè
+              e locali della movida serale. Tra i lidi
+              più rinomati: Cuba Libre, Fiko Beach e Lido delle Stelle,
+              tutti premiati per la gestione ambientale.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Porto delle Grazie e Attività Nautiche</h3>
-              <p>
-                Il Porto delle Grazie, con i suoi 450 posti barca, è stato
-                insignito della Bandiera Blu per gli approdi turistici,
-                confermando l'attenzione per la qualità e la sostenibilità.
-                 Dal porto partono escursioni in barca verso le
-                coste limitrofe e battute di pesca.
-              </p>
-              <p>
-                Per gli amanti dello sport, la costa offre possibilità di
-                windsurf, canottaggio e snorkeling. A pochi passi dalla spiaggia
-                si trovano anche le aree archeologiche e la Torre di San Fili,
-                che arricchiscono l'offerta turistica con un tuffo nella storia.
-              </p>
-            </div>
-                        <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Porto delle Grazie e Attività Nautiche</h3>
+            <p>
+              Il Porto delle Grazie, con i suoi 450 posti barca, è stato
+              insignito della Bandiera Blu per gli approdi turistici,
+              confermando l'attenzione per la qualità e la sostenibilità.
+              Dal porto partono escursioni in barca verso le
+              coste limitrofe e battute di pesca.
+            </p>
+            <p>
+              Per gli amanti dello sport, la costa offre possibilità di
+              windsurf, canottaggio e snorkeling. A pochi passi dalla spiaggia
+              si trovano anche le aree archeologiche e la Torre di San Fili,
+              che arricchiscono l'offerta turistica con un tuffo nella storia.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/roccella/porto-grazie.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 5: Tradizioni, Gastronomia e Artigianato -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Tradizioni e Sapori</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Gastronomia Tipica Roccellese</h3>
-              <p>
-                La cucina di Roccella Ionica celebra i prodotti del mare e della
-                terra. Tra i piatti imperdibili: le fileja con vongole, la
-                pezzogna al cartoccio (pesce di roccia pregiato) e lo stocco
-                alla mammolese, che unisce stoccafisso, pomodoro e cipolla di
-                Tropea.
-              </p>
-              <p>
-                La tradizione contadina offre invece l'olio extravergine d'oliva
-                DOP dalla Locride, il caprino della Limina, la 'nduja piccante,
-                il capocollo e i vini delle cantine locali, perfetti per
-                accompagnare i sapori autentici del territorio.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 5: Tradizioni, Gastronomia e Artigianato -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Tradizioni e Sapori</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Gastronomia Tipica Roccellese</h3>
+            <p>
+              La cucina di Roccella Ionica celebra i prodotti del mare e della
+              terra. Tra i piatti imperdibili: le fileja con vongole, la
+              pezzogna al cartoccio (pesce di roccia pregiato) e lo stocco
+              alla mammolese, che unisce stoccafisso, pomodoro e cipolla di
+              Tropea.
+            </p>
+            <p>
+              La tradizione contadina offre invece l'olio extravergine d'oliva
+              DOP dalla Locride, il caprino della Limina, la 'nduja piccante,
+              il capocollo e i vini delle cantine locali, perfetti per
+              accompagnare i sapori autentici del territorio.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/roccella/gastronomia.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url('../images/roccella/artigianato.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Feste, Dolci e Artigianato</h3>
-              <p>
-                La festa patronale di San Vittore si celebra il 21 luglio con
-                processioni solenni e spettacoli pirotecnici. In agosto, il
-                Ballo del Ciuccio in onore di San Giuseppe regala fuochi
-                d'artificio sul mare. A Pasqua, la Ncrinata 'I
-                Pasca è una suggestiva corsa processionale delle statue.
-              </p>
-              <p>
-                I dolci tipici includono susumelle, mostaccioli e il liquore
-                alla liquirizia come digestivo finale. L'artigianato locale
-                propone ceramiche e laboratori tramandati dagli artigiani
-                roccellesi, mentre nell'entroterra si possono visitare le
-                antiche necropoli di contrada Focà, risalenti al IV secolo a.C..
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Feste, Dolci e Artigianato</h3>
+            <p>
+              La festa patronale di San Vittore si celebra il 21 luglio con
+              processioni solenni e spettacoli pirotecnici. In agosto, il
+              Ballo del Ciuccio in onore di San Giuseppe regala fuochi
+              d'artificio sul mare. A Pasqua, la Ncrinata 'I
+              Pasca è una suggestiva corsa processionale delle statue.
+            </p>
+            <p>
+              I dolci tipici includono susumelle, mostaccioli e il liquore
+              alla liquirizia come digestivo finale. L'artigianato locale
+              propone ceramiche e laboratori tramandati dagli artigiani
+              roccellesi, mentre nell'entroterra si possono visitare le
+              antiche necropoli di contrada Focà, risalenti al IV secolo a.C..
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Tradizioni e Cultura</h2>
-          <div class="tradizioni-grid">
-            <div class="tradizione-card">
-              <i class="fas fa-music"></i>
-              <h4>Roccella Jazz Festival</h4>
-              <p>
-                Dal 1981, uno dei più antichi festival jazz d'Europa. Ogni
-                estate trasforma il borgo in un palcoscenico internazionale,
-                con concerti, masterclasses e seminari.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-calendar-alt"></i>
-              <h4>Festa di San Vittore</h4>
-              <p>
-                Il 21 luglio il borgo celebra il patrono con processioni solenni,
-                spettacoli pirotecnici e momenti di convivialità che
-                coinvolgono l'intera comunità.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-utensils"></i>
-              <h4>Sapori del Mare e della Terra</h4>
-              <p>
-                Fileja con vongole, pezzogna al cartoccio, stocco alla mammolese,
-                'nduja, caprino della Limina e olio extravergine DOP. Un
-                patrimonio di gusto autentico.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-ship"></i>
-              <h4>Processione della Madonna delle Grazie</h4>
-              <p>
-                Il primo weekend di luglio, la statua della Vergine viene portata
-                in processione sul mare, in un rito suggestivo che richiama
-                fedeli da tutto il circondario.
-              </p>
-            </div>
+    <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Tradizioni e Cultura</h2>
+        <div class="tradizioni-grid">
+          <div class="tradizione-card">
+            <i class="fas fa-music"></i>
+            <h4>Roccella Jazz Festival</h4>
+            <p>
+              Dal 1981, uno dei più antichi festival jazz d'Europa. Ogni
+              estate trasforma il borgo in un palcoscenico internazionale,
+              con concerti, masterclasses e seminari.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Festa di San Vittore</h4>
+            <p>
+              Il 21 luglio il borgo celebra il patrono con processioni solenni,
+              spettacoli pirotecnici e momenti di convivialità che
+              coinvolgono l'intera comunità.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-utensils"></i>
+            <h4>Sapori del Mare e della Terra</h4>
+            <p>
+              Fileja con vongole, pezzogna al cartoccio, stocco alla mammolese,
+              'nduja, caprino della Limina e olio extravergine DOP. Un
+              patrimonio di gusto autentico.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-ship"></i>
+            <h4>Processione della Madonna delle Grazie</h4>
+            <p>
+              Il primo weekend di luglio, la statua della Vergine viene portata
+              in processione sul mare, in un rito suggestivo che richiama
+              fedeli da tutto il circondario.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- GALLERIA FOTO -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Galleria Fotografica</h2>
-          <div class="gallery">
-            <div class="gallery-item">
-              <img
-                src="../images/roccella/galleria/castello-carafa.jpg"
-                alt="Castello Carafa"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/roccella/galleria/spiaggia-bandiera-blu.jpg"
-                alt="Spiaggia Bandiera Blu"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/roccella/galleria/roccella-jazz.jpg"
-                alt="Roccella Jazz Festival"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/roccella/galleria/centro-storico.jpg"
-                alt="Centro storico"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/roccella/galleria/porto-grazie.jpg"
-                alt="Porto delle Grazie"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/roccella/galleria/panorama-costiera.jpg"
-                alt="Panorama sulla costa"
-              />
-            </div>
+    <!-- GALLERIA FOTO -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Galleria Fotografica</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="../images/roccella/galleria/castello-carafa.jpg" alt="Castello Carafa" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/roccella/galleria/spiaggia-bandiera-blu.jpg" alt="Spiaggia Bandiera Blu" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/roccella/galleria/roccella-jazz.jpg" alt="Roccella Jazz Festival" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/roccella/galleria/centro-storico.jpg" alt="Centro storico" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/roccella/galleria/porto-grazie.jpg" alt="Porto delle Grazie" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/roccella/galleria/panorama-costiera.jpg" alt="Panorama sulla costa" />
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- INFO UTILI -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Info Utili</h2>
-          <div class="info-grid contact-grid">
-            <div class="info-card">
-              <i class="fas fa-car"></i>
-              <h4>Come Arrivare</h4>
-              <p>
-                <strong>In Auto:</strong> SS106 Jonica, uscita Roccella Ionica.
-                Dista circa 25 km da Siderno e 80 km da Reggio Calabria.<br />
-                <strong>In Treno:</strong> Stazione ferroviaria di Roccella Ionica,
-                servita da treni regionali per Reggio Calabria e Catanzaro.<br />
-                Parcheggio disponibile sia nel centro che a Roccella Marina.
-              </p>
-            </div>
+    <!-- INFO UTILI -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Info Utili</h2>
+        <div class="info-grid contact-grid">
+          <div class="info-card">
+            <i class="fas fa-car"></i>
+            <h4>Come Arrivare</h4>
+            <p>
+              <strong>In Auto:</strong> SS106 Jonica, uscita Roccella Ionica.
+              Dista circa 25 km da Siderno e 80 km da Reggio Calabria.<br />
+              <strong>In Treno:</strong> Stazione ferroviaria di Roccella Ionica,
+              servita da treni regionali per Reggio Calabria e Catanzaro.<br />
+              Parcheggio disponibile sia nel centro che a Roccella Marina.
+            </p>
+          </div>
 
-            <div class="info-card">
-              <i class="fas fa-globe"></i>
-              <h4>Comune e Informazioni</h4>
-              <p>
-                <strong>Comune di Roccella Ionica</strong><br />
-                Via XXV Aprile<br />
-                89047 Roccella Ionica (RC)<br />
-                <strong>Tel:</strong> 0964 84228<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="http://www.comune.roccella.rc.it"
-                  target="_blank"
-                  style="
+          <div class="info-card">
+            <i class="fas fa-globe"></i>
+            <h4>Comune e Informazioni</h4>
+            <p>
+              <strong>Comune di Roccella Ionica</strong><br />
+              Via XXV Aprile<br />
+              89047 Roccella Ionica (RC)<br />
+              <strong>Tel:</strong> 0964 84228<br />
+              <strong>Sito web:</strong>
+              <a href="http://www.comune.roccella.rc.it" target="_blank" style="
                     color: var(--accent);
                     text-decoration: none;
                     font-weight: 600;
-                  "
-                  >www.comune.roccella.rc.it</a
-                >
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-music"></i>
-              <h4>Roccella Jazz Festival</h4>
-              <p>
-                <strong>Periodo:</strong> Luglio - Agosto<br />
-                <strong>Location principali:</strong> Teatro al Castello, Cortile
-                delle Scuole, Ex Convento dei Minimi.<br />
-                Ingresso gratuito per molte serate. Programma e biglietti sul
-                sito ufficiale: <a href="https://www.roccellajazz.org" target="_blank" style="color: var(--accent);">www.roccellajazz.org</a>
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-umbrella-beach"></i>
-              <h4>Informazioni Turistiche</h4>
-              <p>
-                <strong>Porto delle Grazie:</strong> 450 posti barca, servizi
-                e noleggio imbarcazioni.<br />
-                <strong>Info turistiche:</strong> Pro Loco Roccella Ionica -
-                tel. 0964 84228<br />
-                <strong>Sito ufficiale turismo:</strong>
-                <a
-                  href="https://calabriastraordinaria.it/destinazioni/roccella-ionica"
-                  target="_blank"
-                  style="color: var(--accent);"
-                  >Calabria Straordinaria</a
-                >
-              </p>
-            </div>
+                  ">www.comune.roccella.rc.it</a>
+            </p>
           </div>
-          <div class="btn-center">
-            <a href="../index.html#borghi" class="btn"
-              ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
-            >
+
+          <div class="info-card">
+            <i class="fas fa-music"></i>
+            <h4>Roccella Jazz Festival</h4>
+            <p>
+              <strong>Periodo:</strong> Luglio - Agosto<br />
+              <strong>Location principali:</strong> Teatro al Castello, Cortile
+              delle Scuole, Ex Convento dei Minimi.<br />
+              Ingresso gratuito per molte serate. Programma e biglietti sul
+              sito ufficiale: <a href="https://www.roccellajazz.org" target="_blank"
+                style="color: var(--accent);">www.roccellajazz.org</a>
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-umbrella-beach"></i>
+            <h4>Informazioni Turistiche</h4>
+            <p>
+              <strong>Porto delle Grazie:</strong> 450 posti barca, servizi
+              e noleggio imbarcazioni.<br />
+              <strong>Info turistiche:</strong> Pro Loco Roccella Ionica -
+              tel. 0964 84228<br />
+              <strong>Sito ufficiale turismo:</strong>
+              <a href="https://calabriastraordinaria.it/destinazioni/roccella-ionica" target="_blank"
+                style="color: var(--accent);">Calabria Straordinaria</a>
+            </p>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>
-            <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
-            <a href="../index.html">Home</a>
-          </p>
-          <p>
-            &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
-            Zanotti. Tutti i diritti riservati.
-          </p>
-        </div>
-        <div class="copyright">
-          Sito realizzato dagli studenti del progetto scolastico
+        <div class="btn-center">
+          <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script>
-      // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>
+          <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
+          <a href="../index.html">Home</a>
+        </p>
+        <p>
+          &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
+          Zanotti. Tutti i diritti riservati.
+        </p>
+      </div>
+      <div class="copyright">
+        Sito realizzato dagli studenti del progetto scolastico
+      </div>
+    </div>
+  </footer>
 
-      window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-      });
-    </script>
-  </body>
+  <script>
+    // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+
 </html>

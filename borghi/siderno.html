@@ -1,1215 +1,1147 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Siderno - Polo Tecnico Professionale Marconi</title>
-    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
-    <!-- Google Fonts e Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      /* ============================================
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siderno - Polo Tecnico Professionale Marconi</title>
+  <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
+  <!-- Google Fonts e Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ============================================
            POLO TECNICO PROFESSIONALE - STYLE.CSS
            Design Elegante e Professionale
            ============================================ */
 
-      /* RESET E BASE */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    /* RESET E BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        color: #1a1a2e;
-        background-color: #fafbfc;
-        overflow-x: hidden;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background-color: #fafbfc;
+      overflow-x: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
-      /* ============================================
+    /* ============================================
            VARIABILI COLORE - PALETTE REFINED
            ============================================ */
-      :root {
-        --primary: #2c3e50;
-        --primary-light: #34495e;
-        --primary-dark: #1e2b3a;
-        --accent: #e67e22;
-        --accent-light: #f39c12;
-        --accent-dark: #c96e1c;
-        --secondary: #5c7c9a;
-        --gray-light: #f0f2f5;
-        --gray: #9ca3af;
-        --text-light: #6b7280;
-        --text-dark: #1f2937;
-        --white: #ffffff;
-        --off-white: #f8f9fa;
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-        --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
-        --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
-        --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-        --gradient-primary: linear-gradient(
-          135deg,
+    :root {
+      --primary: #2c3e50;
+      --primary-light: #34495e;
+      --primary-dark: #1e2b3a;
+      --accent: #e67e22;
+      --accent-light: #f39c12;
+      --accent-dark: #c96e1c;
+      --secondary: #5c7c9a;
+      --gray-light: #f0f2f5;
+      --gray: #9ca3af;
+      --text-light: #6b7280;
+      --text-dark: #1f2937;
+      --white: #ffffff;
+      --off-white: #f8f9fa;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+      --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+      --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+      --gradient-primary: linear-gradient(135deg,
           var(--primary) 0%,
-          var(--primary-light) 100%
-        );
-        --gradient-accent: linear-gradient(
-          135deg,
+          var(--primary-light) 100%);
+      --gradient-accent: linear-gradient(135deg,
           var(--accent) 0%,
-          var(--accent-light) 100%
-        );
-        --transition: 0.3s ease;
-        --transition-slow: 0.5s ease;
-      }
+          var(--accent-light) 100%);
+      --transition: 0.3s ease;
+      --transition-slow: 0.5s ease;
+    }
 
-      /* ============================================
+    /* ============================================
            LAYOUT GENERALE
            ============================================ */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-      /* ============================================
+    /* ============================================
            HEADER E NAVIGAZIONE
            ============================================ */
-      header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px) saturate(180%);
-        box-shadow: var(--shadow-sm);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        transition: all var(--transition);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all var(--transition);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      transition: padding var(--transition);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition);
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .logo h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      margin-top: 1px;
+    }
+
+    .back-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gray-light);
+      color: var(--text-dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+
+    .back-link a:hover {
+      background: var(--gradient-primary);
+      color: var(--white);
+      transform: translateX(-5px);
+    }
+
+    /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 0;
+      }
+    }
+
+    section:nth-child(even) {
+      background-color: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 60px;
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+           HERO SECTION
+           ============================================ */
+    .hero-borgo {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(15, 44, 74, 0.7) 0%,
+          rgba(26, 61, 92, 0.7) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-borgo .container {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .hero-borgo h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-borgo p {
+      font-size: 1.25rem;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      opacity: 0.95;
+      line-height: 1.8;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+    .content-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .content-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section.reverse {
+      direction: rtl;
+    }
+
+    .content-section.reverse>* {
+      direction: ltr;
+    }
+
+    .content-text {
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .content-text h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .content-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .content-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ============================================
+           INFO CARDS
+           ============================================ */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .info-grid.contact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .info-card i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .info-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+    .tradizioni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .tradizione-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      position: relative;
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .tradizione-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+
+    .tradizione-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .tradizione-card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tradizione-card i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      transition: transform var(--transition);
+    }
+
+    .tradizione-card:hover i {
+      transform: scale(1.1);
+    }
+
+    .tradizione-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .tradizione-card p {
+      color: var(--text-light);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+           GALLERY
+           ============================================ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 220px;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-slow);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.15);
+    }
+
+    /* ============================================
+           BUTTONS
+           ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-accent);
+      color: var(--text-dark);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all var(--transition);
+      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent);
+      transition: left 0.6s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+    }
+
+    .btn i {
+      transition: transform var(--transition);
+    }
+
+    .btn:hover i {
+      transform: translateX(5px);
+    }
+
+    .btn-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* ============================================
+           FOOTER
+           ============================================ */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 70px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .footer-content {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .footer-content p {
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-content a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .footer-content a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ============================================
+           RESPONSIVE
+           ============================================ */
+    @media (max-width: 768px) {
       .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-        transition: padding var(--transition);
+        padding: 32px 0;
       }
 
       .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: transform var(--transition);
+        gap: 8px;
       }
 
       .logo img {
-        height: 45px;
-        width: auto;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        height: 35px;
       }
 
       .logo h1 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
+        font-size: 1rem;
       }
 
       .logo span {
-        font-size: 0.7rem;
-        color: var(--text-light);
+        font-size: 0.6rem;
         display: block;
-        font-weight: 400;
-        letter-spacing: 0.3px;
-        margin-top: 1px;
+        opacity: 0.8;
       }
 
-      .back-link a {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--gray-light);
-        color: var(--text-dark);
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all var(--transition);
-      }
-
-      .back-link a:hover {
-        background: var(--gradient-primary);
-        color: var(--white);
-        transform: translateX(-5px);
-      }
-
-      /* ============================================
-           SEZIONI GENERALI
-           ============================================ */
-      section {
-        padding: 100px 0;
-        position: relative;
-      }
-
-      @media (max-width: 768px) {
-        section {
-          padding: 60px 0;
-        }
-      }
-
-      section:nth-child(even) {
-        background-color: var(--white);
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 40px;
-        letter-spacing: -0.5px;
-      }
-
-      .section-subtitle {
-        text-align: center;
-        color: var(--text-light);
-        margin-bottom: 60px;
-        font-size: 1.15rem;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      /* ============================================
-           HERO SECTION
-           ============================================ */
-      .hero-borgo {
-        position: relative;
-        height: 60vh;
-        min-height: 400px;
-        color: var(--white);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 44, 74, 0.7) 0%,
-          rgba(26, 61, 92, 0.7) 100%
-        );
-        z-index: 2;
-        pointer-events: none;
-      }
-
-      .hero-borgo .container {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-      }
-
-      .hero-borgo h2 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 24px;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .hero-borgo p {
-        font-size: 1.25rem;
-        max-width: 750px;
-        margin: 0 auto 40px;
-        opacity: 0.95;
-        line-height: 1.8;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
       .content-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-        margin-bottom: 60px;
-      }
-
-      .content-section:last-child {
-        margin-bottom: 0;
-      }
-
-      .content-section.reverse {
-        direction: rtl;
-      }
-
-      .content-section.reverse > * {
-        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        direction: ltr !important;
       }
 
       .content-text {
-        padding: 20px;
-        text-align: justify;
-      }
-
-      .content-text h3 {
-        font-size: 1.8rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .content-text p {
-        color: var(--text-light);
-        margin-bottom: 15px;
-        line-height: 1.8;
+        order: 1;
+        padding: 0;
       }
 
       .content-image {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        height: 350px;
-        background-size: cover;
-        background-position: center;
+        order: 2;
+        width: 100%;
       }
 
-      /* ============================================
-           INFO CARDS
-           ============================================ */
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin-top: 40px;
-      }
-
-      .info-grid.contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      }
-
-      .info-card {
-        background: var(--white);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        text-align: center;
-      }
-
-      .info-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .info-card i {
+      .hero-borgo h2 {
         font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 20px;
       }
 
-      .info-card h4 {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-bottom: 10px;
-        font-weight: 600;
+      .hero-borgo p {
+        font-size: 1.1rem;
       }
 
-      .info-card p {
-        color: var(--text-light);
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .logo h1 {
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      .logo span {
+        display: block;
+        font-size: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .logo img {
+        height: 28px;
+      }
+
+      .hero-borgo {
+        min-height: 250px;
+        height: 40vh;
+      }
+
+      .hero-borgo h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+      }
+
+      .hero-borgo p {
         font-size: 0.95rem;
         line-height: 1.6;
       }
 
-      /* ============================================
-           TRADITIONS GRID
-           ============================================ */
-      .tradizioni-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 32px;
-        margin-top: 40px;
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
       }
 
-      .tradizione-card {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        position: relative;
-        padding: 30px 24px;
-        text-align: center;
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
       }
 
-      .tradizione-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-        transform: scaleX(0);
-        transition: transform var(--transition);
-        transform-origin: left;
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover::before {
-        transform: scaleX(1);
+      .content-section {
+        gap: 25px;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover {
-        transform: translateY(-12px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .tradizione-card i {
-        font-size: 3rem;
-        color: var(--accent);
-        margin-bottom: 20px;
-        transition: transform var(--transition);
-      }
-
-      .tradizione-card:hover i {
-        transform: scale(1.1);
-      }
-
-      .tradizione-card h4 {
-        font-size: 1.3rem;
+      .content-text h3 {
+        font-size: 1.4rem;
         margin-bottom: 15px;
-        color: var(--primary);
-        font-weight: 600;
       }
 
-      .tradizione-card p {
-        color: var(--text-light);
-        line-height: 1.7;
-        font-size: 0.95rem;
+      .content-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
       }
 
-      /* ============================================
-           GALLERY
-           ============================================ */
+      .content-image {
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      .info-grid,
+      .info-grid.contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .info-card {
+        padding: 20px;
+      }
+
+      .info-card i {
+        font-size: 2rem;
+      }
+
       .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        margin-top: 50px;
+        gap: 12px;
+        margin-top: 30px;
       }
 
       .gallery-item {
-        border-radius: 16px;
-        overflow: hidden;
-        height: 220px;
-        box-shadow: var(--shadow-md);
-        transition: all var(--transition-slow);
-        position: relative;
+        height: 180px;
       }
 
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.8s;
+      .back-link a {
+        padding: 8px 24px;
+        font-size: 0.75rem;
+        gap: 5px;
       }
 
-      .gallery-item:hover img {
-        transform: scale(1.15);
+      .back-link i {
+        font-size: 0.7rem;
       }
+    }
+  </style>
+</head>
 
-      /* ============================================
-           BUTTONS
-           ============================================ */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: var(--gradient-accent);
-        color: var(--text-dark);
-        padding: 14px 32px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all var(--transition);
-        box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
-        border: none;
-        position: relative;
-        overflow: hidden;
-        justify-content: center;
-      }
-
-      .btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: left 0.6s;
-      }
-
-      .btn:hover::before {
-        left: 100%;
-      }
-
-      .btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
-      }
-
-      .btn i {
-        transition: transform var(--transition);
-      }
-
-      .btn:hover i {
-        transform: translateX(5px);
-      }
-
-      .btn-center {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      /* ============================================
-           FOOTER
-           ============================================ */
-      footer {
-        background: var(--primary-dark);
-        color: rgba(255, 255, 255, 0.8);
-        padding: 70px 0 30px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-      }
-
-      .footer-content {
-        text-align: center;
-        padding-bottom: 30px;
-      }
-
-      .footer-content p {
-        margin-bottom: 15px;
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .footer-content a {
-        color: var(--accent);
-        text-decoration: none;
-        transition: all var(--transition);
-      }
-
-      .footer-content a:hover {
-        color: var(--white);
-      }
-
-      .copyright {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 30px;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      /* ============================================
-           RESPONSIVE
-           ============================================ */
-      @media (max-width: 768px) {
-        .header-content {
-          padding: 32px 0;
-        }
-
-        .logo {
-          gap: 8px;
-        }
-
-        .logo img {
-          height: 35px;
-        }
-
-        .logo h1 {
-          font-size: 1rem;
-        }
-
-        .logo span {
-          font-size: 0.6rem;
-          display: block;
-          opacity: 0.8;
-        }
-
-        .content-section {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          direction: ltr !important;
-        }
-
-        .content-text {
-          order: 1;
-          padding: 0;
-        }
-
-        .content-image {
-          order: 2;
-          width: 100%;
-        }
-
-        .hero-borgo h2 {
-          font-size: 2.5rem;
-        }
-
-        .hero-borgo p {
-          font-size: 1.1rem;
-        }
-
-        .section-title {
-          font-size: 2.2rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          padding: 0 20px;
-        }
-
-        .logo h1 {
-          font-size: 0.8rem;
-          white-space: nowrap;
-        }
-
-        .logo span {
-          display: block;
-          font-size: 0.5rem;
-          opacity: 0.9;
-        }
-
-        .logo img {
-          height: 28px;
-        }
-
-        .hero-borgo {
-          min-height: 250px;
-          height: 40vh;
-        }
-
-        .hero-borgo h2 {
-          font-size: 1.8rem;
-          margin-bottom: 12px;
-        }
-
-        .hero-borgo p {
-          font-size: 0.95rem;
-          line-height: 1.6;
-        }
-
-        .btn {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-
-        .section-title {
-          font-size: 1.6rem;
-          margin-bottom: 30px;
-        }
-
-        .section-subtitle {
-          font-size: 1rem;
-          margin-bottom: 40px;
-        }
-
-        .content-section {
-          gap: 25px;
-          margin-bottom: 40px;
-        }
-
-        .content-text h3 {
-          font-size: 1.4rem;
-          margin-bottom: 15px;
-        }
-
-        .content-text p {
-          font-size: 0.9rem;
-          line-height: 1.6;
-        }
-
-        .content-image {
-          height: 250px;
-          border-radius: 12px;
-        }
-
-        .info-grid,
-        .info-grid.contact-grid {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .info-card {
-          padding: 20px;
-        }
-
-        .info-card i {
-          font-size: 2rem;
-        }
-
-        .gallery {
-          gap: 12px;
-          margin-top: 30px;
-        }
-
-        .gallery-item {
-          height: 180px;
-        }
-
-        .back-link a {
-          padding: 8px 24px;
-          font-size: 0.75rem;
-          gap: 5px;
-        }
-
-        .back-link i {
-          font-size: 0.7rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="container header-content">
-        <div class="logo">
-          <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
-          <div>
-            <h1>Polo Tecnico Professionale</h1>
-            <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-          </div>
-        </div>
-        <div class="back-link">
-          <a href="../index.html#borghi"
-            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
-          >
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+        <div>
+          <h1>Polo Tecnico Professionale</h1>
+          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
         </div>
       </div>
-    </header>
+      <div class="back-link">
+        <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section
-        class="hero-borgo"
-        style="
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-borgo" style="
           background-image: url('../images/siderno/siderno-panorama.jpg');
           background-size: cover;
           background-position: center;
-        "
-      >
-        <div class="hero-overlay"></div>
-        <div class="container">
-          <h2>Siderno</h2>
-          <p>
-            Siderno Superiore, il borgo medievale dove il tempo sembra essersi fermato:
-            vicoli antichi, palazzi nobiliari, e una terrazza panoramica sul Mar Ionio.
-          </p>
-        </div>
-      </section>
+        ">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <h2>Siderno</h2>
+        <p>
+          Siderno Superiore, il borgo medievale dove il tempo sembra essersi fermato:
+          vicoli antichi, palazzi nobiliari, e una terrazza panoramica sul Mar Ionio.
+        </p>
+      </div>
+    </section>
 
-      <!-- INFO CARDS -->
-      <section>
-        <div class="container">
-          <div class="info-grid">
-            <div class="info-card">
-              <i class="fas fa-mountain"></i>
-              <h4>Altitudine</h4>
-              <p>192 m s.l.m. (Siderno Superiore)</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-calendar-alt"></i>
-              <h4>Prime attestazioni</h4>
-              <p>XII-XIII secolo</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-users"></i>
-              <h4>Abitanti</h4>
-              <p>Circa 18.000 (comune)</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-church"></i>
-              <h4>Patrono</h4>
-              <p>San Nicola di Bari (6 dicembre)</p>
-            </div>
+    <!-- INFO CARDS -->
+    <section>
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-mountain"></i>
+            <h4>Altitudine</h4>
+            <p>192 m s.l.m. (Siderno Superiore)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Prime attestazioni</h4>
+            <p>XII-XIII secolo</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-users"></i>
+            <h4>Abitanti</h4>
+            <p>Circa 18.000 (comune)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-church"></i>
+            <h4>Patrono</h4>
+            <p>San Nicola di Bari (6 dicembre)</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 1: Il Borgo Medievale -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Il Borgo Medievale</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Un Viaggio nel Tempo</h3>
-              <p>
-                Siderno Superiore sorge su una collina a circa 200 metri di altitudine,
-                sulle pendici dell’Aspromonte. Le sue origini risalgono al Medioevo:
-                prime notizie documentate nel 1220, quando l’abitato era già organizzato
-                attorno a un castello. Tra il XIV e il XV secolo si sviluppò l’insediamento
-                attuale, con la costruzione della cinta muraria e delle torri difensive.
-                Nel 1532 l’imperatore Carlo V elevò Siderno a baronia autonoma,
-                concedendola a Giovan Battista Carafa, che rafforzò le fortificazioni.
-              </p>
-              <p>
-                Oggi il borgo conserva intatto il suo fascino medievale: vicoli stretti,
-                case in pietra, piccole piazze e scorci panoramici sul mare Ionio.
-                Delle antiche mura restano pochi tratti, ma sono ancora visibili i resti
-                di alcune torri e la celebre Torre Tamburi, eretta in epoca angioina
-                (XIV secolo) e demolita nel 1893.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 1: Il Borgo Medievale -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Il Borgo Medievale</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Un Viaggio nel Tempo</h3>
+            <p>
+              Siderno Superiore sorge su una collina a circa 200 metri di altitudine,
+              sulle pendici dell’Aspromonte. Le sue origini risalgono al Medioevo:
+              prime notizie documentate nel 1220, quando l’abitato era già organizzato
+              attorno a un castello. Tra il XIV e il XV secolo si sviluppò l’insediamento
+              attuale, con la costruzione della cinta muraria e delle torri difensive.
+              Nel 1532 l’imperatore Carlo V elevò Siderno a baronia autonoma,
+              concedendola a Giovan Battista Carafa, che rafforzò le fortificazioni.
+            </p>
+            <p>
+              Oggi il borgo conserva intatto il suo fascino medievale: vicoli stretti,
+              case in pietra, piccole piazze e scorci panoramici sul mare Ionio.
+              Delle antiche mura restano pochi tratti, ma sono ancora visibili i resti
+              di alcune torri e la celebre Torre Tamburi, eretta in epoca angioina
+              (XIV secolo) e demolita nel 1893.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/siderno/vicoli-siderno.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url('../images/siderno/torre-tamburi.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Torre Tamburi e le Fortificazioni</h3>
-              <p>
-                La Torre Tamburi fu costruita nel XIV secolo per volere della corona
-                angioina. Era una delle torri più imponenti del sistema difensivo,
-                insieme ad altre strutture oggi scomparse. Nel Cinquecento il conte
-                Vincenzo Carafa ne potenziò l’apparato difensivo, dotandolo di
-                bastioni e porte d’accesso (Salita Arco, Passioti, Ianora).
-              </p>
-              <p>
-                Dopo la demolizione del 1893, della torre restano solo alcuni disegni
-                d’epoca e la memoria nel nome di una delle strade del borgo.
-                Camminando per il centro storico si possono ancora ammirare i portali
-                in pietra bugnata di palazzi come Palazzo De Mojà, Palazzo Falletti
-                (con portale monumentale), Palazzo Calautti e Palazzo Correale‑Santacroce.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Torre Tamburi e le Fortificazioni</h3>
+            <p>
+              La Torre Tamburi fu costruita nel XIV secolo per volere della corona
+              angioina. Era una delle torri più imponenti del sistema difensivo,
+              insieme ad altre strutture oggi scomparse. Nel Cinquecento il conte
+              Vincenzo Carafa ne potenziò l’apparato difensivo, dotandolo di
+              bastioni e porte d’accesso (Salita Arco, Passioti, Ianora).
+            </p>
+            <p>
+              Dopo la demolizione del 1893, della torre restano solo alcuni disegni
+              d’epoca e la memoria nel nome di una delle strade del borgo.
+              Camminando per il centro storico si possono ancora ammirare i portali
+              in pietra bugnata di palazzi come Palazzo De Mojà, Palazzo Falletti
+              (con portale monumentale), Palazzo Calautti e Palazzo Correale‑Santacroce.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 2: La Chiesa di San Nicola e Piazza Cavone -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Cuore Spirituale e Belvedere</h2>
-          <div class="content-section">
-                        <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 2: La Chiesa di San Nicola e Piazza Cavone -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Cuore Spirituale e Belvedere</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url('../images/siderno/chiesa-san-nicola.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Chiesa di San Nicola di Bari</h3>
-              <p>
-                La Chiesa di San Nicola è la matrice del borgo. Di origine normanna
-                (XI secolo), fu più volte ricostruita, assumendo l’attuale aspetto
-                tardo‑rinascimentale nel XVII secolo, dopo il terremoto del 1638.
-                All’interno conserva un prezioso altare maggiore in marmo policromo,
-                opera di Vincenzo Trinchese (1775), e il cosiddetto “Tesoro di San Nicola”,
-                un insieme di oreficerie e paramenti sacri dal XVI al XVIII secolo.
-              </p>
-              <p>
-                La festa patronale si celebra il 6 dicembre con una solenne processione
-                che attraversa le vie del borgo, accompagnata da musica e momenti di
-                convivialità.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Chiesa di San Nicola di Bari</h3>
+            <p>
+              La Chiesa di San Nicola è la matrice del borgo. Di origine normanna
+              (XI secolo), fu più volte ricostruita, assumendo l’attuale aspetto
+              tardo‑rinascimentale nel XVII secolo, dopo il terremoto del 1638.
+              All’interno conserva un prezioso altare maggiore in marmo policromo,
+              opera di Vincenzo Trinchese (1775), e il cosiddetto “Tesoro di San Nicola”,
+              un insieme di oreficerie e paramenti sacri dal XVI al XVIII secolo.
+            </p>
+            <p>
+              La festa patronale si celebra il 6 dicembre con una solenne processione
+              che attraversa le vie del borgo, accompagnata da musica e momenti di
+              convivialità.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Piazza Cavone: Terrazza sullo Ionio</h3>
-              <p>
-                Inaugurata nel 2016, Piazza Cavone è oggi il cuore pulsante di
-                Siderno Superiore. Questa ampia terrazza naturale si affaccia sul
-                Mar Ionio regalando una delle viste più suggestive della Locride.
-                Al centro, le statue di Ercole e Telefo (donate dallo scultore
-                Antonio Biancospino) e un’elegante fontana. Sulla piazza si affacciano
-                palazzi storici e un punto informazioni turistiche attivo nei periodi
-                di maggiore afflusso.
-              </p>
-              <p>
-                Da qui partono i percorsi alla scoperta del borgo, tra chiese,
-                palazzi gentilizi e i caratteristici “vinedi” (vicoli stretti)
-                che conservano intatta l’atmosfera di un tempo.
-              </p>
-            </div>
-                        <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Piazza Cavone: Terrazza sullo Ionio</h3>
+            <p>
+              Inaugurata nel 2016, Piazza Cavone è oggi il cuore pulsante di
+              Siderno Superiore. Questa ampia terrazza naturale si affaccia sul
+              Mar Ionio regalando una delle viste più suggestive della Locride.
+              Al centro, le statue di Ercole e Telefo (donate dallo scultore
+              Antonio Biancospino) e un’elegante fontana. Sulla piazza si affacciano
+              palazzi storici e un punto informazioni turistiche attivo nei periodi
+              di maggiore afflusso.
+            </p>
+            <p>
+              Da qui partono i percorsi alla scoperta del borgo, tra chiese,
+              palazzi gentilizi e i caratteristici “vinedi” (vicoli stretti)
+              che conservano intatta l’atmosfera di un tempo.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/siderno/piazza-cavone.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 3: Valorizzazione e Turismo Culturale -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Valorizzazione e Turismo Culturale</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Progetti di Tutela</h3>
-              <p>
-                Siderno Superiore è oggi al centro di iniziative di tutela e
-                promozione turistica. Associazioni locali come “Pajisi meu ti vogghiu beni”
-                e il Comitato Pro Piazza Cavone organizzano visite guidate,
-                rievocazioni storiche e laboratori didattici per far conoscere il
-                patrimonio artistico e architettonico del borgo.
-              </p>
-              <p>
-                Tra gli itinerari più apprezzati: “Siderno Medievale” (alla scoperta
-                delle mura, delle porte e della Torre Tamburi) e “I Palazzi Nobiliari”,
-                che conduce nei cortili e nei portali di alcune delle dimore storiche
-                meglio conservate.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 3: Valorizzazione e Turismo Culturale -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Valorizzazione e Turismo Culturale</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Progetti di Tutela</h3>
+            <p>
+              Siderno Superiore è oggi al centro di iniziative di tutela e
+              promozione turistica. Associazioni locali come “Pajisi meu ti vogghiu beni”
+              e il Comitato Pro Piazza Cavone organizzano visite guidate,
+              rievocazioni storiche e laboratori didattici per far conoscere il
+              patrimonio artistico e architettonico del borgo.
+            </p>
+            <p>
+              Tra gli itinerari più apprezzati: “Siderno Medievale” (alla scoperta
+              delle mura, delle porte e della Torre Tamburi) e “I Palazzi Nobiliari”,
+              che conduce nei cortili e nei portali di alcune delle dimore storiche
+              meglio conservate.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/siderno/visite-guidate.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url('../images/siderno/eventi-siderno.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Eventi e Tradizioni</h3>
-              <p>
-                L’estate anima il borgo con la “Sagra della Focaccia” (tipico prodotto
-                locale, condito con olio extravergine e origano), concerti di musica
-                popolare e mostre d’arte. Durante tutto l’anno sono attive iniziative
-                legate alla tradizione contadina, come la “Festa dell’Uva” e i laboratori
-                di tessitura e ceramica.
-              </p>
-              <p>
-                Il borgo è anche punto di partenza per escursioni nei sentieri
-                dell’Aspromonte, tra uliveti secolari e antichi mulini ad acqua,
-                ideali per chi ama il turismo lento e a contatto con la natura.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Eventi e Tradizioni</h3>
+            <p>
+              L’estate anima il borgo con la “Sagra della Focaccia” (tipico prodotto
+              locale, condito con olio extravergine e origano), concerti di musica
+              popolare e mostre d’arte. Durante tutto l’anno sono attive iniziative
+              legate alla tradizione contadina, come la “Festa dell’Uva” e i laboratori
+              di tessitura e ceramica.
+            </p>
+            <p>
+              Il borgo è anche punto di partenza per escursioni nei sentieri
+              dell’Aspromonte, tra uliveti secolari e antichi mulini ad acqua,
+              ideali per chi ama il turismo lento e a contatto con la natura.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 4: Gastronomia e Prodotti Tipici -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Gastronomia e Prodotti Tipici</h2>
-          <div class="content-section">
-                        <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 4: Gastronomia e Prodotti Tipici -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Gastronomia e Prodotti Tipici</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url('../images/siderno/gastronomia.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Sapori della Locride</h3>
-              <p>
-                La cucina di Siderno esprime la ricchezza del territorio locrese:
-                olio extravergine d’oliva DOP, agrumi (arance, limoni, bergamotto),
-                vini pregiati e formaggi caprini. Tra i piatti tradizionali spiccano
-                le “fileja” (pasta fatta in casa) con sugo di capra o con le vongole,
-                la “zuppa di pesce” alla sidernese e lo “stocco alla mammolese”,
-                ereditato dalla vicina tradizione marinara.
-              </p>
-              <p>
-                I dolci tipici includono le “susumelle” (biscotti a base di mosto
-                cotto) e i “pitticelli” (frittelle dolci), preparati in occasione
-                delle festività religiose.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Sapori della Locride</h3>
+            <p>
+              La cucina di Siderno esprime la ricchezza del territorio locrese:
+              olio extravergine d’oliva DOP, agrumi (arance, limoni, bergamotto),
+              vini pregiati e formaggi caprini. Tra i piatti tradizionali spiccano
+              le “fileja” (pasta fatta in casa) con sugo di capra o con le vongole,
+              la “zuppa di pesce” alla sidernese e lo “stocco alla mammolese”,
+              ereditato dalla vicina tradizione marinara.
+            </p>
+            <p>
+              I dolci tipici includono le “susumelle” (biscotti a base di mosto
+              cotto) e i “pitticelli” (frittelle dolci), preparati in occasione
+              delle festività religiose.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Artigianato e Tradizioni Contadine</h3>
-              <p>
-                L’artigianato locale conserva antiche tecniche: la lavorazione del
-                legno (sedie, mobili rustici), la ceramica decorata a mano e la
-                tessitura con telai a mano, ancora praticata da alcune artigiane.
-                I prodotti tessili (coperte, “pezzane”) sono un simbolo dell’identità
-                contadina e vengono oggi riproposti in chiave contemporanea.
-              </p>
-              <p>
-                Durante l’anno, i visitatori possono assistere a dimostrazioni dal
-                vivo presso le botteghe storiche, scoprendo il sapere tramandato di
-                generazione in generazione.
-              </p>
-            </div>
-                        <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Artigianato e Tradizioni Contadine</h3>
+            <p>
+              L’artigianato locale conserva antiche tecniche: la lavorazione del
+              legno (sedie, mobili rustici), la ceramica decorata a mano e la
+              tessitura con telai a mano, ancora praticata da alcune artigiane.
+              I prodotti tessili (coperte, “pezzane”) sono un simbolo dell’identità
+              contadina e vengono oggi riproposti in chiave contemporanea.
+            </p>
+            <p>
+              Durante l’anno, i visitatori possono assistere a dimostrazioni dal
+              vivo presso le botteghe storiche, scoprendo il sapere tramandato di
+              generazione in generazione.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/siderno/artigianato.jpg');
-              "
-            ></div>
+              "></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Tradizioni e Cultura</h2>
+        <div class="tradizioni-grid">
+          <div class="tradizione-card">
+            <i class="fas fa-church"></i>
+            <h4>Festa di San Nicola</h4>
+            <p>
+              Il 6 dicembre il borgo celebra il patrono con solenni processioni,
+              messe e momenti di convivialità. Un’antica tradizione prevede la
+              distribuzione di biscotti benedetti.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-utensils"></i>
+            <h4>Sagra della Focaccia</h4>
+            <p>
+              In estate, la sagra celebra la focaccia tipica, condita con olio
+              extravergine, pomodoro e origano, accompagnata da musica e balli
+              popolari.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-tree"></i>
+            <h3>Leggende e Racconti</h3>
+            <p>
+              Il borgo è ricco di leggende legate alla Torre Tamburi e ai
+              passaggi sotterranei che un tempo collegavano il castello con la
+              costa. Storie di pirati e di tesori nascosti.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-hiking"></i>
+            <h4>Sentieri e Panorami</h4>
+            <p>
+              Da Piazza Cavone partono sentieri tra uliveti e macchia
+              mediterranea che conducono a belvedere naturali, ideali per
+              escursioni e birdwatching.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Tradizioni e Cultura</h2>
-          <div class="tradizioni-grid">
-            <div class="tradizione-card">
-              <i class="fas fa-church"></i>
-              <h4>Festa di San Nicola</h4>
-              <p>
-                Il 6 dicembre il borgo celebra il patrono con solenni processioni,
-                messe e momenti di convivialità. Un’antica tradizione prevede la
-                distribuzione di biscotti benedetti.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-utensils"></i>
-              <h4>Sagra della Focaccia</h4>
-              <p>
-                In estate, la sagra celebra la focaccia tipica, condita con olio
-                extravergine, pomodoro e origano, accompagnata da musica e balli
-                popolari.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-tree"></i>
-              <h3>Leggende e Racconti</h3>
-              <p>
-                Il borgo è ricco di leggende legate alla Torre Tamburi e ai
-                passaggi sotterranei che un tempo collegavano il castello con la
-                costa. Storie di pirati e di tesori nascosti.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-hiking"></i>
-              <h4>Sentieri e Panorami</h4>
-              <p>
-                Da Piazza Cavone partono sentieri tra uliveti e macchia
-                mediterranea che conducono a belvedere naturali, ideali per
-                escursioni e birdwatching.
-              </p>
-            </div>
+    <!-- GALLERIA FOTO -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Galleria Fotografica</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="../images/siderno/galleria/panorama-borgo.jpg" alt="Panorama di Siderno Superiore" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/siderno/galleria/vicoli-stretti.jpg" alt="Vicoli del centro storico" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/siderno/galleria/chiesa-san-nicola.jpg" alt="Chiesa di San Nicola di Bari" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/siderno/galleria/piazza-cavone.jpg" alt="Piazza Cavone con vista mare" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/siderno/galleria/palazzo-carafa.jpg" alt="Palazzo Carafa" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/siderno/galleria/tramonto-ionio.jpg" alt="Tramonto sul Mar Ionio" />
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- GALLERIA FOTO -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Galleria Fotografica</h2>
-          <div class="gallery">
-            <div class="gallery-item">
-              <img
-                src="../images/siderno/galleria/panorama-borgo.jpg"
-                alt="Panorama di Siderno Superiore"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/siderno/galleria/vicoli-stretti.jpg"
-                alt="Vicoli del centro storico"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/siderno/galleria/chiesa-san-nicola.jpg"
-                alt="Chiesa di San Nicola di Bari"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/siderno/galleria/piazza-cavone.jpg"
-                alt="Piazza Cavone con vista mare"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/siderno/galleria/palazzo-carafa.jpg"
-                alt="Palazzo Carafa"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/siderno/galleria/tramonto-ionio.jpg"
-                alt="Tramonto sul Mar Ionio"
-              />
-            </div>
+    <!-- INFO UTILI -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Info Utili</h2>
+        <div class="info-grid contact-grid">
+          <div class="info-card">
+            <i class="fas fa-car"></i>
+            <h4>Come Arrivare</h4>
+            <p>
+              <strong>In Auto:</strong> SS106 Jonica, uscita Siderno. Seguire
+              le indicazioni per Siderno Superiore (strada panoramica).<br />
+              Dista circa 10 km da Locri e 85 km da Reggio Calabria.<br />
+              Parcheggio disponibile ai piedi del borgo e in prossimità di
+              Piazza Cavone.
+            </p>
           </div>
-        </div>
-      </section>
 
-      <!-- INFO UTILI -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Info Utili</h2>
-          <div class="info-grid contact-grid">
-            <div class="info-card">
-              <i class="fas fa-car"></i>
-              <h4>Come Arrivare</h4>
-              <p>
-                <strong>In Auto:</strong> SS106 Jonica, uscita Siderno. Seguire
-                le indicazioni per Siderno Superiore (strada panoramica).<br />
-                Dista circa 10 km da Locri e 85 km da Reggio Calabria.<br />
-                Parcheggio disponibile ai piedi del borgo e in prossimità di
-                Piazza Cavone.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-globe"></i>
-              <h4>Comune e Informazioni</h4>
-              <p>
-                <strong>Comune di Siderno</strong><br />
-                Piazza Vittorio Emanuele III, 1<br />
-                89048 Siderno (RC)<br />
-                <strong>Tel:</strong> 0964 381220<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="http://www.comune.siderno.rc.it"
-                  target="_blank"
-                  style="
+          <div class="info-card">
+            <i class="fas fa-globe"></i>
+            <h4>Comune e Informazioni</h4>
+            <p>
+              <strong>Comune di Siderno</strong><br />
+              Piazza Vittorio Emanuele III, 1<br />
+              89048 Siderno (RC)<br />
+              <strong>Tel:</strong> 0964 381220<br />
+              <strong>Sito web:</strong>
+              <a href="http://www.comune.siderno.rc.it" target="_blank" style="
                     color: var(--accent);
                     text-decoration: none;
                     font-weight: 600;
-                  "
-                  >www.comune.siderno.rc.it</a
-                >
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-map-marked-alt"></i>
-              <h4>Visite Guidate</h4>
-              <p>
-                Per informazioni su visite guidate ed eventi culturali è possibile
-                contattare l’Ufficio Turistico Comunale (tel. 0964 381220) o la
-                Pro Loco Siderno (presso Piazza Cavone).<br />
-                Sono disponibili percorsi tematici: “Siderno Medievale”,
-                “I Palazzi Nobiliari”, “I Sapori della Locride”.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-leaf"></i>
-              <h4>Ente Parco Nazionale dell'Aspromonte</h4>
-              <p>
-                <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
-                Stefano Aspromonte (RC)<br />
-                <strong>Tel:</strong> 0965 743060<br />
-                <strong>Email:</strong>
-                info.posta@parconazionaleaspromonte.it<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="https://www.parconazionaleaspromonte.it"
-                  target="_blank"
-                  style="color: var(--accent)"
-                  >www.parconazionaleaspromonte.it</a
-                >
-              </p>
-            </div>
+                  ">www.comune.siderno.rc.it</a>
+            </p>
           </div>
-          <div class="btn-center">
-            <a href="../index.html#borghi" class="btn"
-              ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
-            >
+
+          <div class="info-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h4>Visite Guidate</h4>
+            <p>
+              Per informazioni su visite guidate ed eventi culturali è possibile
+              contattare l’Ufficio Turistico Comunale (tel. 0964 381220) o la
+              Pro Loco Siderno (presso Piazza Cavone).<br />
+              Sono disponibili percorsi tematici: “Siderno Medievale”,
+              “I Palazzi Nobiliari”, “I Sapori della Locride”.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-leaf"></i>
+            <h4>Ente Parco Nazionale dell'Aspromonte</h4>
+            <p>
+              <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
+              Stefano Aspromonte (RC)<br />
+              <strong>Tel:</strong> 0965 743060<br />
+              <strong>Email:</strong>
+              info.posta@parconazionaleaspromonte.it<br />
+              <strong>Sito web:</strong>
+              <a href="https://www.parconazionaleaspromonte.it" target="_blank"
+                style="color: var(--accent)">www.parconazionaleaspromonte.it</a>
+            </p>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>
-            <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
-            <a href="../index.html">Home</a>
-          </p>
-          <p>
-            &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
-            Zanotti. Tutti i diritti riservati.
-          </p>
-        </div>
-        <div class="copyright">
-          Sito realizzato dagli studenti del progetto scolastico
+        <div class="btn-center">
+          <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script>
-      // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>
+          <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
+          <a href="../index.html">Home</a>
+        </p>
+        <p>
+          &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
+          Zanotti. Tutti i diritti riservati.
+        </p>
+      </div>
+      <div class="copyright">
+        Sito realizzato dagli studenti del progetto scolastico
+      </div>
+    </div>
+  </footer>
 
-      window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-      });
-    </script>
-  </body>
+  <script>
+    // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+
 </html>

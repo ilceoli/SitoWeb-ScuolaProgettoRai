@@ -1,1245 +1,1174 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caulonia - Polo Tecnico Professionale Marconi</title>
-    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
-    <!-- Google Fonts e Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      /* ============================================
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caulonia - Polo Tecnico Professionale Marconi</title>
+  <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
+  <!-- Google Fonts e Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ============================================
            POLO TECNICO PROFESSIONALE - STYLE.CSS
            Design Elegante e Professionale
            ============================================ */
 
-      /* RESET E BASE */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    /* RESET E BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        color: #1a1a2e;
-        background-color: #fafbfc;
-        overflow-x: hidden;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background-color: #fafbfc;
+      overflow-x: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
-      /* ============================================
+    /* ============================================
            VARIABILI COLORE - PALETTE REFINED
            ============================================ */
-      :root {
-        --primary: #2c3e50;
-        --primary-light: #34495e;
-        --primary-dark: #1e2b3a;
-        --accent: #e67e22;
-        --accent-light: #f39c12;
-        --accent-dark: #c96e1c;
-        --secondary: #5c7c9a;
-        --gray-light: #f0f2f5;
-        --gray: #9ca3af;
-        --text-light: #6b7280;
-        --text-dark: #1f2937;
-        --white: #ffffff;
-        --off-white: #f8f9fa;
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-        --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
-        --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
-        --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-        --gradient-primary: linear-gradient(
-          135deg,
+    :root {
+      --primary: #2c3e50;
+      --primary-light: #34495e;
+      --primary-dark: #1e2b3a;
+      --accent: #e67e22;
+      --accent-light: #f39c12;
+      --accent-dark: #c96e1c;
+      --secondary: #5c7c9a;
+      --gray-light: #f0f2f5;
+      --gray: #9ca3af;
+      --text-light: #6b7280;
+      --text-dark: #1f2937;
+      --white: #ffffff;
+      --off-white: #f8f9fa;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+      --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+      --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+      --gradient-primary: linear-gradient(135deg,
           var(--primary) 0%,
-          var(--primary-light) 100%
-        );
-        --gradient-accent: linear-gradient(
-          135deg,
+          var(--primary-light) 100%);
+      --gradient-accent: linear-gradient(135deg,
           var(--accent) 0%,
-          var(--accent-light) 100%
-        );
-        --transition: 0.3s ease;
-        --transition-slow: 0.5s ease;
-      }
+          var(--accent-light) 100%);
+      --transition: 0.3s ease;
+      --transition-slow: 0.5s ease;
+    }
 
-      /* ============================================
+    /* ============================================
            LAYOUT GENERALE
            ============================================ */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-      /* ============================================
+    /* ============================================
            HEADER E NAVIGAZIONE
            ============================================ */
-      header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px) saturate(180%);
-        box-shadow: var(--shadow-sm);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        transition: all var(--transition);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all var(--transition);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      transition: padding var(--transition);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition);
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .logo h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      margin-top: 1px;
+    }
+
+    .back-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gray-light);
+      color: var(--text-dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+
+    .back-link a:hover {
+      background: var(--gradient-primary);
+      color: var(--white);
+      transform: translateX(-5px);
+    }
+
+    /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 0;
+      }
+    }
+
+    section:nth-child(even) {
+      background-color: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 60px;
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+           HERO SECTION
+           ============================================ */
+    .hero-borgo {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(15, 44, 74, 0.7) 0%,
+          rgba(26, 61, 92, 0.7) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-borgo .container {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .hero-borgo h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-borgo p {
+      font-size: 1.25rem;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      opacity: 0.95;
+      line-height: 1.8;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+    .content-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .content-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section.reverse {
+      direction: rtl;
+    }
+
+    .content-section.reverse>* {
+      direction: ltr;
+    }
+
+    .content-text {
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .content-text h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .content-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .content-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ============================================
+           INFO CARDS
+           ============================================ */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .info-grid.contact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .info-card i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .info-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+    .tradizioni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .tradizione-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      position: relative;
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .tradizione-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+
+    .tradizione-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .tradizione-card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tradizione-card i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      transition: transform var(--transition);
+    }
+
+    .tradizione-card:hover i {
+      transform: scale(1.1);
+    }
+
+    .tradizione-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .tradizione-card p {
+      color: var(--text-light);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+           GALLERY
+           ============================================ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 220px;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-slow);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.15);
+    }
+
+    /* ============================================
+           BUTTONS
+           ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-accent);
+      color: var(--text-dark);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all var(--transition);
+      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent);
+      transition: left 0.6s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+    }
+
+    .btn i {
+      transition: transform var(--transition);
+    }
+
+    .btn:hover i {
+      transform: translateX(5px);
+    }
+
+    .btn-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* ============================================
+           FOOTER
+           ============================================ */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 70px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .footer-content {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .footer-content p {
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-content a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .footer-content a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ============================================
+           RESPONSIVE
+           ============================================ */
+    @media (max-width: 768px) {
       .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-        transition: padding var(--transition);
+        padding: 32px 0;
       }
 
       .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: transform var(--transition);
+        gap: 8px;
       }
 
       .logo img {
-        height: 45px;
-        width: auto;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        height: 35px;
       }
 
       .logo h1 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
+        font-size: 1rem;
       }
 
       .logo span {
-        font-size: 0.7rem;
-        color: var(--text-light);
+        font-size: 0.6rem;
         display: block;
-        font-weight: 400;
-        letter-spacing: 0.3px;
-        margin-top: 1px;
+        opacity: 0.8;
       }
 
-      .back-link a {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--gray-light);
-        color: var(--text-dark);
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all var(--transition);
-      }
-
-      .back-link a:hover {
-        background: var(--gradient-primary);
-        color: var(--white);
-        transform: translateX(-5px);
-      }
-
-      /* ============================================
-           SEZIONI GENERALI
-           ============================================ */
-      section {
-        padding: 100px 0;
-        position: relative;
-      }
-
-      @media (max-width: 768px) {
-        section {
-          padding: 60px 0;
-        }
-      }
-
-      section:nth-child(even) {
-        background-color: var(--white);
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 40px;
-        letter-spacing: -0.5px;
-      }
-
-      .section-subtitle {
-        text-align: center;
-        color: var(--text-light);
-        margin-bottom: 60px;
-        font-size: 1.15rem;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      /* ============================================
-           HERO SECTION
-           ============================================ */
-      .hero-borgo {
-        position: relative;
-        height: 60vh;
-        min-height: 400px;
-        color: var(--white);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 44, 74, 0.7) 0%,
-          rgba(26, 61, 92, 0.7) 100%
-        );
-        z-index: 2;
-        pointer-events: none;
-      }
-
-      .hero-borgo .container {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-      }
-
-      .hero-borgo h2 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 24px;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .hero-borgo p {
-        font-size: 1.25rem;
-        max-width: 750px;
-        margin: 0 auto 40px;
-        opacity: 0.95;
-        line-height: 1.8;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
       .content-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-        margin-bottom: 60px;
-      }
-
-      .content-section:last-child {
-        margin-bottom: 0;
-      }
-
-      .content-section.reverse {
-        direction: rtl;
-      }
-
-      .content-section.reverse > * {
-        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        direction: ltr !important;
       }
 
       .content-text {
-        padding: 20px;
-        text-align: justify;
-      }
-
-      .content-text h3 {
-        font-size: 1.8rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .content-text p {
-        color: var(--text-light);
-        margin-bottom: 15px;
-        line-height: 1.8;
+        order: 1;
+        padding: 0;
       }
 
       .content-image {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        height: 350px;
-        background-size: cover;
-        background-position: center;
+        order: 2;
+        width: 100%;
       }
 
-      /* ============================================
-           INFO CARDS
-           ============================================ */
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin-top: 40px;
-      }
-
-      .info-grid.contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      }
-
-      .info-card {
-        background: var(--white);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        text-align: center;
-      }
-
-      .info-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .info-card i {
+      .hero-borgo h2 {
         font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 20px;
       }
 
-      .info-card h4 {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-bottom: 10px;
-        font-weight: 600;
+      .hero-borgo p {
+        font-size: 1.1rem;
       }
 
-      .info-card p {
-        color: var(--text-light);
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .logo h1 {
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      .logo span {
+        display: block;
+        font-size: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .logo img {
+        height: 28px;
+      }
+
+      .hero-borgo {
+        min-height: 250px;
+        height: 40vh;
+      }
+
+      .hero-borgo h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+      }
+
+      .hero-borgo p {
         font-size: 0.95rem;
         line-height: 1.6;
       }
 
-      /* ============================================
-           TRADITIONS GRID
-           ============================================ */
-      .tradizioni-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 32px;
-        margin-top: 40px;
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
       }
 
-      .tradizione-card {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        position: relative;
-        padding: 30px 24px;
-        text-align: center;
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
       }
 
-      .tradizione-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-        transform: scaleX(0);
-        transition: transform var(--transition);
-        transform-origin: left;
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover::before {
-        transform: scaleX(1);
+      .content-section {
+        gap: 25px;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover {
-        transform: translateY(-12px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .tradizione-card i {
-        font-size: 3rem;
-        color: var(--accent);
-        margin-bottom: 20px;
-        transition: transform var(--transition);
-      }
-
-      .tradizione-card:hover i {
-        transform: scale(1.1);
-      }
-
-      .tradizione-card h4 {
-        font-size: 1.3rem;
+      .content-text h3 {
+        font-size: 1.4rem;
         margin-bottom: 15px;
-        color: var(--primary);
-        font-weight: 600;
       }
 
-      .tradizione-card p {
-        color: var(--text-light);
-        line-height: 1.7;
-        font-size: 0.95rem;
+      .content-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
       }
 
-      /* ============================================
-           GALLERY
-           ============================================ */
+      .content-image {
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      .info-grid,
+      .info-grid.contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .info-card {
+        padding: 20px;
+      }
+
+      .info-card i {
+        font-size: 2rem;
+      }
+
       .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        margin-top: 50px;
+        gap: 12px;
+        margin-top: 30px;
       }
 
       .gallery-item {
-        border-radius: 16px;
-        overflow: hidden;
-        height: 220px;
-        box-shadow: var(--shadow-md);
-        transition: all var(--transition-slow);
-        position: relative;
+        height: 180px;
       }
 
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.8s;
+      .back-link a {
+        padding: 8px 24px;
+        font-size: 0.75rem;
+        gap: 5px;
       }
 
-      .gallery-item:hover img {
-        transform: scale(1.15);
+      .back-link i {
+        font-size: 0.7rem;
       }
+    }
+  </style>
+</head>
 
-      /* ============================================
-           BUTTONS
-           ============================================ */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: var(--gradient-accent);
-        color: var(--text-dark);
-        padding: 14px 32px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all var(--transition);
-        box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
-        border: none;
-        position: relative;
-        overflow: hidden;
-        justify-content: center;
-      }
-
-      .btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: left 0.6s;
-      }
-
-      .btn:hover::before {
-        left: 100%;
-      }
-
-      .btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
-      }
-
-      .btn i {
-        transition: transform var(--transition);
-      }
-
-      .btn:hover i {
-        transform: translateX(5px);
-      }
-
-      .btn-center {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      /* ============================================
-           FOOTER
-           ============================================ */
-      footer {
-        background: var(--primary-dark);
-        color: rgba(255, 255, 255, 0.8);
-        padding: 70px 0 30px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-      }
-
-      .footer-content {
-        text-align: center;
-        padding-bottom: 30px;
-      }
-
-      .footer-content p {
-        margin-bottom: 15px;
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .footer-content a {
-        color: var(--accent);
-        text-decoration: none;
-        transition: all var(--transition);
-      }
-
-      .footer-content a:hover {
-        color: var(--white);
-      }
-
-      .copyright {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 30px;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      /* ============================================
-           RESPONSIVE
-           ============================================ */
-      @media (max-width: 768px) {
-        .header-content {
-          padding: 32px 0;
-        }
-
-        .logo {
-          gap: 8px;
-        }
-
-        .logo img {
-          height: 35px;
-        }
-
-        .logo h1 {
-          font-size: 1rem;
-        }
-
-        .logo span {
-          font-size: 0.6rem;
-          display: block;
-          opacity: 0.8;
-        }
-
-        .content-section {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          direction: ltr !important;
-        }
-
-        .content-text {
-          order: 1;
-          padding: 0;
-        }
-
-        .content-image {
-          order: 2;
-          width: 100%;
-        }
-
-        .hero-borgo h2 {
-          font-size: 2.5rem;
-        }
-
-        .hero-borgo p {
-          font-size: 1.1rem;
-        }
-
-        .section-title {
-          font-size: 2.2rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          padding: 0 20px;
-        }
-
-        .logo h1 {
-          font-size: 0.8rem;
-          white-space: nowrap;
-        }
-
-        .logo span {
-          display: block;
-          font-size: 0.5rem;
-          opacity: 0.9;
-        }
-
-        .logo img {
-          height: 28px;
-        }
-
-        .hero-borgo {
-          min-height: 250px;
-          height: 40vh;
-        }
-
-        .hero-borgo h2 {
-          font-size: 1.8rem;
-          margin-bottom: 12px;
-        }
-
-        .hero-borgo p {
-          font-size: 0.95rem;
-          line-height: 1.6;
-        }
-
-        .btn {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-
-        .section-title {
-          font-size: 1.6rem;
-          margin-bottom: 30px;
-        }
-
-        .section-subtitle {
-          font-size: 1rem;
-          margin-bottom: 40px;
-        }
-
-        .content-section {
-          gap: 25px;
-          margin-bottom: 40px;
-        }
-
-        .content-text h3 {
-          font-size: 1.4rem;
-          margin-bottom: 15px;
-        }
-
-        .content-text p {
-          font-size: 0.9rem;
-          line-height: 1.6;
-        }
-
-        .content-image {
-          height: 250px;
-          border-radius: 12px;
-        }
-
-        .info-grid,
-        .info-grid.contact-grid {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .info-card {
-          padding: 20px;
-        }
-
-        .info-card i {
-          font-size: 2rem;
-        }
-
-        .gallery {
-          gap: 12px;
-          margin-top: 30px;
-        }
-
-        .gallery-item {
-          height: 180px;
-        }
-
-        .back-link a {
-          padding: 8px 24px;
-          font-size: 0.75rem;
-          gap: 5px;
-        }
-
-        .back-link i {
-          font-size: 0.7rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="container header-content">
-        <div class="logo">
-          <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
-          <div>
-            <h1>Polo Tecnico Professionale</h1>
-            <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-          </div>
-        </div>
-        <div class="back-link">
-          <a href="../index.html#borghi"
-            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
-          >
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+        <div>
+          <h1>Polo Tecnico Professionale</h1>
+          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
         </div>
       </div>
-    </header>
+      <div class="back-link">
+        <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section
-        class="hero-borgo"
-        style="
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-borgo" style="
           background-image: url(&quot;../images/caulonia/caulonia-panorama.jpg&quot;);
           background-size: cover;
           background-position: center;
-        "
-      >
-        <div class="hero-overlay"></div>
-        <div class="container">
-          <h2>Caulonia</h2>
-          <p>
-            Culla della tarantella calabrese, tra il fascino del borgo medievale
-            e le spiagge dorate della Costa dei Gelsomini.
-          </p>
-        </div>
-      </section>
+        ">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <h2>Caulonia</h2>
+        <p>
+          Culla della tarantella calabrese, tra il fascino del borgo medievale
+          e le spiagge dorate della Costa dei Gelsomini.
+        </p>
+      </div>
+    </section>
 
-      <!-- INFO CARDS -->
-      <section>
-        <div class="container">
-          <div class="info-grid">
-            <div class="info-card">
-              <i class="fas fa-mountain"></i>
-              <h4>Altitudine</h4>
-              <p>300 m s.l.m.</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-map-pin"></i>
-              <h4>Antico Nome</h4>
-              <p>Castelvetere</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-history"></i>
-              <h4>Origine Nome</h4>
-              <p>Richiama l'antica Kaulon (greca)</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-music"></i>
-              <h4>Evento Celebre</h4>
-              <p>Kaulonia Tarantella Festival</p>
-            </div>
+    <!-- INFO CARDS -->
+    <section>
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-mountain"></i>
+            <h4>Altitudine</h4>
+            <p>300 m s.l.m.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-map-pin"></i>
+            <h4>Antico Nome</h4>
+            <p>Castelvetere</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-history"></i>
+            <h4>Origine Nome</h4>
+            <p>Richiama l'antica Kaulon (greca)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-music"></i>
+            <h4>Evento Celebre</h4>
+            <p>Kaulonia Tarantella Festival</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- MACRO-SEZIONE 1: Storia e Identità (da Castelvetere a Caulonia + borgo storico) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Storia e Identità del Borgo</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Da Castelvetere a Caulonia</h3>
-              <p>
-                Il borgo di Caulonia sorge su uno sperone roccioso a circa 300
-                metri di altitudine, tra la valle dei torrenti Stilaro e Allaro
-                e la costa ionica. Fino al 1862 era denominato Castelvetere
-                (Castrum vetus = vecchio castello), di cui rimangono pochi
-                ruderi che evocano l'immagine di una roccaforte medievale. Il
-                nome attuale fu scelto in onore dell'antica città greca di
-                Kaulon, le cui rovine si trovano nel vicino comune di
-                Monasterace Marina, a pochi chilometri da Caulonia, dopo che per
-                secoli si era erroneamente creduto che sorgesse proprio qui.
-              </p>
-              <p>
-                Secondo la tradizione, i superstiti della distruzione di Kaulon
-                ad opera di Dionigi di Siracusa nel 389 a.C. si rifugiarono
-                nell'entroterra, dando vita all'insediamento che secoli dopo
-                sarebbe diventato Castelvetere. Oggi Caulonia è conosciuta come
-                una delle culle della tarantella calabrese, e ogni estate ospita
-                il celebre Kaulonia Tarantella Festival, attirando visitatori da
-                tutta Italia.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- MACRO-SEZIONE 1: Storia e Identità (da Castelvetere a Caulonia + borgo storico) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Storia e Identità del Borgo</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Da Castelvetere a Caulonia</h3>
+            <p>
+              Il borgo di Caulonia sorge su uno sperone roccioso a circa 300
+              metri di altitudine, tra la valle dei torrenti Stilaro e Allaro
+              e la costa ionica. Fino al 1862 era denominato Castelvetere
+              (Castrum vetus = vecchio castello), di cui rimangono pochi
+              ruderi che evocano l'immagine di una roccaforte medievale. Il
+              nome attuale fu scelto in onore dell'antica città greca di
+              Kaulon, le cui rovine si trovano nel vicino comune di
+              Monasterace Marina, a pochi chilometri da Caulonia, dopo che per
+              secoli si era erroneamente creduto che sorgesse proprio qui.
+            </p>
+            <p>
+              Secondo la tradizione, i superstiti della distruzione di Kaulon
+              ad opera di Dionigi di Siracusa nel 389 a.C. si rifugiarono
+              nell'entroterra, dando vita all'insediamento che secoli dopo
+              sarebbe diventato Castelvetere. Oggi Caulonia è conosciuta come
+              una delle culle della tarantella calabrese, e ogni estate ospita
+              il celebre Kaulonia Tarantella Festival, attirando visitatori da
+              tutta Italia.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url(&quot;../images/caulonia/caulonia-borgo.jpg&quot;);
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url(&quot;../images/caulonia/vicoli.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Vicoli, Porte e Palazzi</h3>
-              <p>
-                Il centro storico di Caulonia è un labirinto di stretti vicoli
-                chiamati "vinedi", che si inerpicano lungo il colle. Sono ancora
-                visibili quattro porte medievali della cinta muraria, ormai
-                inglobate nel tessuto urbano: Porta Sant'Antonio (o del
-                Salvatore) in arenaria, Porta Pusterla in pietra e mattoni,
-                Porta Amusa e Porta Allaro.
-              </p>
-              <p>
-                Tra i palazzi nobiliari spicca Palazzo Asciutti-Hyeraci, detto
-                "Palazzo dei Diavoli", la cui facciata è decorata con figure
-                mostruose in altorilievo. Le piazze storiche – Piazza Mese
-                (centro religioso), Piazza Seggio (centro politico) e Piazza
-                Baglio (centro commerciale) – conservano l'atmosfera dell'antica
-                Castelvetere, raccontando la vita sociale e amministrativa del
-                borgo.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Vicoli, Porte e Palazzi</h3>
+            <p>
+              Il centro storico di Caulonia è un labirinto di stretti vicoli
+              chiamati "vinedi", che si inerpicano lungo il colle. Sono ancora
+              visibili quattro porte medievali della cinta muraria, ormai
+              inglobate nel tessuto urbano: Porta Sant'Antonio (o del
+              Salvatore) in arenaria, Porta Pusterla in pietra e mattoni,
+              Porta Amusa e Porta Allaro.
+            </p>
+            <p>
+              Tra i palazzi nobiliari spicca Palazzo Asciutti-Hyeraci, detto
+              "Palazzo dei Diavoli", la cui facciata è decorata con figure
+              mostruose in altorilievo. Le piazze storiche – Piazza Mese
+              (centro religioso), Piazza Seggio (centro politico) e Piazza
+              Baglio (centro commerciale) – conservano l'atmosfera dell'antica
+              Castelvetere, raccontando la vita sociale e amministrativa del
+              borgo.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Le Radici dell'Antica Kaulon</h2>
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Le Radici dell'Antica Kaulon</h2>
 
-          <!-- Primo blocco: testo a sinistra, immagine a destra -->
-          <div class="content-section">
-            <div
-              class="content-image"
-              style="
+        <!-- Primo blocco: testo a sinistra, immagine a destra -->
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url(&quot;../images/caulonia/chiesa-madre.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>La Distruzione e la Memoria</h3>
-              <p>
-                L'antica città greca di Kaulon fu uno dei centri più importanti
-                della Magna Grecia. Nel 389 a.C., dopo aver sconfitto la Lega
-                Italiota, il tiranno di Siracusa Dionigi espugnò e distrusse
-                Kaulon, donando il suo territorio a Locri Epizefiri, città a lui
-                alleata. I superstiti si rifugiarono nell'entroterra, fondando
-                l'insediamento che secoli dopo sarebbe diventato Castelvetere.
-              </p>
-              <p>
-                Il nome "Caulonia", adottato nel 1863, è un tributo alla gloria
-                del passato greco. Ancora oggi, l'archeologia locale custodisce
-                tracce di quell'antica civiltà, mentre il patrimonio artistico
-                del borgo racconta l'evoluzione attraverso i secoli, con
-                affreschi bizantini e chiese di pregio come la Chiesa
-                dell'Immacolata Concezione e la Chiesa Matrice, con il suo
-                caratteristico campanile.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>La Distruzione e la Memoria</h3>
+            <p>
+              L'antica città greca di Kaulon fu uno dei centri più importanti
+              della Magna Grecia. Nel 389 a.C., dopo aver sconfitto la Lega
+              Italiota, il tiranno di Siracusa Dionigi espugnò e distrusse
+              Kaulon, donando il suo territorio a Locri Epizefiri, città a lui
+              alleata. I superstiti si rifugiarono nell'entroterra, fondando
+              l'insediamento che secoli dopo sarebbe diventato Castelvetere.
+            </p>
+            <p>
+              Il nome "Caulonia", adottato nel 1863, è un tributo alla gloria
+              del passato greco. Ancora oggi, l'archeologia locale custodisce
+              tracce di quell'antica civiltà, mentre il patrimonio artistico
+              del borgo racconta l'evoluzione attraverso i secoli, con
+              affreschi bizantini e chiese di pregio come la Chiesa
+              dell'Immacolata Concezione e la Chiesa Matrice, con il suo
+              caratteristico campanile.
+            </p>
           </div>
+        </div>
 
-          <!-- Secondo blocco: immagine a sinistra, testo a destra (reverse) -->
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>La Tradizione Religiosa</h3>
-              <p>
-                Di notevole interesse è la statua lignea del "Cristo alla
-                Colonna" conservata nella Chiesa del Carmine, un capolavoro
-                risalente al XVII-XVIII secolo, secondo la tradizione scolpito
-                in un unico blocco di legno d'olivo, che richiama la grande
-                tradizione scultorea napoletana del Seicento. Il rito della
-                "Caracolo" (dall'arabo kharara, "giro"), una lunga processione
-                che si svolge il Sabato Santo, coinvolge le due
-                arciconfraternite dell'Immacolata e del Rosario in un percorso
-                immutato da secoli, rievocando antichi riti di purificazione e
-                comunità.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+        <!-- Secondo blocco: immagine a sinistra, testo a destra (reverse) -->
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>La Tradizione Religiosa</h3>
+            <p>
+              Di notevole interesse è la statua lignea del "Cristo alla
+              Colonna" conservata nella Chiesa del Carmine, un capolavoro
+              risalente al XVII-XVIII secolo, secondo la tradizione scolpito
+              in un unico blocco di legno d'olivo, che richiama la grande
+              tradizione scultorea napoletana del Seicento. Il rito della
+              "Caracolo" (dall'arabo kharara, "giro"), una lunga processione
+              che si svolge il Sabato Santo, coinvolge le due
+              arciconfraternite dell'Immacolata e del Rosario in un percorso
+              immutato da secoli, rievocando antichi riti di purificazione e
+              comunità.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url(&quot;../images/caulonia/cristo-colonna.jpg&quot;);
-              "
-            ></div>
-          </div>
+              "></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- MACRO-SEZIONE 3: La Tarantella e il Festival -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">La Tarantella e il Festival</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Kaulonia Tarantella Festival</h3>
-              <p>
-                Dal 1999, ogni anno ad agosto, il centro storico di Caulonia si
-                anima con il Kaulonia Tarantella Festival, il più importante
-                evento di musica popolare della Calabria. L'edizione 2023, la
-                XXV, ha ospitato artisti del calibro di Max Gazzè ed Eugenio
-                Bennato, richiamando migliaia di appassionati da tutta Italia.
-              </p>
-              <p>
-                Il festival propone concerti, corsi gratuiti di tarantella,
-                laboratori di liuteria calabrese e approfondimenti culturali. Le
-                piazze Mese e Seggio diventano palcoscenici a cielo aperto,
-                mentre lo "Sperone di Caulonia" accoglie i balli fino a tarda
-                notte. Un evento imperdibile per scoprire il ritmo travolgente
-                di questa tradizione secolare.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- MACRO-SEZIONE 3: La Tarantella e il Festival -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">La Tarantella e il Festival</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Kaulonia Tarantella Festival</h3>
+            <p>
+              Dal 1999, ogni anno ad agosto, il centro storico di Caulonia si
+              anima con il Kaulonia Tarantella Festival, il più importante
+              evento di musica popolare della Calabria. L'edizione 2023, la
+              XXV, ha ospitato artisti del calibro di Max Gazzè ed Eugenio
+              Bennato, richiamando migliaia di appassionati da tutta Italia.
+            </p>
+            <p>
+              Il festival propone concerti, corsi gratuiti di tarantella,
+              laboratori di liuteria calabrese e approfondimenti culturali. Le
+              piazze Mese e Seggio diventano palcoscenici a cielo aperto,
+              mentre lo "Sperone di Caulonia" accoglie i balli fino a tarda
+              notte. Un evento imperdibile per scoprire il ritmo travolgente
+              di questa tradizione secolare.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url(&quot;../images/caulonia/tarantella-festival.jpg&quot;);
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url(&quot;../images/caulonia/tarantella-danza.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>La Danza e la Tradizione</h3>
-              <p>
-                La tarantella calabrese non è solo musica, ma un linguaggio che
-                unisce corpo e anima. Nata come rito terapeutico nel tarantismo,
-                si è trasformata nei secoli in una danza di festa e
-                aggregazione. I ritmi incalzanti della lira e della zampogna,
-                accompagnati dal tamburello, guidano i ballerini in coreografie
-                collettive che animano le piazze durante le sagre e le
-                ricorrenze patronali.
-              </p>
-              <p>
-                Il Festival di Caulonia mantiene viva questa tradizione,
-                offrendo spazi di apprendimento e spettacolo che coinvolgono
-                generazioni diverse, contribuendo a far conoscere il patrimonio
-                immateriale della Calabria a livello nazionale e internazionale.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>La Danza e la Tradizione</h3>
+            <p>
+              La tarantella calabrese non è solo musica, ma un linguaggio che
+              unisce corpo e anima. Nata come rito terapeutico nel tarantismo,
+              si è trasformata nei secoli in una danza di festa e
+              aggregazione. I ritmi incalzanti della lira e della zampogna,
+              accompagnati dal tamburello, guidano i ballerini in coreografie
+              collettive che animano le piazze durante le sagre e le
+              ricorrenze patronali.
+            </p>
+            <p>
+              Il Festival di Caulonia mantiene viva questa tradizione,
+              offrendo spazi di apprendimento e spettacolo che coinvolgono
+              generazioni diverse, contribuendo a far conoscere il patrimonio
+              immateriale della Calabria a livello nazionale e internazionale.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- MACRO-SEZIONE 4: La Costa Ionica e le Spiagge -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">La Costa Ionica e le Spiagge</h2>
-          <div class="content-section">
-            <div
-              class="content-image"
-              style="
+    <!-- MACRO-SEZIONE 4: La Costa Ionica e le Spiagge -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">La Costa Ionica e le Spiagge</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url(&quot;../images/caulonia/spiaggia-bandiera-blu.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Spiagge Bandiera Blu</h3>
-              <p>
-                Caulonia Marina è una delle località calabresi insignite della
-                Bandiera Blu per la qualità delle acque e dei servizi. La
-                spiaggia, caratterizzata in alcuni tratti da dune sabbiose,
-                rientra in un'area dove talvolta si registra la nidificazione
-                delle tartarughe Caretta caretta, monitorata da associazioni
-                ambientaliste.
-              </p>
-              <p>
-                La frazione costiera è collegata al borgo storico dalla strada
-                provinciale 88, che percorre un paesaggio collinare punteggiato
-                da uliveti e agrumeti. Un murales intitolato "Teatro del mare"
-                accoglie i visitatori all'ingresso della spiaggia, introducendo
-                a una distesa di sabbia finissima e al blu dei fondali.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Spiagge Bandiera Blu</h3>
+            <p>
+              Caulonia Marina è una delle località calabresi insignite della
+              Bandiera Blu per la qualità delle acque e dei servizi. La
+              spiaggia, caratterizzata in alcuni tratti da dune sabbiose,
+              rientra in un'area dove talvolta si registra la nidificazione
+              delle tartarughe Caretta caretta, monitorata da associazioni
+              ambientaliste.
+            </p>
+            <p>
+              La frazione costiera è collegata al borgo storico dalla strada
+              provinciale 88, che percorre un paesaggio collinare punteggiato
+              da uliveti e agrumeti. Un murales intitolato "Teatro del mare"
+              accoglie i visitatori all'ingresso della spiaggia, introducendo
+              a una distesa di sabbia finissima e al blu dei fondali.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Torre Camillari e il Territorio</h3>
-              <p>
-                Lungo la costa si erge la Torre Camillari, una delle 72 torri di
-                avvistamento fatte costruire nel XVI secolo dal marchese
-                Fabrizio Pignatelli per difendersi dalle incursioni saracene.
-                L'entroterra, ricco di fiumare (Allaro, Amusa, Precariti), offre
-                itinerari naturalistici tra boschi di leccio e castagno, che
-                degradano dolcemente verso il mare, creando un paesaggio
-                variegato e affascinante.
-              </p>
-              <p>
-                I sentieri che costeggiano le gole e i corsi d'acqua permettono
-                di scoprire antichi mulini, chiese rupestri e panorami
-                mozzafiato, rendendo Caulonia una meta ideale per chi ama il
-                trekking e la natura incontaminata.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Torre Camillari e il Territorio</h3>
+            <p>
+              Lungo la costa si erge la Torre Camillari, una delle 72 torri di
+              avvistamento fatte costruire nel XVI secolo dal marchese
+              Fabrizio Pignatelli per difendersi dalle incursioni saracene.
+              L'entroterra, ricco di fiumare (Allaro, Amusa, Precariti), offre
+              itinerari naturalistici tra boschi di leccio e castagno, che
+              degradano dolcemente verso il mare, creando un paesaggio
+              variegato e affascinante.
+            </p>
+            <p>
+              I sentieri che costeggiano le gole e i corsi d'acqua permettono
+              di scoprire antichi mulini, chiese rupestri e panorami
+              mozzafiato, rendendo Caulonia una meta ideale per chi ama il
+              trekking e la natura incontaminata.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url(&quot;../images/caulonia/torre-camillari.jpg&quot;);
-              "
-            ></div>
+              "></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Tradizioni e Cultura</h2>
+        <div class="tradizioni-grid">
+          <div class="tradizione-card">
+            <i class="fas fa-music"></i>
+            <h4>Tarantella Calabrese</h4>
+            <p>
+              Caulonia è la culla della tarantella calabrese. Il ritmo
+              incalzante della lira e della zampogna accompagna ancora oggi le
+              feste paesane e il celebre festival estivo, che da 25 anni
+              richiama appassionati da tutta Italia.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-utensils"></i>
+            <h4>Gastronomia Locale</h4>
+            <p>
+              Tra le specialità: i "nguti" (biscotti pasquali con uovo sodo),
+              i "pitti i San Martinu" (dolci natalizi a base di frutta secca),
+              la 'nduja, i formaggi di capra e il vino cotto. Un patrimonio di
+              sapori autentici legati alla tradizione contadina.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-flag"></i>
+            <h4>La Repubblica Rossa</h4>
+            <p>
+              Nel marzo 1945 Caulonia fu teatro dell'occupazione delle terre
+              da parte di contadini e braccianti, un episodio noto come
+              "Repubblica Rossa", che durò quattro giorni e segnò la storia
+              sociale del dopoguerra calabrese.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-hiking"></i>
+            <h4>Escursioni e Natura</h4>
+            <p>
+              Il territorio offre percorsi tra le gole delle fiumare, il
+              Monastero di Sant'Ilarione e il Santuario della Madonna di
+              Crochi. Un'area ideale per trekking, birdwatching e scoperta di
+              borghi abbandonati immersi nel verde.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Tradizioni e Cultura</h2>
-          <div class="tradizioni-grid">
-            <div class="tradizione-card">
-              <i class="fas fa-music"></i>
-              <h4>Tarantella Calabrese</h4>
-              <p>
-                Caulonia è la culla della tarantella calabrese. Il ritmo
-                incalzante della lira e della zampogna accompagna ancora oggi le
-                feste paesane e il celebre festival estivo, che da 25 anni
-                richiama appassionati da tutta Italia.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-utensils"></i>
-              <h4>Gastronomia Locale</h4>
-              <p>
-                Tra le specialità: i "nguti" (biscotti pasquali con uovo sodo),
-                i "pitti i San Martinu" (dolci natalizi a base di frutta secca),
-                la 'nduja, i formaggi di capra e il vino cotto. Un patrimonio di
-                sapori autentici legati alla tradizione contadina.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-flag"></i>
-              <h4>La Repubblica Rossa</h4>
-              <p>
-                Nel marzo 1945 Caulonia fu teatro dell'occupazione delle terre
-                da parte di contadini e braccianti, un episodio noto come
-                "Repubblica Rossa", che durò quattro giorni e segnò la storia
-                sociale del dopoguerra calabrese.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-hiking"></i>
-              <h4>Escursioni e Natura</h4>
-              <p>
-                Il territorio offre percorsi tra le gole delle fiumare, il
-                Monastero di Sant'Ilarione e il Santuario della Madonna di
-                Crochi. Un'area ideale per trekking, birdwatching e scoperta di
-                borghi abbandonati immersi nel verde.
-              </p>
-            </div>
+    <!-- GALLERIA FOTO -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Galleria Fotografica</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="../images/caulonia/galleria/caulonia-panorama.jpg" alt="Panorama del borgo storico" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/caulonia/galleria/porta-santantonio.jpg" alt="Porta Sant'Antonio" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/caulonia/galleria/chiesa-madre.jpg" alt="Chiesa Matrice e campanile" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/caulonia/galleria/spiaggia-caulonia.jpg" alt="Spiaggia di Caulonia Marina" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/caulonia/galleria/tarantella-festival.jpg" alt="Kaulonia Tarantella Festival" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/caulonia/galleria/vicoli-stretti.jpg" alt="Vicoli del centro storico" />
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- GALLERIA FOTO -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Galleria Fotografica</h2>
-          <div class="gallery">
-            <div class="gallery-item">
-              <img
-                src="../images/caulonia/galleria/caulonia-panorama.jpg"
-                alt="Panorama del borgo storico"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/caulonia/galleria/porta-santantonio.jpg"
-                alt="Porta Sant'Antonio"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/caulonia/galleria/chiesa-madre.jpg"
-                alt="Chiesa Matrice e campanile"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/caulonia/galleria/spiaggia-caulonia.jpg"
-                alt="Spiaggia di Caulonia Marina"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/caulonia/galleria/tarantella-festival.jpg"
-                alt="Kaulonia Tarantella Festival"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/caulonia/galleria/vicoli-stretti.jpg"
-                alt="Vicoli del centro storico"
-              />
-            </div>
+    <!-- INFO UTILI -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Info Utili</h2>
+        <div class="info-grid contact-grid">
+          <div class="info-card">
+            <i class="fas fa-car"></i>
+            <h4>Come Arrivare</h4>
+            <p>
+              <strong>In Auto:</strong> SS106 Jonica, uscita Caulonia. Seguire
+              le indicazioni per il centro storico (SP 88).<br />
+              Dista circa 20 km da Siderno e 55 km da Reggio Calabria.<br />
+              Parcheggio disponibile in diverse aree.
+            </p>
           </div>
-        </div>
-      </section>
 
-      <!-- INFO UTILI -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Info Utili</h2>
-          <div class="info-grid contact-grid">
-            <div class="info-card">
-              <i class="fas fa-car"></i>
-              <h4>Come Arrivare</h4>
-              <p>
-                <strong>In Auto:</strong> SS106 Jonica, uscita Caulonia. Seguire
-                le indicazioni per il centro storico (SP 88).<br />
-                Dista circa 20 km da Siderno e 55 km da Reggio Calabria.<br />
-                Parcheggio disponibile in diverse aree.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-globe"></i>
-              <h4>Comune e Informazioni</h4>
-              <p>
-                <strong>Comune di Caulonia</strong><br />
-                Via Roma<br />
-                89041 Caulonia (RC)<br />
-                <strong>Centralino:</strong> 0964 86112<br />
-                <strong>Ufficio Tecnico:</strong> 0964 861697<br />
-                <strong>Email:</strong>
-                <a
-                  href="mailto:tecnico@comune.caulonia.rc.it"
-                  style="color: var(--text-light); text-decoration: none"
-                  >tecnico@comune.caulonia.rc.it</a
-                ><br />
-                <strong>Sito web:</strong>
-                <a
-                  href="http://www.comune.caulonia.rc.it"
-                  target="_blank"
-                  style="
+          <div class="info-card">
+            <i class="fas fa-globe"></i>
+            <h4>Comune e Informazioni</h4>
+            <p>
+              <strong>Comune di Caulonia</strong><br />
+              Via Roma<br />
+              89041 Caulonia (RC)<br />
+              <strong>Centralino:</strong> 0964 86112<br />
+              <strong>Ufficio Tecnico:</strong> 0964 861697<br />
+              <strong>Email:</strong>
+              <a href="mailto:tecnico@comune.caulonia.rc.it"
+                style="color: var(--text-light); text-decoration: none">tecnico@comune.caulonia.rc.it</a><br />
+              <strong>Sito web:</strong>
+              <a href="http://www.comune.caulonia.rc.it" target="_blank" style="
                     color: var(--accent);
                     text-decoration: none;
                     font-weight: 600;
-                  "
-                  >www.comune.caulonia.rc.it</a
-                ><br />
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-music"></i>
-              <h4>Kaulonia Tarantella Festival</h4>
-              <p>
-                <strong>Periodo:</strong> Agosto (fine mese)<br />
-                <strong>Luogo:</strong> Centro storico di Caulonia<br />
-                <strong>Info:</strong> Contattare il Comune di Caulonia<br />
-                <small
-                  >Dal 1999, una delle più importanti manifestazioni di musica
-                  popolare in Italia</small
-                >
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-train"></i>
-              <h4>Trasporti</h4>
-              <p>
-                <strong>Stazione Ferroviaria:</strong> Caulonia Marina (linea
-                Jonica Reggio Calabria-Taranto)<br />
-                <strong>Autobus:</strong> Linee regionali da Reggio Calabria e
-                Siderno<br />
-                <strong>Trasporto Locale:</strong> Servizio taxi disponibile su
-                prenotazione<br />
-                <small
-                  >Fermate principali: Caulonia Centro, Caulonia Marina</small
-                >
-              </p>
-            </div>
+                  ">www.comune.caulonia.rc.it</a><br />
+            </p>
           </div>
-          <div class="btn-center">
-            <a href="../index.html#borghi" class="btn"
-              ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
-            >
+
+          <div class="info-card">
+            <i class="fas fa-music"></i>
+            <h4>Kaulonia Tarantella Festival</h4>
+            <p>
+              <strong>Periodo:</strong> Agosto (fine mese)<br />
+              <strong>Luogo:</strong> Centro storico di Caulonia<br />
+              <strong>Info:</strong> Contattare il Comune di Caulonia<br />
+              <small>Dal 1999, una delle più importanti manifestazioni di musica
+                popolare in Italia</small>
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-train"></i>
+            <h4>Trasporti</h4>
+            <p>
+              <strong>Stazione Ferroviaria:</strong> Caulonia Marina (linea
+              Jonica Reggio Calabria-Taranto)<br />
+              <strong>Autobus:</strong> Linee regionali da Reggio Calabria e
+              Siderno<br />
+              <strong>Trasporto Locale:</strong> Servizio taxi disponibile su
+              prenotazione<br />
+              <small>Fermate principali: Caulonia Centro, Caulonia Marina</small>
+            </p>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>
-            <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
-            <a href="../index.html">Home</a>
-          </p>
-          <p>
-            &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
-            Zanotti. Tutti i diritti riservati.
-          </p>
-        </div>
-        <div class="copyright">
-          Sito realizzato dagli studenti del progetto scolastico
+        <div class="btn-center">
+          <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script>
-      // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>
+          <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
+          <a href="../index.html">Home</a>
+        </p>
+        <p>
+          &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
+          Zanotti. Tutti i diritti riservati.
+        </p>
+      </div>
+      <div class="copyright">
+        Sito realizzato dagli studenti del progetto scolastico
+      </div>
+    </div>
+  </footer>
 
-      window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-      });
-    </script>
-  </body>
+  <script>
+    // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+
 </html>

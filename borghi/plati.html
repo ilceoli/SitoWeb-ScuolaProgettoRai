@@ -1,1239 +1,1169 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Platì - Polo Tecnico Professionale Marconi</title>
-    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
-    <!-- Google Fonts e Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      /* ============================================
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platì - Polo Tecnico Professionale Marconi</title>
+  <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
+  <!-- Google Fonts e Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ============================================
            POLO TECNICO PROFESSIONALE - STYLE.CSS
            Design Elegante e Professionale
            ============================================ */
 
-      /* RESET E BASE */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    /* RESET E BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        color: #1a1a2e;
-        background-color: #fafbfc;
-        overflow-x: hidden;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background-color: #fafbfc;
+      overflow-x: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
-      /* ============================================
+    /* ============================================
            VARIABILI COLORE - PALETTE REFINED
            ============================================ */
-      :root {
-        --primary: #2c3e50;
-        --primary-light: #34495e;
-        --primary-dark: #1e2b3a;
-        --accent: #e67e22;
-        --accent-light: #f39c12;
-        --accent-dark: #c96e1c;
-        --secondary: #5c7c9a;
-        --gray-light: #f0f2f5;
-        --gray: #9ca3af;
-        --text-light: #6b7280;
-        --text-dark: #1f2937;
-        --white: #ffffff;
-        --off-white: #f8f9fa;
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-        --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
-        --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
-        --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-        --gradient-primary: linear-gradient(
-          135deg,
+    :root {
+      --primary: #2c3e50;
+      --primary-light: #34495e;
+      --primary-dark: #1e2b3a;
+      --accent: #e67e22;
+      --accent-light: #f39c12;
+      --accent-dark: #c96e1c;
+      --secondary: #5c7c9a;
+      --gray-light: #f0f2f5;
+      --gray: #9ca3af;
+      --text-light: #6b7280;
+      --text-dark: #1f2937;
+      --white: #ffffff;
+      --off-white: #f8f9fa;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+      --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+      --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+      --gradient-primary: linear-gradient(135deg,
           var(--primary) 0%,
-          var(--primary-light) 100%
-        );
-        --gradient-accent: linear-gradient(
-          135deg,
+          var(--primary-light) 100%);
+      --gradient-accent: linear-gradient(135deg,
           var(--accent) 0%,
-          var(--accent-light) 100%
-        );
-        --transition: 0.3s ease;
-        --transition-slow: 0.5s ease;
-      }
+          var(--accent-light) 100%);
+      --transition: 0.3s ease;
+      --transition-slow: 0.5s ease;
+    }
 
-      /* ============================================
+    /* ============================================
            LAYOUT GENERALE
            ============================================ */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-      /* ============================================
+    /* ============================================
            HEADER E NAVIGAZIONE
            ============================================ */
-      header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px) saturate(180%);
-        box-shadow: var(--shadow-sm);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        transition: all var(--transition);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all var(--transition);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      transition: padding var(--transition);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition);
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .logo h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      margin-top: 1px;
+    }
+
+    .back-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gray-light);
+      color: var(--text-dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+
+    .back-link a:hover {
+      background: var(--gradient-primary);
+      color: var(--white);
+      transform: translateX(-5px);
+    }
+
+    /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 0;
+      }
+    }
+
+    section:nth-child(even) {
+      background-color: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 60px;
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+           HERO SECTION
+           ============================================ */
+    .hero-borgo {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(15, 44, 74, 0.7) 0%,
+          rgba(26, 61, 92, 0.7) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-borgo .container {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .hero-borgo h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-borgo p {
+      font-size: 1.25rem;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      opacity: 0.95;
+      line-height: 1.8;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+    .content-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .content-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section.reverse {
+      direction: rtl;
+    }
+
+    .content-section.reverse>* {
+      direction: ltr;
+    }
+
+    .content-text {
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .content-text h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .content-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .content-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ============================================
+           INFO CARDS
+           ============================================ */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .info-grid.contact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .info-card i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .info-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+    .tradizioni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .tradizione-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      position: relative;
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .tradizione-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+
+    .tradizione-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .tradizione-card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tradizione-card i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      transition: transform var(--transition);
+    }
+
+    .tradizione-card:hover i {
+      transform: scale(1.1);
+    }
+
+    .tradizione-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .tradizione-card p {
+      color: var(--text-light);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+           GALLERY
+           ============================================ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 220px;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-slow);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.15);
+    }
+
+    /* ============================================
+           BUTTONS
+           ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-accent);
+      color: var(--text-dark);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all var(--transition);
+      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent);
+      transition: left 0.6s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+    }
+
+    .btn i {
+      transition: transform var(--transition);
+    }
+
+    .btn:hover i {
+      transform: translateX(5px);
+    }
+
+    .btn-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* ============================================
+           FOOTER
+           ============================================ */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 70px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .footer-content {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .footer-content p {
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-content a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .footer-content a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ============================================
+           RESPONSIVE
+           ============================================ */
+    @media (max-width: 768px) {
       .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-        transition: padding var(--transition);
+        padding: 32px 0;
       }
 
       .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: transform var(--transition);
+        gap: 8px;
       }
 
       .logo img {
-        height: 45px;
-        width: auto;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        height: 35px;
       }
 
       .logo h1 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
+        font-size: 1rem;
       }
 
       .logo span {
-        font-size: 0.7rem;
-        color: var(--text-light);
+        font-size: 0.6rem;
         display: block;
-        font-weight: 400;
-        letter-spacing: 0.3px;
-        margin-top: 1px;
+        opacity: 0.8;
       }
 
-      .back-link a {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--gray-light);
-        color: var(--text-dark);
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all var(--transition);
-      }
-
-      .back-link a:hover {
-        background: var(--gradient-primary);
-        color: var(--white);
-        transform: translateX(-5px);
-      }
-
-      /* ============================================
-           SEZIONI GENERALI
-           ============================================ */
-      section {
-        padding: 100px 0;
-        position: relative;
-      }
-
-      @media (max-width: 768px) {
-        section {
-          padding: 60px 0;
-        }
-      }
-
-      section:nth-child(even) {
-        background-color: var(--white);
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 40px;
-        letter-spacing: -0.5px;
-      }
-
-      .section-subtitle {
-        text-align: center;
-        color: var(--text-light);
-        margin-bottom: 60px;
-        font-size: 1.15rem;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      /* ============================================
-           HERO SECTION
-           ============================================ */
-      .hero-borgo {
-        position: relative;
-        height: 60vh;
-        min-height: 400px;
-        color: var(--white);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 44, 74, 0.7) 0%,
-          rgba(26, 61, 92, 0.7) 100%
-        );
-        z-index: 2;
-        pointer-events: none;
-      }
-
-      .hero-borgo .container {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-      }
-
-      .hero-borgo h2 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 24px;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .hero-borgo p {
-        font-size: 1.25rem;
-        max-width: 750px;
-        margin: 0 auto 40px;
-        opacity: 0.95;
-        line-height: 1.8;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
       .content-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-        margin-bottom: 60px;
-      }
-
-      .content-section:last-child {
-        margin-bottom: 0;
-      }
-
-      .content-section.reverse {
-        direction: rtl;
-      }
-
-      .content-section.reverse > * {
-        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        direction: ltr !important;
       }
 
       .content-text {
-        padding: 20px;
-        text-align: justify;
-      }
-
-      .content-text h3 {
-        font-size: 1.8rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .content-text p {
-        color: var(--text-light);
-        margin-bottom: 15px;
-        line-height: 1.8;
+        order: 1;
+        padding: 0;
       }
 
       .content-image {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        height: 350px;
-        background-size: cover;
-        background-position: center;
+        order: 2;
+        width: 100%;
       }
 
-      /* ============================================
-           INFO CARDS
-           ============================================ */
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin-top: 40px;
-      }
-
-      .info-grid.contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      }
-
-      .info-card {
-        background: var(--white);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        text-align: center;
-      }
-
-      .info-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .info-card i {
+      .hero-borgo h2 {
         font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 20px;
       }
 
-      .info-card h4 {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-bottom: 10px;
-        font-weight: 600;
+      .hero-borgo p {
+        font-size: 1.1rem;
       }
 
-      .info-card p {
-        color: var(--text-light);
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .logo h1 {
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      .logo span {
+        display: block;
+        font-size: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .logo img {
+        height: 28px;
+      }
+
+      .hero-borgo {
+        min-height: 250px;
+        height: 40vh;
+      }
+
+      .hero-borgo h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+      }
+
+      .hero-borgo p {
         font-size: 0.95rem;
         line-height: 1.6;
       }
 
-      /* ============================================
-           TRADITIONS GRID
-           ============================================ */
-      .tradizioni-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 32px;
-        margin-top: 40px;
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
       }
 
-      .tradizione-card {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        position: relative;
-        padding: 30px 24px;
-        text-align: center;
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
       }
 
-      .tradizione-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-        transform: scaleX(0);
-        transition: transform var(--transition);
-        transform-origin: left;
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover::before {
-        transform: scaleX(1);
+      .content-section {
+        gap: 25px;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover {
-        transform: translateY(-12px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .tradizione-card i {
-        font-size: 3rem;
-        color: var(--accent);
-        margin-bottom: 20px;
-        transition: transform var(--transition);
-      }
-
-      .tradizione-card:hover i {
-        transform: scale(1.1);
-      }
-
-      .tradizione-card h4 {
-        font-size: 1.3rem;
+      .content-text h3 {
+        font-size: 1.4rem;
         margin-bottom: 15px;
-        color: var(--primary);
-        font-weight: 600;
       }
 
-      .tradizione-card p {
-        color: var(--text-light);
-        line-height: 1.7;
-        font-size: 0.95rem;
+      .content-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
       }
 
-      /* ============================================
-           GALLERY
-           ============================================ */
+      .content-image {
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      .info-grid,
+      .info-grid.contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .info-card {
+        padding: 20px;
+      }
+
+      .info-card i {
+        font-size: 2rem;
+      }
+
       .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        margin-top: 50px;
+        gap: 12px;
+        margin-top: 30px;
       }
 
       .gallery-item {
-        border-radius: 16px;
-        overflow: hidden;
-        height: 220px;
-        box-shadow: var(--shadow-md);
-        transition: all var(--transition-slow);
-        position: relative;
+        height: 180px;
       }
 
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.8s;
+      .back-link a {
+        padding: 8px 24px;
+        font-size: 0.75rem;
+        gap: 5px;
       }
 
-      .gallery-item:hover img {
-        transform: scale(1.15);
+      .back-link i {
+        font-size: 0.7rem;
       }
+    }
+  </style>
+</head>
 
-      /* ============================================
-           BUTTONS
-           ============================================ */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: var(--gradient-accent);
-        color: var(--text-dark);
-        padding: 14px 32px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all var(--transition);
-        box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
-        border: none;
-        position: relative;
-        overflow: hidden;
-        justify-content: center;
-      }
-
-      .btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: left 0.6s;
-      }
-
-      .btn:hover::before {
-        left: 100%;
-      }
-
-      .btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
-      }
-
-      .btn i {
-        transition: transform var(--transition);
-      }
-
-      .btn:hover i {
-        transform: translateX(5px);
-      }
-
-      .btn-center {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      /* ============================================
-           FOOTER
-           ============================================ */
-      footer {
-        background: var(--primary-dark);
-        color: rgba(255, 255, 255, 0.8);
-        padding: 70px 0 30px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-      }
-
-      .footer-content {
-        text-align: center;
-        padding-bottom: 30px;
-      }
-
-      .footer-content p {
-        margin-bottom: 15px;
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .footer-content a {
-        color: var(--accent);
-        text-decoration: none;
-        transition: all var(--transition);
-      }
-
-      .footer-content a:hover {
-        color: var(--white);
-      }
-
-      .copyright {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 30px;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      /* ============================================
-           RESPONSIVE
-           ============================================ */
-      @media (max-width: 768px) {
-        .header-content {
-          padding: 32px 0;
-        }
-
-        .logo {
-          gap: 8px;
-        }
-
-        .logo img {
-          height: 35px;
-        }
-
-        .logo h1 {
-          font-size: 1rem;
-        }
-
-        .logo span {
-          font-size: 0.6rem;
-          display: block;
-          opacity: 0.8;
-        }
-
-        .content-section {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          direction: ltr !important;
-        }
-
-        .content-text {
-          order: 1;
-          padding: 0;
-        }
-
-        .content-image {
-          order: 2;
-          width: 100%;
-        }
-
-        .hero-borgo h2 {
-          font-size: 2.5rem;
-        }
-
-        .hero-borgo p {
-          font-size: 1.1rem;
-        }
-
-        .section-title {
-          font-size: 2.2rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          padding: 0 20px;
-        }
-
-        .logo h1 {
-          font-size: 0.8rem;
-          white-space: nowrap;
-        }
-
-        .logo span {
-          display: block;
-          font-size: 0.5rem;
-          opacity: 0.9;
-        }
-
-        .logo img {
-          height: 28px;
-        }
-
-        .hero-borgo {
-          min-height: 250px;
-          height: 40vh;
-        }
-
-        .hero-borgo h2 {
-          font-size: 1.8rem;
-          margin-bottom: 12px;
-        }
-
-        .hero-borgo p {
-          font-size: 0.95rem;
-          line-height: 1.6;
-        }
-
-        .btn {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-
-        .section-title {
-          font-size: 1.6rem;
-          margin-bottom: 30px;
-        }
-
-        .section-subtitle {
-          font-size: 1rem;
-          margin-bottom: 40px;
-        }
-
-        .content-section {
-          gap: 25px;
-          margin-bottom: 40px;
-        }
-
-        .content-text h3 {
-          font-size: 1.4rem;
-          margin-bottom: 15px;
-        }
-
-        .content-text p {
-          font-size: 0.9rem;
-          line-height: 1.6;
-        }
-
-        .content-image {
-          height: 250px;
-          border-radius: 12px;
-        }
-
-        .info-grid,
-        .info-grid.contact-grid {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .info-card {
-          padding: 20px;
-        }
-
-        .info-card i {
-          font-size: 2rem;
-        }
-
-        .gallery {
-          gap: 12px;
-          margin-top: 30px;
-        }
-
-        .gallery-item {
-          height: 180px;
-        }
-
-        .back-link a {
-          padding: 8px 24px;
-          font-size: 0.75rem;
-          gap: 5px;
-        }
-
-        .back-link i {
-          font-size: 0.7rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="container header-content">
-        <div class="logo">
-          <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
-          <div>
-            <h1>Polo Tecnico Professionale</h1>
-            <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-          </div>
-        </div>
-        <div class="back-link">
-          <a href="../index.html#borghi"
-            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
-          >
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+        <div>
+          <h1>Polo Tecnico Professionale</h1>
+          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
         </div>
       </div>
-    </header>
+      <div class="back-link">
+        <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section
-        class="hero-borgo"
-        style="
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-borgo" style="
           background-image: url('../images/plati/plati-panorama.jpg');
           background-size: cover;
           background-position: center;
-        "
-      >
-        <div class="hero-overlay"></div>
-        <div class="container">
-          <h2>Platì</h2>
-          <p>
-            Un piccolo borgo montano ai piedi dell'Aspromonte, tra boschi
-            secolari, cascate naturali e antiche tradizioni contadine.
-          </p>
-        </div>
-      </section>
+        ">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <h2>Platì</h2>
+        <p>
+          Un piccolo borgo montano ai piedi dell'Aspromonte, tra boschi
+          secolari, cascate naturali e antiche tradizioni contadine.
+        </p>
+      </div>
+    </section>
 
-      <!-- INFO CARDS -->
-      <section>
-        <div class="container">
-          <div class="info-grid">
-            <div class="info-card">
-              <i class="fas fa-mountain"></i>
-              <h4>Altitudine</h4>
-              <p>300 m s.l.m. (territorio fino a 1100 m)</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-calendar-alt"></i>
-              <h4>Fondazione</h4>
-              <p>XVI secolo</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-users"></i>
-              <h4>Abitanti</h4>
-              <p>Circa 3.700</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-church"></i>
-              <h4>Patrono</h4>
-              <p>Maria SS. di Loreto (10 dicembre)</p>
-            </div>
+    <!-- INFO CARDS -->
+    <section>
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-mountain"></i>
+            <h4>Altitudine</h4>
+            <p>300 m s.l.m. (territorio fino a 1100 m)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Fondazione</h4>
+            <p>XVI secolo</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-users"></i>
+            <h4>Abitanti</h4>
+            <p>Circa 3.700</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-church"></i>
+            <h4>Patrono</h4>
+            <p>Maria SS. di Loreto (10 dicembre)</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 1: Un Borgo di Montagna nell'Aspromonte (2 blocchi) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Un Borgo di Montagna nell'Aspromonte</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Tra Boschi e Tradizioni</h3>
-              <p>
-                Platì sorge nella zona della Locride, ai piedi del Parco
-                Nazionale dell'Aspromonte. Il paese, nato nel XVI secolo come
-                centro agricolo e pastorale, conserva ancora oggi l'atmosfera
-                autentica dei borghi montani calabresi. Circondato da colline e
-                boschi, offre un ambiente naturale ricco di vegetazione, aria
-                pura e panorami suggestivi.
-              </p>
-              <p>
-                Il centro storico è caratterizzato da vicoli stretti, case
-                costruite una accanto all'altra e piccole piazze dove gli
-                abitanti si incontrano. Questa struttura urbana riflette
-                l'organizzazione sociale contadina dell'epoca e crea
-                un'atmosfera intima e accogliente, in cui le tradizioni si
-                tramandano di generazione in generazione.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 1: Un Borgo di Montagna nell'Aspromonte (2 blocchi) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Un Borgo di Montagna nell'Aspromonte</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Tra Boschi e Tradizioni</h3>
+            <p>
+              Platì sorge nella zona della Locride, ai piedi del Parco
+              Nazionale dell'Aspromonte. Il paese, nato nel XVI secolo come
+              centro agricolo e pastorale, conserva ancora oggi l'atmosfera
+              autentica dei borghi montani calabresi. Circondato da colline e
+              boschi, offre un ambiente naturale ricco di vegetazione, aria
+              pura e panorami suggestivi.
+            </p>
+            <p>
+              Il centro storico è caratterizzato da vicoli stretti, case
+              costruite una accanto all'altra e piccole piazze dove gli
+              abitanti si incontrano. Questa struttura urbana riflette
+              l'organizzazione sociale contadina dell'epoca e crea
+              un'atmosfera intima e accogliente, in cui le tradizioni si
+              tramandano di generazione in generazione.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/plati/plati-borgo.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url('../images/plati/centro-storico.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Storia e Identità</h3>
-              <p>
-                Le origini di Platì risalgono al XVI secolo, quando il territorio
-                venne popolato da famiglie provenienti dalle zone costiere in
-                cerca di luoghi più sicuri. Il nome potrebbe derivare dal greco
-                "platys" (ampio, largo), riferito alla pianura circostante, o
-                dall'arabo "balat" (lastra di pietra). Il borgo ha mantenuto nel
-                tempo un forte legame con la terra e l'allevamento, come
-                testimoniano le antiche masserie e i tratturi utilizzati per la
-                transumanza.
-              </p>
-              <p>
-                La comunità si è sviluppata attorno a questi valori, dando vita a
-                una rete di solidarietà contadina e a una cultura materiale
-                fatta di saperi antichi: la lavorazione della pietra, la
-                tessitura, la produzione casearia e la conservazione dei
-                prodotti della terra.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Storia e Identità</h3>
+            <p>
+              Le origini di Platì risalgono al XVI secolo, quando il territorio
+              venne popolato da famiglie provenienti dalle zone costiere in
+              cerca di luoghi più sicuri. Il nome potrebbe derivare dal greco
+              "platys" (ampio, largo), riferito alla pianura circostante, o
+              dall'arabo "balat" (lastra di pietra). Il borgo ha mantenuto nel
+              tempo un forte legame con la terra e l'allevamento, come
+              testimoniano le antiche masserie e i tratturi utilizzati per la
+              transumanza.
+            </p>
+            <p>
+              La comunità si è sviluppata attorno a questi valori, dando vita a
+              una rete di solidarietà contadina e a una cultura materiale
+              fatta di saperi antichi: la lavorazione della pietra, la
+              tessitura, la produzione casearia e la conservazione dei
+              prodotti della terra.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 2: Il Territorio e le Frazioni (2 blocchi) -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Il Territorio e le Frazioni</h2>
-          <div class="content-section">
-                        <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 2: Il Territorio e le Frazioni (2 blocchi) -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Il Territorio e le Frazioni</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url('../images/plati/cascata-schioppo.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>La Cascata dello Schioppo</h3>
-              <p>
-                Il territorio comunale è ampio e comprende diverse frazioni, tra
-                cui Cirella, dove si trova la suggestiva cascata dello Schioppo.
-                Questa cascata naturale, immersa nel verde, rappresenta uno dei
-                luoghi più caratteristici della zona. Le acque scendono tra
-                rocce e vegetazione rigogliosa, creando un'oasi di fresco e
-                bellezza, particolarmente apprezzata durante i mesi estivi.
-              </p>
-              <p>
-                L'area circostante offre percorsi naturalistici e punti
-                panoramici ideali per escursioni a piedi. La cascata è
-                facilmente raggiungibile attraverso sentieri che si snodano tra
-                boschi di leccio, querce e castagni secolari, regalando scorci
-                suggestivi e la possibilità di immergersi nella natura
-                incontaminata dell'Aspromonte.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>La Cascata dello Schioppo</h3>
+            <p>
+              Il territorio comunale è ampio e comprende diverse frazioni, tra
+              cui Cirella, dove si trova la suggestiva cascata dello Schioppo.
+              Questa cascata naturale, immersa nel verde, rappresenta uno dei
+              luoghi più caratteristici della zona. Le acque scendono tra
+              rocce e vegetazione rigogliosa, creando un'oasi di fresco e
+              bellezza, particolarmente apprezzata durante i mesi estivi.
+            </p>
+            <p>
+              L'area circostante offre percorsi naturalistici e punti
+              panoramici ideali per escursioni a piedi. La cascata è
+              facilmente raggiungibile attraverso sentieri che si snodano tra
+              boschi di leccio, querce e castagni secolari, regalando scorci
+              suggestivi e la possibilità di immergersi nella natura
+              incontaminata dell'Aspromonte.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Fiumare e Paesaggi</h3>
-              <p>
-                Il territorio di Platì è solcato da diverse fiumare, corsi d'acqua
-                tipici dell'Aspromonte che in inverno diventano impetuosi e in
-                estate offrono fresche pozze naturali. La fiumara di Platì, che
-                attraversa il paese, ha plasmato nei secoli il paesaggio,
-                creando gole e terrazzamenti naturali. Le frazioni più alte,
-                come Cirella e San Nicola, conservano antichi mulini ad acqua e
-                case in pietra, testimonianza di un passato rurale ancora vivo
-                nella memoria degli abitanti.
-              </p>
-              <p>
-                Dai punti più elevati si gode una vista che spazia dal Mar Ionio
-                alle vette dell'Aspromonte, offrendo spettacolari scorci
-                naturali, soprattutto al tramonto.
-              </p>
-            </div>
-                        <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Fiumare e Paesaggi</h3>
+            <p>
+              Il territorio di Platì è solcato da diverse fiumare, corsi d'acqua
+              tipici dell'Aspromonte che in inverno diventano impetuosi e in
+              estate offrono fresche pozze naturali. La fiumara di Platì, che
+              attraversa il paese, ha plasmato nei secoli il paesaggio,
+              creando gole e terrazzamenti naturali. Le frazioni più alte,
+              come Cirella e San Nicola, conservano antichi mulini ad acqua e
+              case in pietra, testimonianza di un passato rurale ancora vivo
+              nella memoria degli abitanti.
+            </p>
+            <p>
+              Dai punti più elevati si gode una vista che spazia dal Mar Ionio
+              alle vette dell'Aspromonte, offrendo spettacolari scorci
+              naturali, soprattutto al tramonto.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/plati/panorama-mare.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 3: Natura e Itinerari (già due blocchi) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Natura e Itinerari</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Escursioni nel Cuore dell'Aspromonte</h3>
-              <p>
-                Il territorio di Platì offre numerosi sentieri escursionistici
-                che si sviluppano tra boschi di leccio, querce e castagni
-                secolari. I percorsi variano in difficoltà e lunghezza, adatti
-                sia a famiglie che a escursionisti esperti. Lungo gli itinerari
-                è possibile osservare la ricca biodiversità dell'Aspromonte, con
-                erbe aromatiche spontanee, funghi e piante officinali utilizzate
-                nella tradizione culinaria e medicinale.
-              </p>
-              <p>
-                Dai punti più alti si gode di una vista panoramica che spazia
-                dal Mar Ionio alle vette dell'Aspromonte, offrendo spettacolari
-                scorci naturali. Le guide del Parco Nazionale organizzano
-                periodicamente escursioni tematiche per scoprire la flora, la
-                fauna e le tradizioni locali.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 3: Natura e Itinerari (già due blocchi) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Natura e Itinerari</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Escursioni nel Cuore dell'Aspromonte</h3>
+            <p>
+              Il territorio di Platì offre numerosi sentieri escursionistici
+              che si sviluppano tra boschi di leccio, querce e castagni
+              secolari. I percorsi variano in difficoltà e lunghezza, adatti
+              sia a famiglie che a escursionisti esperti. Lungo gli itinerari
+              è possibile osservare la ricca biodiversità dell'Aspromonte, con
+              erbe aromatiche spontanee, funghi e piante officinali utilizzate
+              nella tradizione culinaria e medicinale.
+            </p>
+            <p>
+              Dai punti più alti si gode di una vista panoramica che spazia
+              dal Mar Ionio alle vette dell'Aspromonte, offrendo spettacolari
+              scorci naturali. Le guide del Parco Nazionale organizzano
+              periodicamente escursioni tematiche per scoprire la flora, la
+              fauna e le tradizioni locali.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/plati/sentieri-aspromonte.jpg');
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url('../images/plati/boschi.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Biodiversità Aspromontana</h3>
-              <p>
-                La zona è ricca di biodiversità: boschi di leccio, querce,
-                castagni secolari, macchia mediterranea. La flora locale
-                comprende erbe aromatiche spontanee, funghi e piante officinali
-                utilizzate nella tradizione culinaria e medicinale. Tra la
-                fauna, si segnalano la rarissima aquila reale, il lupo
-                appenninico, il gatto selvatico e numerosi rapaci che migrano
-                dall'Africa verso l'Europa in primavera.
-              </p>
-              <p>
-                Il Parco Nazionale dell'Aspromonte, con i suoi oltre 64.000
-                ettari, tutela questi ecosistemi e promuove un turismo
-                sostenibile, attraverso sentieri segnalati, aree attrezzate e
-                centri visita.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Biodiversità Aspromontana</h3>
+            <p>
+              La zona è ricca di biodiversità: boschi di leccio, querce,
+              castagni secolari, macchia mediterranea. La flora locale
+              comprende erbe aromatiche spontanee, funghi e piante officinali
+              utilizzate nella tradizione culinaria e medicinale. Tra la
+              fauna, si segnalano la rarissima aquila reale, il lupo
+              appenninico, il gatto selvatico e numerosi rapaci che migrano
+              dall'Africa verso l'Europa in primavera.
+            </p>
+            <p>
+              Il Parco Nazionale dell'Aspromonte, con i suoi oltre 64.000
+              ettari, tutela questi ecosistemi e promuove un turismo
+              sostenibile, attraverso sentieri segnalati, aree attrezzate e
+              centri visita.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SEZIONE 4: Tradizioni e Comunità (2 blocchi) -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Tradizioni e Comunità</h2>
-          <div class="content-section">
-                        <div
-              class="content-image"
-              style="
+    <!-- SEZIONE 4: Tradizioni e Comunità (2 blocchi) -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Tradizioni e Comunità</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url('../images/plati/tradizioni.jpg');
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Gastronomia e Artigianato</h3>
-              <p>
-                La gastronomia locale è ricca di specialità tipiche
-                aspromontane: formaggi di malga, salumi artigianali, miele di
-                castagno, funghi porcini e vini locali. Le ricette tramandate di
-                generazione in generazione utilizzano ingredienti genuini e
-                locali. Tra i piatti tipici spiccano i maccheroni fatti a mano
-                con ragù di capra, la zuppa di legumi e le frittelle di baccalà
-                durante le festività.
-              </p>
-              <p>
-                L'artigianato tradizionale comprende la lavorazione del legno,
-                la ceramica e la tessitura, con tecniche antiche che riflettono
-                l'identità culturale del borgo. I prodotti tipici locali sono il
-                risultato di secoli di tradizione e conoscenza del territorio,
-                custoditi gelosamente dalle famiglie e dalle piccole botteghe
-                artigiane.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Gastronomia e Artigianato</h3>
+            <p>
+              La gastronomia locale è ricca di specialità tipiche
+              aspromontane: formaggi di malga, salumi artigianali, miele di
+              castagno, funghi porcini e vini locali. Le ricette tramandate di
+              generazione in generazione utilizzano ingredienti genuini e
+              locali. Tra i piatti tipici spiccano i maccheroni fatti a mano
+              con ragù di capra, la zuppa di legumi e le frittelle di baccalà
+              durante le festività.
+            </p>
+            <p>
+              L'artigianato tradizionale comprende la lavorazione del legno,
+              la ceramica e la tessitura, con tecniche antiche che riflettono
+              l'identità culturale del borgo. I prodotti tipici locali sono il
+              risultato di secoli di tradizione e conoscenza del territorio,
+              custoditi gelosamente dalle famiglie e dalle piccole botteghe
+              artigiane.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Feste e Religiosità Popolare</h3>
-              <p>
-                Il 10 dicembre si celebra la festa patronale della Madonna di
-                Loreto, che coinvolge l'intera comunità con processioni, fuochi
-                d'artificio e momenti di convivialità. Altre ricorrenze
-                importanti sono la festa di San Giuseppe (19 marzo) con le
-                tradizionali "cene" e la festa della Madonna del Carmine a
-                luglio, che anima le serate estive con musica e balli popolari.
-              </p>
-              <p>
-                Queste manifestazioni rappresentano un'occasione di incontro e
-                socialità, in cui la comunità rinnova il proprio legame con la
-                storia e le tradizioni. I riti antichi, le processioni e i canti
-                devozionali sono tramandati da secoli, conferendo a Platì
-                un'identità culturale profonda e autentica.
-              </p>
-            </div>
-                        <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Feste e Religiosità Popolare</h3>
+            <p>
+              Il 10 dicembre si celebra la festa patronale della Madonna di
+              Loreto, che coinvolge l'intera comunità con processioni, fuochi
+              d'artificio e momenti di convivialità. Altre ricorrenze
+              importanti sono la festa di San Giuseppe (19 marzo) con le
+              tradizionali "cene" e la festa della Madonna del Carmine a
+              luglio, che anima le serate estive con musica e balli popolari.
+            </p>
+            <p>
+              Queste manifestazioni rappresentano un'occasione di incontro e
+              socialità, in cui la comunità rinnova il proprio legame con la
+              storia e le tradizioni. I riti antichi, le processioni e i canti
+              devozionali sono tramandati da secoli, conferendo a Platì
+              un'identità culturale profonda e autentica.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url('../images/plati/festa-patronale.jpg');
-              "
-            ></div>
+              "></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Tradizioni e Cultura</h2>
+        <div class="tradizioni-grid">
+          <div class="tradizione-card">
+            <i class="fas fa-utensils"></i>
+            <h4>Cucina Tipica</h4>
+            <p>
+              Formaggi di malga, salumi artigianali, miele di castagno e
+              funghi porcini. I maccheroni fatti a mano con ragù di capra sono
+              una specialità del territorio.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Festa Patronale</h4>
+            <p>
+              Il 10 dicembre si celebra la Madonna di Loreto, patrona del
+              paese. Una tradizione religiosa che coinvolge l'intera comunità
+              con processioni e momenti di festa.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-hands"></i>
+            <h4>Artigianato Locale</h4>
+            <p>
+              Lavorazione del legno, ceramica e tessitura con tecniche
+              antiche. Le botteghe artigiane conservano saperi tramandati da
+              generazioni.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-mountain"></i>
+            <h4>Sentieri dell'Aspromonte</h4>
+            <p>
+              Itinerari naturalistici tra boschi secolari e panorami sul Mar
+              Ionio. Percorsi adatti a escursionisti di ogni livello, con
+              guide disponibili su prenotazione.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Tradizioni e Cultura</h2>
-          <div class="tradizioni-grid">
-            <div class="tradizione-card">
-              <i class="fas fa-utensils"></i>
-              <h4>Cucina Tipica</h4>
-              <p>
-                Formaggi di malga, salumi artigianali, miele di castagno e
-                funghi porcini. I maccheroni fatti a mano con ragù di capra sono
-                una specialità del territorio.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-calendar-alt"></i>
-              <h4>Festa Patronale</h4>
-              <p>
-                Il 10 dicembre si celebra la Madonna di Loreto, patrona del
-                paese. Una tradizione religiosa che coinvolge l'intera comunità
-                con processioni e momenti di festa.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-hands"></i>
-              <h4>Artigianato Locale</h4>
-              <p>
-                Lavorazione del legno, ceramica e tessitura con tecniche
-                antiche. Le botteghe artigiane conservano saperi tramandati da
-                generazioni.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-mountain"></i>
-              <h4>Sentieri dell'Aspromonte</h4>
-              <p>
-                Itinerari naturalistici tra boschi secolari e panorami sul Mar
-                Ionio. Percorsi adatti a escursionisti di ogni livello, con
-                guide disponibili su prenotazione.
-              </p>
-            </div>
+    <!-- GALLERIA FOTO -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Galleria Fotografica</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="../images/plati/galleria/plati-panorama.jpg" alt="Panorama del borgo" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/plati/galleria/cascata-schioppo.jpg" alt="Cascata dello Schioppo" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/plati/galleria/centro-storico.jpg" alt="Centro storico e vicoli" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/plati/galleria/sentieri.jpg" alt="Sentieri nell'Aspromonte" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/plati/galleria/bosco.jpg" alt="Boschi di castagno" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/plati/galleria/panorama-mare.jpg" alt="Vista sul Mar Ionio" />
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- GALLERIA FOTO -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Galleria Fotografica</h2>
-          <div class="gallery">
-            <div class="gallery-item">
-              <img
-                src="../images/plati/galleria/plati-panorama.jpg"
-                alt="Panorama del borgo"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/plati/galleria/cascata-schioppo.jpg"
-                alt="Cascata dello Schioppo"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/plati/galleria/centro-storico.jpg"
-                alt="Centro storico e vicoli"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/plati/galleria/sentieri.jpg"
-                alt="Sentieri nell'Aspromonte"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/plati/galleria/bosco.jpg"
-                alt="Boschi di castagno"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/plati/galleria/panorama-mare.jpg"
-                alt="Vista sul Mar Ionio"
-              />
-            </div>
+    <!-- INFO UTILI -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Info Utili</h2>
+        <div class="info-grid contact-grid">
+          <div class="info-card">
+            <i class="fas fa-car"></i>
+            <h4>Come Arrivare</h4>
+            <p>
+              <strong>In Auto:</strong> SS106 Jonica, uscita Ardore o
+              Bovalino. Seguire le indicazioni per Platì (circa 15-20 km in
+              direzione Aspromonte).<br />
+              Dista circa 35 km da Siderno e 70 km da Reggio Calabria.<br />
+              Strade panoramiche tortuose, consigliato navigatore GPS.<br />
+              Parcheggio disponibile nel centro abitato.
+            </p>
           </div>
-        </div>
-      </section>
 
-      <!-- INFO UTILI -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Info Utili</h2>
-          <div class="info-grid contact-grid">
-            <div class="info-card">
-              <i class="fas fa-car"></i>
-              <h4>Come Arrivare</h4>
-              <p>
-                <strong>In Auto:</strong> SS106 Jonica, uscita Ardore o
-                Bovalino. Seguire le indicazioni per Platì (circa 15-20 km in
-                direzione Aspromonte).<br />
-                Dista circa 35 km da Siderno e 70 km da Reggio Calabria.<br />
-                Strade panoramiche tortuose, consigliato navigatore GPS.<br />
-                Parcheggio disponibile nel centro abitato.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-globe"></i>
-              <h4>Comune e Informazioni</h4>
-              <p>
-                <strong>Comune di Platì</strong><br />
-                Piazza Municipio, 1<br />
-                89039 Platì (RC)<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="http://www.comune.plati.rc.it"
-                  target="_blank"
-                  style="
+          <div class="info-card">
+            <i class="fas fa-globe"></i>
+            <h4>Comune e Informazioni</h4>
+            <p>
+              <strong>Comune di Platì</strong><br />
+              Piazza Municipio, 1<br />
+              89039 Platì (RC)<br />
+              <strong>Sito web:</strong>
+              <a href="http://www.comune.plati.rc.it" target="_blank" style="
                     color: var(--accent);
                     text-decoration: none;
                     font-weight: 600;
-                  "
-                  >www.comune.plati.rc.it</a
-                ><br />
-                <strong>Patrono:</strong> Maria SS. di Loreto (10 dicembre)
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-water"></i>
-              <h4>Cascata dello Schioppo</h4>
-              <p>
-                <strong>Località:</strong> Cirella (frazione di Platì)<br />
-                <strong>Altezza:</strong> circa 40 metri<br />
-                <strong>Accesso:</strong> Da Platì seguire indicazioni per
-                Cirella. Parcheggio nei pressi del punto di partenza.<br />
-                <small
-                  >Il nome deriva dal rumore dell'acqua che "schizza" come uno
-                  sparo</small
-                >
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-leaf"></i>
-              <h4>Ente Parco Nazionale dell'Aspromonte</h4>
-              <p>
-                <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
-                Stefano Aspromonte (RC)<br />
-                <strong>Tel:</strong> 0965 743060<br />
-                <strong>Email:</strong>
-                info.posta@parconazionaleaspromonte.it<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="https://www.parconazionaleaspromonte.it"
-                  target="_blank"
-                  style="color: var(--accent)"
-                  >www.parconazionaleaspromonte.it</a
-                >
-              </p>
-            </div>
+                  ">www.comune.plati.rc.it</a><br />
+              <strong>Patrono:</strong> Maria SS. di Loreto (10 dicembre)
+            </p>
           </div>
-          <div class="btn-center">
-            <a href="../index.html#borghi" class="btn"
-              ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
-            >
+
+          <div class="info-card">
+            <i class="fas fa-water"></i>
+            <h4>Cascata dello Schioppo</h4>
+            <p>
+              <strong>Località:</strong> Cirella (frazione di Platì)<br />
+              <strong>Altezza:</strong> circa 40 metri<br />
+              <strong>Accesso:</strong> Da Platì seguire indicazioni per
+              Cirella. Parcheggio nei pressi del punto di partenza.<br />
+              <small>Il nome deriva dal rumore dell'acqua che "schizza" come uno
+                sparo</small>
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-leaf"></i>
+            <h4>Ente Parco Nazionale dell'Aspromonte</h4>
+            <p>
+              <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
+              Stefano Aspromonte (RC)<br />
+              <strong>Tel:</strong> 0965 743060<br />
+              <strong>Email:</strong>
+              info.posta@parconazionaleaspromonte.it<br />
+              <strong>Sito web:</strong>
+              <a href="https://www.parconazionaleaspromonte.it" target="_blank"
+                style="color: var(--accent)">www.parconazionaleaspromonte.it</a>
+            </p>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>
-            <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
-            <a href="../index.html">Home</a>
-          </p>
-          <p>
-            &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
-            Zanotti. Tutti i diritti riservati.
-          </p>
-        </div>
-        <div class="copyright">
-          Sito realizzato dagli studenti del progetto scolastico
+        <div class="btn-center">
+          <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script>
-      // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>
+          <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
+          <a href="../index.html">Home</a>
+        </p>
+        <p>
+          &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
+          Zanotti. Tutti i diritti riservati.
+        </p>
+      </div>
+      <div class="copyright">
+        Sito realizzato dagli studenti del progetto scolastico
+      </div>
+    </div>
+  </footer>
 
-      window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-      });
-    </script>
-  </body>
+  <script>
+    // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+
 </html>

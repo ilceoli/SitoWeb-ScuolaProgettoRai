@@ -1,1224 +1,1168 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samo - Polo Tecnico Professionale Marconi</title>
-    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
-    <!-- Google Fonts e Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      /* ============================================
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samo - Polo Tecnico Professionale Marconi</title>
+  <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
+  <!-- Google Fonts e Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ============================================
            POLO TECNICO PROFESSIONALE - STYLE.CSS
            Design Elegante e Professionale
            ============================================ */
 
-      /* RESET E BASE */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    /* RESET E BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        color: #1a1a2e;
-        background-color: #fafbfc;
-        overflow-x: hidden;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background-color: #fafbfc;
+      overflow-x: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
-      /* ============================================
+    /* ============================================
            VARIABILI COLORE - PALETTE REFINED
            ============================================ */
-      :root {
-        --primary: #2c3e50;
-        --primary-light: #34495e;
-        --primary-dark: #1e2b3a;
-        --accent: #e67e22;
-        --accent-light: #f39c12;
-        --accent-dark: #c96e1c;
-        --secondary: #5c7c9a;
-        --gray-light: #f0f2f5;
-        --gray: #9ca3af;
-        --text-light: #6b7280;
-        --text-dark: #1f2937;
-        --white: #ffffff;
-        --off-white: #f8f9fa;
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-        --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
-        --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
-        --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-        --gradient-primary: linear-gradient(
-          135deg,
+    :root {
+      --primary: #2c3e50;
+      --primary-light: #34495e;
+      --primary-dark: #1e2b3a;
+      --accent: #e67e22;
+      --accent-light: #f39c12;
+      --accent-dark: #c96e1c;
+      --secondary: #5c7c9a;
+      --gray-light: #f0f2f5;
+      --gray: #9ca3af;
+      --text-light: #6b7280;
+      --text-dark: #1f2937;
+      --white: #ffffff;
+      --off-white: #f8f9fa;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+      --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+      --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+      --gradient-primary: linear-gradient(135deg,
           var(--primary) 0%,
-          var(--primary-light) 100%
-        );
-        --gradient-accent: linear-gradient(
-          135deg,
+          var(--primary-light) 100%);
+      --gradient-accent: linear-gradient(135deg,
           var(--accent) 0%,
-          var(--accent-light) 100%
-        );
-        --transition: 0.3s ease;
-        --transition-slow: 0.5s ease;
-      }
+          var(--accent-light) 100%);
+      --transition: 0.3s ease;
+      --transition-slow: 0.5s ease;
+    }
 
-      /* ============================================
+    /* ============================================
            LAYOUT GENERALE
            ============================================ */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-      /* ============================================
+    /* ============================================
            HEADER E NAVIGAZIONE
            ============================================ */
-      header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px) saturate(180%);
-        box-shadow: var(--shadow-sm);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        transition: all var(--transition);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all var(--transition);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      transition: padding var(--transition);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition);
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .logo h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      margin-top: 1px;
+    }
+
+    .back-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gray-light);
+      color: var(--text-dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+
+    .back-link a:hover {
+      background: var(--gradient-primary);
+      color: var(--white);
+      transform: translateX(-5px);
+    }
+
+    /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 0;
+      }
+    }
+
+    section:nth-child(even) {
+      background-color: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 60px;
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+           HERO SECTION
+           ============================================ */
+    .hero-borgo {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(15, 44, 74, 0.7) 0%,
+          rgba(26, 61, 92, 0.7) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-borgo .container {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .hero-borgo h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-borgo p {
+      font-size: 1.25rem;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      opacity: 0.95;
+      line-height: 1.8;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+    .content-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .content-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section.reverse {
+      direction: rtl;
+    }
+
+    .content-section.reverse>* {
+      direction: ltr;
+    }
+
+    .content-text {
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .content-text h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .content-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .content-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ============================================
+           INFO CARDS
+           ============================================ */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .info-grid.contact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .info-card i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .info-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+    .tradizioni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .tradizione-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      position: relative;
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .tradizione-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+
+    .tradizione-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .tradizione-card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tradizione-card i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      transition: transform var(--transition);
+    }
+
+    .tradizione-card:hover i {
+      transform: scale(1.1);
+    }
+
+    .tradizione-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .tradizione-card p {
+      color: var(--text-light);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+           GALLERY
+           ============================================ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 220px;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-slow);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.15);
+    }
+
+    /* ============================================
+           BUTTONS
+           ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-accent);
+      color: var(--text-dark);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all var(--transition);
+      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent);
+      transition: left 0.6s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+    }
+
+    .btn i {
+      transition: transform var(--transition);
+    }
+
+    .btn:hover i {
+      transform: translateX(5px);
+    }
+
+    .btn-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* ============================================
+           FOOTER
+           ============================================ */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 70px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .footer-content {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .footer-content p {
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-content a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .footer-content a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ============================================
+           RESPONSIVE
+           ============================================ */
+    @media (max-width: 768px) {
       .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-        transition: padding var(--transition);
+        padding: 32px 0;
       }
 
       .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: transform var(--transition);
+        gap: 8px;
       }
 
       .logo img {
-        height: 45px;
-        width: auto;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        height: 35px;
       }
 
       .logo h1 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
+        font-size: 1rem;
       }
 
       .logo span {
-        font-size: 0.7rem;
-        color: var(--text-light);
+        font-size: 0.6rem;
         display: block;
-        font-weight: 400;
-        letter-spacing: 0.3px;
-        margin-top: 1px;
+        opacity: 0.8;
       }
 
-      .back-link a {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--gray-light);
-        color: var(--text-dark);
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all var(--transition);
-      }
-
-      .back-link a:hover {
-        background: var(--gradient-primary);
-        color: var(--white);
-        transform: translateX(-5px);
-      }
-
-      /* ============================================
-           SEZIONI GENERALI
-           ============================================ */
-      section {
-        padding: 100px 0;
-        position: relative;
-      }
-
-      @media (max-width: 768px) {
-        section {
-          padding: 60px 0;
-        }
-      }
-
-      section:nth-child(even) {
-        background-color: var(--white);
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 40px;
-        letter-spacing: -0.5px;
-      }
-
-      .section-subtitle {
-        text-align: center;
-        color: var(--text-light);
-        margin-bottom: 60px;
-        font-size: 1.15rem;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      /* ============================================
-           HERO SECTION
-           ============================================ */
-      .hero-borgo {
-        position: relative;
-        height: 60vh;
-        min-height: 400px;
-        color: var(--white);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 44, 74, 0.7) 0%,
-          rgba(26, 61, 92, 0.7) 100%
-        );
-        z-index: 2;
-        pointer-events: none;
-      }
-
-      .hero-borgo .container {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-      }
-
-      .hero-borgo h2 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 24px;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .hero-borgo p {
-        font-size: 1.25rem;
-        max-width: 750px;
-        margin: 0 auto 40px;
-        opacity: 0.95;
-        line-height: 1.8;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
       .content-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-        margin-bottom: 60px;
-      }
-
-      .content-section:last-child {
-        margin-bottom: 0;
-      }
-
-      .content-section.reverse {
-        direction: rtl;
-      }
-
-      .content-section.reverse > * {
-        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        direction: ltr !important;
       }
 
       .content-text {
-        padding: 20px;
-        text-align: justify;
-      }
-
-      .content-text h3 {
-        font-size: 1.8rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .content-text p {
-        color: var(--text-light);
-        margin-bottom: 15px;
-        line-height: 1.8;
+        order: 1;
+        padding: 0;
       }
 
       .content-image {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        height: 350px;
-        background-size: cover;
-        background-position: center;
+        order: 2;
+        width: 100%;
       }
 
-      /* ============================================
-           INFO CARDS
-           ============================================ */
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin-top: 40px;
-      }
-
-      .info-grid.contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      }
-
-      .info-card {
-        background: var(--white);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        text-align: center;
-      }
-
-      .info-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .info-card i {
+      .hero-borgo h2 {
         font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 20px;
       }
 
-      .info-card h4 {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-bottom: 10px;
-        font-weight: 600;
+      .hero-borgo p {
+        font-size: 1.1rem;
       }
 
-      .info-card p {
-        color: var(--text-light);
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .logo h1 {
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      .logo span {
+        display: block;
+        font-size: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .logo img {
+        height: 28px;
+      }
+
+      .hero-borgo {
+        min-height: 250px;
+        height: 40vh;
+      }
+
+      .hero-borgo h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+      }
+
+      .hero-borgo p {
         font-size: 0.95rem;
         line-height: 1.6;
       }
 
-      /* ============================================
-           TRADITIONS GRID
-           ============================================ */
-      .tradizioni-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 32px;
-        margin-top: 40px;
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
       }
 
-      .tradizione-card {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        position: relative;
-        padding: 30px 24px;
-        text-align: center;
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
       }
 
-      .tradizione-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-        transform: scaleX(0);
-        transition: transform var(--transition);
-        transform-origin: left;
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover::before {
-        transform: scaleX(1);
+      .content-section {
+        gap: 25px;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover {
-        transform: translateY(-12px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .tradizione-card i {
-        font-size: 3rem;
-        color: var(--accent);
-        margin-bottom: 20px;
-        transition: transform var(--transition);
-      }
-
-      .tradizione-card:hover i {
-        transform: scale(1.1);
-      }
-
-      .tradizione-card h4 {
-        font-size: 1.3rem;
+      .content-text h3 {
+        font-size: 1.4rem;
         margin-bottom: 15px;
-        color: var(--primary);
-        font-weight: 600;
       }
 
-      .tradizione-card p {
-        color: var(--text-light);
-        line-height: 1.7;
-        font-size: 0.95rem;
+      .content-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
       }
 
-      /* ============================================
-           GALLERY
-           ============================================ */
+      .content-image {
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      .info-grid,
+      .info-grid.contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .info-card {
+        padding: 20px;
+      }
+
+      .info-card i {
+        font-size: 2rem;
+      }
+
       .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        margin-top: 50px;
+        gap: 12px;
+        margin-top: 30px;
       }
 
       .gallery-item {
-        border-radius: 16px;
-        overflow: hidden;
-        height: 220px;
-        box-shadow: var(--shadow-md);
-        transition: all var(--transition-slow);
-        position: relative;
+        height: 180px;
       }
 
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.8s;
+      .back-link a {
+        padding: 8px 24px;
+        font-size: 0.75rem;
+        gap: 5px;
       }
 
-      .gallery-item:hover img {
-        transform: scale(1.15);
+      .back-link i {
+        font-size: 0.7rem;
       }
+    }
+  </style>
+</head>
 
-      /* ============================================
-           BUTTONS
-           ============================================ */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: var(--gradient-accent);
-        color: var(--text-dark);
-        padding: 14px 32px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all var(--transition);
-        box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
-        border: none;
-        position: relative;
-        overflow: hidden;
-        justify-content: center;
-      }
-
-      .btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: left 0.6s;
-      }
-
-      .btn:hover::before {
-        left: 100%;
-      }
-
-      .btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
-      }
-
-      .btn i {
-        transition: transform var(--transition);
-      }
-
-      .btn:hover i {
-        transform: translateX(5px);
-      }
-
-      .btn-center {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      /* ============================================
-           FOOTER
-           ============================================ */
-      footer {
-        background: var(--primary-dark);
-        color: rgba(255, 255, 255, 0.8);
-        padding: 70px 0 30px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-      }
-
-      .footer-content {
-        text-align: center;
-        padding-bottom: 30px;
-      }
-
-      .footer-content p {
-        margin-bottom: 15px;
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .footer-content a {
-        color: var(--accent);
-        text-decoration: none;
-        transition: all var(--transition);
-      }
-
-      .footer-content a:hover {
-        color: var(--white);
-      }
-
-      .copyright {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 30px;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      /* ============================================
-           RESPONSIVE
-           ============================================ */
-      @media (max-width: 768px) {
-        .header-content {
-          padding: 32px 0;
-        }
-
-        .logo {
-          gap: 8px;
-        }
-
-        .logo img {
-          height: 35px;
-        }
-
-        .logo h1 {
-          font-size: 1rem;
-        }
-
-        .logo span {
-          font-size: 0.6rem;
-          display: block;
-          opacity: 0.8;
-        }
-
-        .content-section {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          direction: ltr !important;
-        }
-
-        .content-text {
-          order: 1;
-          padding: 0;
-        }
-
-        .content-image {
-          order: 2;
-          width: 100%;
-        }
-
-        .hero-borgo h2 {
-          font-size: 2.5rem;
-        }
-
-        .hero-borgo p {
-          font-size: 1.1rem;
-        }
-
-        .section-title {
-          font-size: 2.2rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          padding: 0 20px;
-        }
-
-        .logo h1 {
-          font-size: 0.8rem;
-          white-space: nowrap;
-        }
-
-        .logo span {
-          display: block;
-          font-size: 0.5rem;
-          opacity: 0.9;
-        }
-
-        .logo img {
-          height: 28px;
-        }
-
-        .hero-borgo {
-          min-height: 250px;
-          height: 40vh;
-        }
-
-        .hero-borgo h2 {
-          font-size: 1.8rem;
-          margin-bottom: 12px;
-        }
-
-        .hero-borgo p {
-          font-size: 0.95rem;
-          line-height: 1.6;
-        }
-
-        .btn {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-
-        .section-title {
-          font-size: 1.6rem;
-          margin-bottom: 30px;
-        }
-
-        .section-subtitle {
-          font-size: 1rem;
-          margin-bottom: 40px;
-        }
-
-        .content-section {
-          gap: 25px;
-          margin-bottom: 40px;
-        }
-
-        .content-text h3 {
-          font-size: 1.4rem;
-          margin-bottom: 15px;
-        }
-
-        .content-text p {
-          font-size: 0.9rem;
-          line-height: 1.6;
-        }
-
-        .content-image {
-          height: 250px;
-          border-radius: 12px;
-        }
-
-        .info-grid,
-        .info-grid.contact-grid {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .info-card {
-          padding: 20px;
-        }
-
-        .info-card i {
-          font-size: 2rem;
-        }
-
-        .gallery {
-          gap: 12px;
-          margin-top: 30px;
-        }
-
-        .gallery-item {
-          height: 180px;
-        }
-
-        .back-link a {
-          padding: 8px 24px;
-          font-size: 0.75rem;
-          gap: 5px;
-        }
-
-        .back-link i {
-          font-size: 0.7rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="container header-content">
-        <div class="logo">
-          <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
-          <div>
-            <h1>Polo Tecnico Professionale</h1>
-            <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-          </div>
-        </div>
-        <div class="back-link">
-          <a href="../index.html#borghi"
-            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
-          >
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+        <div>
+          <h1>Polo Tecnico Professionale</h1>
+          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
         </div>
       </div>
-    </header>
+      <div class="back-link">
+        <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section
-        class="hero-borgo"
-        style="
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-borgo" style="
           background-image: url(&quot;../images/samo/samo-panorama.jpg&quot;);
           background-size: cover;
           background-position: center;
-        "
-      >
-        <div class="hero-overlay"></div>
-        <div class="container">
-          <h2>Samo</h2>
-          <p>
-            Un gioiello nascosto dell'Aspromonte, tra le radici della Magna
-            Grecia e l'antico borgo di Precacore.
-          </p>
-        </div>
-      </section>
+        ">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <h2>Samo</h2>
+        <p>
+          Un gioiello nascosto dell'Aspromonte, tra le radici della Magna
+          Grecia e l'antico borgo di Precacore.
+        </p>
+      </div>
+    </section>
 
-      <!-- INFO CARDS -->
-      <section>
-        <div class="container">
-          <div class="info-grid">
-            <div class="info-card">
-              <i class="fas fa-mountain"></i>
-              <h4>Altitudine</h4>
-              <p>280 m s.l.m. (min 200 m, max 1056 m)</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-map-pin"></i>
-              <h4>Territorio</h4>
-              <p>Cuore dell'Aspromonte</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-archway"></i>
-              <h4>Patrimonio</h4>
-              <p>Resti greco-bizantini di Precacore</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-paint-brush"></i>
-              <h4>Progetti</h4>
-              <p>O_S(i)amoLAB (laboratorio culturale)</p>
-            </div>
+    <!-- INFO CARDS -->
+    <section>
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-mountain"></i>
+            <h4>Altitudine</h4>
+            <p>280 m s.l.m. (min 200 m, max 1056 m)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-map-pin"></i>
+            <h4>Territorio</h4>
+            <p>Cuore dell'Aspromonte</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-archway"></i>
+            <h4>Patrimonio</h4>
+            <p>Resti greco-bizantini di Precacore</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-paint-brush"></i>
+            <h4>Progetti</h4>
+            <p>O_S(i)amoLAB (laboratorio culturale)</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- MACRO-SEZIONE 1: Il Borgo di Samo e il Suo Territorio -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Il Borgo di Samo e il Suo Territorio</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Il Cuore Verde dell'Aspromonte</h3>
-              <p>
-                Situato nel cuore dell'Aspromonte, a nord della fiumara La
-                Verde, il borgo di Samo sorge su una collina a 280 metri di
-                altitudine, tra vallate verdi, boschi secolari e montagne. Il
-                territorio comunale, che si estende per oltre 50 km², offre
-                panorami mozzafiato sul Mar Ionio e sull'aspra catena montuosa
-                dell'Aspromonte, inserito nel Parco Nazionale che dal 2021 fa
-                parte del Global Geoparks Network dell'UNESCO.
-              </p>
-              <p>
-                Le fitte foreste di leccio, querce e castagni creano un
-                ecosistema ricco di biodiversità, ideale per escursioni e
-                percorsi di scoperta del paesaggio. Il paese conserva
-                un'identità territoriale ben definita in cui passato e presente
-                convivono armoniosamente, con vicoli antichi e piazze che
-                raccontano secoli di vita contadina.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- MACRO-SEZIONE 1: Il Borgo di Samo e il Suo Territorio -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Il Borgo di Samo e il Suo Territorio</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Il Cuore Verde dell'Aspromonte</h3>
+            <p>
+              Situato nel cuore dell'Aspromonte, a nord della fiumara La
+              Verde, il borgo di Samo sorge su una collina a 280 metri di
+              altitudine, tra vallate verdi, boschi secolari e montagne. Il
+              territorio comunale, che si estende per oltre 50 km², offre
+              panorami mozzafiato sul Mar Ionio e sull'aspra catena montuosa
+              dell'Aspromonte, inserito nel Parco Nazionale che dal 2021 fa
+              parte del Global Geoparks Network dell'UNESCO.
+            </p>
+            <p>
+              Le fitte foreste di leccio, querce e castagni creano un
+              ecosistema ricco di biodiversità, ideale per escursioni e
+              percorsi di scoperta del paesaggio. Il paese conserva
+              un'identità territoriale ben definita in cui passato e presente
+              convivono armoniosamente, con vicoli antichi e piazze che
+              raccontano secoli di vita contadina.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url(&quot;../images/samo/samo-paesaggio.jpg&quot;);
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url(&quot;../images/samo/samo-fiumaralaverde.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>La Fiumara La Verde e la Biodiversità</h3>
-              <p>
-                Il territorio di Samo è attraversato dalla fiumara La Verde, un
-                corso d'acqua a carattere torrentizio che nei millenni ha
-                modellato il paesaggio, creando gole profonde e un contrasto
-                cromatico unico tra il bianco dei calanchi e il verde della
-                macchia mediterranea. La fiumara è stata nei secoli una via
-                naturale di comunicazione tra la costa e l'entroterra, e oggi
-                offre scenari suggestivi e sentieri ideali per escursioni.
-              </p>
-              <p>
-                La zona è ricca di biodiversità: boschi di leccio, querce,
-                castagni secolari, macchia mediterranea. Tra la fauna, si
-                segnalano la rarissima aquila reale, il lupo appenninico, il
-                gatto selvatico e numerosi rapaci che migrano dall'Africa verso
-                l'Europa in primavera.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>La Fiumara La Verde e la Biodiversità</h3>
+            <p>
+              Il territorio di Samo è attraversato dalla fiumara La Verde, un
+              corso d'acqua a carattere torrentizio che nei millenni ha
+              modellato il paesaggio, creando gole profonde e un contrasto
+              cromatico unico tra il bianco dei calanchi e il verde della
+              macchia mediterranea. La fiumara è stata nei secoli una via
+              naturale di comunicazione tra la costa e l'entroterra, e oggi
+              offre scenari suggestivi e sentieri ideali per escursioni.
+            </p>
+            <p>
+              La zona è ricca di biodiversità: boschi di leccio, querce,
+              castagni secolari, macchia mediterranea. Tra la fauna, si
+              segnalano la rarissima aquila reale, il lupo appenninico, il
+              gatto selvatico e numerosi rapaci che migrano dall'Africa verso
+              l'Europa in primavera.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- MACRO-SEZIONE 2: Le Origini tra Mito e Storia: Precacore -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Le Origini tra Mito e Storia: Precacore</h2>
-          <div class="content-section">
-            <div
-              class="content-image"
-              style="
+    <!-- MACRO-SEZIONE 2: Le Origini tra Mito e Storia: Precacore -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Le Origini tra Mito e Storia: Precacore</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url(&quot;../images/samo/samo-borgoprecacore.webp&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>La Leggenda di Samo e la Magna Grecia</h3>
-              <p>
-                Secondo una tradizione locale, il nome del paese deriverebbe da
-                coloni dell'isola greca di Samo, che secondo lo storico Erodoto
-                si sarebbero stabiliti in queste terre nel 492 a.C. Non esistono
-                prove archeologiche certe, ma la leggenda è ancora viva nella
-                memoria collettiva. Il territorio faceva parte dell'area
-                d'influenza dell'antica Kaulon, e tracce di frequentazione
-                ellenica sono attestate da reperti ceramici di stile corinzio e
-                jonico.
-              </p>
-              <p>
-                Il borgo medievale sorse poi in epoca bizantina, quando monaci
-                basiliani cercarono rifugio in questi luoghi isolati, lasciando
-                testimonianze di insediamenti rupestri e chiese-grotte che
-                ancora oggi si possono visitare.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>La Leggenda di Samo e la Magna Grecia</h3>
+            <p>
+              Secondo una tradizione locale, il nome del paese deriverebbe da
+              coloni dell'isola greca di Samo, che secondo lo storico Erodoto
+              si sarebbero stabiliti in queste terre nel 492 a.C. Non esistono
+              prove archeologiche certe, ma la leggenda è ancora viva nella
+              memoria collettiva. Il territorio faceva parte dell'area
+              d'influenza dell'antica Kaulon, e tracce di frequentazione
+              ellenica sono attestate da reperti ceramici di stile corinzio e
+              jonico.
+            </p>
+            <p>
+              Il borgo medievale sorse poi in epoca bizantina, quando monaci
+              basiliani cercarono rifugio in questi luoghi isolati, lasciando
+              testimonianze di insediamenti rupestri e chiese-grotte che
+              ancora oggi si possono visitare.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>L'Antico Borgo di Precacore</h3>
-              <p>
-                Oggi, l'antico borgo di Precacore conserva i resti di questo
-                passato millenario, con strutture murarie e testimonianze
-                artistiche di epoca greco-bizantina. Il borgo, situato in
-                posizione panoramica sulla fiumara La Verde, è facilmente
-                raggiungibile con una suggestiva passeggiata che si inerpica sul
-                pendio. Tra le case dirute spiccano due chiese recuperate: la
-                Chiesa di San Giovanni Battista, con tracce di un affresco della
-                Madonna Nera, e la Chiesa di San Sebastiano, che conserva
-                affreschi quattrocenteschi.
-              </p>
-              <p>
-                Recenti interventi di illuminazione e restauro hanno restituito
-                luce a questo gioiello medievale, rendendolo meta di visitatori
-                e studiosi. Il sito è anche al centro del progetto di
-                valorizzazione "Re_ThiNk Precacore".
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>L'Antico Borgo di Precacore</h3>
+            <p>
+              Oggi, l'antico borgo di Precacore conserva i resti di questo
+              passato millenario, con strutture murarie e testimonianze
+              artistiche di epoca greco-bizantina. Il borgo, situato in
+              posizione panoramica sulla fiumara La Verde, è facilmente
+              raggiungibile con una suggestiva passeggiata che si inerpica sul
+              pendio. Tra le case dirute spiccano due chiese recuperate: la
+              Chiesa di San Giovanni Battista, con tracce di un affresco della
+              Madonna Nera, e la Chiesa di San Sebastiano, che conserva
+              affreschi quattrocenteschi.
+            </p>
+            <p>
+              Recenti interventi di illuminazione e restauro hanno restituito
+              luce a questo gioiello medievale, rendendolo meta di visitatori
+              e studiosi. Il sito è anche al centro del progetto di
+              valorizzazione "Re_ThiNk Precacore".
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url(&quot;../images/samo/samo-precacore.webp&quot;);
-              "
-            ></div>
-          </div>
+              "></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- MACRO-SEZIONE 3: Natura e Paesaggio: Gole e Sentieri -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Natura e Paesaggio: Gole e Sentieri</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Le Gole della Fiumara La Verde</h3>
-              <p>
-                Dal centro abitato di Samo, percorrendo un suggestivo sentiero
-                che conduce al greto della fiumara La Verde, si raggiungono le
-                maestose gole che si estendono per circa 3,5 km. Le alte pareti
-                rocciose, ornate da rare felci e capelvenere, si stringono fino
-                a formare stretti canyon. Lungo il percorso si alternano
-                uliveti, leccete e zone con fitta vegetazione arbustiva, fino ad
-                arrivare ai suggestivi strapiombi di Monte Palecastro.
-              </p>
-              <p>
-                Un itinerario ideale per gli amanti del trekking e della natura
-                incontaminata, che permette di immergersi in un ambiente
-                selvaggio e di osservare da vicino la geologia dell'Aspromonte.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+    <!-- MACRO-SEZIONE 3: Natura e Paesaggio: Gole e Sentieri -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Natura e Paesaggio: Gole e Sentieri</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Le Gole della Fiumara La Verde</h3>
+            <p>
+              Dal centro abitato di Samo, percorrendo un suggestivo sentiero
+              che conduce al greto della fiumara La Verde, si raggiungono le
+              maestose gole che si estendono per circa 3,5 km. Le alte pareti
+              rocciose, ornate da rare felci e capelvenere, si stringono fino
+              a formare stretti canyon. Lungo il percorso si alternano
+              uliveti, leccete e zone con fitta vegetazione arbustiva, fino ad
+              arrivare ai suggestivi strapiombi di Monte Palecastro.
+            </p>
+            <p>
+              Un itinerario ideale per gli amanti del trekking e della natura
+              incontaminata, che permette di immergersi in un ambiente
+              selvaggio e di osservare da vicino la geologia dell'Aspromonte.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url(&quot;../images/samo/samo-golafiumaralaverde.jpg&quot;);
-              "
-            ></div>
-          </div>
+              "></div>
+        </div>
 
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-image" style="
                 background-image: url(&quot;../images/samo/samo-sentieroprecacore.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Il Sentiero per l'Antico Borgo di Precacore</h3>
-              <p>
-                Una passeggiata nel tempo: il sentiero che collega il paese al
-                borgo di Precacore si snoda attraverso uliveti e macchia
-                mediterranea, offrendo scorci suggestivi sulla valle. Lungo il
-                percorso, recentemente valorizzato con interventi di
-                illuminazione, si possono ammirare i ruderi delle antiche
-                abitazioni e le due chiesette restaurate.
-              </p>
-              <p>
-                Un'escursione adatta a tutti, che permette di scoprire le radici
-                storiche del territorio e di godere di un panorama unico
-                sull'Aspromonte, con la possibilità di proseguire verso altri
-                itinerari naturalistici.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>Il Sentiero per l'Antico Borgo di Precacore</h3>
+            <p>
+              Una passeggiata nel tempo: il sentiero che collega il paese al
+              borgo di Precacore si snoda attraverso uliveti e macchia
+              mediterranea, offrendo scorci suggestivi sulla valle. Lungo il
+              percorso, recentemente valorizzato con interventi di
+              illuminazione, si possono ammirare i ruderi delle antiche
+              abitazioni e le due chiesette restaurate.
+            </p>
+            <p>
+              Un'escursione adatta a tutti, che permette di scoprire le radici
+              storiche del territorio e di godere di un panorama unico
+              sull'Aspromonte, con la possibilità di proseguire verso altri
+              itinerari naturalistici.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- MACRO-SEZIONE 4: Cultura e Innovazione: O_S(i)amoLAB e Murales -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Cultura e Innovazione</h2>
-          <div class="content-section">
-            <div
-              class="content-image"
-              style="
+    <!-- MACRO-SEZIONE 4: Cultura e Innovazione: O_S(i)amoLAB e Murales -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Cultura e Innovazione</h2>
+        <div class="content-section">
+          <div class="content-image" style="
                 background-image: url(&quot;../images/samo/samo-osamolab.jpeg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>O_S(i)amoLAB: Creatività e Partecipazione</h3>
-              <p>
-                Negli ultimi anni, il paese ha avviato strategie innovative per
-                valorizzare il borgo e rafforzarne l'attrattività turistica. Il
-                progetto "Re_ThiNk Precacore. Idee di futuro per Samo e il Borgo
-                antico di Precacore", promosso dalla Regione Calabria, ha dato
-                vita a O_S(i)amoLAB, un laboratorio di progettazione
-                esperienziale e innovazione culturale che coinvolge artisti,
-                studenti e ricercatori nello sviluppo di iniziative creative e
-                partecipative.
-              </p>
-              <p>
-                O_S(i)amoLAB ha già realizzato numerosi eventi, tra cui
-                "Paesaggi Teatrali" con Mana Chuma Teatro e Teatro delle Rane,
-                laboratori di drammaturgia e spettacoli che animano il
-                territorio. Queste iniziative rappresentano un modello
-                innovativo di collaborazione tra cultura, educazione e sviluppo
-                sostenibile, valorizzando il patrimonio locale attraverso il
-                coinvolgimento attivo della comunità.
-              </p>
-            </div>
+              "></div>
+          <div class="content-text">
+            <h3>O_S(i)amoLAB: Creatività e Partecipazione</h3>
+            <p>
+              Negli ultimi anni, il paese ha avviato strategie innovative per
+              valorizzare il borgo e rafforzarne l'attrattività turistica. Il
+              progetto "Re_ThiNk Precacore. Idee di futuro per Samo e il Borgo
+              antico di Precacore", promosso dalla Regione Calabria, ha dato
+              vita a O_S(i)amoLAB, un laboratorio di progettazione
+              esperienziale e innovazione culturale che coinvolge artisti,
+              studenti e ricercatori nello sviluppo di iniziative creative e
+              partecipative.
+            </p>
+            <p>
+              O_S(i)amoLAB ha già realizzato numerosi eventi, tra cui
+              "Paesaggi Teatrali" con Mana Chuma Teatro e Teatro delle Rane,
+              laboratori di drammaturgia e spettacoli che animano il
+              territorio. Queste iniziative rappresentano un modello
+              innovativo di collaborazione tra cultura, educazione e sviluppo
+              sostenibile, valorizzando il patrimonio locale attraverso il
+              coinvolgimento attivo della comunità.
+            </p>
           </div>
+        </div>
 
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Murales e Arte Urbana</h3>
-              <p>
-                Negli anni Novanta, grazie alla collaborazione con l'Accademia
-                di Belle Arti di Reggio Calabria, Samo è stata abbellita da
-                numerosi murales dipinti sulle facciate delle case, oltre al
-                restauro di fontane e del lavatoio pubblico decorato con tessere
-                vitree policrome. Questa operazione ha trasformato il centro
-                storico in una galleria d'arte a cielo aperto, attirando
-                l'attenzione di critici e visitatori.
-              </p>
-              <p>
-                Oggi i murales sono parte integrante dell'identità visiva del
-                borgo, e insieme ai progetti di O_S(i)amoLAB rappresentano un
-                connubio tra arte contemporanea e tradizione, rendendo Samo un
-                laboratorio culturale vivo e dinamico.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Murales e Arte Urbana</h3>
+            <p>
+              Negli anni Novanta, grazie alla collaborazione con l'Accademia
+              di Belle Arti di Reggio Calabria, Samo è stata abbellita da
+              numerosi murales dipinti sulle facciate delle case, oltre al
+              restauro di fontane e del lavatoio pubblico decorato con tessere
+              vitree policrome. Questa operazione ha trasformato il centro
+              storico in una galleria d'arte a cielo aperto, attirando
+              l'attenzione di critici e visitatori.
+            </p>
+            <p>
+              Oggi i murales sono parte integrante dell'identità visiva del
+              borgo, e insieme ai progetti di O_S(i)amoLAB rappresentano un
+              connubio tra arte contemporanea e tradizione, rendendo Samo un
+              laboratorio culturale vivo e dinamico.
+            </p>
+          </div>
+          <div class="content-image" style="
                 background-image: url(&quot;../images/samo/samo-murales.jpg&quot;);
-              "
-            ></div>
+              "></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Tradizioni e Cultura</h2>
+        <div class="tradizioni-grid">
+          <div class="tradizione-card">
+            <i class="fas fa-church"></i>
+            <h4>San Giovanni Battista</h4>
+            <p>
+              Il patrono del paese è San Giovanni Battista, celebrato con
+              festeggiamenti religiosi che uniscono la tradizione bizantina
+              alle usanze popolari. Ogni 29 agosto si rinnova l'antica
+              tradizione della festa, con processioni che salgono all'antico
+              borgo di Precacore.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-utensils"></i>
+            <h4>Enogastronomia Locale</h4>
+            <p>
+              La tradizione culinaria aspromontana si esprime nei formaggi di
+              capra, nei salumi artigianali come la 'nduja, nel miele di
+              castagno e nei vini locali. I maccheroni fatti a mano conditi
+              con ragù di capra sono una specialità del territorio.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-palette"></i>
+            <h4>Murales e Arte Urbana</h4>
+            <p>
+              Negli anni Novanta, grazie alla collaborazione con l'Accademia
+              di Belle Arti di Reggio Calabria, Samo è stata abbellita da
+              numerosi murales dipinti sulle facciate delle case, oltre al
+              restauro di fontane e del lavatoio pubblico decorato con tessere
+              vitree policrome.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-hiking"></i>
+            <h4>Escursioni e Trekking</h4>
+            <p>
+              Il territorio offre numerosi percorsi: il sentiero per l'antico
+              borgo di Precacore, le gole della fiumara La Verde e
+              l'itinerario per Montalto (26 km, 7h30). L'Aspromonte è anche
+              meta per ciclovie, mountain bike e torrentismo.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Tradizioni e Cultura</h2>
-          <div class="tradizioni-grid">
-            <div class="tradizione-card">
-              <i class="fas fa-church"></i>
-              <h4>San Giovanni Battista</h4>
-              <p>
-                Il patrono del paese è San Giovanni Battista, celebrato con
-                festeggiamenti religiosi che uniscono la tradizione bizantina
-                alle usanze popolari. Ogni 29 agosto si rinnova l'antica
-                tradizione della festa, con processioni che salgono all'antico
-                borgo di Precacore.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-utensils"></i>
-              <h4>Enogastronomia Locale</h4>
-              <p>
-                La tradizione culinaria aspromontana si esprime nei formaggi di
-                capra, nei salumi artigianali come la 'nduja, nel miele di
-                castagno e nei vini locali. I maccheroni fatti a mano conditi
-                con ragù di capra sono una specialità del territorio.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-palette"></i>
-              <h4>Murales e Arte Urbana</h4>
-              <p>
-                Negli anni Novanta, grazie alla collaborazione con l'Accademia
-                di Belle Arti di Reggio Calabria, Samo è stata abbellita da
-                numerosi murales dipinti sulle facciate delle case, oltre al
-                restauro di fontane e del lavatoio pubblico decorato con tessere
-                vitree policrome.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-hiking"></i>
-              <h4>Escursioni e Trekking</h4>
-              <p>
-                Il territorio offre numerosi percorsi: il sentiero per l'antico
-                borgo di Precacore, le gole della fiumara La Verde e
-                l'itinerario per Montalto (26 km, 7h30). L'Aspromonte è anche
-                meta per ciclovie, mountain bike e torrentismo.
-              </p>
-            </div>
-          </div>
+    <!-- GALLERIA FOTO -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Galleria Fotografica</h2>
+        <div class="gallery">
+          <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-1.jpg"></div>
+          <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-2.jpg"></div>
+          <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-3.jpg"></div>
+          <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-4.jpg"></div>
+          <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-5.jpg"></div>
+          <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-6.jpg"></div>
         </div>
-      </section>
- 
-      <!-- GALLERIA FOTO -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Galleria Fotografica</h2>
-          <div class="gallery">
-            <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-1.jpg"></div>
-            <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-2.jpg"></div>
-            <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-3.jpg"></div>
-            <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-4.jpg"></div>
-            <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-5.jpg"></div>
-            <div class="gallery-item"><img src="../images/samo/galleria/galleria-samo-6.jpg"></div>
+      </div>
+    </section>
+
+    <!-- INFO UTILI -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Info Utili</h2>
+        <div class="info-grid contact-grid">
+          <div class="info-card">
+            <i class="fas fa-car"></i>
+            <h4>Come Arrivare</h4>
+            <p>
+              <strong>In Auto:</strong> SS106 Jonica, uscita Bianco o
+              Bovalino. Seguire le indicazioni per Samo (circa 15-20 km in
+              direzione Aspromonte).<br />
+              Dista circa 40 km da Siderno e 85 km da Reggio Calabria.<br />
+              Strade panoramiche tortuose, consigliato navigatore GPS.<br />
+              Parcheggio disponibile nel centro abitato.
+            </p>
           </div>
-        </div>
-      </section>
 
-      <!-- INFO UTILI -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Info Utili</h2>
-          <div class="info-grid contact-grid">
-            <div class="info-card">
-              <i class="fas fa-car"></i>
-              <h4>Come Arrivare</h4>
-              <p>
-                <strong>In Auto:</strong> SS106 Jonica, uscita Bianco o
-                Bovalino. Seguire le indicazioni per Samo (circa 15-20 km in
-                direzione Aspromonte).<br />
-                Dista circa 40 km da Siderno e 85 km da Reggio Calabria.<br />
-                Strade panoramiche tortuose, consigliato navigatore GPS.<br />
-                Parcheggio disponibile nel centro abitato.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-globe"></i>
-              <h4>Comune e Informazioni</h4>
-              <p>
-                <strong>Comune di Samo</strong><br />
-                Via Vittorio Emanuele, 11<br />
-                89030 Samo (RC)<br />
-                <strong>Tel:</strong> 0964 977022<br />
-                <strong>Email:</strong>
-                <a
-                  href="mailto:protocollo@comune.samo.rc.it"
-                  style="color: var(--text-light); text-decoration: none"
-                  >protocollo@comune.samo.rc.it</a
-                ><br />
-                <strong>PEC:</strong> protocollo.comunedisamo@asmepec.it<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="http://www.comune.samo.rc.it"
-                  target="_blank"
-                  style="
+          <div class="info-card">
+            <i class="fas fa-globe"></i>
+            <h4>Comune e Informazioni</h4>
+            <p>
+              <strong>Comune di Samo</strong><br />
+              Via Vittorio Emanuele, 11<br />
+              89030 Samo (RC)<br />
+              <strong>Tel:</strong> 0964 977022<br />
+              <strong>Email:</strong>
+              <a href="mailto:protocollo@comune.samo.rc.it"
+                style="color: var(--text-light); text-decoration: none">protocollo@comune.samo.rc.it</a><br />
+              <strong>PEC:</strong> protocollo.comunedisamo@asmepec.it<br />
+              <strong>Sito web:</strong>
+              <a href="http://www.comune.samo.rc.it" target="_blank" style="
                     color: var(--accent);
                     text-decoration: none;
                     font-weight: 600;
-                  "
-                  >www.comune.samo.rc.it</a
-                ><br />
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-paint-brush"></i>
-              <h4>O_S(i)amoLAB</h4>
-              <p>
-                <strong>Laboratorio di Innovazione Culturale</strong><br />
-                <strong>Email:</strong>
-                <a
-                  href="mailto:osamolab@comune.samo.rc.it"
-                  style="color: var(--text-light); text-decoration: none"
-                  >osamolab@comune.samo.rc.it</a
-                ><br />
-                <small>Informazioni su eventi e attività culturali</small>
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-leaf"></i>
-              <h4>Ente Parco Nazionale dell'Aspromonte</h4>
-              <p>
-                <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
-                Stefano Aspromonte (RC)<br />
-                <strong>Tel:</strong> 0965 743060<br />
-                <strong>Email:</strong>
-                info.posta@parconazionaleaspromonte.it<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="https://www.parconazionaleaspromonte.it"
-                  target="_blank"
-                  style="color: var(--accent)"
-                  >www.parconazionaleaspromonte.it</a
-                ><br />
-                <small>Per informazioni su sentieri e aree naturali</small>
-              </p>
-            </div>
+                  ">www.comune.samo.rc.it</a><br />
+            </p>
           </div>
-          <div class="btn-center">
-            <a href="../index.html#borghi" class="btn"
-              ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
-            >
+
+          <div class="info-card">
+            <i class="fas fa-paint-brush"></i>
+            <h4>O_S(i)amoLAB</h4>
+            <p>
+              <strong>Laboratorio di Innovazione Culturale</strong><br />
+              <strong>Email:</strong>
+              <a href="mailto:osamolab@comune.samo.rc.it"
+                style="color: var(--text-light); text-decoration: none">osamolab@comune.samo.rc.it</a><br />
+              <small>Informazioni su eventi e attività culturali</small>
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-leaf"></i>
+            <h4>Ente Parco Nazionale dell'Aspromonte</h4>
+            <p>
+              <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
+              Stefano Aspromonte (RC)<br />
+              <strong>Tel:</strong> 0965 743060<br />
+              <strong>Email:</strong>
+              info.posta@parconazionaleaspromonte.it<br />
+              <strong>Sito web:</strong>
+              <a href="https://www.parconazionaleaspromonte.it" target="_blank"
+                style="color: var(--accent)">www.parconazionaleaspromonte.it</a><br />
+              <small>Per informazioni su sentieri e aree naturali</small>
+            </p>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>
-            <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
-            <a href="../index.html">Home</a>
-          </p>
-          <p>
-            &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
-            Zanotti. Tutti i diritti riservati.
-          </p>
-        </div>
-        <div class="copyright">
-          Sito realizzato dagli studenti del progetto scolastico
+        <div class="btn-center">
+          <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script>
-      // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>
+          <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
+          <a href="../index.html">Home</a>
+        </p>
+        <p>
+          &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
+          Zanotti. Tutti i diritti riservati.
+        </p>
+      </div>
+      <div class="copyright">
+        Sito realizzato dagli studenti del progetto scolastico
+      </div>
+    </div>
+  </footer>
 
-      window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-      });
-    </script>
-  </body>
+  <script>
+    // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+
 </html>

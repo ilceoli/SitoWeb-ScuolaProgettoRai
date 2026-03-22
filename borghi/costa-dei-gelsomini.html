@@ -1,1348 +1,1266 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Costa dei Gelsomini - Polo Tecnico Professionale Marconi</title>
-    <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
-    <!-- Google Fonts e Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      /* ============================================
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Costa dei Gelsomini - Polo Tecnico Professionale Marconi</title>
+  <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
+  <!-- Google Fonts e Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ============================================
            POLO TECNICO PROFESSIONALE - STYLE.CSS
            Design Elegante e Professionale
            ============================================ */
 
-      /* RESET E BASE */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    /* RESET E BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        color: #1a1a2e;
-        background-color: #fafbfc;
-        overflow-x: hidden;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background-color: #fafbfc;
+      overflow-x: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
-      /* ============================================
+    /* ============================================
            VARIABILI COLORE - PALETTE REFINED
            ============================================ */
-      :root {
-        --primary: #2c3e50;
-        --primary-light: #34495e;
-        --primary-dark: #1e2b3a;
-        --accent: #e67e22;
-        --accent-light: #f39c12;
-        --accent-dark: #c96e1c;
-        --secondary: #5c7c9a;
-        --gray-light: #f0f2f5;
-        --gray: #9ca3af;
-        --text-light: #6b7280;
-        --text-dark: #1f2937;
-        --white: #ffffff;
-        --off-white: #f8f9fa;
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-        --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
-        --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
-        --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-        --gradient-primary: linear-gradient(
-          135deg,
+    :root {
+      --primary: #2c3e50;
+      --primary-light: #34495e;
+      --primary-dark: #1e2b3a;
+      --accent: #e67e22;
+      --accent-light: #f39c12;
+      --accent-dark: #c96e1c;
+      --secondary: #5c7c9a;
+      --gray-light: #f0f2f5;
+      --gray: #9ca3af;
+      --text-light: #6b7280;
+      --text-dark: #1f2937;
+      --white: #ffffff;
+      --off-white: #f8f9fa;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+      --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
+      --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
+      --gradient-primary: linear-gradient(135deg,
           var(--primary) 0%,
-          var(--primary-light) 100%
-        );
-        --gradient-accent: linear-gradient(
-          135deg,
+          var(--primary-light) 100%);
+      --gradient-accent: linear-gradient(135deg,
           var(--accent) 0%,
-          var(--accent-light) 100%
-        );
-        --transition: 0.3s ease;
-        --transition-slow: 0.5s ease;
-      }
+          var(--accent-light) 100%);
+      --transition: 0.3s ease;
+      --transition-slow: 0.5s ease;
+    }
 
-      /* ============================================
+    /* ============================================
            LAYOUT GENERALE
            ============================================ */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-      /* ============================================
+    /* ============================================
            HEADER E NAVIGAZIONE
            ============================================ */
-      header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px) saturate(180%);
-        box-shadow: var(--shadow-sm);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        transition: all var(--transition);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all var(--transition);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      transition: padding var(--transition);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition);
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .logo h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      margin-top: 1px;
+    }
+
+    .back-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gray-light);
+      color: var(--text-dark);
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+
+    .back-link a:hover {
+      background: var(--gradient-primary);
+      color: var(--white);
+      transform: translateX(-5px);
+    }
+
+    /* ============================================
+           SEZIONI GENERALI
+           ============================================ */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 0;
+      }
+    }
+
+    section:nth-child(even) {
+      background-color: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 60px;
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+           HERO SECTION
+           ============================================ */
+    .hero-borgo {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(15, 44, 74, 0.7) 0%,
+          rgba(26, 61, 92, 0.7) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-borgo .container {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .hero-borgo h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-borgo p {
+      font-size: 1.25rem;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      opacity: 0.95;
+      line-height: 1.8;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ============================================
+           CONTENT SECTIONS
+           ============================================ */
+    .content-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .content-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section.reverse {
+      direction: rtl;
+    }
+
+    .content-section.reverse>* {
+      direction: ltr;
+    }
+
+    .content-text {
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .content-text h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .content-text p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .content-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ============================================
+           INFO CARDS
+           ============================================ */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .info-grid.contact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .info-card i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .info-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+           TRADITIONS GRID
+           ============================================ */
+    .tradizioni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .tradizione-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all var(--transition-slow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      position: relative;
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .tradizione-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+
+    .tradizione-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .tradizione-card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tradizione-card i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      transition: transform var(--transition);
+    }
+
+    .tradizione-card:hover i {
+      transform: scale(1.1);
+    }
+
+    .tradizione-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .tradizione-card p {
+      color: var(--text-light);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+           GALLERY
+           ============================================ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 220px;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-slow);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.15);
+    }
+
+    /* ============================================
+           BUTTONS
+           ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-accent);
+      color: var(--text-dark);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all var(--transition);
+      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent);
+      transition: left 0.6s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
+    }
+
+    .btn i {
+      transition: transform var(--transition);
+    }
+
+    .btn:hover i {
+      transform: translateX(5px);
+    }
+
+    .btn-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* ============================================
+           FOOTER
+           ============================================ */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 70px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .footer-content {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .footer-content p {
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-content a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .footer-content a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ============================================
+           RESPONSIVE
+           ============================================ */
+    @media (max-width: 768px) {
       .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-        transition: padding var(--transition);
+        padding: 32px 0;
       }
 
       .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: transform var(--transition);
+        gap: 8px;
       }
 
       .logo img {
-        height: 45px;
-        width: auto;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        height: 35px;
       }
 
       .logo h1 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
+        font-size: 1rem;
       }
 
       .logo span {
-        font-size: 0.7rem;
-        color: var(--text-light);
+        font-size: 0.6rem;
         display: block;
-        font-weight: 400;
-        letter-spacing: 0.3px;
-        margin-top: 1px;
+        opacity: 0.8;
       }
 
-      .back-link a {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--gray-light);
-        color: var(--text-dark);
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all var(--transition);
-      }
-
-      .back-link a:hover {
-        background: var(--gradient-primary);
-        color: var(--white);
-        transform: translateX(-5px);
-      }
-
-      /* ============================================
-           SEZIONI GENERALI
-           ============================================ */
-      section {
-        padding: 100px 0;
-        position: relative;
-      }
-
-      @media (max-width: 768px) {
-        section {
-          padding: 60px 0;
-        }
-      }
-
-      section:nth-child(even) {
-        background-color: var(--white);
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 40px;
-        letter-spacing: -0.5px;
-      }
-
-      .section-subtitle {
-        text-align: center;
-        color: var(--text-light);
-        margin-bottom: 60px;
-        font-size: 1.15rem;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      /* ============================================
-           HERO SECTION
-           ============================================ */
-      .hero-borgo {
-        position: relative;
-        height: 60vh;
-        min-height: 400px;
-        color: var(--white);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 44, 74, 0.7) 0%,
-          rgba(26, 61, 92, 0.7) 100%
-        );
-        z-index: 2;
-        pointer-events: none;
-      }
-
-      .hero-borgo .container {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-      }
-
-      .hero-borgo h2 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 24px;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .hero-borgo p {
-        font-size: 1.25rem;
-        max-width: 750px;
-        margin: 0 auto 40px;
-        opacity: 0.95;
-        line-height: 1.8;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
       .content-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-        margin-bottom: 60px;
-      }
-
-      .content-section:last-child {
-        margin-bottom: 0;
-      }
-
-      .content-section.reverse {
-        direction: rtl;
-      }
-
-      .content-section.reverse > * {
-        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        direction: ltr !important;
       }
 
       .content-text {
-        padding: 20px;
-        text-align: justify;
-      }
-
-      .content-text h3 {
-        font-size: 1.8rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .content-text p {
-        color: var(--text-light);
-        margin-bottom: 15px;
-        line-height: 1.8;
+        order: 1;
+        padding: 0;
       }
 
       .content-image {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        height: 350px;
-        background-size: cover;
-        background-position: center;
+        order: 2;
+        width: 100%;
       }
 
-      /* ============================================
-           INFO CARDS
-           ============================================ */
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin-top: 40px;
-      }
-
-      .info-grid.contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      }
-
-      .info-card {
-        background: var(--white);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        text-align: center;
-      }
-
-      .info-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .info-card i {
+      .hero-borgo h2 {
         font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 20px;
       }
 
-      .info-card h4 {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-bottom: 10px;
-        font-weight: 600;
+      .hero-borgo p {
+        font-size: 1.1rem;
       }
 
-      .info-card p {
-        color: var(--text-light);
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .logo h1 {
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      .logo span {
+        display: block;
+        font-size: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .logo img {
+        height: 28px;
+      }
+
+      .hero-borgo {
+        min-height: 250px;
+        height: 40vh;
+      }
+
+      .hero-borgo h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+      }
+
+      .hero-borgo p {
         font-size: 0.95rem;
         line-height: 1.6;
       }
 
-      /* ============================================
-           TRADITIONS GRID
-           ============================================ */
-      .tradizioni-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 32px;
-        margin-top: 40px;
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
       }
 
-      .tradizione-card {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all var(--transition-slow);
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        position: relative;
-        padding: 30px 24px;
-        text-align: center;
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
       }
 
-      .tradizione-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-        transform: scaleX(0);
-        transition: transform var(--transition);
-        transform-origin: left;
+      .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover::before {
-        transform: scaleX(1);
+      .content-section {
+        gap: 25px;
+        margin-bottom: 40px;
       }
 
-      .tradizione-card:hover {
-        transform: translateY(-12px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .tradizione-card i {
-        font-size: 3rem;
-        color: var(--accent);
-        margin-bottom: 20px;
-        transition: transform var(--transition);
-      }
-
-      .tradizione-card:hover i {
-        transform: scale(1.1);
-      }
-
-      .tradizione-card h4 {
-        font-size: 1.3rem;
+      .content-text h3 {
+        font-size: 1.4rem;
         margin-bottom: 15px;
-        color: var(--primary);
-        font-weight: 600;
       }
 
-      .tradizione-card p {
-        color: var(--text-light);
-        line-height: 1.7;
-        font-size: 0.95rem;
+      .content-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
       }
 
-      /* ============================================
-           GALLERY
-           ============================================ */
+      .content-image {
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      .info-grid,
+      .info-grid.contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .info-card {
+        padding: 20px;
+      }
+
+      .info-card i {
+        font-size: 2rem;
+      }
+
       .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        margin-top: 50px;
+        gap: 12px;
+        margin-top: 30px;
       }
 
       .gallery-item {
-        border-radius: 16px;
-        overflow: hidden;
-        height: 220px;
-        box-shadow: var(--shadow-md);
-        transition: all var(--transition-slow);
-        position: relative;
+        height: 180px;
       }
 
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.8s;
+      .back-link a {
+        padding: 8px 24px;
+        font-size: 0.75rem;
+        gap: 5px;
       }
 
-      .gallery-item:hover img {
-        transform: scale(1.15);
+      .back-link i {
+        font-size: 0.7rem;
       }
+    }
+  </style>
+</head>
 
-      /* ============================================
-           BUTTONS
-           ============================================ */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: var(--gradient-accent);
-        color: var(--text-dark);
-        padding: 14px 32px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all var(--transition);
-        box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
-        border: none;
-        position: relative;
-        overflow: hidden;
-        justify-content: center;
-      }
-
-      .btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: left 0.6s;
-      }
-
-      .btn:hover::before {
-        left: 100%;
-      }
-
-      .btn:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
-      }
-
-      .btn i {
-        transition: transform var(--transition);
-      }
-
-      .btn:hover i {
-        transform: translateX(5px);
-      }
-
-      .btn-center {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      /* ============================================
-           FOOTER
-           ============================================ */
-      footer {
-        background: var(--primary-dark);
-        color: rgba(255, 255, 255, 0.8);
-        padding: 70px 0 30px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-accent);
-      }
-
-      .footer-content {
-        text-align: center;
-        padding-bottom: 30px;
-      }
-
-      .footer-content p {
-        margin-bottom: 15px;
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .footer-content a {
-        color: var(--accent);
-        text-decoration: none;
-        transition: all var(--transition);
-      }
-
-      .footer-content a:hover {
-        color: var(--white);
-      }
-
-      .copyright {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 30px;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      /* ============================================
-           RESPONSIVE
-           ============================================ */
-      @media (max-width: 768px) {
-        .header-content {
-          padding: 32px 0;
-        }
-
-        .logo {
-          gap: 8px;
-        }
-
-        .logo img {
-          height: 35px;
-        }
-
-        .logo h1 {
-          font-size: 1rem;
-        }
-
-        .logo span {
-          font-size: 0.6rem;
-          display: block;
-          opacity: 0.8;
-        }
-
-        .content-section {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          direction: ltr !important;
-        }
-
-        .content-text {
-          order: 1;
-          padding: 0;
-        }
-
-        .content-image {
-          order: 2;
-          width: 100%;
-        }
-
-        .hero-borgo h2 {
-          font-size: 2.5rem;
-        }
-
-        .hero-borgo p {
-          font-size: 1.1rem;
-        }
-
-        .section-title {
-          font-size: 2.2rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          padding: 0 20px;
-        }
-
-        .logo h1 {
-          font-size: 0.8rem;
-          white-space: nowrap;
-        }
-
-        .logo span {
-          display: block;
-          font-size: 0.5rem;
-          opacity: 0.9;
-        }
-
-        .logo img {
-          height: 28px;
-        }
-
-        .hero-borgo {
-          min-height: 250px;
-          height: 40vh;
-        }
-
-        .hero-borgo h2 {
-          font-size: 1.8rem;
-          margin-bottom: 12px;
-        }
-
-        .hero-borgo p {
-          font-size: 0.95rem;
-          line-height: 1.6;
-        }
-
-        .btn {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-
-        .section-title {
-          font-size: 1.6rem;
-          margin-bottom: 30px;
-        }
-
-        .section-subtitle {
-          font-size: 1rem;
-          margin-bottom: 40px;
-        }
-
-        .content-section {
-          gap: 25px;
-          margin-bottom: 40px;
-        }
-
-        .content-text h3 {
-          font-size: 1.4rem;
-          margin-bottom: 15px;
-        }
-
-        .content-text p {
-          font-size: 0.9rem;
-          line-height: 1.6;
-        }
-
-        .content-image {
-          height: 250px;
-          border-radius: 12px;
-        }
-
-        .info-grid,
-        .info-grid.contact-grid {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .info-card {
-          padding: 20px;
-        }
-
-        .info-card i {
-          font-size: 2rem;
-        }
-
-        .gallery {
-          gap: 12px;
-          margin-top: 30px;
-        }
-
-        .gallery-item {
-          height: 180px;
-        }
-
-        .back-link a {
-          padding: 8px 24px;
-          font-size: 0.75rem;
-          gap: 5px;
-        }
-
-        .back-link i {
-          font-size: 0.7rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="container header-content">
-        <div class="logo">
-          <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
-          <div>
-            <h1>Polo Tecnico Professionale</h1>
-            <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-          </div>
-        </div>
-        <div class="back-link">
-          <a href="../index.html#borghi"
-            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
-          >
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Logo Repubblica Italiana" />
+        <div>
+          <h1>Polo Tecnico Professionale</h1>
+          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
         </div>
       </div>
-    </header>
+      <div class="back-link">
+        <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section
-        class="hero-borgo"
-        style="
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-borgo" style="
           background-image: url(&quot;../images/costa-gelsomini/panorama-costa.jpg&quot;);
           background-size: cover;
           background-position: center;
-        "
-      >
-        <div class="hero-overlay"></div>
-        <div class="container">
-          <h2>Costa dei Gelsomini</h2>
-          <p>
-            Dove il profumo del gelsomino incontra il mare cristallino, tra
-            storia millenaria e natura incontaminata.
-          </p>
-        </div>
-      </section>
-
-      <!-- INFO CARDS -->
-      <section>
-        <div class="container">
-          <div class="info-grid">
-            <div class="info-card">
-              <i class="fas fa-map-pin"></i>
-              <h4>Estensione</h4>
-              <p>Da Punta Stilo a Capo Spartivento</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-flower"></i>
-              <h4>Simbolo</h4>
-              <p>Il gelsomino (Jasminum grandiflorum)</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-turtle"></i>
-              <h4>Biodiversità</h4>
-              <p>Nidificazione Caretta caretta</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-history"></i>
-              <h4>Civiltà</h4>
-              <p>Greca, Romana, Bizantina, Normanna</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MACRO-SEZIONE 1: Il Profumo dei Gelsomini -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Il Profumo dei Gelsomini</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>La Storia di un'Essenza</h3>
-              <p>
-                Il nome "Costa dei Gelsomini" nasce dalla storica coltivazione
-                del gelsomino, diffusa lungo tutta la fascia costiera della
-                Locride. Questa pianta, introdotta probabilmente in epoca araba,
-                trovò nel clima mite e nei terreni ben drenati il suo habitat
-                ideale, trasformando il paesaggio in una distesa di fiori
-                bianchi dal profumo inconfondibile.
-              </p>
-              <p>
-                Le "gelsominaie" – donne esperte nella raccolta – si alzavano
-                all'alba per cogliere i delicati boccioli ancora chiusi,
-                destinati all'industria dei profumi. Un lavoro delicato che
-                richiedeva mani esperte e pazienza, tramandato di generazione in
-                generazione.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/gelsominaie.jpg&quot;);
-              "
-            ></div>
-          </div>
-
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/essenze.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>L'Oro Liquido Esportato in Francia</h3>
-              <p>
-                I fiori venivano esportati soprattutto in Francia, patria della
-                profumeria, contribuendo a rendere la zona un punto di
-                riferimento internazionale per le essenze naturali. La
-                **Stazione Sperimentale delle Essenze**, istituita a Reggio
-                Calabria nel 1928, fu un centro di ricerca fondamentale per la
-                selezione e la promozione di queste colture, che raggiunsero il
-                loro massimo splendore negli anni Cinquanta del Novecento.
-              </p>
-              <p>
-                Oggi la tradizione si rinnova con piccole produzioni artigianali
-                che valorizzano il patrimonio olfattivo della costa, tra
-                laboratori di profumi e saponi naturali che ricordano l'antica
-                vocazione del territorio.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MACRO-SEZIONE 2: Biodiversità e Tartarughe Marine -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Un Santuario per la Biodiversità</h2>
-          <div class="content-section">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/tartaruga-caretta.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>La Caretta caretta a Brancaleone</h3>
-              <p>
-                La Costa dei Gelsomini è uno dei siti più preziosi del
-                Mediterraneo per la conservazione della tartaruga marina Caretta
-                caretta. Ogni anno, da maggio ad agosto, le femmine emergono di
-                notte sulle spiagge di sabbia fine per deporre le uova.
-                Brancaleone, con le sue spiagge protette, è un **Sito di
-                Importanza Comunitaria (SIC)** e uno dei luoghi simbolo di
-                questa straordinaria nidificazione.
-              </p>
-              <p>
-                Le spiagge di sabbia fine e i fondali limpidi offrono l'habitat
-                ideale per la schiusa delle uova e la discesa a mare dei
-                piccoli, che avviene solitamente nelle prime ore della notte,
-                seguendo il riflesso della luna sull'acqua.
-              </p>
-            </div>
-          </div>
-
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Un Progetto di Conservazione Esemplare</h3>
-              <p>
-                Dal 2016, l'associazione Caretta Calabria Conservation ha
-                monitorato e protetto oltre 130 nidi, dai quali sono nati circa
-                6000 piccoli esemplari. Un progetto che coinvolge volontari,
-                pescatori e turisti in un impegno comune per la salvaguardia di
-                questa specie a rischio. Ogni estate, centinaia di persone
-                partecipano alle attività di sorveglianza e liberazione dei
-                piccoli, in un'esperienza educativa e coinvolgente.
-              </p>
-              <p>
-                Le attività di sensibilizzazione hanno reso Brancaleone un punto
-                di riferimento per il turismo sostenibile, dimostrando come la
-                protezione dell'ambiente possa andare di pari passo con lo
-                sviluppo economico locale.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/caretta-conservation.jpg&quot;);
-              "
-            ></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MACRO-SEZIONE 3: Magna Grecia – Locri e Kaulon -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Le Radici della Magna Grecia</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>Locri Epizefiri: la Città delle Leggi</h3>
-              <p>
-                La Costa dei Gelsomini è un museo a cielo aperto dell'antica
-                Grecia. A Locri Epizefiri sorgeva una delle più importanti
-                colonie greche. Qui, intorno al 660 a.C., il legislatore
-                **Zaleuco** scrisse il primo codice di leggi della storia
-                occidentale, anticipando di secoli le costituzioni greche e
-                romane. La città era anche nota per il ruolo centrale delle
-                donne nella società, con una discendenza matrilineare unica nel
-                mondo antico, celebrata dai famosi pinakes votivi oggi
-                conservati nel museo.
-              </p>
-              <p>
-                Il teatro greco, scavato nella roccia, e l'area sacra
-                testimoniano ancora oggi la grandezza di questa polis che
-                dominava la costa ionica.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/teatro-locri.jpg&quot;);
-              "
-            ></div>
-          </div>
-
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/tempio-kaulon.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Kaulon: il Tempio e il Drago</h3>
-              <p>
-                Più a nord, Kaulon fioriva sul promontorio di Punta Stilo.
-                L'antica colonia achea fu distrutta dal tiranno di Siracusa
-                Dionigi nel 389-388 a.C. La sua area sacra conserva i resti di
-                un imponente tempio dorico del V secolo a.C., le cui colonne in
-                arenaria si stagliano ancora oggi contro il cielo. Nelle
-                vicinanze, la Casa del Drago custodiva un mosaico di 25 mq
-                raffigurante un drago marino, il più grande mosaico ellenistico
-                d'Italia, oggi conservato nel museo di Monasterace.
-              </p>
-              <p>
-                Le rovine di Kaulon, immerse in un paesaggio di uliveti e
-                macchia mediterranea, offrono una delle esperienze archeologiche
-                più suggestive della Calabria.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MACRO-SEZIONE 4: Epoca Romana – Naniglio e Casignana -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">L'Eredità Romana</h2>
-          <div class="content-section">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/villa-casignana.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>La Villa Romana di Casignana</h3>
-              <p>
-                L'epoca romana ha lasciato testimonianze straordinarie. La
-                **Villa Romana di Casignana**, risalente al I secolo d.C., con i
-                suoi mosaici policromi, è uno dei complessi più importanti del
-                Sud Italia, seconda solo a Piazza Armerina in Sicilia. Qui sono
-                visibili pavimenti musivi a motivi geometrici, scene di caccia e
-                figure mitologiche, che rivelano la raffinatezza della vita
-                aristocratica nell'antica Calabria.
-              </p>
-              <p>
-                Le terme e gli ambienti residenziali, con le loro decorazioni in
-                marmi pregiati, testimoniano l'importanza economica e culturale
-                di questa zona durante l'Impero.
-              </p>
-            </div>
-          </div>
-
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Il Naniglio: Ingegneria e Culto delle Acque</h3>
-              <p>
-                Nell'entroterra di Gioiosa Ionica, il complesso del **Naniglio**
-                (II-III secolo d.C.) offre una cisterna ipogea unica nel suo
-                genere, con otto poderosi pilastri e una scala a chiocciola di
-                24 gradini che scende nelle viscere della terra. Accanto, un
-                ninfeo dedicato al culto delle acque testimonia la devozione per
-                questo elemento vitale.
-              </p>
-              <p>
-                Il sito, indicato dal FAI come "Luogo del Cuore", rappresenta
-                una delle più affascinanti testimonianze della vita rurale
-                romana nella Locride, ancora in gran parte da esplorare.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/naniglio-cisterna.jpg&quot;);
-              "
-            ></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MACRO-SEZIONE 5: Periodo Bizantino e Medievale -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Il Segno dell'Oriente</h2>
-          <div class="content-section">
-            <div class="content-text">
-              <h3>La Cattolica di Stilo</h3>
-              <p>
-                Tra il VII e il IX secolo, monaci basiliani in fuga dalle
-                persecuzioni iconoclaste portarono in Calabria l'arte bizantina.
-                Ne è testimonianza la **Cattolica di Stilo**, un gioiello
-                architettonico del X secolo con cupola centrale e quattro
-                colonne angolari (tetrakionion), che sorge in un paesaggio di
-                ulivi e pietre. La sua struttura, a pianta quadrata con tre
-                absidi, rappresenta uno dei capolavori dell'architettura
-                medievale in Italia meridionale.
-              </p>
-              <p>
-                L'interno, semplice e austero, conserva tracce di affreschi che
-                raccontano la spiritualità di questi luoghi.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/cattolica-stilo.jpg&quot;);
-              "
-            ></div>
-          </div>
-
-          <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/cattedrale-gerace.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>La Cattedrale di Gerace</h3>
-              <p>
-                Più a sud, la **Cattedrale di Gerace**, consacrata nel 1045, è
-                la più grande della Calabria. Edificata in stile normanno su un
-                precedente luogo di culto, conserva colonne in granito di
-                spoglio provenienti dall'antica Locri, un ambone del XII secolo
-                e una cripta con volte a crociera che testimonia il passaggio
-                dai riti orientali a quelli latini.
-              </p>
-              <p>
-                Questi luoghi rappresentano alcune delle testimonianze più
-                suggestive dell'arte bizantina e normanna nel Sud Italia, dove
-                le due culture si fusero creando un patrimonio unico.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MACRO-SEZIONE 6: Arte Contemporanea – Parco Museo Santa Barbara -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">
-            Arte Contemporanea nel Cuore della Calabria
-          </h2>
-          <div class="content-section">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/parco-santa-barbara.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Il Parco Museo Santa Barbara (MuSaBa)</h3>
-              <p>
-                Un'esperienza unica è il **Parco Museo Santa Barbara (MuSaBa)**,
-                fondato nel 1969 dai coniugi Nik Spatari e Hiske Maas su un
-                antico complesso monastico del X secolo. Questo museo immerso
-                nella natura, situato nei pressi di Mammola, è considerato da
-                molti critici uno dei più importanti parchi museali di arte
-                contemporanea a livello internazionale.
-              </p>
-              <p>
-                Le opere, realizzate in pietre, mosaici e ceramiche, si
-                integrano perfettamente con il paesaggio, creando un dialogo tra
-                arte antica e moderna che si estende per oltre 100.000 metri
-                quadrati.
-              </p>
-            </div>
-          </div>
-
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>L'Eredità di Nik Spatari</h3>
-              <p>
-                Il parco è anche un laboratorio di ricerca artistica e un centro
-                di promozione culturale, attirando visitatori da tutto il mondo.
-                Nik Spatari, scomparso nel 2020, ha lasciato un'eredità
-                artistica unica nel suo genere: un'opera d'arte totale che fonde
-                architettura, scultura e paesaggio in un continuo rimando tra
-                passato e presente.
-              </p>
-              <p>
-                Oggi il museo continua la sua missione educativa e culturale,
-                ospitando residenze d'artista, mostre temporanee e laboratori
-                didattici, mantenendo vivo il sogno dei suoi fondatori.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/costa-gelsomini/scultura-musaba.jpg&quot;);
-              "
-            ></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Tradizioni e Cultura</h2>
-          <div class="tradizioni-grid">
-            <div class="tradizione-card">
-              <i class="fas fa-music"></i>
-              <h4>Tarantella Calabrese</h4>
-              <p>
-                Il ritmo incalzante della lira e della zampogna anima le feste
-                paesane. Il Kaulonia Tarantella Festival a Caulonia (ultima
-                settimana di agosto) è uno degli eventi più importanti d'Italia
-                per la musica popolare.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-cheese"></i>
-              <h4>Caciocavallo di Ciminà</h4>
-              <p>
-                Presidio Slow Food dal 2011, questo formaggio a due testine è
-                prodotto con latte crudo di vacca e caglio naturale di capretto,
-                custodendo un'antica tradizione casearia.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-wine-bottle"></i>
-              <h4>Greco di Bianco DOC</h4>
-              <p>
-                Il vino passito più antico d'Italia, citato già da Esiodo nel
-                VII secolo a.C. Ha ottenuto la DOC nel 1980. Un nettare dal
-                colore dorato, prodotto con uve appassite su graticci.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-hiking"></i>
-              <h4>Sentieri dell'Aspromonte</h4>
-              <p>
-                Dai borghi alle vette, numerosi percorsi escursionistici
-                attraversano gole, cascate e boschi secolari, offrendo panorami
-                unici sul Mar Ionio. Il Parco Nazionale dell'Aspromonte è punto
-                di riferimento per gli amanti del trekking.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- GALLERIA FOTO -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">Galleria Fotografica</h2>
-          <div class="gallery">
-            <div class="gallery-item">
-              <img
-                src="../images/costa-gelsomini/galleria/panorama-costa.jpg"
-                alt="Panorama della costa"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/costa-gelsomini/galleria/gelsomini-fiori.jpg"
-                alt="Gelsomini in fiore"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/costa-gelsomini/galleria/tartaruga-caretta.jpg"
-                alt="Tartaruga Caretta caretta"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/costa-gelsomini/galleria/teatro-locri.jpg"
-                alt="Teatro greco di Locri"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/costa-gelsomini/galleria/mosaico-casignana.jpg"
-                alt="Mosaico Villa Romana di Casignana"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/costa-gelsomini/galleria/parco-santa-barbara.jpg"
-                alt="Parco Museo Santa Barbara"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- INFO UTILI -->
-      <section>
-        <div class="container">
-          <h2 class="section-title">Info Utili</h2>
-          <div class="info-grid contact-grid">
-            <div class="info-card">
-              <i class="fas fa-car"></i>
-              <h4>Come Arrivare</h4>
-              <p>
-                <strong>In Auto:</strong> SS106 Jonica collega i principali
-                centri della costa. Uscite consigliate: Roccella, Siderno,
-                Locri, Bianco, Bovalino, Monasterace.<br />
-                <strong>In Treno:</strong> Linea Jonica Reggio Calabria-Taranto
-                con stazioni in ogni comune.<br />
-                <strong>In Aereo:</strong> Aeroporto di Reggio Calabria (Tito
-                Minniti) o Lamezia Terme.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-globe"></i>
-              <h4>Informazioni Turistiche</h4>
-              <p>
-                <strong>Consorzio di Promozione Turistica della Locride</strong
-                ><br />
-                Sede: Piazza Garibaldi, 1 - Locri<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="http://www.locride.info"
-                  target="_blank"
-                  style="color: var(--accent)"
-                  >www.locride.info</a
-                ><br />
-                <strong>Pro Loco dei singoli comuni:</strong> Consultare i siti
-                istituzionali per orari e contatti aggiornati.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-leaf"></i>
-              <h4>Ente Parco Nazionale dell'Aspromonte</h4>
-              <p>
-                <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
-                Stefano Aspromonte (RC)<br />
-                <strong>Tel:</strong> 0965 743060<br />
-                <strong>Email:</strong>
-                info.posta@parconazionaleaspromonte.it<br />
-                <strong>Sito web:</strong>
-                <a
-                  href="https://www.parconazionaleaspromonte.it"
-                  target="_blank"
-                  style="color: var(--accent)"
-                  >www.parconazionaleaspromonte.it</a
-                ><br />
-                <small>Per informazioni su sentieri e aree naturali</small>
-              </p>
-            </div>
-
-            <div class="info-card">
-              <i class="fas fa-umbrella-beach"></i>
-              <h4>Spiagge Bandiera Blu</h4>
-              <p>
-                La Costa dei Gelsomini vanta numerosi riconoscimenti di qualità
-                ambientale.<br />
-                Comuni che hanno ricevuto la Bandiera Blu:
-                <strong
-                  >Roccella Ionica, Caulonia, Siderno, Riace, Bianco, Africo,
-                  Bova Marina</strong
-                >.<br />
-                Spiagge attrezzate, fondali bassi ideali per famiglie, aree
-                libere per chi cerca tranquillità.
-              </p>
-            </div>
-          </div>
-          <div class="btn-center">
-            <a href="../index.html#borghi" class="btn"
-              ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
+        ">
+      <div class="hero-overlay"></div>
       <div class="container">
-        <div class="footer-content">
-          <p>
-            <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
-            <a href="../index.html">Home</a>
-          </p>
-          <p>
-            &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
-            Zanotti. Tutti i diritti riservati.
-          </p>
-        </div>
-        <div class="copyright">
-          Sito realizzato dagli studenti del progetto scolastico
+        <h2>Costa dei Gelsomini</h2>
+        <p>
+          Dove il profumo del gelsomino incontra il mare cristallino, tra
+          storia millenaria e natura incontaminata.
+        </p>
+      </div>
+    </section>
+
+    <!-- INFO CARDS -->
+    <section>
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-map-pin"></i>
+            <h4>Estensione</h4>
+            <p>Da Punta Stilo a Capo Spartivento</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-flower"></i>
+            <h4>Simbolo</h4>
+            <p>Il gelsomino (Jasminum grandiflorum)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-turtle"></i>
+            <h4>Biodiversità</h4>
+            <p>Nidificazione Caretta caretta</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-history"></i>
+            <h4>Civiltà</h4>
+            <p>Greca, Romana, Bizantina, Normanna</p>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
+    <!-- MACRO-SEZIONE 1: Il Profumo dei Gelsomini -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Il Profumo dei Gelsomini</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>La Storia di un'Essenza</h3>
+            <p>
+              Il nome "Costa dei Gelsomini" nasce dalla storica coltivazione
+              del gelsomino, diffusa lungo tutta la fascia costiera della
+              Locride. Questa pianta, introdotta probabilmente in epoca araba,
+              trovò nel clima mite e nei terreni ben drenati il suo habitat
+              ideale, trasformando il paesaggio in una distesa di fiori
+              bianchi dal profumo inconfondibile.
+            </p>
+            <p>
+              Le "gelsominaie" – donne esperte nella raccolta – si alzavano
+              all'alba per cogliere i delicati boccioli ancora chiusi,
+              destinati all'industria dei profumi. Un lavoro delicato che
+              richiedeva mani esperte e pazienza, tramandato di generazione in
+              generazione.
+            </p>
+          </div>
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/gelsominaie.jpg&quot;);
+              "></div>
+        </div>
 
-      window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-      });
-    </script>
-  </body>
+        <div class="content-section reverse">
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/essenze.jpg&quot;);
+              "></div>
+          <div class="content-text">
+            <h3>L'Oro Liquido Esportato in Francia</h3>
+            <p>
+              I fiori venivano esportati soprattutto in Francia, patria della
+              profumeria, contribuendo a rendere la zona un punto di
+              riferimento internazionale per le essenze naturali. La
+              **Stazione Sperimentale delle Essenze**, istituita a Reggio
+              Calabria nel 1928, fu un centro di ricerca fondamentale per la
+              selezione e la promozione di queste colture, che raggiunsero il
+              loro massimo splendore negli anni Cinquanta del Novecento.
+            </p>
+            <p>
+              Oggi la tradizione si rinnova con piccole produzioni artigianali
+              che valorizzano il patrimonio olfattivo della costa, tra
+              laboratori di profumi e saponi naturali che ricordano l'antica
+              vocazione del territorio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MACRO-SEZIONE 2: Biodiversità e Tartarughe Marine -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Un Santuario per la Biodiversità</h2>
+        <div class="content-section">
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/tartaruga-caretta.jpg&quot;);
+              "></div>
+          <div class="content-text">
+            <h3>La Caretta caretta a Brancaleone</h3>
+            <p>
+              La Costa dei Gelsomini è uno dei siti più preziosi del
+              Mediterraneo per la conservazione della tartaruga marina Caretta
+              caretta. Ogni anno, da maggio ad agosto, le femmine emergono di
+              notte sulle spiagge di sabbia fine per deporre le uova.
+              Brancaleone, con le sue spiagge protette, è un **Sito di
+              Importanza Comunitaria (SIC)** e uno dei luoghi simbolo di
+              questa straordinaria nidificazione.
+            </p>
+            <p>
+              Le spiagge di sabbia fine e i fondali limpidi offrono l'habitat
+              ideale per la schiusa delle uova e la discesa a mare dei
+              piccoli, che avviene solitamente nelle prime ore della notte,
+              seguendo il riflesso della luna sull'acqua.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Un Progetto di Conservazione Esemplare</h3>
+            <p>
+              Dal 2016, l'associazione Caretta Calabria Conservation ha
+              monitorato e protetto oltre 130 nidi, dai quali sono nati circa
+              6000 piccoli esemplari. Un progetto che coinvolge volontari,
+              pescatori e turisti in un impegno comune per la salvaguardia di
+              questa specie a rischio. Ogni estate, centinaia di persone
+              partecipano alle attività di sorveglianza e liberazione dei
+              piccoli, in un'esperienza educativa e coinvolgente.
+            </p>
+            <p>
+              Le attività di sensibilizzazione hanno reso Brancaleone un punto
+              di riferimento per il turismo sostenibile, dimostrando come la
+              protezione dell'ambiente possa andare di pari passo con lo
+              sviluppo economico locale.
+            </p>
+          </div>
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/caretta-conservation.jpg&quot;);
+              "></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MACRO-SEZIONE 3: Magna Grecia – Locri e Kaulon -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Le Radici della Magna Grecia</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>Locri Epizefiri: la Città delle Leggi</h3>
+            <p>
+              La Costa dei Gelsomini è un museo a cielo aperto dell'antica
+              Grecia. A Locri Epizefiri sorgeva una delle più importanti
+              colonie greche. Qui, intorno al 660 a.C., il legislatore
+              **Zaleuco** scrisse il primo codice di leggi della storia
+              occidentale, anticipando di secoli le costituzioni greche e
+              romane. La città era anche nota per il ruolo centrale delle
+              donne nella società, con una discendenza matrilineare unica nel
+              mondo antico, celebrata dai famosi pinakes votivi oggi
+              conservati nel museo.
+            </p>
+            <p>
+              Il teatro greco, scavato nella roccia, e l'area sacra
+              testimoniano ancora oggi la grandezza di questa polis che
+              dominava la costa ionica.
+            </p>
+          </div>
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/teatro-locri.jpg&quot;);
+              "></div>
+        </div>
+
+        <div class="content-section reverse">
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/tempio-kaulon.jpg&quot;);
+              "></div>
+          <div class="content-text">
+            <h3>Kaulon: il Tempio e il Drago</h3>
+            <p>
+              Più a nord, Kaulon fioriva sul promontorio di Punta Stilo.
+              L'antica colonia achea fu distrutta dal tiranno di Siracusa
+              Dionigi nel 389-388 a.C. La sua area sacra conserva i resti di
+              un imponente tempio dorico del V secolo a.C., le cui colonne in
+              arenaria si stagliano ancora oggi contro il cielo. Nelle
+              vicinanze, la Casa del Drago custodiva un mosaico di 25 mq
+              raffigurante un drago marino, il più grande mosaico ellenistico
+              d'Italia, oggi conservato nel museo di Monasterace.
+            </p>
+            <p>
+              Le rovine di Kaulon, immerse in un paesaggio di uliveti e
+              macchia mediterranea, offrono una delle esperienze archeologiche
+              più suggestive della Calabria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MACRO-SEZIONE 4: Epoca Romana – Naniglio e Casignana -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">L'Eredità Romana</h2>
+        <div class="content-section">
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/villa-casignana.jpg&quot;);
+              "></div>
+          <div class="content-text">
+            <h3>La Villa Romana di Casignana</h3>
+            <p>
+              L'epoca romana ha lasciato testimonianze straordinarie. La
+              **Villa Romana di Casignana**, risalente al I secolo d.C., con i
+              suoi mosaici policromi, è uno dei complessi più importanti del
+              Sud Italia, seconda solo a Piazza Armerina in Sicilia. Qui sono
+              visibili pavimenti musivi a motivi geometrici, scene di caccia e
+              figure mitologiche, che rivelano la raffinatezza della vita
+              aristocratica nell'antica Calabria.
+            </p>
+            <p>
+              Le terme e gli ambienti residenziali, con le loro decorazioni in
+              marmi pregiati, testimoniano l'importanza economica e culturale
+              di questa zona durante l'Impero.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>Il Naniglio: Ingegneria e Culto delle Acque</h3>
+            <p>
+              Nell'entroterra di Gioiosa Ionica, il complesso del **Naniglio**
+              (II-III secolo d.C.) offre una cisterna ipogea unica nel suo
+              genere, con otto poderosi pilastri e una scala a chiocciola di
+              24 gradini che scende nelle viscere della terra. Accanto, un
+              ninfeo dedicato al culto delle acque testimonia la devozione per
+              questo elemento vitale.
+            </p>
+            <p>
+              Il sito, indicato dal FAI come "Luogo del Cuore", rappresenta
+              una delle più affascinanti testimonianze della vita rurale
+              romana nella Locride, ancora in gran parte da esplorare.
+            </p>
+          </div>
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/naniglio-cisterna.jpg&quot;);
+              "></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MACRO-SEZIONE 5: Periodo Bizantino e Medievale -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Il Segno dell'Oriente</h2>
+        <div class="content-section">
+          <div class="content-text">
+            <h3>La Cattolica di Stilo</h3>
+            <p>
+              Tra il VII e il IX secolo, monaci basiliani in fuga dalle
+              persecuzioni iconoclaste portarono in Calabria l'arte bizantina.
+              Ne è testimonianza la **Cattolica di Stilo**, un gioiello
+              architettonico del X secolo con cupola centrale e quattro
+              colonne angolari (tetrakionion), che sorge in un paesaggio di
+              ulivi e pietre. La sua struttura, a pianta quadrata con tre
+              absidi, rappresenta uno dei capolavori dell'architettura
+              medievale in Italia meridionale.
+            </p>
+            <p>
+              L'interno, semplice e austero, conserva tracce di affreschi che
+              raccontano la spiritualità di questi luoghi.
+            </p>
+          </div>
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/cattolica-stilo.jpg&quot;);
+              "></div>
+        </div>
+
+        <div class="content-section reverse">
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/cattedrale-gerace.jpg&quot;);
+              "></div>
+          <div class="content-text">
+            <h3>La Cattedrale di Gerace</h3>
+            <p>
+              Più a sud, la **Cattedrale di Gerace**, consacrata nel 1045, è
+              la più grande della Calabria. Edificata in stile normanno su un
+              precedente luogo di culto, conserva colonne in granito di
+              spoglio provenienti dall'antica Locri, un ambone del XII secolo
+              e una cripta con volte a crociera che testimonia il passaggio
+              dai riti orientali a quelli latini.
+            </p>
+            <p>
+              Questi luoghi rappresentano alcune delle testimonianze più
+              suggestive dell'arte bizantina e normanna nel Sud Italia, dove
+              le due culture si fusero creando un patrimonio unico.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MACRO-SEZIONE 6: Arte Contemporanea – Parco Museo Santa Barbara -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">
+          Arte Contemporanea nel Cuore della Calabria
+        </h2>
+        <div class="content-section">
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/parco-santa-barbara.jpg&quot;);
+              "></div>
+          <div class="content-text">
+            <h3>Il Parco Museo Santa Barbara (MuSaBa)</h3>
+            <p>
+              Un'esperienza unica è il **Parco Museo Santa Barbara (MuSaBa)**,
+              fondato nel 1969 dai coniugi Nik Spatari e Hiske Maas su un
+              antico complesso monastico del X secolo. Questo museo immerso
+              nella natura, situato nei pressi di Mammola, è considerato da
+              molti critici uno dei più importanti parchi museali di arte
+              contemporanea a livello internazionale.
+            </p>
+            <p>
+              Le opere, realizzate in pietre, mosaici e ceramiche, si
+              integrano perfettamente con il paesaggio, creando un dialogo tra
+              arte antica e moderna che si estende per oltre 100.000 metri
+              quadrati.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>L'Eredità di Nik Spatari</h3>
+            <p>
+              Il parco è anche un laboratorio di ricerca artistica e un centro
+              di promozione culturale, attirando visitatori da tutto il mondo.
+              Nik Spatari, scomparso nel 2020, ha lasciato un'eredità
+              artistica unica nel suo genere: un'opera d'arte totale che fonde
+              architettura, scultura e paesaggio in un continuo rimando tra
+              passato e presente.
+            </p>
+            <p>
+              Oggi il museo continua la sua missione educativa e culturale,
+              ospitando residenze d'artista, mostre temporanee e laboratori
+              didattici, mantenendo vivo il sogno dei suoi fondatori.
+            </p>
+          </div>
+          <div class="content-image" style="
+                background-image: url(&quot;../images/costa-gelsomini/scultura-musaba.jpg&quot;);
+              "></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADIZIONI E CURIOSITÀ (4 card) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Tradizioni e Cultura</h2>
+        <div class="tradizioni-grid">
+          <div class="tradizione-card">
+            <i class="fas fa-music"></i>
+            <h4>Tarantella Calabrese</h4>
+            <p>
+              Il ritmo incalzante della lira e della zampogna anima le feste
+              paesane. Il Kaulonia Tarantella Festival a Caulonia (ultima
+              settimana di agosto) è uno degli eventi più importanti d'Italia
+              per la musica popolare.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-cheese"></i>
+            <h4>Caciocavallo di Ciminà</h4>
+            <p>
+              Presidio Slow Food dal 2011, questo formaggio a due testine è
+              prodotto con latte crudo di vacca e caglio naturale di capretto,
+              custodendo un'antica tradizione casearia.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-wine-bottle"></i>
+            <h4>Greco di Bianco DOC</h4>
+            <p>
+              Il vino passito più antico d'Italia, citato già da Esiodo nel
+              VII secolo a.C. Ha ottenuto la DOC nel 1980. Un nettare dal
+              colore dorato, prodotto con uve appassite su graticci.
+            </p>
+          </div>
+          <div class="tradizione-card">
+            <i class="fas fa-hiking"></i>
+            <h4>Sentieri dell'Aspromonte</h4>
+            <p>
+              Dai borghi alle vette, numerosi percorsi escursionistici
+              attraversano gole, cascate e boschi secolari, offrendo panorami
+              unici sul Mar Ionio. Il Parco Nazionale dell'Aspromonte è punto
+              di riferimento per gli amanti del trekking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERIA FOTO -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Galleria Fotografica</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="../images/costa-gelsomini/galleria/panorama-costa.jpg" alt="Panorama della costa" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/costa-gelsomini/galleria/gelsomini-fiori.jpg" alt="Gelsomini in fiore" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/costa-gelsomini/galleria/tartaruga-caretta.jpg" alt="Tartaruga Caretta caretta" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/costa-gelsomini/galleria/teatro-locri.jpg" alt="Teatro greco di Locri" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/costa-gelsomini/galleria/mosaico-casignana.jpg"
+              alt="Mosaico Villa Romana di Casignana" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/costa-gelsomini/galleria/parco-santa-barbara.jpg" alt="Parco Museo Santa Barbara" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO UTILI -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Info Utili</h2>
+        <div class="info-grid contact-grid">
+          <div class="info-card">
+            <i class="fas fa-car"></i>
+            <h4>Come Arrivare</h4>
+            <p>
+              <strong>In Auto:</strong> SS106 Jonica collega i principali
+              centri della costa. Uscite consigliate: Roccella, Siderno,
+              Locri, Bianco, Bovalino, Monasterace.<br />
+              <strong>In Treno:</strong> Linea Jonica Reggio Calabria-Taranto
+              con stazioni in ogni comune.<br />
+              <strong>In Aereo:</strong> Aeroporto di Reggio Calabria (Tito
+              Minniti) o Lamezia Terme.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-globe"></i>
+            <h4>Informazioni Turistiche</h4>
+            <p>
+              <strong>Consorzio di Promozione Turistica della Locride</strong><br />
+              Sede: Piazza Garibaldi, 1 - Locri<br />
+              <strong>Sito web:</strong>
+              <a href="http://www.locride.info" target="_blank" style="color: var(--accent)">www.locride.info</a><br />
+              <strong>Pro Loco dei singoli comuni:</strong> Consultare i siti
+              istituzionali per orari e contatti aggiornati.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-leaf"></i>
+            <h4>Ente Parco Nazionale dell'Aspromonte</h4>
+            <p>
+              <strong>Sede:</strong> Via Aurora, 1 - Gambarie, 89057 Santo
+              Stefano Aspromonte (RC)<br />
+              <strong>Tel:</strong> 0965 743060<br />
+              <strong>Email:</strong>
+              info.posta@parconazionaleaspromonte.it<br />
+              <strong>Sito web:</strong>
+              <a href="https://www.parconazionaleaspromonte.it" target="_blank"
+                style="color: var(--accent)">www.parconazionaleaspromonte.it</a><br />
+              <small>Per informazioni su sentieri e aree naturali</small>
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-umbrella-beach"></i>
+            <h4>Spiagge Bandiera Blu</h4>
+            <p>
+              La Costa dei Gelsomini vanta numerosi riconoscimenti di qualità
+              ambientale.<br />
+              Comuni che hanno ricevuto la Bandiera Blu:
+              <strong>Roccella Ionica, Caulonia, Siderno, Riace, Bianco, Africo,
+                Bova Marina</strong>.<br />
+              Spiagge attrezzate, fondali bassi ideali per famiglie, aree
+              libere per chi cerca tranquillità.
+            </p>
+          </div>
+        </div>
+        <div class="btn-center">
+          <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>
+          <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
+          <a href="../index.html">Home</a>
+        </p>
+        <p>
+          &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
+          Zanotti. Tutti i diritti riservati.
+        </p>
+      </div>
+      <div class="copyright">
+        Sito realizzato dagli studenti del progetto scolastico
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Gestione dello scroll: riporta in alto al ricaricamento della pagina
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+
 </html>

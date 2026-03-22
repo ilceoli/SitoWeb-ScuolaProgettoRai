@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
@@ -18,8 +18,7 @@
     />
     <style>
       /* ============================================
-           POLO TECNICO PROFESSIONALE - STYLE.CSS
-           Design Elegante e Professionale
+           STILE DEFINITIVO – invariato dal template
            ============================================ */
 
       /* RESET E BASE */
@@ -43,9 +42,6 @@
         overflow-wrap: break-word;
       }
 
-      /* ============================================
-           VARIABILI COLORE - PALETTE REFINED
-           ============================================ */
       :root {
         --primary: #2c3e50;
         --primary-light: #34495e;
@@ -66,32 +62,18 @@
         --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
         --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
         --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-        --gradient-primary: linear-gradient(
-          135deg,
-          var(--primary) 0%,
-          var(--primary-light) 100%
-        );
-        --gradient-accent: linear-gradient(
-          135deg,
-          var(--accent) 0%,
-          var(--accent-light) 100%
-        );
+        --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+        --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
         --transition: 0.3s ease;
         --transition-slow: 0.5s ease;
       }
 
-      /* ============================================
-           LAYOUT GENERALE
-           ============================================ */
       .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 24px;
       }
 
-      /* ============================================
-           HEADER E NAVIGAZIONE
-           ============================================ */
       header {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px) saturate(180%);
@@ -162,9 +144,6 @@
         transform: translateX(-5px);
       }
 
-      /* ============================================
-           SEZIONI GENERALI
-           ============================================ */
       section {
         padding: 100px 0;
         position: relative;
@@ -189,20 +168,6 @@
         letter-spacing: -0.5px;
       }
 
-      .section-subtitle {
-        text-align: center;
-        color: var(--text-light);
-        margin-bottom: 60px;
-        font-size: 1.15rem;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      /* ============================================
-           HERO SECTION
-           ============================================ */
       .hero-borgo {
         position: relative;
         height: 60vh;
@@ -219,11 +184,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 44, 74, 0.7) 0%,
-          rgba(26, 61, 92, 0.7) 100%
-        );
+        background: linear-gradient(135deg, rgba(15, 44, 74, 0.7) 0%, rgba(26, 61, 92, 0.7) 100%);
         z-index: 2;
         pointer-events: none;
       }
@@ -252,9 +213,6 @@
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
       }
 
-      /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
       .content-section {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -302,9 +260,6 @@
         background-position: center;
       }
 
-      /* ============================================
-           INFO CARDS
-           ============================================ */
       .info-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -350,9 +305,6 @@
         line-height: 1.6;
       }
 
-      /* ============================================
-           TRADITIONS GRID
-           ============================================ */
       .tradizioni-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -418,9 +370,6 @@
         font-size: 0.95rem;
       }
 
-      /* ============================================
-           GALLERY
-           ============================================ */
       .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -448,9 +397,6 @@
         transform: scale(1.15);
       }
 
-      /* ============================================
-           BUTTONS
-           ============================================ */
       .btn {
         display: inline-flex;
         align-items: center;
@@ -477,12 +423,7 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
         transition: left 0.6s;
       }
 
@@ -509,9 +450,6 @@
         margin-top: 40px;
       }
 
-      /* ============================================
-           FOOTER
-           ============================================ */
       footer {
         background: var(--primary-dark);
         color: rgba(255, 255, 255, 0.8);
@@ -558,9 +496,6 @@
         color: rgba(255, 255, 255, 0.6);
       }
 
-      /* ============================================
-           RESPONSIVE
-           ============================================ */
       @media (max-width: 768px) {
         .header-content {
           padding: 32px 0;
@@ -579,32 +514,26 @@
           display: block;
           opacity: 0.8;
         }
-
         .content-section {
           display: flex;
           flex-direction: column;
           gap: 30px;
           direction: ltr !important;
         }
-
         .content-text {
           order: 1;
           padding: 0;
         }
-
         .content-image {
           order: 2;
           width: 100%;
         }
-
         .hero-borgo h2 {
           font-size: 2.5rem;
         }
-
         .hero-borgo p {
           font-size: 1.1rem;
         }
-
         .section-title {
           font-size: 2.2rem;
         }
@@ -623,84 +552,63 @@
           font-size: 0.5rem;
           opacity: 0.9;
         }
-
         .logo img {
           height: 28px;
         }
-
         .hero-borgo {
           min-height: 250px;
           height: 40vh;
         }
-
         .hero-borgo h2 {
           font-size: 1.8rem;
           margin-bottom: 12px;
         }
-
         .hero-borgo p {
           font-size: 0.95rem;
           line-height: 1.6;
         }
-
         .btn {
           padding: 10px 20px;
           font-size: 0.9rem;
         }
-
         .section-title {
           font-size: 1.6rem;
           margin-bottom: 30px;
         }
-
-        .section-subtitle {
-          font-size: 1rem;
-          margin-bottom: 40px;
-        }
-
         .content-section {
           gap: 25px;
           margin-bottom: 40px;
         }
-
         .content-text h3 {
           font-size: 1.4rem;
           margin-bottom: 15px;
         }
-
         .content-text p {
           font-size: 0.9rem;
           line-height: 1.6;
         }
-
         .content-image {
           height: 250px;
           border-radius: 12px;
         }
-
         .info-grid,
         .info-grid.contact-grid {
           grid-template-columns: 1fr;
           gap: 16px;
         }
-
         .info-card {
           padding: 20px;
         }
-
         .info-card i {
           font-size: 2rem;
         }
-
         .gallery {
           gap: 12px;
           margin-top: 30px;
         }
-
         .gallery-item {
           height: 180px;
         }
-
         .back-link a {
           padding: 8px 24px;
           font-size: 0.75rem;
@@ -724,9 +632,7 @@
           </div>
         </div>
         <div class="back-link">
-          <a href="../index.html#borghi"
-            ><i class="fas fa-arrow-left"></i> Torna alla mappa</a
-          >
+          <a href="../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
         </div>
       </div>
     </header>
@@ -735,11 +641,7 @@
       <!-- HERO SECTION -->
       <section
         class="hero-borgo"
-        style="
-          background-image: url(&quot;../images/brancaleone/brancaleone-hero.jpg&quot;);
-          background-size: cover;
-          background-position: center;
-        "
+        style="background-image: url('../images/brancaleone/brancaleone-borgo.webp '); background-size: cover; background-position: center;"
       >
         <div class="hero-overlay"></div>
         <div class="container">
@@ -752,486 +654,160 @@
       <section>
         <div class="container">
           <div class="info-grid">
-            <div class="info-card">
-              <i class="fas fa-mountain"></i>
-              <h4>Altitudine</h4>
-              <p>12 - 150 m s.l.m.</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-users"></i>
-              <h4>Abitanti</h4>
-              <p>3.574</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-map-pin"></i>
-              <h4>Zona</h4>
-              <p>Costa dei Gelsomini</p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-history"></i>
-              <h4>Origini</h4>
-              <p>VI-VII secolo d.C.</p>
-            </div>
+            <div class="info-card"><i class="fas fa-mountain"></i><h4>Altitudine</h4><p>12 - 150 m s.l.m.</p></div>
+            <div class="info-card"><i class="fas fa-users"></i><h4>Abitanti</h4><p>3.574</p></div>
+            <div class="info-card"><i class="fas fa-map-pin"></i><h4>Zona</h4><p>Costa dei Gelsomini</p></div>
+            <div class="info-card"><i class="fas fa-history"></i><h4>Origini</h4><p>VI-VII secolo d.C.</p></div>
           </div>
         </div>
       </section>
 
-      <!-- STORIA -->
+      <!-- SEZIONE 1: STORIA -->
       <section>
         <div class="container">
           <h2 class="section-title">La Storia di Brancaleone</h2>
           <div class="content-section">
             <div class="content-text">
               <h3>Dalle Origini Bizantine</h3>
-              <p>
-                Brancaleone è una località di straordinaria bellezza
-                naturalistica situata lungo la Costa dei Gelsomini, in Calabria.
-                Le origini del borgo risalgono al VI-VII secolo, durante il
-                periodo bizantino, anche se si ritiene che l'area fosse abitata
-                già in epoche precedenti, come testimoniano tracce elleniche e
-                romane.
-              </p>
-              <p>
-                Proprio qui sorge oggi Brancaleone Superiore, un affascinante
-                borgo medievale abbandonato a seguito dell'alluvione del 1953,
-                ma ancora visitabile per i suoi suggestivi resti scavati nella
-                roccia arenaria.
-              </p>
+              <p>Brancaleone è una località di straordinaria bellezza naturalistica situata lungo la Costa dei Gelsomini, in Calabria. Le origini del borgo risalgono al VI-VII secolo, durante il periodo bizantino, anche se si ritiene che l'area fosse abitata già in epoche precedenti, come testimoniano tracce elleniche e romane.</p>
+              <p>Proprio qui sorge oggi Brancaleone Superiore, un affascinante borgo medievale abbandonato a seguito dell'alluvione del 1953, ma ancora visitabile per i suoi suggestivi resti scavati nella roccia arenaria.</p>
             </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/brancaleone/brancaleone-1.jpg&quot;);
-              "
-            ></div>
+            <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone-vetus.webp');"></div>
           </div>
-
           <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/brancaleone/brancaleone-vetus.jpg&quot;);
-              "
-            ></div>
+            <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone-panorama.jpg'); background-position: center 1%;"></div>
             <div class="content-text">
               <h3>Il Borgo Abbandonato</h3>
-              <p>
-                L'attuale Brancaleone Marina si sviluppa lungo la costa ionica
-                per circa 10 chilometri, da Capo Spartivento fino alla Fiumara
-                di Bruzzano. Il borgo era diviso in due zone principali: una
-                vicino alla nuova chiesa dell'Annunziata (oggi Centro di
-                Documentazione) e un'altra più a nord, dove sorgeva il nucleo
-                abitato attorno all'antica chiesa protopapale arcipretale
-                dell'Annunziata.
-              </p>
-              <p>
-                Molte strutture del paese sono scavate o costruite direttamente
-                nella roccia arenaria che circonda l'abitato, rendendo il luogo
-                particolarmente suggestivo. Tra i resti spiccano incisioni
-                armene e la grotta-chiesa dell'Albero della Vita.
-              </p>
+              <p>L'attuale Brancaleone Marina si sviluppa lungo la costa ionica per circa 10 chilometri, da Capo Spartivento fino alla Fiumara di Bruzzano. Il borgo era diviso in due zone principali: una vicino alla nuova chiesa dell'Annunziata (oggi Centro di Documentazione) e un'altra più a nord, dove sorgeva il nucleo abitato attorno all'antica chiesa protopapale arcipretale dell'Annunziata.</p>
+              <p>Molte strutture del paese sono scavate o costruite direttamente nella roccia arenaria che circonda l'abitato, rendendo il luogo particolarmente suggestivo. Tra i resti spiccano incisioni armene e la grotta-chiesa dell'Albero della Vita.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- LUOGHI DA VISITARE -->
+      <!-- SEZIONE 2: SITI ARCHEOLOGICI E GROTTE (due blocchi) -->
       <section style="background-color: white">
         <div class="container">
-          <h2 class="section-title">Luoghi da Visitare</h2>
+          <h2 class="section-title">Siti Archeologici e Grotte</h2>
           <div class="content-section">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/brancaleone/brancaleone-chiese.jpg&quot;);
-              "
-            ></div>
+            <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone-alberovita.webp');"></div>
             <div class="content-text">
-              <h3>I Siti Archeologici</h3>
-              <p>Tra i luoghi più interessanti dell'antico borgo si trovano:</p>
-              <ul
-                style="
-                  color: var(--text-light);
-                  margin-left: 20px;
-                  margin-bottom: 20px;
-                "
-              >
-                <li>La grotta-chiesa dell'Albero della Vita</li>
-                <li>
-                  Il sito archeologico dei silos-granai, utilizzati per la
-                  conservazione dei cereali e dell'acqua
-                </li>
-                <li>
-                  La Grotta della Madonna del Riposo, con affreschi seicenteschi
-                </li>
-                <li>La Piazzetta del Ponte</li>
-                <li>
-                  I resti dell'antica Chiesa dell'Annunziata di Brancaleone
-                </li>
-              </ul>
-              <p>
-                Il Museo del Mare di Brancaleone, in Via Napoli 16, racconta la
-                storia marittima del paese e la sua forte connessione con il
-                mare.
-              </p>
+              <h3>Grotta dell'Albero della Vita</h3>
+              <p>La <strong>grotta‑chiesa dell’Albero della Vita</strong> è uno dei luoghi più suggestivi di Brancaleone Vetus. Scavata nella roccia arenaria, conserva incisioni e graffiti di origine armena che testimoniano l’antica presenza di comunità cristiane orientali. Il nome deriva da una rappresentazione simbolica scolpita nella pietra, legata ad antiche tradizioni religiose.</p>
+              <p>La grotta è oggi visitabile e rappresenta una tappa imprescindibile per chi desidera immergersi nella storia millenaria del borgo.</p>
             </div>
           </div>
-
           <div class="content-section reverse">
             <div class="content-text">
-              <h3>Cesare Pavese a Brancaleone</h3>
-              <p>
-                Nel 1935-36 lo scrittore Cesare Pavese fu confinato per otto
-                mesi a Brancaleone per motivi politici. Qui scrisse il suo
-                "Diario" e alcune poesie. La sua casa, situata nel centro
-                storico, è oggi un museo visitabile su richiesta, arredata con
-                oggetti originali dell'epoca.
-              </p>
+              <h3>Chiesa dell'Annunziata</h3>
+              <p>La <strong>nuova Chiesa dell’Annunziata</strong> sorge nel cuore di Brancaleone Marina. Edificata dopo l’alluvione del 1953, rappresenta il centro della vita religiosa della comunità. All’interno conserva opere d’arte moderna e una statua della Madonna particolarmente venerata dai fedeli. La chiesa è facilmente riconoscibile per la sua facciata semplice e il campanile che si staglia nel centro del paese.</p>
+              <p>Nei dintorni si trovano anche la <strong>Grotta della Madonna del Riposo</strong> (con affreschi seicenteschi), la Piazzetta del Ponte e i resti dell’antica chiesa protopapale, che completano il ricco itinerario religioso e archeologico.</p>
             </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/brancaleone/brancaleone-pavese.jpg&quot;);
-              "
-            ></div>
+            <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone-chiesa-annunziata-nuova.jpg');"></div>
           </div>
         </div>
       </section>
 
-      <!-- NATURA E TARTARUGHE -->
+      <!-- SEZIONE 3: MUSEO DEL MARE E CASA DI PAVESE -->
       <section>
+        <div class="container">
+          <h2 class="section-title">Museo del Mare e Casa di Pavese</h2>
+          <div class="content-section">
+            <div class="content-text">
+              <h3>Museo del Mare</h3>
+              <p>Il <strong>Museo del Mare di Brancaleone</strong>, in Via Napoli 16, custodisce la memoria marittima del paese e il suo profondo legame con il mare. Qui si possono ammirare attrezzi da pesca, modelli di imbarcazioni e fotografie storiche. Il museo rappresenta un punto di riferimento per chi desidera conoscere la storia locale e l’importanza che il mare ha sempre avuto per la comunità.</p>
+            </div>
+            <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone-museo-mare-brancaleone.webp');"></div>
+          </div>
+          <div class="content-section reverse">
+            <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone-casacesarepavese.webp');"></div>
+            <div class="content-text">
+              <h3>Cesare Pavese a Brancaleone</h3>
+              <p>Nel 1935-36 lo scrittore Cesare Pavese fu confinato per otto mesi a Brancaleone per motivi politici. Qui scrisse il suo "Diario" e alcune poesie. La sua casa, situata nel centro storico, è oggi un piccolo museo visitabile su richiesta, arredata con oggetti originali dell'epoca, che conserva il diario e alcune poesie scritte proprio a Brancaleone.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEZIONE 4: NATURA E TARTARUGHE -->
+      <section style="background-color: white">
         <div class="container">
           <h2 class="section-title">Natura e Tartarughe Caretta-Caretta</h2>
           <div class="content-section">
+            <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone-spiaggia.webp');"></div>
             <div class="content-text">
               <h3>Protettori delle Tartarughe Marine</h3>
-              <p>
-                Brancaleone rappresenta uno dei luoghi più importanti della
-                Calabria per la nidificazione della Caretta-Caretta. Ogni anno
-                vengono individuati circa dieci nidi e, grazie all'attività
-                dell'associazione Caretta Calabria Conservation, dal 2016 sono
-                stati protetti oltre 130 nidi, dai quali sono nati circa 6000
-                piccoli esemplari.
-              </p>
-              <p>
-                Le spiagge di Brancaleone, con il loro mare limpido e sabbia
-                fine e dorata, offrono l'habitat ideale per la deposizione delle
-                uova. Il progetto di conservazione ha fatto di Brancaleone un
-                punto di riferimento internazionale per la protezione di questa
-                specie a rischio.
-              </p>
+              <p>Brancaleone è uno dei luoghi più importanti della Calabria per la nidificazione della <strong>Caretta caretta</strong>. Ogni anno vengono individuati circa dieci nidi e, grazie all'attività dell'associazione <strong>Caretta Calabria Conservation</strong>, dal 2016 sono stati protetti oltre 130 nidi, dai quali sono nati circa 6000 piccoli esemplari.</p>
+              <p>Le spiagge di Brancaleone, con il loro mare limpido e sabbia fine e dorata, offrono l'habitat ideale per la deposizione delle uova. Il progetto di conservazione ha fatto di Brancaleone un punto di riferimento internazionale per la protezione di questa specie a rischio.</p>
             </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/brancaleone/brancaleone-2.jpg&quot;);
-              "
-            ></div>
           </div>
-
           <div class="content-section reverse">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/brancaleone/brancaleone-1.jpg&quot;);
-              "
-            ></div>
             <div class="content-text">
-              <h3>Il Profumo dei Gelsomini</h3>
-              <p>
-                Per molti anni Brancaleone è stata conosciuta come la "città dei
-                gelsomini". Questo fiore, insieme al Bergamotto di Reggio
-                Calabria, è stato una delle coltivazioni più caratteristiche
-                della regione e uno dei profumi più apprezzati grazie anche al
-                lavoro della Stazione Sperimentale delle Essenze di Reggio
-                Calabria.
-              </p>
-              <p>
-                I fiori venivano raccolti all'alba dalle "gelsominaie" ed
-                esportati soprattutto in Francia. Ancora oggi lunghi filari di
-                gelsomini decorano il territorio e alcune antiche distillerie
-                vengono custodite come preziose testimonianze della tradizione
-                locale.
-              </p>
+              <h3>Una Spiaggia a Misura di Tartaruga</h3>
+              <p>Il litorale di Brancaleone si estende per circa 10 chilometri, caratterizzato da sabbia dorata e acque cristalline. Durante la stagione di nidificazione (da giugno a settembre), i volontari monitorano ogni notte la spiaggia, recintano i nidi e sensibilizzano i bagnanti sull'importanza di rispettare questi fragili ecosistemi.</p>
+              <p>Assistere alla schiusa delle uova e alla corsa dei piccoli verso il mare è un'esperienza emozionante che coinvolge sempre più turisti e residenti, rendendo Brancaleone un esempio virtuoso di turismo sostenibile.</p>
             </div>
+            <div class="content-image" style="background-image: url('../images/brancaleone/brancaleone-caretta-caretta.webp');"></div>
           </div>
         </div>
       </section>
 
-      <!-- LA COSTA DEI GELSOMINI -->
-      <section style="background-color: white">
-        <div class="container">
-          <h2 class="section-title">La Costa dei Gelsomini</h2>
-          <div class="content-section">
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/brancaleone/brancaleone-3.jpg&quot;);
-              "
-            ></div>
-            <div class="content-text">
-              <h3>Terra di Profumi e Tradizioni</h3>
-              <p>
-                La Costa dei Gelsomini, conosciuta anche come Locride, è una
-                delle destinazioni più affascinanti della Calabria. Si estende
-                lungo la costa ionica della Città metropolitana di Reggio
-                Calabria, tra Punta Stilo e Capo Spartivento.
-              </p>
-              <p>
-                Qui il mare cristallino, la storia millenaria e il profumo del
-                gelsomino creano un'esperienza autentica e memorabile. Il nome
-                "Costa dei Gelsomini" nasce dalla storica coltivazione del
-                Gelsomino, diffusa lungo tutta la fascia costiera.
-              </p>
-            </div>
-          </div>
-
-          <div class="content-section reverse">
-            <div class="content-text">
-              <h3>Le Gelsominaie e l'Oro Liquido</h3>
-              <p>
-                I fiori del gelsomino venivano raccolti dalle "gelsominaie",
-                donne che all'alba raccoglievano i delicati boccioli destinati
-                all'industria dei profumi. Questi preziosi fiori venivano
-                esportati soprattutto in Francia, patria della profumeria,
-                contribuendo a rendere la zona un punto di riferimento
-                internazionale per le essenze naturali.
-              </p>
-              <p>
-                Brancaleone, con i suoi 10 chilometri di costa, rappresenta il
-                cuore pulsante di questa tradizione olfattiva che ha reso
-                celebre l'intera regione.
-              </p>
-            </div>
-            <div
-              class="content-image"
-              style="
-                background-image: url(&quot;../images/brancaleone/brancaleone-gelsomini.jpg&quot;);
-              "
-            ></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TRADIZIONI E CULTURA -->
-      <section style="background-color: white">
+      <!-- SEZIONE 5: TRADIZIONI E CULTURA (4 card) -->
+      <section>
         <div class="container">
           <h2 class="section-title">Tradizioni e Cultura</h2>
           <div class="tradizioni-grid">
-            <div class="tradizione-card">
-              <i class="fas fa-fish"></i>
-              <h4>Pesca e Mare</h4>
-              <p>
-                Brancaleone è profondamente legata al mare. La tradizione della
-                pesca artigianale, la cucina a base di pesce fresco e le feste
-                marineristiche rendono il paese unico nella sua identità
-                costiera.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-star"></i>
-              <h4>Notte delle Stelle</h4>
-              <p>
-                Ogni estate, quando il cielo è particolarmente limpido, si
-                organizzano osservazioni astronomiche lungo il lungomare.
-                L'assenza di inquinamento luminoso rende Brancaleone ideale per
-                ammirare la Via Lattea.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-leaf"></i>
-              <h4>Gelsomini e Profumi</h4>
-              <p>
-                La raccolta dei gelsomini, avvenuta tradizionalmente all'alba, è
-                ancora celebrata con piccole mostre e degustazioni di prodotti
-                derivati da questo prezioso fiore che profuma tutto il
-                territorio.
-              </p>
-            </div>
-            <div class="tradizione-card">
-              <i class="fas fa-paw"></i>
-              <h4>Tartarughe Marine</h4>
-              <p>
-                Il progetto di salvaguardia delle Caretta-Caretta coinvolge
-                tutta la comunità. Ogni anno volontari e turisti partecipano
-                alle attività di monitoraggio e protezione dei nidi.
-              </p>
-            </div>
+            <div class="tradizione-card"><i class="fas fa-fish"></i><h4>Pesca e Mare</h4><p>Brancaleone è profondamente legata al mare. La tradizione della pesca artigianale, la cucina a base di pesce fresco e le feste marineristiche rendono il paese unico nella sua identità costiera.</p></div>
+            <div class="tradizione-card"><i class="fas fa-star"></i><h4>Notte delle Stelle</h4><p>Ogni estate, quando il cielo è particolarmente limpido, si organizzano osservazioni astronomiche lungo il lungomare. L'assenza di inquinamento luminoso rende Brancaleone ideale per ammirare la Via Lattea.</p></div>
+            <div class="tradizione-card"><i class="fas fa-leaf"></i><h4>Gelsomini e Profumi</h4><p>La raccolta dei gelsomini, avvenuta tradizionalmente all'alba, ha reso famosa Brancaleone come "città dei gelsomini". I fiori venivano esportati in Francia per l'industria dei profumi. Ancora oggi il territorio conserva filari di gelsomini e antiche distillerie.</p></div>
+            <div class="tradizione-card"><i class="fas fa-paw"></i><h4>Tartarughe Marine</h4><p>Il progetto di salvaguardia delle Caretta-Caretta coinvolge tutta la comunità. Ogni anno volontari e turisti partecipano alle attività di monitoraggio e protezione dei nidi.</p></div>
           </div>
         </div>
       </section>
 
-      <!-- GALLERIA FOTO -->
-      <section>
+      <!-- SEZIONE 6: GALLERIA FOTOGRAFICA -->
+      <section style="background-color: white">
         <div class="container">
           <h2 class="section-title">Galleria Fotografica</h2>
           <div class="gallery">
-            <div class="gallery-item">
-              <img
-                src="../images/brancaleone/galleria/galleria-brancaleone-1.jpg"
-                alt="Brancaleone galleria 1"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/brancaleone/galleria/galleria-brancaleone-2.jpg"
-                alt="Brancaleone galleria 2"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/brancaleone/galleria/galleria-brancaleone-3.jpg"
-                alt="Brancaleone galleria 3"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/brancaleone/galleria/galleria-brancaleone-4.jpg"
-                alt="Brancaleone galleria 4"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/brancaleone/galleria/galleria-brancaleone-5.jpg"
-                alt="Brancaleone galleria 5"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="../images/brancaleone/galleria/galleria-brancaleone-6.jpg"
-                alt="Brancaleone galleria 6"
-              />
-            </div>
+            <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-1.jpg"></div>
+            <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-2.jpg"></div>
+            <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-3.webp"></div>
+            <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-4.webp"></div>
+            <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-5.jpg"></div>
+            <div class="gallery-item"><img src="../images/brancaleone/galleria/galleria-brancaleone-6.jpg"></div>
           </div>
         </div>
       </section>
 
-      <!-- INFO UTILI -->
-      <section style="background-color: white">
+      <!-- SEZIONE 7: INFO UTILI -->
+      <section>
         <div class="container">
           <h2 class="section-title">Info Utili</h2>
           <div class="info-grid contact-grid">
-            <div class="info-card">
-              <i class="fas fa-car"></i>
-              <h4>Come Arrivare</h4>
-              <p>
-                <strong>In Auto</strong><br />
-                SS106 Jonica, uscita Brancaleone<br />
-                Dista circa 25 km da Siderno e 60 km da Reggio Calabria<br />
-                Parcheggio gratuito lungo il lungomare<br /><br />
-                <strong>In Pullman</strong><br />
-                Autolinee Federico da Reggio Calabria e Siderno<br />
-                Fermata: Piazza Municipio
-              </p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-landmark"></i>
-              <h4>Comune e Informazioni</h4>
-              <p>
-                <strong>Comune di Brancaleone</strong><br />
-                Via Regina Margherita, 2<br />
-                89040 Brancaleone (RC)<br />
-                Tel: 0964 933008<br />
-                Fax: 0964 934065<br />
-                Pec:
-                <a
-                  href="mailto:protocollo.brancaleone@asmepec.it"
-                  style="color: var(--text-light); text-decoration: none"
-                  >protocollo.brancaleone@asmepec.it</a
-                ><br />
-                Sito web:
-                <a
-                  href="https://www.comune.brancaleone.rc.it"
-                  target="_blank"
-                  style="
-                    color: var(--accent);
-                    text-decoration: none;
-                    font-weight: 600;
-                  "
-                  >www.comune.brancaleone.rc.it</a
-                ><br />
-              </p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-train"></i>
-              <h4>Trasporti</h4>
-              <p>
-                <strong>Stazione Ferroviaria</strong><br />
-                Stazione di Brancaleone<br />
-                Linea Jonica Reggio Calabria-Taranto<br /><br />
-                <strong>Trasporto Locale</strong><br />
-                Servizio taxi disponibile<br />
-                Noleggio biciclette lungo il lungomare<br />
-                Minibus turistici in alta stagione
-              </p>
-            </div>
-            <div class="info-card">
-              <i class="fas fa-paw"></i>
-              <h4>Tartarughe e Mare</h4>
-              <p>
-                <strong>Caretta Calabria Conservation</strong><br />
-                Sede: Stazione Ferroviaria di Capo Spartivento, Palizzi<br />
-                Tel: +39 327 047 6383<br />
-                Email:
-                <a
-                  href="mailto:info@carettacalabriaconservation.org"
-                  style="color: var(--text-light); text-decoration: none"
-                  >info@carettacalabriaconservation.org</a
-                ><br />
-                Sito:
-                <a
-                  href="http://carettacalabriaconservation.org/"
-                  target="_blank"
-                  style="
-                    color: var(--accent);
-                    text-decoration: none;
-                    font-weight: 600;
-                  "
-                  >www.carettacalabriaconservation.org</a
-                ><br /><br />
-                <strong>Spiagge</strong><br />
-                10 km di costa con sabbia dorata<br />
-                Acqua cristallina, ideale per nidificazione
-              </p>
-            </div>
+            <div class="info-card"><i class="fas fa-car"></i><h4>Come Arrivare</h4><p><strong>In Auto</strong><br />SS106 Jonica, uscita Brancaleone<br />Dista circa 25 km da Siderno e 60 km da Reggio Calabria<br />Parcheggio gratuito lungo il lungomare<br /><br /><strong>In Pullman</strong><br />Autolinee Federico da Reggio Calabria e Siderno<br />Fermata: Piazza Municipio</p></div>
+            <div class="info-card"><i class="fas fa-landmark"></i><h4>Comune e Informazioni</h4><p><strong>Comune di Brancaleone</strong><br />Via Regina Margherita, 2<br />89040 Brancaleone (RC)<br />Tel: 0964 933008<br />Fax: 0964 934065<br />Pec: <a href="mailto:protocollo.brancaleone@asmepec.it" style="color: var(--text-light); text-decoration: none;">protocollo.brancaleone@asmepec.it</a><br />Sito web: <a href="https://www.comune.brancaleone.rc.it" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">www.comune.brancaleone.rc.it</a></p></div>
+            <div class="info-card"><i class="fas fa-train"></i><h4>Trasporti</h4><p><strong>Stazione Ferroviaria</strong><br />Stazione di Brancaleone<br />Linea Jonica Reggio Calabria-Taranto<br /><br /><strong>Trasporto Locale</strong><br />Servizio taxi disponibile<br />Noleggio biciclette lungo il lungomare<br />Minibus turistici in alta stagione</p></div>
+            <div class="info-card"><i class="fas fa-paw"></i><h4>Tartarughe e Mare</h4><p><strong>Caretta Calabria Conservation</strong><br />Sede: Stazione Ferroviaria di Capo Spartivento, Palizzi<br />Tel: +39 327 047 6383<br />Email: <a href="mailto:info@carettacalabriaconservation.org" style="color: var(--text-light); text-decoration: none;">info@carettacalabriaconservation.org</a><br />Sito: <a href="http://carettacalabriaconservation.org/" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">www.carettacalabriaconservation.org</a><br /><br /><strong>Spiagge</strong><br />10 km di costa con sabbia dorata<br />Acqua cristallina, ideale per nidificazione</p></div>
           </div>
-          <div class="btn-center">
-            <a href="../index.html#borghi" class="btn"
-              ><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a
-            >
-          </div>
+          <div class="btn-center"><a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a></div>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
       <div class="container">
         <div class="footer-content">
-          <p>
-            <a href="../index.html#borghi">← Torna alla mappa dei borghi</a> |
-            <a href="../index.html">Home</a>
-          </p>
-          <p>
-            &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
-            Zanotti. Tutti i diritti riservati.
-          </p>
+          <p><a href="../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../index.html">Home</a></p>
+          <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.</p>
         </div>
-        <div class="copyright">
-          Sito realizzato dagli studenti del progetto scolastico
-        </div>
+        <div class="copyright">Sito realizzato dagli studenti del progetto scolastico</div>
       </div>
     </footer>
 
     <script>
-      // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
-
-      window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-      });
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+      window.addEventListener("load", function () { window.scrollTo(0, 0); });
     </script>
   </body>
 </html>

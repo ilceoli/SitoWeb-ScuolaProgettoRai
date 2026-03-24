@@ -1198,15 +1198,15 @@
       history.scrollRestoration = "manual";
     }
 
-    // Forza la pagina a partire dall'alto solo se non c'è un hash (es. #borghi)
-    // o se la pagina viene ricaricata (Refresh)
-    window.addEventListener("load", function () {
-      const isReload =
-        performance.getEntriesByType("navigation")[0]?.type === "reload";
-      if (isReload || !window.location.hash) {
-        window.scrollTo(0, 0);
-      }
-    });
+    // // Forza la pagina a partire dall'alto solo se non c'è un hash (es. #borghi)
+    // // o se la pagina viene ricaricata (Refresh)
+    // window.addEventListener("load", function () {
+    //   const isReload =
+    //     performance.getEntriesByType("navigation")[0]?.type === "reload";
+    //   if (isReload || !window.location.hash) {
+    //     window.scrollTo(0, 0);
+    //   }
+    // });
   </script>
 </body>
 

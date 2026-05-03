@@ -13,9 +13,6 @@ ehthumbs.db
 .idea/
 *.sublime-*
 
-# Cartella di configurazione Continue (estensione VS Code/Cursor)
-.continue/
-
 # File di log
 *.log
 

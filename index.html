@@ -253,7 +253,7 @@
         </p>
         <div class="card-grid">
           <!-- AFM -->
-          <div class="card">
+          <div class="card" data-course="afm">
             <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
@@ -274,7 +274,7 @@
             </div>
           </div>
           <!-- SIA -->
-          <div class="card">
+          <div class="card" data-course="sia">
             <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
@@ -295,7 +295,7 @@
             </div>
           </div>
           <!-- CAT -->
-          <div class="card">
+          <div class="card" data-course="cat">
             <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
@@ -316,7 +316,7 @@
             </div>
           </div>
           <!-- Turismo -->
-          <div class="card">
+          <div class="card" data-course="tur">
             <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
@@ -337,7 +337,7 @@
             </div>
           </div>
           <!-- Logistica -->
-          <div class="card">
+          <div class="card" data-course="log">
             <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
@@ -358,7 +358,7 @@
             </div>
           </div>
           <!-- Moda per il Made in Italy -->
-          <div class="card">
+          <div class="card" data-course="mod">
             <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
@@ -379,7 +379,7 @@
             </div>
           </div>
           <!-- Odontotecnico -->
-          <div class="card">
+          <div class="card" data-course="odo">
             <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
@@ -400,7 +400,7 @@
             </div>
           </div>
           <!-- Manutenzione e Assistenza Tecnica -->
-          <div class="card">
+          <div class="card" data-course="mat">
             <div class="card-image" style="
                   background-color: var(--primary-light);
                   display: flex;
@@ -865,9 +865,273 @@
     </div>
   </footer>
 
+  <!-- Modal per i dettagli del corso -->
+  <div class="course-modal" id="course-modal">
+    <div class="course-modal-content">
+      <button class="course-modal-close" id="course-modal-close"><i class="fas fa-times"></i></button>
+      <div class="course-modal-header">
+        <span class="course-modal-tag" id="modal-tag">Tecnico</span>
+        <h3 id="modal-title">Nome del Corso</h3>
+      </div>
+      <div class="course-modal-body">
+        <p class="course-modal-desc" id="modal-desc">Descrizione dettagliata...</p>
+        
+        <div class="course-modal-details">
+          <div class="detail-section">
+            <h4><i class="fas fa-book-open"></i> Materie Caratterizzanti</h4>
+            <ul id="modal-subjects">
+              <!-- Popolato dinamicamente -->
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h4><i class="fas fa-briefcase"></i> Sbocchi Professionali</h4>
+            <ul id="modal-careers">
+              <!-- Popolato dinamicamente -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
+    // Database dei corsi di studio
+    const corsiDati = {
+      afm: {
+        title: "Amministrazione, Finanza e Marketing (AFM)",
+        tag: "Tecnico",
+        desc: "Per chi è adatto? Se ti piace capire come funzionano le aziende, come si gestiscono i soldi, come si promuovono i prodotti e desideri lavorare in un'impresa di qualsiasi settore, questo indirizzo fa per te. L’indirizzo AFM ti prepara a diventare un professionista capace di gestire l’amministrazione, la finanza e il marketing di un’azienda. Studierai come vengono organizzati i processi aziendali, come si leggono e si interpretano i risultati economici, come si pianificano strategie commerciali e come funziona il sistema fiscale e giuridico.",
+        subjects: [
+          "Gestione amministrativa e contabile: registrazione delle operazioni economiche e lettura dei bilanci",
+          "Diritto ed economia: norme che regolano l'attività d'impresa, contratti, fiscalità",
+          "Marketing e commercio: strategie per promuovere i prodotti a livello nazionale e internazionale",
+          "Finanza e prodotti assicurativo-bancari: gestione finanziaria aziendale e servizi bancari",
+          "Informatica e lingue straniere: strumenti per operare in un contesto digitale e globale"
+        ],
+        careers: [
+          "Responsabile o addetto negli uffici amministrativi e contabili di aziende private",
+          "Operatore in banche, assicurazioni e società finanziarie",
+          "Impiegato negli uffici pubblici e nelle amministrazioni comunali",
+          "Consulente aziendale junior e collaboratore in studi commercialisti",
+          "Ragioniere, esperto di finanza aziendale, o prosecuzione studi in Economia, Giurisprudenza"
+        ]
+      },
+      sia: {
+        title: "Sistemi Informativi Aziendali (SIA)",
+        tag: "Tecnico",
+        desc: "Per chi è adatto? Se ami la tecnologia, l'informatica e allo stesso tempo ti interessa il mondo aziendale e come le imprese usano i computer per organizzarsi, questo indirizzo è perfetto per te. SIA è una specializzazione che combina l’economia aziendale con l’informatica applicata. Dopo un primo biennio di studi economici generali (come in AFM), ti concentrerai sullo studio dei sistemi informatici aziendali e su come la tecnologia trasforma il modo in cui funzionano le aziende.",
+        subjects: [
+          "Programmazione e sviluppo software: scrittura di codice per creare programmi aziendali",
+          "Database e gestione dati: organizzazione e protezione dei dati aziendali in banche dati sicure",
+          "Automazione dei processi aziendali: uso della tecnologia per ottimizzare le operazioni d'impresa",
+          "E-commerce e web: creazione e gestione di negozi online e piattaforme digitali",
+          "Cybersecurity: protezione dei sistemi informatici da attacchi e furto di informazioni",
+          "Economia aziendale digitale: comprensione dell'evoluzione del business moderno"
+        ],
+        careers: [
+          "Programmatore web e sviluppatore di software gestionali",
+          "Amministratore di database e gestore di reti informatiche",
+          "Esperto di e-commerce e digitalizzazione aziendale",
+          "Consulente informatico aziendale, analista di sistemi e tecnico IT",
+          "Prosecuzione degli studi in Informatica, Ingegneria Informatica o Economia"
+        ]
+      },
+      cat: {
+        title: "Costruzioni, Ambiente e Territorio (CAT)",
+        tag: "Tecnico",
+        desc: "Per chi è adatto? Se hai interesse per la costruzione, l'edilizia, il territorio e l'ambiente, e ti piacciono il disegno tecnico e i progetti, questo indirizzo è quello che fa per te. L'indirizzo CAT ti forma come geometra, una figura professionale indispensabile nel settore delle costruzioni, dell’urbanistica e della gestione del territorio. Imparerai a leggere, progettare e dirigere opere edili, oltre a proteggere e valorizzare l’ambiente e il paesaggio.",
+        subjects: [
+          "Progettazione edilizia: disegno e progettazione di edifici residenziali, commerciali e industriali",
+          "Costruzioni e impianti: studio dei materiali da costruzione, della loro resistenza e applicazione",
+          "Disegno tecnico CAD: uso di software professionali per creare disegni in 2D e 3D di precisione",
+          "Rilievo e topografia: misurazione del territorio con strumenti digitali e di precisione"
+        ],
+        careers: [
+          "Collaboratore in studi di architettura, ingegneria e design",
+          "Tecnico di cantiere e responsabile di progetto nelle imprese edili",
+          "Funzionario o perito tecnico per comuni, enti pubblici e banche",
+          "Libero professionista come Geometra abilitato (previo esame di stato)",
+          "Prosecuzione degli studi in Ingegneria, Architettura, Geologia o Design"
+        ]
+      },
+      tur: {
+        title: "Turismo (TUR)",
+        tag: "Tecnico",
+        desc: "Per chi è adatto? Se ami i viaggi, le culture diverse, le lingue straniere e hai passione per promuovere il territorio e le sue bellezze, questo indirizzo è perfetto per te. L’indirizzo Turismo ti prepara a lavorare nel comparto turistico, insegnandoti come valorizzare il patrimonio culturale, artistico, paesaggistico e gastronomico di un territorio. Diventerai un professionista capace di organizzare servizi turistici, gestire strutture ricettive e sviluppare strategie di marketing territoriale.",
+        subjects: [
+          "Lingue straniere: studio di tre lingue europee a livello avanzato per il turismo internazionale",
+          "Geografia e storia culturale: conoscenza del patrimonio UNESCO, delle tradizioni e delle culture",
+          "Economia e gestione aziendale del turismo: organizzazione aziendale e controllo di costi/ricavi",
+          "Marketing territoriale e digitale: promozione delle destinazioni e uso dei social/piattaforme di prenotazione",
+          "Enogastronomia e patrimonio locale: valorizzazione della cucina e dei prodotti tipici come risorsa"
+        ],
+        careers: [
+          "Receptionist, addetto all'accoglienza e Guest Relations manager in hotel e resort",
+          "Operatore, programmatore e consulente per Tour Operator e Agenzie di Viaggio",
+          "Guida turistica, accompagnatore abilitato o organizzatore di eventi culturali",
+          "Specialista di marketing territoriale ed enogastronomico per enti di promozione",
+          "Prosecuzione degli studi in Lingue, Scienze del Turismo o Beni Culturali"
+        ]
+      },
+      log: {
+        title: "Trasporti e Logistica (LOG)",
+        tag: "Professionale",
+        desc: "Per chi è adatto? Se ti interessa l'organizzazione, la pianificazione dei movimenti di merci e persone, il trasporto aereo, marittimo, ferroviario o stradale, questo indirizzo è per te. L’indirizzo Trasporti e Logistica ti forma come esperto della gestione dei flussi logistici e della conduzione dei sistemi di trasporto. Acquisirai competenze tecniche e organizzative per lavorare in un settore fondamentale per l’economia globale.",
+        subjects: [
+          "Logistica e gestione della supply chain: pianificazione e controllo dei flussi fisici e informativi",
+          "Diritto e normativa dei trasporti: legislazione nazionale e internazionale per aereo, mare e terra",
+          "Economia aziendale del trasporto: analisi dei costi, pricing e ottimizzazione delle operazioni",
+          "Sistemi informatici logistici: software di tracciamento merci, gestione magazzini e itinerari",
+          "Operazioni doganali e commercio internazionale: procedure di import-export, documentazione e dazi",
+          "Organizzazione e sicurezza: norme di prevenzione e sicurezza per i vari mezzi e hub di trasporto"
+        ],
+        careers: [
+          "Responsabile logistico di magazzino (Supply Chain Manager)",
+          "Addetto spedizioniere doganale ed esperto di commercio internazionale",
+          "Pianificatore di flussi e operatore in porti, aeroporti o interporti",
+          "Specialista nell'ottimizzazione dei percorsi e flotte di trasporto",
+          "Accesso a corsi ITS di alta specializzazione o Ingegneria Gestionale ed Economia"
+        ]
+      },
+      mod: {
+        title: "Industria e Artigianato per il Made in Italy (Moda)",
+        tag: "Professionale",
+        desc: "Per chi è adatto? Se hai passione per la moda, l'abbigliamento, il design, la creatività e il \"fatto a mano\" con qualità e precisione, questo indirizzo è perfetto per te. Questo indirizzo ti forma come professionista del settore moda e tessile, con competenze sia artigianali che industriali. Imparerai il ciclo completo di lavorazione dell’abbigliamento, dalla progettazione al confezionamento finale, mantenendo gli elevati standard di qualità del Made in Italy.",
+        subjects: [
+          "Progettazione e design di moda: creazione di bozzetti, studio di forme, volumi e tendenze",
+          "Storia della moda e del costume: evoluzione dello stile, del costume e dell'abbigliamento nel tempo",
+          "Tecnologie dei materiali tessili: studio delle fibre (naturali, sintetiche) e della struttura dei tessuti",
+          "Tecniche sartoriali e CAD: confezione sartoriale manuale unita alla modellistica digitale al computer"
+        ],
+        careers: [
+          "Stilista di moda, disegnatore ed esperto di modellazione CAD",
+          "Sarto, modellista, campionarista o assistente di produzione in atelier e grandi marchi",
+          "Addetto al controllo qualità tessile e materiali in aziende di abbigliamento",
+          "Operatore nel settore retail, showroom ed e-commerce di moda",
+          "Prosecuzione degli studi in Accademie di Moda e Design (IUAV, IED, Polimoda)"
+        ]
+      },
+      odo: {
+        title: "Arti Ausiliarie delle Professioni Sanitarie: Odontotecnico",
+        tag: "Professionale",
+        desc: "L’indirizzo Odontotecnico ti forma come professionista specializzato nella realizzazione di protesi dentarie. Lavorerai a stretto contatto con gli odontoiatri, creando apparecchi di protesi su misura (corone, ponti, dentiere, ecc.) seguendo prescrizioni mediche precise. È un lavoro che unisce precisione artigianale, sensibilità estetica e competenze scientifiche d'avanguardia.",
+        subjects: [
+          "Anatomia e gnatologia: studio della struttura dentale, dell'apparato masticatorio e dell'occlusione",
+          "Tecniche di laboratorio: progettazione e realizzazione di protesi fisse, mobili e implantari",
+          "Scienza dei materiali dentali: proprietà e reazioni di resine, ceramiche e leghe metalliche",
+          "Progettazione CAD e fresatura CAM: uso di software 3D e stampanti/fresatrici tridimensionali",
+          "Normative igienico-sanitarie: procedure di sterilizzazione e sicurezza in ambiente di laboratorio"
+        ],
+        careers: [
+          "Titolare o dipendente di laboratorio odontotecnico specializzato",
+          "Disegnatore e progettista di protesi digitali CAD/CAM 3D",
+          "Consulente commerciale e dimostratore tecnico per aziende di forniture dentali",
+          "Insegnante tecnico-pratico (ITP) negli istituti professionali",
+          "Prosecuzione degli studi universitari in Odontoiatria, Igiene Dentale o Infermieristica"
+        ]
+      },
+      mat: {
+        title: "Manutenzione e Assistenza Tecnica (MAT)",
+        tag: "Professionale",
+        desc: "Per chi è adatto? Se sei pratico/a, ami smontare e riparare cose, hai buone capacità manuali e ti piace risolvere problemi tecnici, questo indirizzo è per te. L’indirizzo Manutenzione e Assistenza Tecnica ti forma come tecnico specializzato nell’installazione, manutenzione, diagnostica e riparazione di sistemi, impianti e apparati tecnologici. Acquisirai competenze sia in ambito meccanico che elettrico ed elettronico.",
+        subjects: [
+          "Tecnologie meccaniche: diagnostica, montaggio e manutenzione di organi e dispositivi meccanici",
+          "Impianti elettrici ed elettronici: installazione e riparazione di impianti civili ed industriali",
+          "Automazione e domotica: programmazione di PLC, robotica industriale e sistemi intelligenti per edifici",
+          "Diagnosi e troubleshooting: tecniche di localizzazione e risoluzione guasti su sistemi complessi",
+          "Disegno tecnico e schemi: lettura e interpretazione di schemi elettrici, idraulici e meccanici CAD"
+        ],
+        careers: [
+          "Tecnico manutentore e installatore in aziende industriali, manifatturiere o dell'energia",
+          "Manutentore specializzato per impianti civili (domotica, riscaldamento, condizionamento)",
+          "Addetto all'assistenza tecnica e riparatore in officine o centri specializzati",
+          "Tecnico diagnostico o perito in aziende del settore navale e dell'automazione",
+          "Prosecuzione studi negli Istituti Tecnici Superiori (ITS) per l'efficienza energetica e la meccatronica"
+        ]
+      }
+    };
+
+    // Logica del popup modale dei corsi
+    const courseModal = document.getElementById("course-modal");
+    const modalTag = document.getElementById("modal-tag");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDesc = document.getElementById("modal-desc");
+    const modalSubjects = document.getElementById("modal-subjects");
+    const modalCareers = document.getElementById("modal-careers");
+    const courseModalClose = document.getElementById("course-modal-close");
+
+    // Aggiungi click listener a tutte le card con data-course
+    document.querySelectorAll(".card[data-course]").forEach((card) => {
+      card.addEventListener("click", () => {
+        const courseId = card.getAttribute("data-course");
+        const dati = corsiDati[courseId];
+        if (dati) {
+          // Popola il modale
+          modalTag.textContent = dati.tag;
+          // Imposta colore del tag in base al tipo
+          if (dati.tag === "Tecnico") {
+            modalTag.style.background = "var(--gradient-accent)";
+            modalTag.style.color = "var(--text-dark)";
+          } else {
+            modalTag.style.background = "var(--gradient-primary)";
+            modalTag.style.color = "var(--white)";
+          }
+          
+          modalTitle.textContent = dati.title;
+          modalDesc.textContent = dati.desc;
+          
+          // Popola le materie
+          modalSubjects.innerHTML = "";
+          dati.subjects.forEach((subj) => {
+            const li = document.createElement("li");
+            li.textContent = subj;
+            modalSubjects.appendChild(li);
+          });
+          
+          // Popola gli sbocchi
+          modalCareers.innerHTML = "";
+          dati.careers.forEach((car) => {
+            const li = document.createElement("li");
+            li.textContent = car;
+            modalCareers.appendChild(li);
+          });
+          
+          // Mostra il modale e blocca lo scroll
+          courseModal.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+      });
+    });
+
+    // Funzione per chiudere il modale
+    function closeCourseModal() {
+      courseModal.classList.remove("active");
+      // Sblocca lo scroll solo se la navbar mobile non è aperta
+      const navMenu = document.getElementById("nav-menu");
+      if (!navMenu.classList.contains("active")) {
+        document.body.style.overflow = "";
+      }
+    }
+
+    courseModalClose.addEventListener("click", closeCourseModal);
+    
+    // Chiudi il modale cliccando all'esterno del contenuto (sullo sfondo)
+    courseModal.addEventListener("click", (e) => {
+      if (e.target === courseModal) {
+        closeCourseModal();
+      }
+    });
+
+    // Chiudi premendo ESC
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && courseModal.classList.contains("active")) {
+        closeCourseModal();
+      }
+    });
+
     // Menu mobile toggle con overlay e blocco dello scroll
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");

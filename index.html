@@ -28,7 +28,11 @@
           <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
         </div>
       </div>
-      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#scuola">La scuola</a></li>
@@ -38,6 +42,7 @@
       </ul>
     </div>
   </header>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
   <main>
     <!-- HOME / HERO (SLIDESHOW) -->
@@ -206,13 +211,13 @@
         <!-- Galleria foto (sostituire con le vostre) -->
         <div class="gallery">
           <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=10" alt="Foto scuola 1" />
+            <img src="assets/sede-marconi.webp" alt="Foto scuola 1" />
           </div>
           <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=11" alt="Foto scuola 2" />
+            <img src="assets/sede-ipsia-siderno.webp" alt="Foto scuola 2" />
           </div>
           <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=12" alt="Foto scuola 3" />
+            <img src="assets/sede-ipsia-locri.webp" alt="Foto scuola 3" />
           </div>
         </div>
 
@@ -863,17 +868,31 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
-    // Menu mobile toggle
+    // Menu mobile toggle con overlay e blocco dello scroll
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
+    const navOverlay = document.getElementById("nav-overlay");
 
-    hamburger.addEventListener("click", () => {
+    function toggleMenu() {
+      hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
-    });
+      navOverlay.classList.toggle("active");
+      if (navMenu.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+    navOverlay.addEventListener("click", toggleMenu);
 
     document.querySelectorAll(".nav-menu a").forEach((link) => {
       link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
         navMenu.classList.remove("active");
+        navOverlay.classList.remove("active");
+        document.body.style.overflow = "";
       });
     });
 

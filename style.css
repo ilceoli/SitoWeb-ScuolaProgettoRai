@@ -89,12 +89,14 @@ header.scrolled {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
   transition: padding var(--transition);
 }
 
 header.scrolled .header-content {
-  padding: 12px 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .logo {
@@ -256,6 +258,13 @@ header {
   color: var(--white);
   box-shadow: var(--shadow-sm);
 }
+
+/* NASCONDI GLI ELEMENTI MOBILE MENU INFO E SLIDESHOW SU DESKTOP */
+.nav-menu-info,
+.nav-menu-header-slideshow {
+  display: none !important;
+}
+
 
 .hamburger {
   display: none;
@@ -822,6 +831,7 @@ section:nth-child(even) {
   flex-wrap: wrap;
   gap: 30px;
   margin-top: 60px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -841,15 +851,30 @@ section:nth-child(even) {
   box-shadow: var(--shadow-xl);
 }
 
+.stat-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  transition: transform var(--transition);
+}
+
+.stat-item:hover .stat-icon {
+  transform: scale(1.18) rotate(-5deg);
+}
+
 .stat-number {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: 800;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .stat-label {
@@ -1134,7 +1159,7 @@ footer::before {
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
 }
 
@@ -1167,23 +1192,29 @@ footer::before {
   }
 
   .header-content {
-    padding: 20px 0;
+    padding-top: 26px !important;
+    padding-bottom: 26px !important;
+  }
+
+  header.scrolled .header-content {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
   }
 
   .logo {
-    gap: 8px;
+    gap: 12px;
   }
 
   .logo img {
-    height: 40px;
+    height: 52px;
   }
 
   .logo h1 {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
 
   .logo span {
-    font-size: 0.65rem;
+    font-size: 0.78rem;
     display: block;
     opacity: 0.8;
   }
@@ -1227,6 +1258,7 @@ footer::before {
     border-radius: 0;
     margin-top: 0;
     display: flex; /* Always flex but hidden via position */
+    overflow-y: auto; /* Enable scroll on smaller screens */
   }
 
   .nav-menu.active {
@@ -1239,7 +1271,6 @@ footer::before {
     transform: translateX(20px);
     transition: transform 0.4s ease, opacity 0.4s ease;
   }
-
   .nav-menu.active li {
     opacity: 1;
     transform: translateX(0);
@@ -1251,6 +1282,8 @@ footer::before {
   .nav-menu.active li:nth-child(3) { transition-delay: 0.2s; }
   .nav-menu.active li:nth-child(4) { transition-delay: 0.25s; }
   .nav-menu.active li:nth-child(5) { transition-delay: 0.3s; }
+  .nav-menu.active li:nth-child(6) { transition-delay: 0.35s; }
+  .nav-menu.active li:nth-child(7) { transition-delay: 0.4s; }
 
   .nav-menu a {
     padding: 12px 18px;
@@ -1274,10 +1307,146 @@ footer::before {
     color: var(--primary);
     transform: translateX(4px);
   }
-
   .nav-menu a.active {
     background: var(--gradient-primary);
     color: var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-menu-header-slideshow {
+    display: block !important;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .drawer-slideshow {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: var(--gray-light);
+  }
+
+  .drawer-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+  }
+
+  .drawer-slide.active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .drawer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.25));
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  /* Stili Mobile per gli Elementi Aggiuntivi nel Drawer */
+  .nav-menu-divider {
+    display: block !important;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08);
+    margin: 15px 0 !important;
+  }
+
+  .nav-menu-info {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+    padding: 0 18px;
+    margin-top: 10px;
+  }
+
+  .nav-info-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+
+  .nav-info-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: -8px;
+  }
+
+  .nav-info-tagline {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .nav-info-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+  }
+
+  .nav-info-contacts p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .nav-info-contacts i {
+    color: var(--accent);
+    width: 14px;
+    text-align: center;
+  }
+
+  .nav-info-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .nav-menu .nav-info-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--gray-light);
+    color: var(--primary);
+    font-size: 1.1rem;
+    padding: 0;
+    transition: all var(--transition);
+    transform: none;
+    box-shadow: none;
+  }
+
+  .nav-menu .nav-info-socials a:hover {
+    background: var(--gradient-primary);
+    color: var(--white);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-sm);
   }
 
@@ -1298,20 +1467,107 @@ footer::before {
   }
 
   .stats-grid {
-    flex-direction: column;
-    align-items: center;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
   }
 
   .stat-item {
-    width: 100%;
-    max-width: 300px;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 20px 15px !important;
+  }
+
+  .stat-number {
+    font-size: 2.2rem !important;
+  }
+
+  .stat-icon {
+    font-size: 1.8rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .stat-label {
+    font-size: 0.8rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  /* Redesigned mobile grid carousels */
+  section {
+    padding: 60px 0 !important;
+  }
+
+  .container {
+    padding: 0 32px !important;
+  }
+
+  .borghi-grid,
+  .card-grid,
+  .servizi-grid,
+  .gallery {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 16px !important;
+    padding: 10px 32px 20px !important;
+    margin-left: -32px !important;
+    margin-right: -32px !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .card-grid::-webkit-scrollbar,
+  .servizi-grid::-webkit-scrollbar,
+  .gallery::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Barra di scorrimento visibile e personalizzata per i Borghi su mobile */
+  .borghi-grid {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--gray-light);
+  }
+
+  .borghi-grid::-webkit-scrollbar {
+    display: block !important;
+    height: 6px !important;
+  }
+
+  .borghi-grid::-webkit-scrollbar-track {
+    background: var(--gray-light) !important;
+    border-radius: 10px !important;
+  }
+
+  .borghi-grid::-webkit-scrollbar-thumb {
+    background: var(--accent) !important;
+    border-radius: 10px !important;
+  }
+
+  .borghi-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-dark) !important;
+  }
+
+  .borgo-card,
+  .card,
+  .servizio-item,
+  .gallery-item {
+    flex: 0 0 85% !important;
+    scroll-snap-align: center !important;
+    margin-bottom: 0 !important;
+    height: auto !important;
+  }
+
+  .gallery-item {
+    height: 200px !important;
   }
 }
 
+
 @media (max-width: 480px) {
   .container {
-    padding: 0 24px;
-    /* Increase padding to push logo from edges */
+    padding: 0 32px !important;
   }
 
   .hero {
@@ -1322,14 +1578,28 @@ footer::before {
     font-size: 1.8rem;
   }
 
+  .header-content {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+  }
+
+  header.scrolled .header-content {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
   .logo h1 {
-    font-size: 0.9rem;
+    font-size: 1.18rem;
     white-space: nowrap;
   }
 
   .logo span {
     display: block;
-    font-size: 0.6rem;
+    font-size: 0.72rem;
     opacity: 0.9;
   }
 
@@ -1512,4 +1782,36 @@ footer::before {
   .course-modal-header h3 {
     font-size: 1.5rem;
   }
+}
+
+/* Carousel Layout for Auto-Scrolling Sections */
+.corsi-carousel,
+.servizi-carousel {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-snap-type: none !important;
+  gap: 24px !important;
+  padding: 15px 5px 25px !important;
+  scroll-behavior: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  align-items: stretch !important;
+}
+
+.corsi-carousel::-webkit-scrollbar,
+.servizi-carousel::-webkit-scrollbar {
+  display: none !important;
+}
+
+.corsi-carousel .card,
+.servizi-carousel .servizio-item {
+  flex: 0 0 320px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Highlight effect for Borgo Card when clicked from Map */
+.borgo-card.highlighted-card {
+  border-color: var(--accent) !important;
+  box-shadow: var(--shadow-hover), 0 0 25px rgba(230, 126, 34, 0.5) !important;
+  transform: scale(1.03) translateY(-12px) !important;
+  z-index: 10 !important;
 }

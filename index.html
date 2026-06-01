@@ -39,6 +39,27 @@
         <li><a href="#corsi">Corsi</a></li>
         <li><a href="#servizi">Servizi</a></li>
         <li><a href="#borghi">Scopri il Territorio</a></li>
+        <li class="nav-menu-header-slideshow">
+          <div class="drawer-slideshow">
+            <div class="drawer-slide active" style="background-image: url('assets/sede-marconi.webp'); background-position: center 100%;"></div>
+            <div class="drawer-slide" style="background-image: url('assets/sede-ipsia-siderno.webp'); background-position: center 100%;"></div>
+            <div class="drawer-slide" style="background-image: url('assets/sede-ipsia-locri.webp'); background-position: center 170%;"></div>
+            <div class="drawer-overlay"></div>
+          </div>
+        </li>
+        <li class="nav-menu-info">
+          <div class="nav-info-title">Polo Tecnico Professionale</div>
+          <div class="nav-info-desc">Marconi · Ipsia · Zanotti</div>
+          <div class="nav-info-tagline">"Costruiamo insieme il tuo futuro"</div>
+          <div class="nav-info-contacts">
+            <p><i class="fas fa-map-marker-alt"></i> Siderno - Locri</p>
+            <p><i class="fas fa-envelope"></i> rcis03100l@istruzione.it</p>
+          </div>
+          <div class="nav-info-socials">
+            <a href="https://www.instagram.com/polo_tecn_profes_sidernolocri/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a>
+          </div>
+        </li>
       </ul>
     </div>
   </header>
@@ -72,6 +93,31 @@
     <section id="scuola">
       <div class="container">
         <h2 class="section-title">La scuola</h2>
+        
+        <!-- Numeri del Polo Tecnico Professionale (Spostati e Arricchiti con Icone) -->
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+            <div class="stat-number">915</div>
+            <div class="stat-label">Studenti</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="stat-number">48</div>
+            <div class="stat-label">Classi</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-flask"></i></div>
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Laboratori</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-school"></i></div>
+            <div class="stat-number">3</div>
+            <div class="stat-label">Plessi</div>
+          </div>
+        </div>
+
         <div class="scuola-grid">
           <!-- Colonna sinistra: timeline arricchita -->
           <div>
@@ -220,26 +266,6 @@
             <img src="assets/sede-ipsia-locri.webp" alt="Foto scuola 3" />
           </div>
         </div>
-
-        <!-- Numeri aggiornati -->
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-number">915</div>
-            <div class="stat-label">Studenti</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">48</div>
-            <div class="stat-label">Classi</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">4</div>
-            <div class="stat-label">Plessi</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">15+</div>
-            <div class="stat-label">Laboratori</div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -251,7 +277,7 @@
           Cinque anni per costruire il tuo futuro: percorsi tecnici e
           professionali
         </p>
-        <div class="card-grid">
+        <div class="card-grid corsi-carousel" id="corsi-carousel">
           <!-- AFM -->
           <div class="card" data-course="afm">
             <div class="card-image" style="
@@ -429,7 +455,7 @@
       <div class="container">
         <h2 class="section-title">Servizi</h2>
         <p class="section-subtitle">Per studenti, genitori e personale</p>
-        <div class="servizi-grid">
+        <div class="servizi-grid servizi-carousel" id="servizi-carousel">
           <div class="servizio-item">
             <div class="servizio-icon">
               <i class="fas fa-calendar-alt"></i>
@@ -506,7 +532,7 @@
         <!-- Schede descrittive dei borghi (14 card) -->
         <div class="borghi-grid">
           <!-- Valle delle Grandi Pietre (Pietra Cappa) -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-valledellegrandipietre">
             <div class="borgo-image"
               style="
                   background-image: url(&quot;assets/borghi/valledellegrandipietre/immagini/valle-pietra-cappa.jpg&quot;);"></div>
@@ -522,7 +548,7 @@
           </div>
 
           <!-- Villa Romana del Naniglio (Gioiosa Ionica) -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-villaromanadelnaniglio">
             <div class="borgo-image"
               style="
                   background-image: url(&quot;assets/borghi/villaromanadelnaniglio/immagini/naniglio-esterno.jpg&quot;);"></div>
@@ -538,7 +564,7 @@
           </div>
 
           <!-- Gerace -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-gerace">
             <div class="borgo-image" style="
                   background-image: url(&quot;assets/borghi/gerace/immagini/gerace-panorama.jpg&quot;);"></div>
             <div class="borgo-content">
@@ -553,7 +579,7 @@
           </div>
 
           <!-- Brancaleone -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-brancaleone">
             <div class="borgo-image" style="
                   background-image: url('assets/borghi/brancaleone/immagini/brancaleone-borgo.webp');"></div>
             <div class="borgo-content">
@@ -567,7 +593,7 @@
           </div>
 
           <!-- San Luca -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-sanluca">
             <div class="borgo-image" style="
                   background-image: url(&quot;assets/borghi/sanluca/immagini/sanluca-panorama.jpg&quot;);"></div>
             <div class="borgo-content">
@@ -581,7 +607,7 @@
           </div>
 
           <!-- Locri -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-locri">
             <div class="borgo-image" style="
                   background-image: url(&quot;assets/borghi/locri/immagini/locri.jpg&quot;);"></div>
             <div class="borgo-content">
@@ -595,7 +621,7 @@
           </div>
 
           <!-- Bianco -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-bianco">
             <div class="borgo-image" style="
                   background-image: url(&quot;assets/borghi/bianco/immagini/bianco-chiesavecchia.jpeg&quot;);"></div>
             <div class="borgo-content">
@@ -609,7 +635,7 @@
           </div>
 
           <!-- Samo -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-samo">
             <div class="borgo-image" style="
                   background-image: url(&quot;assets/borghi/samo/immagini/samo-panorama.jpg&quot;);"></div>
             <div class="borgo-content">
@@ -623,7 +649,7 @@
           </div>
 
           <!-- Siderno -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-siderno">
             <div class="borgo-image" style="
                   background-image: url(&quot;assets/borghi/siderno/immagini/siderno-panorama.jpg&quot;);"></div>
             <div class="borgo-content">
@@ -638,7 +664,7 @@
           </div>
 
           <!-- Caulonia -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-caulonia">
             <div class="borgo-image" style="
                   background-image: url(&quot;assets/borghi/caulonia/immagini/caulonia.jpg&quot;);"></div>
             <div class="borgo-content">
@@ -652,7 +678,7 @@
           </div>
 
           <!-- Sant'Agata del Bianco -->
-          <div class="borgo-card">
+          <div class="borgo-card" id="borgo-santagatadelbianco">
             <div class="borgo-image"
               style="
                   background-image: url(&quot;assets/borghi/santagatadelbianco/immagini/murales-lear.jpg&quot;);"></div>
@@ -861,6 +887,10 @@
             Un'iniziativa degli studenti per raccontare il territorio
             attraverso i borghi della Locride.
           </p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/polo_tecn_profes_sidernolocri/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener noreferrer" title="Sito Web"><i class="fas fa-globe"></i></a>
+          </div>
         </div>
       </div>
       <div class="copyright">
@@ -1164,7 +1194,7 @@
     hamburger.addEventListener("click", toggleMenu);
     navOverlay.addEventListener("click", toggleMenu);
 
-    document.querySelectorAll(".nav-menu a").forEach((link) => {
+    document.querySelectorAll(".nav-menu a[href^='#']").forEach((link) => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
@@ -1367,8 +1397,8 @@
       },
       {
         nome: "Samo",
-        lat: 38.067,
-        lng: 16.067,
+        lat: 38.073669059583594, 
+        lng: 16.05821324443914,
         link: "assets/borghi/samo/samo.html",
         tipo: "default",
       },
@@ -1381,8 +1411,8 @@
       },
       {
         nome: "Sant'Agata del Bianco",
-        lat: 38.116,
-        lng: 16.083,
+        lat: 38.09091046535419,
+        lng: 16.083455019578096,
         link: "assets/borghi/santagatadelbianco/santagatadelbianco.html",
         tipo: "default",
       },
@@ -1465,7 +1495,25 @@
         if (borgo.link.startsWith("http")) {
           window.open(borgo.link, "_blank");
         } else {
-          window.location.href = borgo.link;
+          // Estrae lo slug dal percorso del link (es. assets/borghi/gerace/gerace.html -> gerace)
+          let slug = "";
+          if (borgo.link.includes("assets/borghi/")) {
+            const parts = borgo.link.split("/");
+            slug = parts[2];
+          }
+          const card = document.getElementById("borgo-" + slug);
+          if (card) {
+            // Scorre in modo fluido fino alla scheda centrandola sia in orizzontale (mobile) che verticale (desktop)
+            card.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+            // Aggiunge la classe di evidenziazione temporanea per 2 secondi
+            card.classList.add("highlighted-card");
+            setTimeout(() => {
+              card.classList.remove("highlighted-card");
+            }, 2000);
+          } else {
+            // Fallback se la scheda non è presente o è disattivata
+            window.location.href = borgo.link;
+          }
         }
       });
 
@@ -1486,6 +1534,202 @@
     //     window.scrollTo(0, 0);
     //   }
     // });
+
+    // ==========================================================================
+    // AUTO-SCROLL CAROUSELS (Courses and Services)
+    // ==========================================================================
+    function initAutoScrollCarousel(carouselId, speed, direction) {
+      const carousel = document.getElementById(carouselId);
+      if (!carousel) return;
+
+      let scrollSpeed = speed;
+      let animationFrameId = null;
+      let isPaused = false;
+      let isInteracting = false;
+      let resumeTimeout = null;
+
+      // Track direction: 1 for rightwards (increasing scrollLeft), -1 for leftwards (decreasing scrollLeft)
+      let currentDir = direction === "rtl" ? 1 : -1;
+
+      // Keep track of the precise scroll position as a float to prevent integer rounding issues
+      let currentScroll = 0;
+
+      // Flag to prevent our programmatic scrolls from triggering the manual interaction pause
+      let isProgrammaticScroll = false;
+
+      // Set initial scroll position for 'ltr' so it scrolls backwards from the end
+      const setupInitialScroll = () => {
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        if (direction === "ltr" && maxScroll > 0) {
+          carousel.scrollLeft = maxScroll;
+        }
+        currentScroll = carousel.scrollLeft;
+      };
+
+      // Set up on window load or immediately if ready
+      if (document.readyState === "complete") {
+        setupInitialScroll();
+      } else {
+        window.addEventListener("load", setupInitialScroll);
+      }
+
+      const animate = () => {
+        if (!isPaused && !isInteracting) {
+          const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+          if (maxScroll > 0) {
+            if (currentDir === 1) {
+              currentScroll += scrollSpeed;
+              if (currentScroll >= maxScroll - 1) {
+                currentScroll = maxScroll;
+                currentDir = -1;
+              }
+            } else {
+              currentScroll -= scrollSpeed;
+              if (currentScroll <= 1) {
+                currentScroll = 0;
+                currentDir = 1;
+              }
+            }
+            isProgrammaticScroll = true;
+            carousel.scrollLeft = currentScroll;
+          }
+        }
+        animationFrameId = requestAnimationFrame(animate);
+      };
+
+      const start = () => {
+        if (!animationFrameId) {
+          animationFrameId = requestAnimationFrame(animate);
+        }
+      };
+
+      // Pause on hover
+      carousel.addEventListener("mouseenter", () => {
+        isPaused = true;
+      });
+
+      carousel.addEventListener("mouseleave", () => {
+        isPaused = false;
+      });
+
+      // Pause and resume on manual interaction
+      const onInteractionStart = () => {
+        isInteracting = true;
+        isPaused = true;
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+      };
+
+      const onInteractionEnd = () => {
+        resumeTimeout = setTimeout(() => {
+          isInteracting = false;
+          isPaused = false;
+        }, 1500); // Resume auto-scroll after 1.5 seconds of idle
+      };
+
+      carousel.addEventListener("touchstart", onInteractionStart, { passive: true });
+      carousel.addEventListener("touchend", onInteractionEnd);
+      carousel.addEventListener("mousedown", onInteractionStart);
+      carousel.addEventListener("mouseup", onInteractionEnd);
+
+      carousel.addEventListener("scroll", () => {
+        // If it's a programmatic scroll initiated by our animation, ignore it
+        if (isProgrammaticScroll) {
+          isProgrammaticScroll = false;
+          return;
+        }
+
+        // If the user is scrolling manually, sync our float tracker
+        currentScroll = carousel.scrollLeft;
+
+        // Update scroll direction when manually scrolled near/to boundaries
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        if (maxScroll > 0) {
+          if (carousel.scrollLeft >= maxScroll - 1) {
+            currentDir = -1;
+          } else if (carousel.scrollLeft <= 1) {
+            currentDir = 1;
+          }
+        }
+        // Also trigger pause-and-resume behavior during active scroll wheel action
+        if (isInteracting) return;
+        onInteractionStart();
+        onInteractionEnd();
+      });
+
+      start();
+    }
+
+    // Animated Counters for Statistics (Count-up on scroll)
+    function initCounters() {
+      const stats = document.querySelectorAll(".stat-number");
+      
+      const countUp = (el) => {
+        const originalText = el.textContent.trim();
+        const hasPlus = originalText.includes("+");
+        const target = parseInt(originalText.replace("+", ""), 10);
+        if (isNaN(target)) return;
+
+        // Set initial starting text to 0
+        el.textContent = "0" + (hasPlus ? "+" : "");
+
+        const duration = 1500; // Animation duration in ms
+        const startTime = performance.now();
+
+        const updateCount = (now) => {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          
+          // Easing function: easeOutQuad
+          const easeProgress = progress * (2 - progress);
+          const currentValue = Math.floor(easeProgress * target);
+
+          el.textContent = currentValue + (hasPlus ? "+" : "");
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            el.textContent = originalText; // Ensure precise final target text (e.g. 15+)
+          }
+        };
+
+        requestAnimationFrame(updateCount);
+      };
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            stats.forEach(stat => countUp(stat));
+            obs.unobserve(entry.target); // Run only once
+          }
+        });
+      }, { threshold: 0.2 });
+
+      const statsGrid = document.querySelector(".stats-grid");
+      if (statsGrid) {
+        observer.observe(statsGrid);
+      }
+    }
+
+    // Animated Slideshow inside Mobile Drawer
+    function initDrawerSlideshow() {
+      const slides = document.querySelectorAll(".drawer-slide");
+      if (slides.length === 0) return;
+      let currentIndex = 0;
+
+      setInterval(() => {
+        slides[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add("active");
+      }, 5000);
+    }
+
+    // Initialize carousels and counters after the DOM is ready
+    window.addEventListener("load", () => {
+      initAutoScrollCarousel("corsi-carousel", 0.6, "rtl"); // Right to Left
+      initAutoScrollCarousel("servizi-carousel", 0.6, "ltr"); // Left to Right
+      initCounters();
+      initDrawerSlideshow();
+    });
   </script>
 </body>
 

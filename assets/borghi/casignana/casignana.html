@@ -519,6 +519,35 @@
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.6);
         }
+    .credits {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .credits-icon {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .credits-link {
+      color: var(--white) !important;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .credits-link:hover {
+      color: var(--accent) !important;
+    }
 
         /* ============================================
            RESPONSIVE
@@ -562,7 +591,7 @@
                 font-size: 1.8rem;
             }
         }
-    
+
         /* ==========================================================================
            OTTIMIZZAZIONE MOBILE E TABLET (ANDROID, IOS, IPAD)
            ========================================================================== */
@@ -573,62 +602,76 @@
                 text-align: center !important;
                 padding: 16px 0 !important;
             }
+
             .logo {
                 flex-direction: column !important;
                 align-items: center !important;
                 text-align: center !important;
                 gap: 6px !important;
             }
+
             .logo h1 {
                 font-size: 1.15rem !important;
             }
+
             .logo span {
                 font-size: 0.65rem !important;
                 text-align: center !important;
             }
+
             .back-link {
                 width: 100% !important;
                 display: flex !important;
                 justify-content: center !important;
                 margin-top: 5px !important;
             }
+
             .back-link a {
                 padding: 8px 24px !important;
                 font-size: 0.85rem !important;
             }
+
             .content-section {
                 display: flex !important;
                 flex-direction: column !important;
                 gap: 30px !important;
                 direction: ltr !important;
             }
+
             .content-text {
                 order: 1 !important;
                 padding: 0 !important;
                 text-align: justify !important;
             }
+
             .content-image {
                 order: 2 !important;
                 width: 100% !important;
                 height: 280px !important;
             }
+
             .hero-borgo {
                 min-height: 280px !important;
                 height: 45vh !important;
             }
+
             .hero-borgo h2 {
                 font-size: 2.2rem !important;
             }
+
             .hero-borgo p {
                 font-size: 1.05rem !important;
             }
+
             .section-title {
                 font-size: 2rem !important;
             }
+
             .info-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 16px !important;
             }
+
             .tradizioni-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 20px !important;
@@ -640,36 +683,46 @@
                 font-size: 0.95rem !important;
                 white-space: normal !important;
             }
+
             .logo span {
                 font-size: 0.6rem !important;
             }
+
             .logo img {
                 height: 32px !important;
             }
+
             .info-grid {
                 grid-template-columns: 1fr !important;
             }
+
             .tradizioni-grid {
                 grid-template-columns: 1fr !important;
             }
+
             .gallery {
                 grid-template-columns: 1fr !important;
                 gap: 12px !important;
             }
+
             .gallery-item {
                 height: 180px !important;
             }
+
             .hero-borgo {
                 min-height: 220px !important;
                 height: 35vh !important;
             }
+
             .hero-borgo h2 {
                 font-size: 1.8rem !important;
             }
+
             .hero-borgo p {
                 font-size: 0.9rem !important;
                 line-height: 1.5 !important;
             }
+
             .section-title {
                 font-size: 1.6rem !important;
             }
@@ -749,13 +802,11 @@
                             Palazzi e occupa un'area di circa 8.000 metri quadrati. Il sito venne scoperto casualmente
                             nel 1963, durante i lavori di costruzione di un acquedotto lungo la Strada Statale 106.</p>
                     </div>
-                    <div class="content-image"
-                        style="background-image: url('immagini/scoperta.jpg');"></div>
+                    <div class="content-image" style="background-image: url('immagini/scoperta.jpg');"></div>
                 </div>
 
                 <div class="content-section reverse">
-                    <div class="content-image"
-                        style="background-image: url('immagini/scavi.jpg');"></div>
+                    <div class="content-image" style="background-image: url('immagini/scavi.jpg');"></div>
                     <div class="content-text">
                         <h3>Dai Primi Scavi alla Ricostruzione</h3>
                         <p>Tuttavia, solo alla fine degli anni '90 iniziarono le prime campagne sistematiche di scavo e
@@ -788,13 +839,11 @@
                         <p>Le ricerche archeologiche condotte negli ultimi anni hanno inoltre dimostrato che la villa fu
                             abitata almeno fino al VII secolo d.C., segno della lunga continuità di vita del sito.</p>
                     </div>
-                    <div class="content-image"
-                        style="background-image: url('immagini/complesso.jpg');"></div>
+                    <div class="content-image" style="background-image: url('immagini/complesso.jpg');"></div>
                 </div>
 
                 <div class="content-section reverse">
-                    <div class="content-image"
-                        style="background-image: url('immagini/ambienti.jpg');"></div>
+                    <div class="content-image" style="background-image: url('immagini/ambienti.jpg');"></div>
                     <div class="content-text">
                         <h3>Gli Ambienti Principali</h3>
                         <p>Tra gli ambienti più importanti scoperti dagli archeologi si trovano:</p>
@@ -826,13 +875,11 @@
                             artistico raggiunto dagli artigiani che lavoravano per l'élite romana locale. I colori
                             vivaci e la precisione dei dettagli si sono conservati in modo eccezionale.</p>
                     </div>
-                    <div class="content-image"
-                        style="background-image: url('immagini/mosaici.jpg');"></div>
+                    <div class="content-image" style="background-image: url('immagini/mosaici.jpg');"></div>
                 </div>
 
                 <div class="content-section reverse">
-                    <div class="content-image"
-                        style="background-image: url('immagini/simbolismo.jpg');"></div>
+                    <div class="content-image" style="background-image: url('immagini/simbolismo.jpg');"></div>
                     <div class="content-text">
                         <h3>Simbolismo e Significato</h3>
                         <p>Ogni mosaico racconta una storia mitologica o allegorica. Le Nereidi rappresentano la
@@ -861,13 +908,11 @@
                             le speranze di vita dopo la morte dei romani provinciali. I rituali funerari erano
                             considerati essenziali per garantire pace eterna ai defunti.</p>
                     </div>
-                    <div class="content-image"
-                        style="background-image: url('immagini/necropoli.jpg');"></div>
+                    <div class="content-image" style="background-image: url('immagini/necropoli.jpg');"></div>
                 </div>
 
                 <div class="content-section reverse">
-                    <div class="content-image"
-                        style="background-image: url('immagini/reliquie.jpg');"></div>
+                    <div class="content-image" style="background-image: url('immagini/reliquie.jpg');"></div>
                     <div class="content-text">
                         <h3>Reliquie del Passato</h3>
                         <p>Gli oggetti ritrovati nelle tombe includono ceramiche finemente decorate, gioielli in oro e
@@ -923,14 +968,13 @@
                             alt="Vista generale della villa"></div>
                     <div class="gallery-item"><img src="immagini/galleria/dettaglio-mosaico.jpg"
                             alt="Dettaglio mosaico"></div>
-                    <div class="gallery-item"><img src="immagini/galleria/sala-nereidi.jpg"
-                            alt="Sala delle Nereidi"></div>
-                    <div class="gallery-item"><img src="immagini/galleria/ambiente-termale.jpg"
-                            alt="Ambiente termale"></div>
-                    <div class="gallery-item"><img src="immagini/galleria/cortile-centrale.jpg"
-                            alt="Cortile centrale"></div>
-                    <div class="gallery-item"><img src="immagini/galleria/reperti.jpg"
-                            alt="Reperti archeologici"></div>
+                    <div class="gallery-item"><img src="immagini/galleria/sala-nereidi.jpg" alt="Sala delle Nereidi">
+                    </div>
+                    <div class="gallery-item"><img src="immagini/galleria/ambiente-termale.jpg" alt="Ambiente termale">
+                    </div>
+                    <div class="gallery-item"><img src="immagini/galleria/cortile-centrale.jpg" alt="Cortile centrale">
+                    </div>
+                    <div class="gallery-item"><img src="immagini/galleria/reperti.jpg" alt="Reperti archeologici"></div>
                 </div>
             </div>
         </section>
@@ -973,12 +1017,18 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p><a href="../../../index.html#borghi">← Torna alla mappa dei borghi</a> | <a href="../../../index.html">Home</a>
+                <p><a href="../../../index.html#borghi">← Torna alla mappa dei borghi</a> | <a
+                        href="../../../index.html">Home</a>
                 </p>
                 <p>&copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.</p>
             </div>
-            <div class="copyright">
-                Sito realizzato dagli studenti del progetto scolastico
+                        <div class="credits">
+                <span class="credits-icon"><i class="fa-solid fa-code"></i></span>
+                Sito Web realizzato da 
+                <a href="https://www.instagram.com/mike_strano/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="credits-link">Michele Strano</a>
             </div>
         </div>
     </footer>

@@ -546,6 +546,35 @@
       font-size: 0.9rem;
       color: rgba(255, 255, 255, 0.6);
     }
+    .credits {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .credits-icon {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .credits-link {
+      color: var(--white) !important;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .credits-link:hover {
+      color: var(--accent) !important;
+    }
 
     /* ============================================
            RESPONSIVE
@@ -706,119 +735,143 @@
         font-size: 0.7rem;
       }
     }
-  
-        /* ==========================================================================
+
+    /* ==========================================================================
            OTTIMIZZAZIONE MOBILE E TABLET (ANDROID, IOS, IPAD)
            ========================================================================== */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column !important;
-                gap: 15px !important;
-                text-align: center !important;
-                padding: 16px 0 !important;
-            }
-            .logo {
-                flex-direction: column !important;
-                align-items: center !important;
-                text-align: center !important;
-                gap: 6px !important;
-            }
-            .logo h1 {
-                font-size: 1.15rem !important;
-            }
-            .logo span {
-                font-size: 0.65rem !important;
-                text-align: center !important;
-            }
-            .back-link {
-                width: 100% !important;
-                display: flex !important;
-                justify-content: center !important;
-                margin-top: 5px !important;
-            }
-            .back-link a {
-                padding: 8px 24px !important;
-                font-size: 0.85rem !important;
-            }
-            .content-section {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 30px !important;
-                direction: ltr !important;
-            }
-            .content-text {
-                order: 1 !important;
-                padding: 0 !important;
-                text-align: justify !important;
-            }
-            .content-image {
-                order: 2 !important;
-                width: 100% !important;
-                height: 280px !important;
-            }
-            .hero-borgo {
-                min-height: 280px !important;
-                height: 45vh !important;
-            }
-            .hero-borgo h2 {
-                font-size: 2.2rem !important;
-            }
-            .hero-borgo p {
-                font-size: 1.05rem !important;
-            }
-            .section-title {
-                font-size: 2rem !important;
-            }
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 16px !important;
-            }
-            .tradizioni-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 20px !important;
-            }
-        }
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+        padding: 16px 0 !important;
+      }
 
-        @media (max-width: 480px) {
-            .logo h1 {
-                font-size: 0.95rem !important;
-                white-space: normal !important;
-            }
-            .logo span {
-                font-size: 0.6rem !important;
-            }
-            .logo img {
-                height: 32px !important;
-            }
-            .info-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .tradizioni-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .gallery {
-                grid-template-columns: 1fr !important;
-                gap: 12px !important;
-            }
-            .gallery-item {
-                height: 180px !important;
-            }
-            .hero-borgo {
-                min-height: 220px !important;
-                height: 35vh !important;
-            }
-            .hero-borgo h2 {
-                font-size: 1.8rem !important;
-            }
-            .hero-borgo p {
-                font-size: 0.9rem !important;
-                line-height: 1.5 !important;
-            }
-            .section-title {
-                font-size: 1.6rem !important;
-            }
-        }
-    </style>
+      .logo {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 6px !important;
+      }
+
+      .logo h1 {
+        font-size: 1.15rem !important;
+      }
+
+      .logo span {
+        font-size: 0.65rem !important;
+        text-align: center !important;
+      }
+
+      .back-link {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 5px !important;
+      }
+
+      .back-link a {
+        padding: 8px 24px !important;
+        font-size: 0.85rem !important;
+      }
+
+      .content-section {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+        direction: ltr !important;
+      }
+
+      .content-text {
+        order: 1 !important;
+        padding: 0 !important;
+        text-align: justify !important;
+      }
+
+      .content-image {
+        order: 2 !important;
+        width: 100% !important;
+        height: 280px !important;
+      }
+
+      .hero-borgo {
+        min-height: 280px !important;
+        height: 45vh !important;
+      }
+
+      .hero-borgo h2 {
+        font-size: 2.2rem !important;
+      }
+
+      .hero-borgo p {
+        font-size: 1.05rem !important;
+      }
+
+      .section-title {
+        font-size: 2rem !important;
+      }
+
+      .info-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+
+      .tradizioni-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo h1 {
+        font-size: 0.95rem !important;
+        white-space: normal !important;
+      }
+
+      .logo span {
+        font-size: 0.6rem !important;
+      }
+
+      .logo img {
+        height: 32px !important;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .tradizioni-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+
+      .gallery-item {
+        height: 180px !important;
+      }
+
+      .hero-borgo {
+        min-height: 220px !important;
+        height: 35vh !important;
+      }
+
+      .hero-borgo h2 {
+        font-size: 1.8rem !important;
+      }
+
+      .hero-borgo p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+      }
+
+      .section-title {
+        font-size: 1.6rem !important;
+      }
+    }
+  </style>
 
 </head>
 
@@ -1164,22 +1217,22 @@
         <h2 class="section-title">Galleria Fotografica</h2>
         <div class="gallery">
           <div class="gallery-item">
-            <img src="immagini/galleria/galleria1.webp"/>
+            <img src="immagini/galleria/galleria1.webp" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/galleria/galleria2.webp"/>
+            <img src="immagini/galleria/galleria2.webp" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/galleria/galleria3.png"/>
+            <img src="immagini/galleria/galleria3.png" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/galleria/galleria4.jpg"/>
+            <img src="immagini/galleria/galleria4.jpg" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/galleria/galleria5.jpg"/>
+            <img src="immagini/galleria/galleria5.jpg" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/galleria/galleria6.jpeg"/>
+            <img src="immagini/galleria/galleria6.jpeg" />
           </div>
         </div>
       </div>
@@ -1268,9 +1321,14 @@
           Zanotti. Tutti i diritti riservati.
         </p>
       </div>
-      <div class="copyright">
-        Sito realizzato dagli studenti del progetto scolastico
-      </div>
+                  <div class="credits">
+                <span class="credits-icon"><i class="fa-solid fa-code"></i></span>
+                Sito Web realizzato da 
+                <a href="https://www.instagram.com/mike_strano/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="credits-link">Michele Strano</a>
+            </div>
     </div>
   </footer>
 

@@ -507,7 +507,8 @@
         <div class="borghi-grid">
           <!-- Valle delle Grandi Pietre (Pietra Cappa) -->
           <div class="borgo-card">
-            <div class="borgo-image" style="
+            <div class="borgo-image"
+              style="
                   background-image: url(&quot;assets/borghi/valledellegrandipietre/immagini/valle-pietra-cappa.jpg&quot;);"></div>
             <div class="borgo-content">
               <h3>Valle delle Grandi Pietre</h3>
@@ -515,13 +516,15 @@
                 Pietra Cappa è il più grande monolite d'Europa, meta di
                 escursioni e trekking tra natura e storia.
               </p>
-              <a href="assets/borghi/valledellegrandipietre/valledellegrandipietre.html" class="btn-borgo">Scopri la Valle →</a>
+              <a href="assets/borghi/valledellegrandipietre/valledellegrandipietre.html" class="btn-borgo">Scopri la
+                Valle →</a>
             </div>
           </div>
 
           <!-- Villa Romana del Naniglio (Gioiosa Ionica) -->
           <div class="borgo-card">
-            <div class="borgo-image" style="
+            <div class="borgo-image"
+              style="
                   background-image: url(&quot;assets/borghi/villaromanadelnaniglio/immagini/naniglio-esterno.jpg&quot;);"></div>
             <div class="borgo-content">
               <h3>Villa Romana del Naniglio</h3>
@@ -529,7 +532,8 @@
                 Paese collinare con centro storico medievale e castello. Noto
                 per le tradizioni e la posizione panoramica sullo Ionio.
               </p>
-              <a href="assets/borghi/villaromanadelnaniglio/villaromanadelnaniglio.html" class="btn-borgo">Scopri la Villa →</a>
+              <a href="assets/borghi/villaromanadelnaniglio/villaromanadelnaniglio.html" class="btn-borgo">Scopri la
+                Villa →</a>
             </div>
           </div>
 
@@ -649,16 +653,18 @@
 
           <!-- Sant'Agata del Bianco -->
           <div class="borgo-card">
-            <div class="borgo-image" style="
-                  background-image: url(&quot;assets/borghi/santagatadelbianco/immagini/santagata-michelebello.jpg&quot;);"></div>
+            <div class="borgo-image"
+              style="
+                  background-image: url(&quot;assets/borghi/santagatadelbianco/immagini/murales-lear.jpg&quot;);"></div>
             <div class="borgo-content">
-              <h3>Sant'Agata del Bianco (MANCANO DUE FOTO DA INSERIRE)</h3>
+              <h3>Sant'Agata del Bianco</h3>
               <p>
                 La “Città dei Murales”, un museo a cielo aperto tra i vicoli
                 del borgo, dove l'arte contemporanea incontra la memoria dello
                 scrittore Saverio Strati e le tradizioni dell'Aspromonte.
               </p>
-              <a href="assets/borghi/santagatadelbianco/santagatadelbianco.html" class="btn-borgo">Scopri Sant'Agata →</a>
+              <a href="assets/borghi/santagatadelbianco/santagatadelbianco.html" class="btn-borgo">Scopri Sant'Agata
+                →</a>
             </div>
           </div>
 
@@ -860,7 +866,14 @@
       <div class="copyright">
         &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti.
         Tutti i diritti riservati.
-        <p>Sito realizzato da <a href="https://www.instagram.com/mike_strano/" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">Michele Strano</a></p>
+        <div class="credits">
+            <span class="credits-icon"><i class="fa-solid fa-code"></i></span>
+            Sito Web realizzato da 
+            <a href="https://www.instagram.com/mike_strano/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="credits-link">Michele Strano</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -875,7 +888,7 @@
       </div>
       <div class="course-modal-body">
         <p class="course-modal-desc" id="modal-desc">Descrizione dettagliata...</p>
-        
+
         <div class="course-modal-details">
           <div class="detail-section">
             <h4><i class="fas fa-book-open"></i> Materie Caratterizzanti</h4>
@@ -883,7 +896,7 @@
               <!-- Popolato dinamicamente -->
             </ul>
           </div>
-          
+
           <div class="detail-section">
             <h4><i class="fas fa-briefcase"></i> Sbocchi Professionali</h4>
             <ul id="modal-careers">
@@ -1079,10 +1092,10 @@
             modalTag.style.background = "var(--gradient-primary)";
             modalTag.style.color = "var(--white)";
           }
-          
+
           modalTitle.textContent = dati.title;
           modalDesc.textContent = dati.desc;
-          
+
           // Popola le materie
           modalSubjects.innerHTML = "";
           dati.subjects.forEach((subj) => {
@@ -1090,7 +1103,7 @@
             li.textContent = subj;
             modalSubjects.appendChild(li);
           });
-          
+
           // Popola gli sbocchi
           modalCareers.innerHTML = "";
           dati.careers.forEach((car) => {
@@ -1098,7 +1111,7 @@
             li.textContent = car;
             modalCareers.appendChild(li);
           });
-          
+
           // Mostra il modale e blocca lo scroll
           courseModal.classList.add("active");
           document.body.style.overflow = "hidden";
@@ -1117,7 +1130,7 @@
     }
 
     courseModalClose.addEventListener("click", closeCourseModal);
-    
+
     // Chiudi il modale cliccando all'esterno del contenuto (sullo sfondo)
     courseModal.addEventListener("click", (e) => {
       if (e.target === courseModal) {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <!-- Google Fonts e Font Awesome per icone -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -27,9 +30,11 @@
 
         /* Variabili colore */
         :root {
-            --primary: #0a3b5b;       /* blu scuro */
+            --primary: #0a3b5b;
+            /* blu scuro */
             --primary-light: #1e4f6e;
-            --accent: #eab308;         /* giallo */
+            --accent: #eab308;
+            /* giallo */
             --gray-light: #f0f2f5;
             --text-light: #6b7280;
         }
@@ -44,7 +49,7 @@
         /* Header e navigazione */
         header {
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -128,7 +133,7 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         /* Sezioni generali */
@@ -168,13 +173,13 @@
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
         .card-image {
@@ -294,7 +299,8 @@
             background-color: var(--accent);
         }
 
-        .footer-col p, .footer-col ul {
+        .footer-col p,
+        .footer-col ul {
             margin-bottom: 10px;
             line-height: 1.8;
         }
@@ -308,7 +314,7 @@
         }
 
         .footer-col a {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -332,7 +338,7 @@
 
         .social-icons a {
             color: white;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -349,11 +355,40 @@
 
         .copyright {
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
             padding-top: 20px;
             font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
         }
+    .credits {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .credits-icon {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .credits-link {
+      color: var(--white) !important;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .credits-link:hover {
+      color: var(--accent) !important;
+    }
 
         /* Timeline */
         .timeline {
@@ -361,11 +396,13 @@
             list-style: none;
             padding: 0;
         }
+
         .timeline li {
             margin-bottom: 15px;
             padding-left: 20px;
             border-left: 3px solid var(--accent);
         }
+
         .timeline strong {
             color: var(--primary);
         }
@@ -377,32 +414,39 @@
             gap: 30px;
             margin-top: 40px;
         }
+
         .borgo-card {
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
         }
+
         .borgo-card:hover {
             transform: translateY(-5px);
         }
+
         .borgo-image {
             height: 180px;
             background-size: cover;
             background-position: center;
         }
+
         .borgo-content {
             padding: 20px;
         }
+
         .borgo-content h3 {
             color: var(--primary);
             margin-bottom: 10px;
         }
+
         .borgo-content p {
             color: var(--text-light);
             margin-bottom: 15px;
         }
+
         .btn-borgo {
             display: inline-block;
             background-color: var(--primary);
@@ -413,6 +457,7 @@
             font-size: 0.9rem;
             transition: background 0.3s;
         }
+
         .btn-borgo:hover {
             background-color: var(--primary-light);
         }
@@ -456,6 +501,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container header-content">
@@ -479,7 +525,8 @@
         <section id="home" class="hero">
             <div class="container">
                 <h2>Benvenuti nel nuovo Polo Tecnico Professionale</h2>
-                <p>Dal 2024/2025 l’IIS Marconi, l’IPSIA di Siderno e parte dello Zanotti Bianco si uniscono per offrire un’offerta formativa ancora più ricca e moderna.</p>
+                <p>Dal 2024/2025 l’IIS Marconi, l’IPSIA di Siderno e parte dello Zanotti Bianco si uniscono per offrire
+                    un’offerta formativa ancora più ricca e moderna.</p>
                 <a href="#corsi" class="btn">Scopri i corsi <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
@@ -492,17 +539,20 @@
                 <div class="card-grid">
                     <!-- Card 1: Convegno clima -->
                     <div class="card">
-                        <div class="card-image" style="background-image: url('https://picsum.photos/400/200?random=1');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=1');"></div>
                         <div class="card-content">
                             <span class="tag">Evento</span>
                             <h3>“Il mondo che… 4°C” – Ottobre 2025</h3>
-                            <p>Convegno sui cambiamenti climatici con il patrocinio del Comune di Siderno. Relatore: prof. Carmelo Scordino.</p>
+                            <p>Convegno sui cambiamenti climatici con il patrocinio del Comune di Siderno. Relatore:
+                                prof. Carmelo Scordino.</p>
                             <a href="#" style="color: var(--primary); font-weight: 600;">Leggi tutto →</a>
                         </div>
                     </div>
                     <!-- Card 2: 25 Aprile -->
                     <div class="card">
-                        <div class="card-image" style="background-image: url('https://picsum.photos/400/200?random=2');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=2');"></div>
                         <div class="card-content">
                             <span class="tag">Celebrazione</span>
                             <h3>25 Aprile 2023 – La Resistenza</h3>
@@ -512,11 +562,13 @@
                     </div>
                     <!-- Card 3: Laboratorio nuove tecnologie -->
                     <div class="card">
-                        <div class="card-image" style="background-image: url('https://picsum.photos/400/200?random=3');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=3');"></div>
                         <div class="card-content">
                             <span class="tag">Progetto</span>
                             <h3>Giovani e innovazione sociale</h3>
-                            <p>Laboratorio su dipendenza tecnologica e nuove addiction, nell’ambito del progetto “Giovani e innovazione sociale nella Locride”.</p>
+                            <p>Laboratorio su dipendenza tecnologica e nuove addiction, nell’ambito del progetto
+                                “Giovani e innovazione sociale nella Locride”.</p>
                             <a href="#" style="color: var(--primary); font-weight: 600;">Leggi tutto →</a>
                         </div>
                     </div>
@@ -530,22 +582,29 @@
                 <h2 class="section-title">La scuola</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
                     <div>
-                        <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 20px;">Oltre 75 anni di storia</h3>
+                        <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 20px;">Oltre 75 anni di
+                            storia</h3>
                         <ul class="timeline">
-                            <li><strong>1946</strong> – L’Amministrazione Comunale avvia l’iniziativa per una scuola superiore a Siderno.</li>
+                            <li><strong>1946</strong> – L’Amministrazione Comunale avvia l’iniziativa per una scuola
+                                superiore a Siderno.</li>
                             <li><strong>1949/50</strong> – Istituto privato gestito dal Comune.</li>
-                            <li><strong>1951</strong> – Diventa scuola pubblica (sezione staccata del “Piria” di Reggio Calabria).</li>
+                            <li><strong>1951</strong> – Diventa scuola pubblica (sezione staccata del “Piria” di Reggio
+                                Calabria).</li>
                             <li><strong>1952</strong> – Autonomia.</li>
                             <li><strong>1956/57</strong> – Intitolato a “Giuseppe Garibaldi”.</li>
-                            <li><strong>1958/59</strong> – La prof.ssa Maria Fenoglio lo intitola a <strong>Guglielmo Marconi</strong>; assorbe le classi dell’Istituto Tecnico per Geometri.</li>
+                            <li><strong>1958/59</strong> – La prof.ssa Maria Fenoglio lo intitola a <strong>Guglielmo
+                                    Marconi</strong>; assorbe le classi dell’Istituto Tecnico per Geometri.</li>
                             <li><strong>2007/2009</strong> – Trasferimento nella nuova sede di viale Sasso Marconi.</li>
-                            <li><strong>2012/2013</strong> – Fusione con l’I.T.G. “Pitagora”: nasce l’I.I.S. “G. Marconi”.</li>
-                            <li><strong>2024/2025</strong> – Nasce il Polo Tecnico Professionale <strong>“Marconi – Ipsia Art – Zanotti”</strong>.</li>
+                            <li><strong>2012/2013</strong> – Fusione con l’I.T.G. “Pitagora”: nasce l’I.I.S. “G.
+                                Marconi”.</li>
+                            <li><strong>2024/2025</strong> – Nasce il Polo Tecnico Professionale <strong>“Marconi –
+                                    Ipsia Art – Zanotti”</strong>.</li>
                         </ul>
                     </div>
                     <div>
                         <!-- Video placeholder (sostituire con il vostro video tour) -->
-                        <div style="background-color: #ddd; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 12px;">
+                        <div
+                            style="background-color: #ddd; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 12px;">
                             <i class="fas fa-play-circle" style="font-size: 4rem; color: var(--primary);"></i>
                             <span style="margin-left: 10px;">Video tour della scuola (presto disponibile)</span>
                         </div>
@@ -554,14 +613,19 @@
 
                 <!-- Galleria foto (sostituire con le vostre) -->
                 <div class="gallery">
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=10" alt="Foto scuola 1"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=11" alt="Foto scuola 2"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=12" alt="Foto scuola 3"></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=13" alt="Foto scuola 4"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=10" alt="Foto scuola 1">
+                    </div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=11" alt="Foto scuola 2">
+                    </div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=12" alt="Foto scuola 3">
+                    </div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/300?random=13" alt="Foto scuola 4">
+                    </div>
                 </div>
 
                 <!-- Numeri aggiornati -->
-                <div style="display: flex; justify-content: space-around; margin-top: 40px; flex-wrap: wrap; gap: 20px; text-align: center;">
+                <div
+                    style="display: flex; justify-content: space-around; margin-top: 40px; flex-wrap: wrap; gap: 20px; text-align: center;">
                     <div>
                         <div style="font-size: 3rem; font-weight: 700; color: var(--primary);">915</div>
                         <div>Studenti</div>
@@ -586,11 +650,13 @@
         <section id="corsi" style="background-color: white;">
             <div class="container">
                 <h2 class="section-title">I nostri corsi</h2>
-                <p class="section-subtitle">Cinque anni per costruire il tuo futuro: percorsi tecnici e professionali</p>
+                <p class="section-subtitle">Cinque anni per costruire il tuo futuro: percorsi tecnici e professionali
+                </p>
                 <div class="card-grid">
                     <!-- AFM -->
                     <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <div class="card-image"
+                            style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="card-content">
@@ -601,7 +667,8 @@
                     </div>
                     <!-- SIA -->
                     <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <div class="card-image"
+                            style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-laptop-code"></i>
                         </div>
                         <div class="card-content">
@@ -612,7 +679,8 @@
                     </div>
                     <!-- CAT -->
                     <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <div class="card-image"
+                            style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-draw-polygon"></i>
                         </div>
                         <div class="card-content">
@@ -623,7 +691,8 @@
                     </div>
                     <!-- Turismo -->
                     <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <div class="card-image"
+                            style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-umbrella-beach"></i>
                         </div>
                         <div class="card-content">
@@ -634,7 +703,8 @@
                     </div>
                     <!-- Logistica -->
                     <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <div class="card-image"
+                            style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-truck"></i>
                         </div>
                         <div class="card-content">
@@ -645,18 +715,21 @@
                     </div>
                     <!-- Moda per il Made in Italy -->
                     <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <div class="card-image"
+                            style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-tshirt"></i>
                         </div>
                         <div class="card-content">
                             <h3>Moda per il Made in Italy</h3>
-                            <p>Dalla progettazione alla realizzazione di capi, artigianato digitale e tradizione sartoriale.</p>
+                            <p>Dalla progettazione alla realizzazione di capi, artigianato digitale e tradizione
+                                sartoriale.</p>
                             <span class="tag">Professionale</span>
                         </div>
                     </div>
                     <!-- Odontotecnico -->
                     <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <div class="card-image"
+                            style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-tooth"></i>
                         </div>
                         <div class="card-content">
@@ -667,7 +740,8 @@
                     </div>
                     <!-- Manutenzione e Assistenza Tecnica -->
                     <div class="card">
-                        <div class="card-image" style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <div class="card-image"
+                            style="background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-cogs"></i>
                         </div>
                         <div class="card-content">
@@ -678,7 +752,9 @@
                     </div>
                 </div>
                 <p style="text-align: center; margin-top: 40px;">
-                    <a href="#" class="btn" style="background-color: transparent; border: 2px solid var(--primary); color: var(--primary);">Scarica i piani di studio completi →</a>
+                    <a href="#" class="btn"
+                        style="background-color: transparent; border: 2px solid var(--primary); color: var(--primary);">Scarica
+                        i piani di studio completi →</a>
                 </p>
             </div>
         </section>
@@ -712,7 +788,8 @@
                     <div class="servizio-item">
                         <div class="servizio-icon"><i class="fas fa-book"></i></div>
                         <h3>Biblioteca</h3>
-                        <p>10.000 volumi, 6.000 brani musicali, 3.500 e-book, 100 audiolibri. Prestito digitale MLOL.</p>
+                        <p>10.000 volumi, 6.000 brani musicali, 3.500 e-book, 100 audiolibri. Prestito digitale MLOL.
+                        </p>
                     </div>
                     <div class="servizio-item">
                         <div class="servizio-icon"><i class="fas fa-certificate"></i></div>
@@ -737,79 +814,97 @@
         <section id="borghi" style="background-color: white;">
             <div class="container">
                 <h2 class="section-title">I Borghi del Territorio</h2>
-                <p class="section-subtitle">Scopri i borghi e le località della Locride: clicca sui marker per visitare le pagine dedicate</p>
-                
+                <p class="section-subtitle">Scopri i borghi e le località della Locride: clicca sui marker per visitare
+                    le pagine dedicate</p>
+
                 <!-- Contenitore mappa -->
-                <div id="map" style="height: 500px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 40px;"></div>
+                <div id="map"
+                    style="height: 500px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 40px;">
+                </div>
 
                 <!-- Schede descrittive dei borghi (ora 14 card) -->
                 <div class="borghi-grid">
                     <!-- Siderno -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=30');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=30');"></div>
                         <div class="borgo-content">
                             <h3>Siderno</h3>
-                            <p>Città costiera, famosa per il lungomare e il centro storico. Sede del nostro istituto, offre bellezze architettoniche e una vivace tradizione culturale.</p>
+                            <p>Città costiera, famosa per il lungomare e il centro storico. Sede del nostro istituto,
+                                offre bellezze architettoniche e una vivace tradizione culturale.</p>
                             <a href="borghi/siderno.html" class="btn-borgo">Scopri Siderno →</a>
                         </div>
                     </div>
                     <!-- Locri -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=31');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=31');"></div>
                         <div class="borgo-content">
                             <h3>Locri</h3>
-                            <p>Antica colonia greca con il famoso Teatro e il Museo Nazionale. Un polo culturale di rilievo nella Locride.</p>
+                            <p>Antica colonia greca con il famoso Teatro e il Museo Nazionale. Un polo culturale di
+                                rilievo nella Locride.</p>
                             <a href="borghi/locri.html" class="btn-borgo">Scopri Locri →</a>
                         </div>
                     </div>
                     <!-- Gioiosa Ionica -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=32');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=32');"></div>
                         <div class="borgo-content">
                             <h3>Gioiosa Ionica</h3>
-                            <p>Paese collinare con centro storico medievale e castello. Noto per le tradizioni e la posizione panoramica sullo Ionio.</p>
+                            <p>Paese collinare con centro storico medievale e castello. Noto per le tradizioni e la
+                                posizione panoramica sullo Ionio.</p>
                             <a href="borghi/gioiosa.html" class="btn-borgo">Scopri Gioiosa →</a>
                         </div>
                     </div>
                     <!-- Bianco -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=33');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=33');"></div>
                         <div class="borgo-content">
                             <h3>Bianco</h3>
-                            <p>Comune costiero noto per le spiagge e il centro storico. Ricco di tradizioni e legato alla figura del pittore e scultore.</p>
+                            <p>Comune costiero noto per le spiagge e il centro storico. Ricco di tradizioni e legato
+                                alla figura del pittore e scultore.</p>
                             <a href="borghi/bianco.html" class="btn-borgo">Scopri Bianco →</a>
                         </div>
                     </div>
                     <!-- Stilo -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=34');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=34');"></div>
                         <div class="borgo-content">
                             <h3>Stilo</h3>
-                            <p>Famoso per la Cattolica, gioiello dell'architettura bizantina. Borgo medievale tra i più belli d'Italia.</p>
+                            <p>Famoso per la Cattolica, gioiello dell'architettura bizantina. Borgo medievale tra i più
+                                belli d'Italia.</p>
                             <a href="borghi/stilo.html" class="btn-borgo">Scopri Stilo →</a>
                         </div>
                     </div>
                     <!-- Brancaleone -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=35');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=35');"></div>
                         <div class="borgo-content">
                             <h3>Brancaleone</h3>
-                            <p>Città natale del celebre regista e attore. Spiagge dorate e tradizioni legate al mare.</p>
+                            <p>Città natale del celebre regista e attore. Spiagge dorate e tradizioni legate al mare.
+                            </p>
                             <a href="borghi/brancaleone.html" class="btn-borgo">Scopri Brancaleone →</a>
                         </div>
                     </div>
                     <!-- Caulonia -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=36');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=36');"></div>
                         <div class="borgo-content">
                             <h3>Caulonia</h3>
-                            <p>Antica Caulonia, ricca di storia e arte. Il centro storico conserva palazzi e chiese di pregio.</p>
+                            <p>Antica Caulonia, ricca di storia e arte. Il centro storico conserva palazzi e chiese di
+                                pregio.</p>
                             <a href="borghi/caulonia.html" class="btn-borgo">Scopri Caulonia →</a>
                         </div>
                     </div>
                     <!-- Cimina -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=37');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=37');"></div>
                         <div class="borgo-content">
                             <h3>Cimina</h3>
                             <p>Piccolo borgo immerso nel verde, con antichi mestieri e tradizioni agroalimentari.</p>
@@ -818,16 +913,19 @@
                     </div>
                     <!-- Villa romana di Casignana -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=38');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=38');"></div>
                         <div class="borgo-content">
                             <h3>Villa Romana di Casignana</h3>
-                            <p>Importante sito archeologico con mosaici ben conservati, testimonianza della vita nell'antica Roma.</p>
+                            <p>Importante sito archeologico con mosaici ben conservati, testimonianza della vita
+                                nell'antica Roma.</p>
                             <a href="borghi/casignana.html" class="btn-borgo">Scopri Casignana →</a>
                         </div>
                     </div>
                     <!-- Riace -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=39');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=39');"></div>
                         <div class="borgo-content">
                             <h3>Riace</h3>
                             <p>Famoso in tutto il mondo per i Bronzi di Riace. Borgo ricco di storia e tradizioni.</p>
@@ -836,37 +934,45 @@
                     </div>
                     <!-- Roccella -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=40');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=40');"></div>
                         <div class="borgo-content">
                             <h3>Roccella Ionica</h3>
-                            <p>Centro marinaro con un castello e un lungomare vivace. Nota per la produzione di cedro.</p>
+                            <p>Centro marinaro con un castello e un lungomare vivace. Nota per la produzione di cedro.
+                            </p>
                             <a href="borghi/roccella.html" class="btn-borgo">Scopri Roccella →</a>
                         </div>
                     </div>
                     <!-- Samo -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=41');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=41');"></div>
                         <div class="borgo-content">
                             <h3>Samo</h3>
-                            <p>Piccolo comune collinare, immerso nella natura, con tradizioni agricole e punti panoramici.</p>
+                            <p>Piccolo comune collinare, immerso nella natura, con tradizioni agricole e punti
+                                panoramici.</p>
                             <a href="borghi/samo.html" class="btn-borgo">Scopri Samo →</a>
                         </div>
                     </div>
                     <!-- San Luca -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=42');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=42');"></div>
                         <div class="borgo-content">
                             <h3>San Luca</h3>
-                            <p>Centro dell'Aspromonte, famoso per il Santuario della Madonna di Polsi. Ricco di natura e spiritualità.</p>
+                            <p>Centro dell'Aspromonte, famoso per il Santuario della Madonna di Polsi. Ricco di natura e
+                                spiritualità.</p>
                             <a href="borghi/sanluca.html" class="btn-borgo">Scopri San Luca →</a>
                         </div>
                     </div>
                     <!-- Valle delle Grandi Pietre (Pietra Cappa) -->
                     <div class="borgo-card">
-                        <div class="borgo-image" style="background-image: url('https://picsum.photos/400/200?random=43');"></div>
+                        <div class="borgo-image"
+                            style="background-image: url('https://picsum.photos/400/200?random=43');"></div>
                         <div class="borgo-content">
                             <h3>Valle delle Grandi Pietre</h3>
-                            <p>Pietra Cappa è il più grande monolite d'Europa, meta di escursioni e trekking tra natura e storia.</p>
+                            <p>Pietra Cappa è il più grande monolite d'Europa, meta di escursioni e trekking tra natura
+                                e storia.</p>
                             <a href="borghi/valle-grandi-pietre.html" class="btn-borgo">Scopri la Valle →</a>
                         </div>
                     </div>
@@ -923,14 +1029,27 @@
                     </div>
                     <p style="margin-top: 25px;"><strong>Newsletter</strong></p>
                     <form style="display: flex; margin-top: 10px;">
-                        <input type="email" placeholder="La tua email" style="flex: 1; padding: 10px; border: none; border-radius: 5px 0 0 5px;">
-                        <button type="submit" style="background-color: var(--accent); border: none; padding: 10px 15px; border-radius: 0 5px 5px 0; cursor: pointer; font-weight: 600;"><i class="fas fa-paper-plane"></i></button>
+                        <input type="email" placeholder="La tua email"
+                            style="flex: 1; padding: 10px; border: none; border-radius: 5px 0 0 5px;">
+                        <button type="submit"
+                            style="background-color: var(--accent); border: none; padding: 10px 15px; border-radius: 0 5px 5px 0; cursor: pointer; font-weight: 600;"><i
+                                class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Sito realizzato dagli studenti del progetto scolastico. Tutti i diritti riservati.
+                &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti
+Tutti i diritti riservati.
+            
+            <div class="credits">
+                <span class="credits-icon"><i class="fa-solid fa-code"></i></span>
+                Sito Web realizzato da 
+                <a href="https://www.instagram.com/mike_strano/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="credits-link">Michele Strano</a>
             </div>
+        </div>
         </div>
     </footer>
 
@@ -989,11 +1108,11 @@
         ];
 
         // Aggiungi marker per ogni borgo
-        borghi.forEach(function(borgo) {
+        borghi.forEach(function (borgo) {
             var marker = L.marker([borgo.lat, borgo.lng], { icon: redIcon }).addTo(map);
-            
+
             // Al click sul marker, reindirizza alla pagina del borgo
-            marker.on('click', function() {
+            marker.on('click', function () {
                 window.location.href = borgo.link;
             });
 
@@ -1002,4 +1121,5 @@
         });
     </script>
 </body>
+
 </html>

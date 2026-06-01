@@ -552,6 +552,35 @@
       font-size: 0.9rem;
       color: rgba(255, 255, 255, 0.6);
     }
+    .credits {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .credits-icon {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .credits-link {
+      color: var(--white) !important;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .credits-link:hover {
+      color: var(--accent) !important;
+    }
 
     /* ============================================
            RESPONSIVE
@@ -712,119 +741,143 @@
         font-size: 0.7rem;
       }
     }
-  
-        /* ==========================================================================
+
+    /* ==========================================================================
            OTTIMIZZAZIONE MOBILE E TABLET (ANDROID, IOS, IPAD)
            ========================================================================== */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column !important;
-                gap: 15px !important;
-                text-align: center !important;
-                padding: 16px 0 !important;
-            }
-            .logo {
-                flex-direction: column !important;
-                align-items: center !important;
-                text-align: center !important;
-                gap: 6px !important;
-            }
-            .logo h1 {
-                font-size: 1.15rem !important;
-            }
-            .logo span {
-                font-size: 0.65rem !important;
-                text-align: center !important;
-            }
-            .back-link {
-                width: 100% !important;
-                display: flex !important;
-                justify-content: center !important;
-                margin-top: 5px !important;
-            }
-            .back-link a {
-                padding: 8px 24px !important;
-                font-size: 0.85rem !important;
-            }
-            .content-section {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 30px !important;
-                direction: ltr !important;
-            }
-            .content-text {
-                order: 1 !important;
-                padding: 0 !important;
-                text-align: justify !important;
-            }
-            .content-image {
-                order: 2 !important;
-                width: 100% !important;
-                height: 280px !important;
-            }
-            .hero-borgo {
-                min-height: 280px !important;
-                height: 45vh !important;
-            }
-            .hero-borgo h2 {
-                font-size: 2.2rem !important;
-            }
-            .hero-borgo p {
-                font-size: 1.05rem !important;
-            }
-            .section-title {
-                font-size: 2rem !important;
-            }
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 16px !important;
-            }
-            .tradizioni-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 20px !important;
-            }
-        }
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+        padding: 16px 0 !important;
+      }
 
-        @media (max-width: 480px) {
-            .logo h1 {
-                font-size: 0.95rem !important;
-                white-space: normal !important;
-            }
-            .logo span {
-                font-size: 0.6rem !important;
-            }
-            .logo img {
-                height: 32px !important;
-            }
-            .info-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .tradizioni-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .gallery {
-                grid-template-columns: 1fr !important;
-                gap: 12px !important;
-            }
-            .gallery-item {
-                height: 180px !important;
-            }
-            .hero-borgo {
-                min-height: 220px !important;
-                height: 35vh !important;
-            }
-            .hero-borgo h2 {
-                font-size: 1.8rem !important;
-            }
-            .hero-borgo p {
-                font-size: 0.9rem !important;
-                line-height: 1.5 !important;
-            }
-            .section-title {
-                font-size: 1.6rem !important;
-            }
-        }
-    </style>
+      .logo {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 6px !important;
+      }
+
+      .logo h1 {
+        font-size: 1.15rem !important;
+      }
+
+      .logo span {
+        font-size: 0.65rem !important;
+        text-align: center !important;
+      }
+
+      .back-link {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 5px !important;
+      }
+
+      .back-link a {
+        padding: 8px 24px !important;
+        font-size: 0.85rem !important;
+      }
+
+      .content-section {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+        direction: ltr !important;
+      }
+
+      .content-text {
+        order: 1 !important;
+        padding: 0 !important;
+        text-align: justify !important;
+      }
+
+      .content-image {
+        order: 2 !important;
+        width: 100% !important;
+        height: 280px !important;
+      }
+
+      .hero-borgo {
+        min-height: 280px !important;
+        height: 45vh !important;
+      }
+
+      .hero-borgo h2 {
+        font-size: 2.2rem !important;
+      }
+
+      .hero-borgo p {
+        font-size: 1.05rem !important;
+      }
+
+      .section-title {
+        font-size: 2rem !important;
+      }
+
+      .info-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+
+      .tradizioni-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo h1 {
+        font-size: 0.95rem !important;
+        white-space: normal !important;
+      }
+
+      .logo span {
+        font-size: 0.6rem !important;
+      }
+
+      .logo img {
+        height: 32px !important;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .tradizioni-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+
+      .gallery-item {
+        height: 180px !important;
+      }
+
+      .hero-borgo {
+        min-height: 220px !important;
+        height: 35vh !important;
+      }
+
+      .hero-borgo h2 {
+        font-size: 1.8rem !important;
+      }
+
+      .hero-borgo p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+      }
+
+      .section-title {
+        font-size: 1.6rem !important;
+      }
+    }
+  </style>
 
 </head>
 
@@ -842,10 +895,11 @@
         <a href="../../../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
       </div>
     </div>
-  </header>  <main>
+  </header>
+  <main>
     <!-- SEZIONE 1: Accendere il Borgo (Bottone ON/OFF e Messaggio ai Turisti) -->
     <section class="hero-borgo" style="
-          background-image: url('immagini/santagata-michelebello.jpg');
+          background-image: url('immagini/murales-lear.jpg');
           background-size: cover;
           background-position: center;
         ">
@@ -895,11 +949,15 @@
           <div class="content-text">
             <h3>Riaccendere la Luce della Speranza</h3>
             <p>
-              Sant'Agata del Bianco non ha voluto semplicemente "decorare" o "abbellire" le proprie pareti. L'ambizione dell'amministrazione e della comunità locale è stata quella di <strong>"accendere" il paese</strong>, azionando un interruttore ideale contro lo spopolamento e l'abbandono. L'emblema di questa rinascita è il murale del <strong>bottone ON/OFF</strong>: un grande interruttore dipinto sulla roccia che simboleggia l'accensione dell'energia sociale e della rinascita artistica del paese.
+              Sant'Agata del Bianco non ha voluto semplicemente "decorare" o "abbellire" le proprie pareti. L'ambizione
+              dell'amministrazione e della comunità locale è stata quella di <strong>"accendere" il paese</strong>,
+              azionando un interruttore ideale contro lo spopolamento e l'abbandono. L'emblema di questa rinascita è il
+              murale del <strong>bottone ON/OFF</strong>: un grande interruttore dipinto sulla roccia che simboleggia
+              l'accensione dell'energia sociale e della rinascita artistica del paese.
             </p>
           </div>
           <div class="content-image" style="
-                background-image: url('immagini/murales-onoff.jpg');
+                background-image: url('immagini/murales-onoff.webp');
               "></div>
         </div>
 
@@ -910,7 +968,10 @@
           <div class="content-text">
             <h3>Un Messaggio per il Visitatore</h3>
             <p>
-              A chiunque giunga a Sant'Agata, il borgo lascia un messaggio profondo: <em>"Non essere un semplice spettatore che passa per caso. Lasciati accendere anche tu. Esplora le nostre strade come pagine di un libro e porta con te la luce del riscatto di questa terra."</em> La street art non è solo per gli occhi, ma è un ponte emotivo tra il passato rurale e chi viene a trovarci nel presente.
+              A chiunque giunga a Sant'Agata, il borgo lascia un messaggio profondo: <em>"Non essere un semplice
+                spettatore che passa per caso. Lasciati accendere anche tu. Esplora le nostre strade come pagine di un
+                libro e porta con te la luce del riscatto di questa terra."</em> La street art non è solo per gli occhi,
+              ma è un ponte emotivo tra il passato rurale e chi viene a trovarci nel presente.
             </p>
           </div>
         </div>
@@ -922,27 +983,37 @@
       <div class="container">
         <h2 class="section-title">Il Percorso dei Murales</h2>
         <div class="content-section">
-          <div class="content-text">
-            <h3>Un Museo a Cielo Aperto</h3>
-            <p>
-              Le pareti del borgo sono una galleria d'arte permanente curata in particolar modo dagli artisti <strong>Andrea Sposari</strong> (Spos.art) e <strong>Antonio Zappia</strong>. Le loro opere, sparse tra i vicoli del centro storico, donano nuova linfa alle pareti del paese. L'opera simbolo è il murale di <strong>Tibi e Tascia</strong> (realizzato da Sposari in Piazza Diritti dei Bambini), che ritrae con toni poetici i due ragazzi protagonisti del romanzo di Saverio Strati, mentre altre creazioni emblematiche come la <em>"Ragazza afgana"</em> o la <em>"Dea Artemide"</em> portano la prestigiosa firma di Zappia. Ogni dipinto fa tornare in vita i personaggi della letteratura e le tradizioni locali.
-            </p>
-          </div>
           <div class="content-image" style="
                 background-image: url('immagini/murales-tibi-tascia.jpg');
               "></div>
+          <div class="content-text">
+            <h3>Un Museo a Cielo Aperto</h3>
+            <p>
+              Le pareti del borgo sono una galleria d'arte permanente curata in particolar modo dagli artisti
+              <strong>Andrea Sposari</strong> (Spos.art) e <strong>Antonio Zappia</strong>. Le loro opere, sparse tra i
+              vicoli del centro storico, donano nuova linfa alle pareti del paese. L'opera simbolo è il murale di
+              <strong>Tibi e Tascia</strong> (realizzato da Sposari in Piazza Diritti dei Bambini), che ritrae con toni
+              poetici i due ragazzi protagonisti del romanzo di Saverio Strati, mentre altre creazioni emblematiche come
+              la <em>"Ragazza afgana"</em> o la <em>"Dea Artemide"</em> portano la prestigiosa firma di Zappia. Ogni
+              dipinto fa tornare in vita i personaggi della letteratura e le tradizioni locali.
+            </p>
+          </div>
         </div>
 
         <div class="content-section reverse">
-          <div class="content-image" style="
-                background-image: url('immagini/porta-pinta.jpg');
-              "></div>
           <div class="content-text">
             <h3>La Via delle Porte Pinte</h3>
             <p>
-              I vecchi portoni delle case del centro storico sono stati trasformati nella suggestiva <strong>"Via delle Porte Pinte"</strong>. Ogni porta è decorata con dipinti ispirati alle opere di Saverio Strati, come <em>"Piccolo grande Sud"</em>, <em>"L'uomo in fondo al pozzo"</em> e <em>"Il selvaggio di Santa Venere"</em>. Questo percorso crea una narrazione continua in cui l'architettura si fonde con le parole dello scrittore.
+              I vecchi portoni delle case del centro storico sono stati trasformati nella suggestiva <strong>"Via delle
+                Porte Pinte"</strong>. Ogni porta è decorata con dipinti ispirati alle opere di Saverio Strati, come
+              <em>"Piccolo grande Sud"</em>, <em>"L'uomo in fondo al pozzo"</em> e <em>"Il selvaggio di Santa
+                Venere"</em>. Questo percorso crea una narrazione continua in cui l'architettura si fonde con le parole
+              dello scrittore.
             </p>
           </div>
+          <div class="content-image" style="
+                background-image: url('immagini/porta-pinta.webp');
+              "></div>
         </div>
       </div>
     </section>
@@ -955,7 +1026,11 @@
           <div class="content-text">
             <h3>La Voce del Piccolo Grande Sud</h3>
             <p>
-              Saverio Strati (1924-2014) è lo scrittore più illustre nato a Sant’Agata del Bianco. Autodidatta, lavorò come muratore prima di intraprendere gli studi universitari e affermarsi nel panorama letterario italiano. Con i suoi romanzi, tra cui spicca <em>"Il selvaggio di Santa Venere"</em> (Premio Campiello 1977), ha raccontato il duro mondo contadino, le migrazioni e il rapporto viscerale con la propria terra con uno stile realistico ed emotivo.
+              Saverio Strati (1924-2014) è lo scrittore più illustre nato a Sant’Agata del Bianco. Autodidatta, lavorò
+              come muratore prima di intraprendere gli studi universitari e affermarsi nel panorama letterario italiano.
+              Con i suoi romanzi, tra cui spicca <em>"Il selvaggio di Santa Venere"</em> (Premio Campiello 1977), ha
+              raccontato il duro mondo contadino, le migrazioni e il rapporto viscerale con la propria terra con uno
+              stile realistico ed emotivo.
             </p>
           </div>
           <div class="content-image" style="
@@ -970,7 +1045,10 @@
           <div class="content-text">
             <h3>La Casa Natale e la Memoria</h3>
             <p>
-              La casa natale di Saverio Strati è oggi una casa-museo aperta alle visite. All'esterno si può ammirare il suo ritratto dipinto sulla facciata e la celebre frase: <em>“Qui c’è luce abbagliante. Anche nell’inverno c’è luce abbagliante… Si potrebbe fare di questa terra il paradiso”</em>. All'interno sono custoditi arredi d'epoca, fotografie storiche e documenti che celebrano la sua eredità culturale.
+              La casa natale di Saverio Strati è oggi una casa-museo aperta alle visite. All'esterno si può ammirare il
+              suo ritratto dipinto sulla facciata e la celebre frase: <em>“Qui c’è luce abbagliante. Anche nell’inverno
+                c’è luce abbagliante… Si potrebbe fare di questa terra il paradiso”</em>. All'interno sono custoditi
+              arredi d'epoca, fotografie storiche e documenti che celebrano la sua eredità culturale.
             </p>
           </div>
         </div>
@@ -982,27 +1060,34 @@
       <div class="container">
         <h2 class="section-title">Museo delle Cose Perdute</h2>
         <div class="content-section">
-          <div class="content-text">
-            <h3>Antonio Scarfone e il Disordine Deliberato</h3>
-            <p>
-              Accanto alla casa natale di Saverio Strati si trova il <strong>Museo delle Cose Perdute</strong>, uno spazio ideato dall'artista locale Antonio Scarfone. Qui, vecchi attrezzi della vita contadina, utensili quotidiani, mobili, fotografie e abiti dismessi sono stati salvati dall'oblio e ordinati in un affascinante "disordine voluto". Il museo non segue schemi tradizionali, ma invita i visitatori a perdersi nei ricordi della memoria collettiva del paese.
-            </p>
-          </div>
           <div class="content-image" style="
                 background-image: url('immagini/museo-cose-perdute.webp');
               "></div>
+          <div class="content-text">
+            <h3>Antonio Scarfone e il Disordine Deliberato</h3>
+            <p>
+              Accanto alla casa natale di Saverio Strati si trova il <strong>Museo delle Cose Perdute</strong>, uno
+              spazio ideato dall'artista locale Antonio Scarfone. Qui, vecchi attrezzi della vita contadina, utensili
+              quotidiani, mobili, fotografie e abiti dismessi sono stati salvati dall'oblio e ordinati in un
+              affascinante "disordine voluto". Il museo non segue schemi tradizionali, ma invita i visitatori a perdersi
+              nei ricordi della memoria collettiva del paese.
+            </p>
+          </div>
         </div>
 
         <div class="content-section reverse">
-          <div class="content-image" style="
-                background-image: url('immagini/giardino-pensiero.webp');
-              "></div>
           <div class="content-text">
             <h3>Il Giardino del Pensiero e le Finestre Narranti</h3>
             <p>
-              Adiacente al museo, il <strong>Giardino del Pensiero</strong> (un piccolo anfiteatro in pietra verde) e le <strong>Finestre Narranti</strong> arricchiscono il percorso. Si tratta di sculture in ferro ricavate da materiali di scarto e incorniciate nelle antiche finestre del borgo, che riportano versi dello scrittore e riproducono scene rurali, creando un dialogo suggestivo con il visitatore.
+              Adiacente al museo, il <strong>Giardino del Pensiero</strong> (un piccolo anfiteatro in pietra verde) e le
+              <strong>Finestre Narranti</strong> arricchiscono il percorso. Si tratta di sculture in ferro ricavate da
+              materiali di scarto e incorniciate nelle antiche finestre del borgo, che riportano versi dello scrittore e
+              riproducono scene rurali, creando un dialogo suggestivo con il visitatore.
             </p>
           </div>
+          <div class="content-image" style="
+                background-image: url('immagini/giardino-pensiero.webp');
+              "></div>
         </div>
       </div>
     </section>
@@ -1015,10 +1100,15 @@
           <div class="content-text">
             <h3>Le Sirene Dormienti e l'Antico Palmento</h3>
             <p>
-              Poco fuori dal centro abitato, in un podere immerso tra gli ulivi e affacciato sulla "montagna blu d'Aspromonte", sorge un'opera rupestre magica: le <strong>Sirene Dormienti</strong>. Scolpite a mano libera dallo scultore e bracciante agricolo <strong>Vincenzo Baldissarro</strong>, le figure prendono forma direttamente sulla pietra arenaria di un antico palmento bizantino, utilizzato in passato per la pigiatura dell'uva.
+              Poco fuori dal centro abitato, in un podere immerso tra gli ulivi e affacciato sulla "montagna blu
+              d'Aspromonte", sorge un'opera rupestre magica: le <strong>Sirene Dormienti</strong>. Scolpite a mano
+              libera dallo scultore e bracciante agricolo <strong>Vincenzo Baldissarro</strong>, le figure prendono
+              forma direttamente sulla pietra arenaria di un antico palmento bizantino, utilizzato in passato per la
+              pigiatura dell'uva.
             </p>
             <p>
-              La leggenda vuole che le sirene, risalite lungo la fiumara La Verde per sfuggire a Poseidone, si siano addormentate sfinite nelle vasche del palmento, venendo pietrificate per l'eternità da un dio benevolo.
+              La leggenda vuole che le sirene, risalite lungo la fiumara La Verde per sfuggire a Poseidone, si siano
+              addormentate sfinite nelle vasche del palmento, venendo pietrificate per l'eternità da un dio benevolo.
             </p>
           </div>
           <div class="content-image" style="
@@ -1033,7 +1123,11 @@
           <div class="content-text">
             <h3>Orfeo, Euridice e la Natività nella Roccia</h3>
             <p>
-              Oltre alle sirene, il Maestro Vincenzo Baldissarro ha scolpito nella roccia arenaria altre figure di straordinaria fattura: il <strong>Cavallo di Troia</strong>, il <strong>Piede di Polifemo</strong>, un abbraccio tra <strong>Orfeo ed Euridice</strong> e, all'interno di una grotta naturale del podere, una suggestiva <strong>Natività di Gesù</strong>. Queste opere rappresentano una straordinaria sintesi tra l'archeologia viticola rupestre e l'arte contemporanea spontanea.
+              Oltre alle sirene, il Maestro Vincenzo Baldissarro ha scolpito nella roccia arenaria altre figure di
+              straordinaria fattura: il <strong>Cavallo di Troia</strong>, il <strong>Piede di Polifemo</strong>, un
+              abbraccio tra <strong>Orfeo ed Euridice</strong> e, all'interno di una grotta naturale del podere, una
+              suggestiva <strong>Natività di Gesù</strong>. Queste opere rappresentano una straordinaria sintesi tra
+              l'archeologia viticola rupestre e l'arte contemporanea spontanea.
             </p>
           </div>
         </div>
@@ -1081,10 +1175,11 @@
     <section>
       <div class="container">
         <h2 class="section-title">I Murales del Borgo</h2>
-        <p class="section-subtitle">Una passeggiata visiva tra le opere della street art a cielo aperto di Sant'Agata</p>
+        <p class="section-subtitle">Una passeggiata visiva tra le opere della street art a cielo aperto di Sant'Agata
+        </p>
         <div class="gallery">
           <div class="gallery-item">
-            <img src="immagini/galleria/murales-tibi-tascia.jpg" alt="Il murale di Tibi e Tascia" />
+            <img src="immagini/galleria/murales-lettura.jpg" alt="Il murale di Tibi e Tascia" />
           </div>
           <div class="gallery-item">
             <img src="immagini/galleria/murales-dante.jpg" alt="Il murale di Dante e Beatrice" />
@@ -1093,7 +1188,7 @@
             <img src="immagini/galleria/murales-cavalli.jpg" alt="I Cavalli dell'Apocalisse (tributo a Fàbon)" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/galleria/murales-lear.jpg" alt="Il murale sul disegno di Edward Lear" />
+            <img src="immagini/galleria/santagata-michelestrati.jpg" alt="Poeta Contadino Michele Strati" />
           </div>
           <div class="gallery-item">
             <img src="immagini/galleria/murales-vitamea.jpg" alt="Il murale Vita Mea" />
@@ -1185,9 +1280,14 @@
           Zanotti. Tutti i diritti riservati.
         </p>
       </div>
-      <div class="copyright">
-        Sito realizzato dagli studenti del progetto scolastico
-      </div>
+                  <div class="credits">
+                <span class="credits-icon"><i class="fa-solid fa-code"></i></span>
+                Sito Web realizzato da 
+                <a href="https://www.instagram.com/mike_strano/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="credits-link">Michele Strano</a>
+            </div>
     </div>
   </footer>
 

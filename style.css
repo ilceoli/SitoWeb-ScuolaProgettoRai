@@ -1071,6 +1071,37 @@ footer::before {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.credits {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.credits-icon {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.credits-link {
+  color: var(--white) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.credits-link:hover {
+  color: var(--accent) !important;
+}
+
+
 .scuola-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

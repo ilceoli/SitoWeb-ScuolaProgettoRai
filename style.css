@@ -1877,3 +1877,107 @@ footer::before {
   transform: scale(1.03) translateY(-12px) !important;
   z-index: 10 !important;
 }
+
+/* ============================================
+   BADGE NOVITÀ — Animated overlay badge
+   ============================================ */
+.badge-novita {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #e67e22 0%, #f39c12 50%, #e67e22 100%);
+  background-size: 200% 200%;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  box-shadow:
+    0 4px 16px rgba(230, 126, 34, 0.45),
+    0 0 0 0 rgba(230, 126, 34, 0.4);
+  animation: badgeShimmer 3s ease-in-out infinite;
+  cursor: default;
+  pointer-events: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pulsing glow ring behind the badge */
+.badge-novita-pulse {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50px;
+  border: 2px solid rgba(243, 156, 18, 0.6);
+  animation: badgePulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.badge-novita i {
+  font-size: 0.8rem;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+  animation: badgeStarSpin 4s ease-in-out infinite;
+}
+
+.badge-novita-text {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
+/* Lift badge slightly on card hover */
+.borgo-card:hover .badge-novita {
+  transform: scale(1.08);
+  box-shadow:
+    0 6px 24px rgba(230, 126, 34, 0.55),
+    0 0 0 0 rgba(230, 126, 34, 0.5);
+}
+
+/* Shimmer sweep across the gradient */
+@keyframes badgeShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Pulsing glow ring */
+@keyframes badgePulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Gentle star rotation */
+@keyframes badgeStarSpin {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-12deg) scale(1.15);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    transform: rotate(12deg) scale(1.15);
+  }
+}
+

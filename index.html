@@ -41,9 +41,12 @@
         <li><a href="#borghi">Scopri il Territorio</a></li>
         <li class="nav-menu-header-slideshow">
           <div class="drawer-slideshow">
-            <div class="drawer-slide active" style="background-image: url('assets/sede-marconi.webp'); background-position: center 100%;"></div>
-            <div class="drawer-slide" style="background-image: url('assets/sede-ipsia-siderno.webp'); background-position: center 100%;"></div>
-            <div class="drawer-slide" style="background-image: url('assets/sede-ipsia-locri.webp'); background-position: center 170%;"></div>
+            <div class="drawer-slide active"
+              style="background-image: url('assets/sede-marconi.webp'); background-position: center 100%;"></div>
+            <div class="drawer-slide"
+              style="background-image: url('assets/sede-ipsia-siderno.webp'); background-position: center 100%;"></div>
+            <div class="drawer-slide"
+              style="background-image: url('assets/sede-ipsia-locri.webp'); background-position: center 170%;"></div>
             <div class="drawer-overlay"></div>
           </div>
         </li>
@@ -56,8 +59,10 @@
             <p><i class="fas fa-envelope"></i> rcis03100l@istruzione.it</p>
           </div>
           <div class="nav-info-socials">
-            <a href="https://www.instagram.com/polo_tecn_profes_sidernolocri/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a>
+            <a href="https://www.instagram.com/polo_tecn_profes_sidernolocri/" target="_blank"
+              rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener noreferrer"><i
+                class="fas fa-globe"></i></a>
           </div>
         </li>
       </ul>
@@ -93,7 +98,7 @@
     <section id="scuola">
       <div class="container">
         <h2 class="section-title">La scuola</h2>
-        
+
         <!-- Numeri del Polo Tecnico Professionale (Spostati e Arricchiti con Icone) -->
         <div class="stats-grid">
           <div class="stat-item">
@@ -275,7 +280,8 @@
         <h2 class="section-title">I nostri corsi</h2>
         <p class="section-subtitle">
           Cinque anni per costruire il tuo futuro: percorsi tecnici e
-          professionali. <br><span style="color: var(--accent); font-weight: 600;">Clicca su un corso per saperne di più.</span>
+          professionali. <br><span style="color: var(--accent); font-weight: 600;">Clicca su un corso per saperne di
+            più.</span>
         </p>
         <div class="card-grid corsi-carousel" id="corsi-carousel">
           <!-- AFM -->
@@ -703,9 +709,14 @@
 
           <!-- Sant'Agata del Bianco -->
           <div class="borgo-card" id="borgo-santagatadelbianco">
-            <div class="borgo-image"
-              style="
-                  background-image: url(&quot;assets/borghi/santagatadelbianco/immagini/murales-lear.jpg&quot;);"></div>
+            <div class="borgo-image" style="
+                  background-image: url(&quot;assets/borghi/santagatadelbianco/immagini/murales-lear.jpg&quot;);">
+              <div class="badge-novita">
+                <span class="badge-novita-pulse"></span>
+                <i class="fas fa-star"></i>
+                <span class="badge-novita-text">NOVITÀ</span>
+              </div>
+            </div>
             <div class="borgo-content">
               <h3>Sant'Agata del Bianco</h3>
               <p>
@@ -912,8 +923,10 @@
             attraverso i borghi della Locride.
           </p>
           <div class="social-icons">
-            <a href="https://www.instagram.com/polo_tecn_profes_sidernolocri/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener noreferrer" title="Sito Web"><i class="fas fa-globe"></i></a>
+            <a href="https://www.instagram.com/polo_tecn_profes_sidernolocri/" target="_blank" rel="noopener noreferrer"
+              title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener noreferrer" title="Sito Web"><i
+                class="fas fa-globe"></i></a>
           </div>
         </div>
       </div>
@@ -921,11 +934,9 @@
         &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti.
         Tutti i diritti riservati.
         <div class="credits">
-            <span class="credits-icon"><i class="fa-solid fa-code"></i></span>
-            Sito Web realizzato da 
-            <a href="https://www.instagram.com/mike_strano/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <span class="credits-icon"><i class="fa-solid fa-code"></i></span>
+          Sito Web realizzato da
+          <a href="https://www.instagram.com/mike_strano/" target="_blank" rel="noopener noreferrer"
             class="credits-link">Michele Strano</a>
         </div>
       </div>
@@ -1421,7 +1432,7 @@
       },
       {
         nome: "Samo",
-        lat: 38.073669059583594, 
+        lat: 38.073669059583594,
         lng: 16.05821324443914,
         link: "assets/borghi/samo/samo.html",
         tipo: "default",
@@ -1686,7 +1697,7 @@
     // Animated Counters for Statistics (Count-up on scroll)
     function initCounters() {
       const stats = document.querySelectorAll(".stat-number");
-      
+
       const countUp = (el) => {
         const originalText = el.textContent.trim();
         const hasPlus = originalText.includes("+");
@@ -1702,7 +1713,7 @@
         const updateCount = (now) => {
           const elapsed = now - startTime;
           const progress = Math.min(elapsed / duration, 1);
-          
+
           // Easing function: easeOutQuad
           const easeProgress = progress * (2 - progress);
           const currentValue = Math.floor(easeProgress * target);

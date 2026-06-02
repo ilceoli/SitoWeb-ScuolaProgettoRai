@@ -509,7 +509,6 @@ section:nth-child(even) {
 /* ============================================
    CARD GRID (corsi, borghi)
    ============================================ */
-.card-grid,
 .borghi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -517,7 +516,27 @@ section:nth-child(even) {
   margin-top: 40px;
 }
 
-.card,
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.card {
+  flex: 0 0 350px;
+  scroll-snap-align: start;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all var(--transition-slow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .borgo-card {
   background: var(--white);
   border-radius: 20px;
@@ -636,6 +655,47 @@ section:nth-child(even) {
   /* Larghezza in base al contenuto */
 }
 
+.card-footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.btn-click {
+  background: transparent;
+  color: var(--primary);
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: none;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.card:hover .btn-click {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-click i {
+  font-size: 0.75rem;
+  transition: transform var(--transition);
+}
+
+.card:hover .btn-click i {
+  transform: translateX(4px);
+}
+
 .btn-borgo {
   display: inline-flex;
   align-items: center;
@@ -712,6 +772,8 @@ section:nth-child(even) {
 }
 
 .servizio-item {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
   text-align: center;
   padding: 32px 24px;
   background: var(--white);
@@ -1098,15 +1160,13 @@ footer::before {
 
 .credits {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .credits-icon {
@@ -1784,28 +1844,30 @@ footer::before {
   }
 }
 
-/* Carousel Layout for Auto-Scrolling Sections */
-.corsi-carousel,
-.servizi-carousel {
-  display: flex !important;
-  overflow-x: auto !important;
-  scroll-snap-type: none !important;
-  gap: 24px !important;
-  padding: 15px 5px 25px !important;
-  scroll-behavior: auto !important;
-  -webkit-overflow-scrolling: touch !important;
-  align-items: stretch !important;
-}
+@media (max-width: 1024px) {
+  /* Carousel Layout for Auto-Scrolling Sections */
+  .corsi-carousel,
+  .servizi-carousel {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: none !important;
+    gap: 24px !important;
+    padding: 15px 5px 25px !important;
+    scroll-behavior: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    align-items: stretch !important;
+  }
 
-.corsi-carousel::-webkit-scrollbar,
-.servizi-carousel::-webkit-scrollbar {
-  display: none !important;
-}
+  .corsi-carousel::-webkit-scrollbar,
+  .servizi-carousel::-webkit-scrollbar {
+    display: none !important;
+  }
 
-.corsi-carousel .card,
-.servizi-carousel .servizio-item {
-  flex: 0 0 320px !important;
-  margin-bottom: 0 !important;
+  .corsi-carousel .card,
+  .servizi-carousel .servizio-item {
+    flex: 0 0 320px !important;
+    margin-bottom: 0 !important;
+  }
 }
 
 /* Highlight effect for Borgo Card when clicked from Map */

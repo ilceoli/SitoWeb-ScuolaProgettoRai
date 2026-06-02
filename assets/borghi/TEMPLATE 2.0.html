@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-    Parco Archeologico del Naniglio - Polo Tecnico Professionale Marconi
-  </title>
-  <link rel="icon" type="image/webp" href="../../logo-flavicon.webp" />
+  <!-- TITOLO: sostituire [Nome Borgo] -->
+  <title>[Nome Borgo] - Polo Tecnico Professionale Marconi</title>
+  <link rel="icon" type="image/webp" href="../images/logo-flavicon.webp" />
   <!-- Google Fonts e Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1051,7 +1050,7 @@
             }
 
             .gallery {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
                 gap: 16px;
                 margin-top: 32px;
             }
@@ -1214,7 +1213,7 @@
             }
 
             .gallery {
-                grid-template-columns: repeat(3, 1fr);  /* 3 colonne fisse */
+                grid-template-columns: repeat(2, 1fr);  /* 3 colonne fisse */
                 gap: 24px;
                 margin-top: 40px;
             }
@@ -1262,7 +1261,7 @@
             }
 
             .footer-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
             }
 
@@ -1355,313 +1354,213 @@
     <div class="nav-overlay" id="nav-overlay"></div>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- ============================================
+           HERO SECTION
+           ============================================ -->
     <section class="hero-borgo" style="
-          background-image: url(&quot;immagini/naniglio-esterno.jpg&quot;);
+          background-image: url('../images/[nome-cartella]/[nome-immagine-hero].jpg');
           background-size: cover;
           background-position: center;
         ">
       <div class="hero-overlay"></div>
       <div class="container">
-        <h2>Villa Romana del Naniglio</h2>
+        <h2>[NOME BORGO]</h2>
         <p>
-          Uno dei complessi archeologici più singolari della Calabria, con una
-          monumentale cisterna ipogea unica nel suo genere.
+          [Frase evocativa che descrive il borgo in poche parole, evidenziando
+          il suo carattere distintivo.]
         </p>
       </div>
     </section>
 
-    <!-- INFO CARDS -->
+    <!-- ============================================
+           INFO CARDS (4 card con i dati principali)
+           ============================================ -->
     <section>
       <div class="container">
         <div class="info-grid">
           <div class="info-card info-utili-card">
+            <i class="fas fa-mountain"></i>
+            <h4>Altitudine</h4>
+            <p>[Valore] m s.l.m.</p>
+          </div>
+          <div class="info-card info-utili-card">
             <i class="fas fa-calendar-alt"></i>
-            <h4>Periodo</h4>
-            <p>Fine I sec. a.C. - III sec. d.C.</p>
+            <h4>[Evento / Fondazione]</h4>
+            <p>[Dato corrispondente]</p>
           </div>
           <div class="info-card info-utili-card">
-            <i class="fas fa-water"></i>
-            <h4>Cisterna</h4>
-            <p>17,47 x 10,27 m, 8 pilastri</p>
+            <i class="fas fa-users"></i>
+            <h4>Abitanti</h4>
+            <p>Circa [numero]</p>
           </div>
           <div class="info-card info-utili-card">
-            <i class="fas fa-map-pin"></i>
-            <h4>Località</h4>
-            <p>Contrada Annunziata, Gioiosa Ionica</p>
-          </div>
-          <div class="info-card info-utili-card">
-            <i class="fas fa-chess-board"></i>
-            <h4>Mosaici</h4>
-            <p>Policromi a motivi geometrici</p>
+            <i class="fas fa-trophy"></i>
+            <h4>Riconoscimento</h4>
+            <p>[Premio / caratteristica]</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INTRODUZIONE E STORIA -->
+    <!-- ============================================
+           SEZIONE 1 (due blocchi: primo normale, secondo reverse)
+           ============================================ -->
     <section>
       <div class="container">
-        <h2 class="section-title">La Villa Romana del Naniglio</h2>
+        <h2 class="section-title">[Titolo prima sezione]</h2>
+
+        <!-- Primo blocco: testo a sinistra, immagine a destra -->
         <div class="content-section">
           <div class="content-text">
-            <h3>Una Residenza di Prestigio</h3>
-            <p>
-              Il Parco Archeologico del Naniglio, situato nel territorio di
-              Gioiosa Ionica nella valle del fiume Torbido, conserva i resti
-              di una delle più interessanti ville romane della Calabria. La
-              villa fu edificata verso la fine del I secolo a.C. e raggiunse
-              il massimo splendore intorno al III secolo d.C., per poi subire
-              un lento e progressivo abbandono nei secoli successivi.
-            </p>
-            <p>
-              La villa apparteneva probabilmente a una ricca famiglia romana e
-              rappresentava sia una residenza di prestigio sia il centro
-              amministrativo di una grande proprietà agricola. Il complesso
-              comprende ambienti residenziali decorati con mosaici, strutture
-              architettoniche ben conservate e un imponente sistema
-              sotterraneo per la gestione dell'acqua.
-            </p>
+            <h3>[Sottotitolo 1A]</h3>
+            <p>[Testo descrittivo 1 – almeno un paragrafo]</p>
+            <p>[Testo descrittivo 2 – secondo paragrafo]</p>
           </div>
           <div class="content-image" style="
-                background-image: url(&quot;immagini/naniglio-esterno.jpg&quot;);
+                background-image: url('../images/[nome-cartella]/[immagine1].jpg');
+              "></div>
+        </div>
+
+        <!-- Secondo blocco: immagine a sinistra, testo a destra (reverse) -->
+        <div class="content-section reverse">
+          <div class="content-image" style="
+                background-image: url('../images/[nome-cartella]/[immagine2].jpg');
+              "></div>
+          <div class="content-text">
+            <h3>[Sottotitolo 1B]</h3>
+            <p>[Testo descrittivo 3 – almeno un paragrafo]</p>
+            <p>[Testo descrittivo 4 – secondo paragrafo]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+           SEZIONE 2 (sfondo bianco, due blocchi)
+           ============================================ -->
+    <section style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">[Titolo seconda sezione]</h2>
+
+        <!-- Primo blocco: testo a sinistra, immagine a destra -->
+        <div class="content-section">
+          <div class="content-image" style="
+                background-image: url('../images/[nome-cartella]/[immagine3].jpg');
+              "></div>
+          <div class="content-text">
+            <h3>[Sottotitolo 2A]</h3>
+            <p>[Testo descrittivo 5]</p>
+            <p>[Testo descrittivo 6]</p>
+          </div>
+        </div>
+
+        <!-- Secondo blocco: immagine a sinistra, testo a destra (reverse) -->
+        <div class="content-section reverse">
+          <div class="content-text">
+            <h3>[Sottotitolo 2B]</h3>
+            <p>[Testo descrittivo 7]</p>
+            <p>[Testo descrittivo 8]</p>
+          </div>
+          <div class="content-image" style="
+                background-image: url('../images/[nome-cartella]/[immagine4].jpg');
               "></div>
         </div>
       </div>
     </section>
 
-    <!-- LA CISTERNA IPOGEICA -->
-    <section style="background-color: white">
+    <!-- ============================================
+           SEZIONE 3 (se necessaria) – stesso schema delle precedenti
+           ============================================ -->
+    <section>
       <div class="container">
-        <h2 class="section-title">Il Capolavoro di Ingegneria</h2>
+        <h2 class="section-title">[Titolo terza sezione]</h2>
+
         <div class="content-section">
-          <div class="content-image" style="
-                background-image: url(&quot;immagini/naniglio-cisterna.jpg&quot;);
-              "></div>
           <div class="content-text">
-            <h3>La Cisterna Sotterranea</h3>
-            <p>
-              L'elemento più spettacolare del sito è il grande complesso
-              ipogeo, un capolavoro di ingegneria idraulica che rende il
-              Naniglio unico in Calabria. La cisterna, risalente al II-III
-              secolo d.C., è formata da tre ambienti comunicanti con volte
-              sorrette da otto poderosi pilastri quadrangolari disposti su
-              doppia fila.
-            </p>
-            <p>
-              All'interno misura una lunghezza di 17,47 metri e una larghezza
-              di 10,27 metri. L'accesso avviene attraverso una spettacolare
-              scaletta elicoidale a spirale di 24 gradini, visibile anche
-              dall'esterno e protetta da una struttura in muratura. I
-              lucernari sulla volta illuminano naturalmente gli ambienti
-              sottostanti.
-            </p>
+            <h3>[Sottotitolo 3A]</h3>
+            <p>[Testo descrittivo 9]</p>
           </div>
+          <div class="content-image" style="
+                background-image: url('../images/[nome-cartella]/[immagine5].jpg');
+              "></div>
         </div>
 
         <div class="content-section reverse">
-          <div class="content-text">
-            <h3>Il Ninfeo e gli Ambienti Minori</h3>
-            <p>
-              Due vani minori completano il complesso: il primo è sormontato
-              da una volta a botte con lucernario circolare centrale; il
-              secondo presenta due lucernari circolari di diversa grandezza.
-              In questa stanza è situata un'edicola in cotto con i resti di un
-              elegante frontone: si tratta di un Ninfeo, un luogo dedicato al
-              culto delle acque dove si andava a godere del fresco e della
-              penombra, e dove scorreva naturalmente dell'acqua.
-            </p>
-            <p>
-              L'ambiente maggiore, costruito in laterizio rivestito di
-              intonaco, presenta sulle pareti tre orifizi tubolari con
-              abbondanti incrostazioni calcaree, testimonianza del lungo
-              fluire dell'acqua.
-            </p>
-          </div>
           <div class="content-image" style="
-                background-image: url(&quot;immagini/naniglio-ninfeo.jpg&quot;);
+                background-image: url('../images/[nome-cartella]/[immagine6].jpg');
               "></div>
+          <div class="content-text">
+            <h3>[Sottotitolo 3B]</h3>
+            <p>[Testo descrittivo 10]</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- I MOSAICI -->
+    <!-- ============================================
+           TRADIZIONI E CULTURA (4 card)
+           ============================================ -->
     <section>
       <div class="container">
-        <h2 class="section-title">I Mosaici Policromi</h2>
-        <div class="content-section">
-          <div class="content-image" style="
-                background-image: url(&quot;immagini/naniglio-mosaico.jpg&quot;);
-              "></div>
-          <div class="content-text">
-            <h3>Preziosi Pavimenti Figurati</h3>
-            <p>
-              Gli scavi archeologici condotti tra il 1981 e il 1986 hanno
-              riportato alla luce il settore inferiore della villa, con
-              ambienti residenziali decorati da pregiati pavimenti mosaicati a
-              motivi geometrici e intonaco dipinto sulle pareti.
-            </p>
-            <p>
-              Di particolare pregio è il mosaico nella stanza A, che presenta
-              una rosetta in bianco e nero con tessere centrale di pasta
-              vitrea colorata, un elemento raro e costoso che testimonia
-              l'elevato livello della committenza. La qualità dei mosaici e la
-              presenza di materiali pregiati confermano l'importanza e la
-              ricchezza della famiglia proprietaria della villa.
-            </p>
-            <p>
-              Successivi scavi condotti nel 2010 hanno portato alla luce
-              un'ampia sala ottagonale e diverse canalizzazioni, una delle
-              quali probabilmente collegata alla cisterna.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AREE ANCORA DA ESCAVARE -->
-    <section style="background-color: white">
-      <div class="container">
-        <h2 class="section-title">Aree Inedite e Prospettive Future</h2>
-        <div class="content-section">
-          <div class="content-text">
-            <h3>Il Quartiere Termale</h3>
-            <p>
-              Nella zona a sud della villa si trova un complesso di ruderi non
-              ancora scavato che corrisponde probabilmente al quartiere
-              termale. L'intera area archeologica conserva ancora numerosi
-              segreti: gli scavi del 2010 hanno riportato alla luce solo il
-              perimetro della sala ottagonale e parte delle canalizzazioni, ma
-              molto resta ancora da esplorare.
-            </p>
-            <p>
-              Il sito, indicato dal FAI come uno dei "Luoghi del Cuore",
-              rappresenta una testimonianza eccezionale della vita rurale
-              romana nella Locride e un patrimonio culturale di inestimabile
-              valore che attende di essere pienamente valorizzato.
-            </p>
-          </div>
-          <div class="content-image" style="
-                background-image: url(&quot;immagini/naniglio-termale.jpg&quot;);
-              "></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STORIA DEGLI SCAVI -->
-    <section>
-      <div class="container">
-        <h2 class="section-title">Il Parco Archeologico Oggi</h2>
-        <div class="content-section">
-          <div class="content-image" style="
-                background-image: url(&quot;immagini/naniglio-giorninostri.jpg&quot;);
-              "></div>
-          <div class="content-text">
-            <h3>Un patrimonio da vivere</h3>
-            <p>
-              Il Parco Archeologico del Naniglio è oggi uno dei siti più
-              suggestivi della Locride, meta di visitatori, studiosi e
-              appassionati di archeologia. Grazie all'impegno della comunità
-              locale e delle associazioni culturali, il sito è periodicamente
-              aperto al pubblico e ospita visite guidate, laboratori didattici
-              per scuole e famiglie.
-            </p>
-            <p>
-              Particolarmente attiva è la collaborazione con le scuole del
-              territorio, che organizzano uscite didattiche per far conoscere
-              agli studenti la storia romana della Calabria. I giovani possono
-              così immergersi nell'atmosfera dell'antica villa, camminare tra
-              i resti dei mosaici e scoprire i segreti della grande cisterna
-              ipogea.
-            </p>
-            <p>
-              Un modo per mantenere viva la memoria e tramandare alle nuove
-              generazioni la conoscenza di questo straordinario patrimonio
-              archeologico.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRADIZIONI E CULTURA -->
-    <section style="background-color: white">
-      <div class="container">
-        <h2 class="section-title">Curiosità e Tradizioni</h2>
+        <h2 class="section-title">Tradizioni e Cultura</h2>
         <div class="tradizioni-grid">
           <div class="tradizione-card">
-            <i class="fas fa-water"></i>
-            <h4>Il Ninfeo</h4>
-            <p>
-              L'edicola in cotto con frontone, ancora visibile nella stanza
-              minore, era dedicata al culto delle acque. Qui scorreva acqua
-              naturale e i proprietari della villa si ritiravano per godere
-              del fresco e della penombra.
-            </p>
+            <i class="fas fa-calendar-alt"></i>
+            <h4>[Nome festa / tradizione 1]</h4>
+            <p>[Breve descrizione della tradizione 1]</p>
           </div>
           <div class="tradizione-card">
-            <i class="fas fa-stairs"></i>
-            <h4>La Scala Elicoidale</h4>
-            <p>
-              La spettacolare scala a chiocciola di 24 gradini che scende
-              nella cisterna è uno degli elementi più fotografati del sito. Un
-              esempio simile, ma molto più monumentale, si trova a Miseno con
-              la "Piscina Mirabilis".
-            </p>
+            <i class="fas fa-utensils"></i>
+            <h4>[Gastronomia / prodotto tipico]</h4>
+            <p>[Descrizione di sapori o piatti caratteristici]</p>
           </div>
           <div class="tradizione-card">
-            <i class="fas fa-road"></i>
-            <h4>La Strada Sotto Sopra</h4>
-            <p>
-              Per decenni la strada statale 281 passava proprio sopra la
-              cisterna del Naniglio, con i veicoli che transitavano
-              letteralmente sul tetto della villa romana, incuranti del tesoro
-              archeologico sottostante.
-            </p>
+            <i class="fas fa-hands"></i>
+            <h4>[Artigianato / mestiere antico]</h4>
+            <p>[Descrizione dell'artigianato locale]</p>
           </div>
           <div class="tradizione-card">
-            <i class="fas fa-heart"></i>
-            <h4>Luogo del Cuore FAI</h4>
-            <p>
-              Il Naniglio è stato segnalato in numerose edizioni del
-              censimento "I Luoghi del Cuore" del FAI, a testimonianza
-              dell'affetto delle comunità locali per questo straordinario
-              patrimonio.
-            </p>
+            <i class="fas fa-hiking"></i>
+            <h4>[Natura / sentieri]</h4>
+            <p>[Descrizione delle opportunità naturalistiche]</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GALLERIA FOTO -->
-    <section>
+    <!-- ============================================
+           GALLERIA FOTOGRAFICA
+           ============================================ -->
+    <section style="background-color: white">
       <div class="container">
         <h2 class="section-title">Galleria Fotografica</h2>
         <div class="gallery">
           <div class="gallery-item">
-            <img src="immagini/naniglio-entrata.png" alt="Vista esterna del Naniglio" />
+            <img src="../images/[nome-cartella]/galleria/[foto1].jpg" alt="[Descrizione 1]" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/naniglio-cisterna.jpg" alt="Cisterna interna con pilastri" />
+            <img src="../images/[nome-cartella]/galleria/[foto2].jpg" alt="[Descrizione 2]" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/naniglio-lucernario.jpg" alt="Lucernario" />
+            <img src="../images/[nome-cartella]/galleria/[foto3].jpg" alt="[Descrizione 3]" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/naniglio-ninfeo.jpg" alt="Ninfeo con edicola" />
+            <img src="../images/[nome-cartella]/galleria/[foto4].jpg" alt="[Descrizione 4]" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/naniglio-mosaico.jpg" alt="Mosaico geometrico" />
+            <img src="../images/[nome-cartella]/galleria/[foto5].jpg" alt="[Descrizione 5]" />
           </div>
           <div class="gallery-item">
-            <img src="immagini/naniglio-termale.jpg" alt="Quartiere termale" />
+            <img src="../images/[nome-cartella]/galleria/[foto6].jpg" alt="[Descrizione 6]" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INFO UTILI -->
-    <section style="background-color: white">
+    <!-- ============================================
+           INFO UTILI (contatti, come arrivare, trasporti)
+           ============================================ -->
+    <section>
       <div class="container">
         <h2 class="section-title">Info Utili</h2>
         <div class="info-grid contact-grid">
@@ -1669,54 +1568,69 @@
             <i class="fas fa-car"></i>
             <h4>Come Arrivare</h4>
             <p>
-              <strong>In Auto:</strong> SS106 Jonica, uscita Gioiosa Ionica.
-              Seguire indicazioni per Mammola (SP 281). Il sito si trova in
-              contrada Annunziata, a pochi km dal centro abitato.
+              <strong>In Auto:</strong> SS106 Jonica, uscita [nome uscita].
+              Seguire le indicazioni per [nome borgo].<br />
+              Dista circa [XX] km da Siderno e [YY] km da Reggio Calabria.<br />
+              Parcheggio [disponibilità].
             </p>
           </div>
+
           <div class="info-card">
             <i class="fas fa-globe"></i>
             <h4>Comune e Informazioni</h4>
             <p>
-              <strong>Comune di Gioiosa Ionica</strong><br />
-              Via Garibaldi, 14<br />
-              89042 Gioiosa Ionica (RC)<br />
-              <strong>Tel:</strong> 0964 51536<br />
-              <strong>PEC:</strong> protocollo.gioiosa@asmepec.it<br />
+              <strong>Comune di [Nome]</strong><br />
+              [Indirizzo completo]<br />
+              [CAP] [Località] (RC)<br />
+              <strong>Tel:</strong> [numero telefono]<br />
+              <strong>Email:</strong>
+              <a href="mailto:[email]" style="color: var(--text-light); text-decoration: none">[email]</a><br />
               <strong>Sito web:</strong>
-              <a href="https://www.comune.gioiosaionica.rc.it" target="_blank"
-                style="color: var(--accent)">www.comune.gioiosaionica.rc.it</a>
+              <a href="[url]" target="_blank" style="
+                    color: var(--accent);
+                    text-decoration: none;
+                    font-weight: 600;
+                  ">[www.comune...]</a>
             </p>
           </div>
+
           <div class="info-card">
-            <i class="fas fa-clock"></i>
-            <h4>Orari e Contatti</h4>
+            <i class="fas fa-landmark"></i>
+            <h4>[Museo / Luogo d'interesse principale]</h4>
             <p>
-              <strong>Stato attuale:</strong> Il sito non è regolarmente
-              aperto al pubblico. In alcuni periodi, grazie all'attività di
-              volontari locali, è visitabile su appuntamento.<br />
-              <strong>Info visite:</strong> Contattare il Comune di Gioiosa
-              Ionica per informazioni aggiornate.
+              <strong>[Nome struttura]</strong><br />
+              [Indirizzo]<br />
+              <strong>Orari:</strong> [orari di apertura]<br />
+              <strong>Tel:</strong> [telefono]<br />
+              <strong>Sito web:</strong>
+              <a href="[url]" target="_blank" style="
+                    color: var(--accent);
+                    text-decoration: none;
+                    font-weight: 600;
+                  ">[sito web]</a>
             </p>
           </div>
+
           <div class="info-card">
-            <i class="fas fa-phone-alt"></i>
-            <h4>Contatto Museo</h4>
+            <i class="fas fa-train"></i>
+            <h4>Trasporti</h4>
             <p>
-              <strong>Museo Archeologico Nazionale di Locri</strong><br />
-              Tel: 0964 390023<br />
-              (Per informazioni sui siti archeologici della zona)
+              <strong>Stazione Ferroviaria:</strong> [nome stazione] (linea
+              Jonica Reggio Calabria-Taranto)<br />
+              <strong>Autobus:</strong> [linee extraurbane]<br />
+              <strong>Trasporto Locale:</strong> [servizio taxi / navetta]
             </p>
           </div>
         </div>
         <div class="btn-center">
-          <a href="../../../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
+          <a href="../index.html#borghi" class="btn"><i class="fas fa-map-marked-alt"></i> Torna alla mappa</a>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- FOOTER -->
-    <footer>
+  <!-- FOOTER (invariato) -->
+  <footer>
             <div class="container">
                 <div class="footer-grid">
                     <!-- Colonna 1: Scuola e contatti -->
@@ -1767,7 +1681,6 @@
                 </div>
             </div>
         </footer>
-  </main>
 
   <script>
         // Ripristino scroll al caricamento

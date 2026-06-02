@@ -14,882 +14,1343 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    /* ============================================
-           POLO TECNICO PROFESSIONALE - STYLE.CSS
-           Design Elegante e Professionale
+        /* ============================================
+           RESET & VARIABILI
            ============================================ */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* RESET E BASE */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --primary-dark: #1e2b3a;
+            --accent: #e67e22;
+            --accent-light: #f39c12;
+            --secondary: #5c7c9a;
+            --gray-light: #f0f2f5;
+            --gray: #9ca3af;
+            --text-light: #6b7280;
+            --text-dark: #1f2937;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+            --shadow-hover: 0 20px 56px rgba(0, 0, 0, 0.15);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --transition: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            --radius-sm: 12px;
+            --radius: 20px;
+            --radius-lg: 24px;
+            --max-width: 1200px;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
 
-    body {
-      font-family: "Inter", sans-serif;
-      line-height: 1.6;
-      color: #1a1a2e;
-      background-color: #fafbfc;
-      overflow-x: hidden;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
+        body {
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fafbfc;
+            overflow-x: hidden;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    /* ============================================
-           VARIABILI COLORE - PALETTE REFINED
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ============================================
+           CONTAINER
            ============================================ */
-    :root {
-      --primary: #2c3e50;
-      --primary-light: #34495e;
-      --primary-dark: #1e2b3a;
-      --accent: #e67e22;
-      --accent-light: #f39c12;
-      --accent-dark: #c96e1c;
-      --secondary: #5c7c9a;
-      --gray-light: #f0f2f5;
-      --gray: #9ca3af;
-      --text-light: #6b7280;
-      --text-dark: #1f2937;
-      --white: #ffffff;
-      --off-white: #f8f9fa;
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-      --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
-      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
-      --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.16);
-      --shadow-hover: 0 24px 72px rgba(0, 0, 0, 0.18);
-      --gradient-primary: linear-gradient(135deg,
-          var(--primary) 0%,
-          var(--primary-light) 100%);
-      --gradient-accent: linear-gradient(135deg,
-          var(--accent) 0%,
-          var(--accent-light) 100%);
-      --transition: 0.3s ease;
-      --transition-slow: 0.5s ease;
-    }
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    /* ============================================
-           LAYOUT GENERALE
+        header .container {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        /* ============================================
+           HEADER - MOBILE FIRST CON HAMBURGER
            ============================================ */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all var(--transition);
+        }
 
-    /* ============================================
-           HEADER E NAVIGAZIONE
+        .header-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 0;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .logo h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .logo span {
+            font-size: 0.65rem;
+            color: var(--text-light);
+            display: block;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            margin-top: 2px;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            cursor: pointer;
+            z-index: 1100;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+            border-radius: 2px;
+            transition: all var(--transition);
+            transform-origin: left center;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(-2px) translateX(2px);
+            background-color: var(--accent-dark);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(2px) translateX(2px);
+            background-color: var(--accent-dark);
+        }
+
+        /* Overlay */
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 999;
+            transition: opacity 0.4s ease;
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Nav menu mobile */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: #ffffff;
+            box-shadow: var(--shadow-xl);
+            padding: 80px 24px 40px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 8px;
+            z-index: 1050;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow-y: auto;
+            margin: 0;
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu li {
+            width: 100%;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .nav-menu.active li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .nav-menu.active li:nth-child(1) { transition-delay: 0.1s; }
+        .nav-menu.active li:nth-child(2) { transition-delay: 0.15s; }
+        .nav-menu.active li:nth-child(3) { transition-delay: 0.2s; }
+        .nav-menu.active li:nth-child(4) { transition-delay: 0.25s; }
+        .nav-menu.active li:nth-child(5) { transition-delay: 0.3s; }
+        .nav-menu.active li:nth-child(6) { transition-delay: 0.35s; }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 12px 16px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            transition: all var(--transition);
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a:active {
+            background: var(--gray-light);
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        .nav-menu a.active {
+            background: var(--gradient-primary);
+            color: var(--white);
+        }
+
+        /* Slideshow nel drawer */
+        .drawer-slideshow {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            background: var(--gray-light);
+        }
+
+        .drawer-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 1;
+        }
+
+        .drawer-slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .drawer-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.25));
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        /* Info nel drawer */
+        .nav-info-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .nav-info-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: -6px;
+        }
+
+        .nav-info-tagline {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: var(--accent);
+            margin-bottom: 2px;
+        }
+
+        .nav-info-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+            font-size: 0.82rem;
+            color: var(--text-dark);
+        }
+
+        .nav-info-contacts p {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+        }
+
+        .nav-info-contacts i {
+            color: var(--accent);
+            width: 14px;
+            text-align: center;
+        }
+
+        .nav-info-socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        .nav-menu .nav-info-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--gray-light);
+            color: var(--primary);
+            font-size: 1.1rem;
+            padding: 0;
+            transition: all var(--transition);
+        }
+
+        .nav-menu .nav-info-socials a:hover {
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-menu-sticky-footer {
+    position: sticky;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 10;
+    padding-bottom: 10px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.nav-menu-sticky-footer .drawer-slideshow {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: var(--gray-light);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+}
+
+.nav-menu-sticky-footer .nav-menu-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 8px;
+}
+
+        /* ============================================
+           SEZIONI - MOBILE FIRST
            ============================================ */
-    header {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px) saturate(180%);
-      box-shadow: var(--shadow-sm);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      transition: all var(--transition);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
+        section {
+            padding: 50px 0;
+            position: relative;
+        }
 
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      transition: padding var(--transition);
-    }
+        section:nth-child(even) {
+            background-color: var(--white);
+        }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      transition: transform var(--transition);
-    }
+        .section-title {
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 32px;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
 
-    .logo img {
-      height: 45px;
-      width: auto;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-    }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
 
-    .logo h1 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.2;
-    }
-
-    .logo span {
-      font-size: 0.7rem;
-      color: var(--text-light);
-      display: block;
-      font-weight: 400;
-      letter-spacing: 0.3px;
-      margin-top: 1px;
-    }
-
-    .back-link a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--gray-light);
-      color: var(--text-dark);
-      padding: 8px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all var(--transition);
-    }
-
-    .back-link a:hover {
-      background: var(--gradient-primary);
-      color: var(--white);
-      transform: translateX(-5px);
-    }
-
-    /* ============================================
-           SEZIONI GENERALI
+        /* ============================================
+           HERO - MOBILE FIRST
            ============================================ */
-    section {
-      padding: 100px 0;
-      position: relative;
-    }
+        .hero-borgo {
+            position: relative;
+            min-height: 240px;
+            height: 40vh;
+            max-height: 400px;
+            color: var(--white);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-size: cover;
+            background-position: center 21%;
+        }
 
-    @media (max-width: 768px) {
-      section {
-        padding: 60px 0;
-      }
-    }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg,
+                    rgba(15, 44, 74, 0.55) 0%,
+                    rgba(26, 61, 92, 0.7) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
 
-    section:nth-child(even) {
-      background-color: var(--white);
-    }
+        .hero-borgo .container {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 0 20px;
+        }
 
-    .section-title {
-      text-align: center;
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 40px;
-      letter-spacing: -0.5px;
-    }
+        .hero-borgo h2 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            text-shadow: 0 3px 16px rgba(0, 0, 0, 0.35);
+        }
 
-    .section-subtitle {
-      text-align: center;
-      color: var(--text-light);
-      margin-bottom: 60px;
-      font-size: 1.15rem;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.8;
-    }
+        .hero-borgo p {
+            font-size: 0.9rem;
+            max-width: 500px;
+            margin: 0 auto;
+            opacity: 0.93;
+            line-height: 1.6;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+        }
 
-    /* ============================================
-           HERO SECTION
+        /* ============================================
+           CONTENT SECTIONS - MOBILE FIRST (CARD)
            ============================================ */
-    .hero-borgo {
-      position: relative;
-      height: 60vh;
-      min-height: 400px;
-      color: var(--white);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg,
-          rgba(15, 44, 74, 0.7) 0%,
-          rgba(26, 61, 92, 0.7) 100%);
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .hero-borgo .container {
-      position: relative;
-      z-index: 3;
-      text-align: center;
-    }
-
-    .hero-borgo h2 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 24px;
-      line-height: 1.1;
-      letter-spacing: -1px;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .hero-borgo p {
-      font-size: 1.25rem;
-      max-width: 750px;
-      margin: 0 auto 40px;
-      opacity: 0.95;
-      line-height: 1.8;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
-    .content-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-
-    .content-section:last-child {
-      margin-bottom: 0;
-    }
-
-    .content-section.reverse {
-      direction: rtl;
-    }
-
-    .content-section.reverse>* {
-      direction: ltr;
-    }
-
-    .content-text {
-      padding: 20px;
-      text-align: justify;
-    }
-
-    .content-text h3 {
-      font-size: 1.8rem;
-      color: var(--primary);
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    .content-text p {
-      color: var(--text-light);
-      margin-bottom: 15px;
-      line-height: 1.8;
-    }
-
-    .content-image {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      height: 350px;
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* ============================================
-           INFO CARDS
-           ============================================ */
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .info-grid.contact-grid {
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    }
-
-    .info-card {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-      transition: all var(--transition-slow);
-      border: 1px solid rgba(0, 0, 0, 0.04);
-      text-align: center;
-    }
-
-    .info-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .info-card i {
-      font-size: 2.5rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-
-    .info-card h4 {
-      font-size: 1.2rem;
-      color: var(--primary);
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    .info-card p {
-      color: var(--text-light);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* ============================================
-           TRADITIONS GRID
-           ============================================ */
-    .tradizioni-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 32px;
-      margin-top: 40px;
-    }
-
-    .tradizione-card {
-      background: var(--white);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: all var(--transition-slow);
-      border: 1px solid rgba(0, 0, 0, 0.04);
-      position: relative;
-      padding: 30px 24px;
-      text-align: center;
-    }
-
-    .tradizione-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gradient-accent);
-      transform: scaleX(0);
-      transition: transform var(--transition);
-      transform-origin: left;
-    }
-
-    .tradizione-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .tradizione-card:hover {
-      transform: translateY(-12px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .tradizione-card i {
-      font-size: 3rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-      transition: transform var(--transition);
-    }
-
-    .tradizione-card:hover i {
-      transform: scale(1.1);
-    }
-
-    .tradizione-card h4 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    .tradizione-card p {
-      color: var(--text-light);
-      line-height: 1.7;
-      font-size: 0.95rem;
-    }
-
-    /* ============================================
-           GALLERY
-           ============================================ */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 50px;
-    }
-
-    .gallery-item {
-      border-radius: 16px;
-      overflow: hidden;
-      height: 220px;
-      box-shadow: var(--shadow-md);
-      transition: all var(--transition-slow);
-      position: relative;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.15);
-    }
-
-    /* ============================================
-           BUTTONS
-           ============================================ */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--gradient-accent);
-      color: var(--text-dark);
-      padding: 14px 32px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all var(--transition);
-      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
-      border: none;
-      position: relative;
-      overflow: hidden;
-      justify-content: center;
-    }
-
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent);
-      transition: left 0.6s;
-    }
-
-    .btn:hover::before {
-      left: 100%;
-    }
-
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(212, 168, 67, 0.4);
-    }
-
-    .btn i {
-      transition: transform var(--transition);
-    }
-
-    .btn:hover i {
-      transform: translateX(5px);
-    }
-
-    .btn-center {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-    }
-
-    /* ============================================
-           FOOTER
-           ============================================ */
-    footer {
-      background: var(--primary-dark);
-      color: rgba(255, 255, 255, 0.8);
-      padding: 70px 0 30px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    footer::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gradient-accent);
-    }
-
-    .footer-content {
-      text-align: center;
-      padding-bottom: 30px;
-    }
-
-    .footer-content p {
-      margin-bottom: 15px;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .footer-content a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: all var(--transition);
-    }
-
-    .footer-content a:hover {
-      color: var(--white);
-    }
-
-    .copyright {
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 30px;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.6);
-    }
-    .credits {
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 20px;
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 15px;
-    }
-
-    .credits-icon {
-      color: var(--accent);
-      font-size: 1.1rem;
-    }
-
-    .credits-link {
-      color: var(--white) !important;
-      text-decoration: underline;
-      text-decoration-color: var(--accent);
-      font-weight: 600;
-      transition: all var(--transition);
-    }
-
-    .credits-link:hover {
-      color: var(--accent) !important;
-    }
-
-    /* ============================================
-           RESPONSIVE
-           ============================================ */
-    @media (max-width: 768px) {
-      .header-content {
-        padding: 32px 0;
-      }
-
-      .logo {
-        gap: 8px;
-      }
-
-      .logo img {
-        height: 35px;
-      }
-
-      .logo h1 {
-        font-size: 1rem;
-      }
-
-      .logo span {
-        font-size: 0.6rem;
-        display: block;
-        opacity: 0.8;
-      }
-
-      .content-section {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        direction: ltr !important;
-      }
-
-      .content-text {
-        order: 1;
-        padding: 0;
-      }
-
-      .content-image {
-        order: 2;
-        width: 100%;
-      }
-
-      .hero-borgo h2 {
-        font-size: 2.5rem;
-      }
-
-      .hero-borgo p {
-        font-size: 1.1rem;
-      }
-
-      .section-title {
-        font-size: 2.2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 0 20px;
-      }
-
-      .logo h1 {
-        font-size: 0.8rem;
-        white-space: nowrap;
-      }
-
-      .logo span {
-        display: block;
-        font-size: 0.5rem;
-        opacity: 0.9;
-      }
-
-      .logo img {
-        height: 28px;
-      }
-
-      .hero-borgo {
-        min-height: 250px;
-        height: 40vh;
-      }
-
-      .hero-borgo h2 {
-        font-size: 1.8rem;
-        margin-bottom: 12px;
-      }
-
-      .hero-borgo p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-      }
-
-      .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-      }
-
-      .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-      }
-
-      .section-subtitle {
-        font-size: 1rem;
-        margin-bottom: 40px;
-      }
-
-      .content-section {
-        gap: 25px;
-        margin-bottom: 40px;
-      }
-
-      .content-text h3 {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-      }
-
-      .content-text p {
-        font-size: 0.9rem;
-        line-height: 1.6;
-      }
-
-      .content-image {
-        height: 250px;
-        border-radius: 12px;
-      }
-
-      .info-grid,
-      .info-grid.contact-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 28px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            direction: ltr;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-image {
+            width: 100%;
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            order: 1;
+        }
+
+        .content-text {
+            padding: 22px 20px 24px;
+            order: 2;
+        }
+
+        .content-text h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .content-text p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+
+        .content-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-text p strong {
+            color: var(--text-dark);
+        }
+
+        /* ============================================
+        INFO GRID - MOBILE FIRST (OTTIMIZZATA)
+        ============================================ */
+      .info-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          margin-top: 20px;
       }
 
       .info-card {
-        padding: 20px;
+          background: var(--white);
+          border-radius: var(--radius-sm);
+          padding: 16px 10px;
+          box-shadow: var(--shadow-sm);
+          transition: all var(--transition-slow);
+          border: 1px solid rgba(0, 0, 0, 0.04);
+          text-align: center;
+      }
+
+      .info-card:active {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow-hover);
       }
 
       .info-card i {
-        font-size: 2rem;
+          font-size: 1.5rem;
+          color: var(--accent);
+          margin-bottom: 8px;
+          display: block;
       }
 
+      .info-card h4 {
+          font-size: 0.9rem;
+          color: var(--primary);
+          margin-bottom: 4px;
+          font-weight: 600;
+      }
+
+      .info-card p {
+          color: var(--text-light);
+          font-size: 0.78rem;
+          line-height: 1.4;
+      }
+
+      .info-card a {
+          color: var(--accent);
+          word-break: break-all;
+      }
+
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+
+      /* Ripristino stile originale per Info Utili */
+      .info-utili-card {
+          padding: 22px 18px;
+          border-radius: var(--radius);
+          box-shadow: var(--shadow);
+      }
+
+      .info-utili-card i {
+          font-size: 2rem;
+          margin-bottom: 14px;
+      }
+
+      .info-utili-card h4 {
+          font-size: 1.05rem;
+          margin-bottom: 6px;
+      }
+
+      .info-utili-card p {
+          font-size: 0.85rem;
+          line-height: 1.5;
+      }
+
+        /* ============================================
+        TRADIZIONI GRID - MOBILE FIRST (OTTIMIZZATA)
+        ============================================ */
+      .tradizioni-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+          margin-top: 20px;
+      }
+
+      .tradizione-card {
+          background: var(--white);
+          border-radius: var(--radius-sm);
+          overflow: hidden;
+          box-shadow: var(--shadow-sm);
+          transition: all var(--transition-slow);
+          border: 1px solid rgba(0, 0, 0, 0.04);
+          padding: 18px 12px;
+          text-align: center;
+          position: relative;
+      }
+
+      .tradizione-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background: var(--gradient-accent);
+          transform: scaleX(0);
+          transition: transform var(--transition);
+          transform-origin: left;
+      }
+
+      .tradizione-card:active::before {
+          transform: scaleX(1);
+      }
+
+      .tradizione-card:active {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow-hover);
+      }
+
+      .tradizione-card i {
+          font-size: 1.6rem;
+          color: var(--accent);
+          margin-bottom: 10px;
+          display: block;
+          transition: transform var(--transition);
+      }
+
+      .tradizione-card:active i {
+          transform: scale(1.05);
+      }
+
+      .tradizione-card h4 {
+          font-size: 0.9rem;
+          margin-bottom: 6px;
+          color: var(--primary);
+          font-weight: 600;
+      }
+
+      .tradizione-card p {
+          color: var(--text-light);
+          line-height: 1.5;
+          font-size: 0.75rem;
+      }
+
+        /* ============================================
+        GALLERY - 3 RIGHE x 2 COLONNE (FUNZIONANTE)
+        ============================================ */
       .gallery {
-        gap: 12px;
-        margin-top: 30px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: 1fr;
+          gap: 10px;
+          margin-top: 24px;
       }
 
       .gallery-item {
-        height: 180px;
+          border-radius: var(--radius-sm);
+          overflow: hidden;
+          box-shadow: var(--shadow-md);
+          aspect-ratio: 4 / 3;
       }
 
-      .back-link a {
-        padding: 8px 24px;
-        font-size: 0.75rem;
-        gap: 5px;
+      .gallery-item img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
       }
 
-      .back-link i {
-        font-size: 0.7rem;
-      }
-    }
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--gradient-accent);
+            color: #1a1a1a;
+            padding: 13px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all var(--transition);
+            box-shadow: 0 4px 18px rgba(230, 126, 34, 0.3);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            touch-action: manipulation;
+        }
 
-    /* ==========================================================================
-           OTTIMIZZAZIONE MOBILE E TABLET (ANDROID, IOS, IPAD)
-           ========================================================================== */
-    @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column !important;
-        gap: 15px !important;
-        text-align: center !important;
-        padding: 16px 0 !important;
-      }
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
 
-      .logo {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        gap: 6px !important;
-      }
+        .btn:active::before {
+            left: 100%;
+        }
 
-      .logo h1 {
-        font-size: 1.15rem !important;
-      }
+        .btn:active {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(230, 126, 34, 0.4);
+        }
 
-      .logo span {
-        font-size: 0.65rem !important;
-        text-align: center !important;
-      }
+        .btn i {
+            transition: transform var(--transition);
+        }
 
-      .back-link {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        margin-top: 5px !important;
-      }
+        .btn:active i {
+            transform: translateX(4px);
+        }
 
-      .back-link a {
-        padding: 8px 24px !important;
-        font-size: 0.85rem !important;
-      }
+        .btn-center {
+            display: flex;
+            justify-content: center;
+            margin-top: 32px;
+        }
 
-      .content-section {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 30px !important;
-        direction: ltr !important;
-      }
+        /* ============================================
+           FOOTER A 3 COLONNE
+           ============================================ */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 50px 0 28px;
+            position: relative;
+            overflow: hidden;
+        }
 
-      .content-text {
-        order: 1 !important;
-        padding: 0 !important;
-        text-align: justify !important;
-      }
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+        }
 
-      .content-image {
-        order: 2 !important;
-        width: 100% !important;
-        height: 280px !important;
-      }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
 
-      .hero-borgo {
-        min-height: 280px !important;
-        height: 45vh !important;
-      }
+        .footer-col h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 16px;
+            position: relative;
+            padding-bottom: 10px;
+        }
 
-      .hero-borgo h2 {
-        font-size: 2.2rem !important;
-      }
+        .footer-col h4::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--gradient-accent);
+        }
 
-      .hero-borgo p {
-        font-size: 1.05rem !important;
-      }
+        .footer-col p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
 
-      .section-title {
-        font-size: 2rem !important;
-      }
+        .footer-col p i {
+            color: var(--accent);
+            width: 18px;
+            font-size: 0.95rem;
+            text-align: center;
+        }
 
-      .info-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 16px !important;
-      }
+        .footer-col a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            transition: all var(--transition);
+        }
 
-      .tradizioni-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 20px !important;
-      }
-    }
+        .footer-col a:active,
+        .footer-col a:hover {
+            color: var(--white);
+        }
 
-    @media (max-width: 480px) {
-      .logo h1 {
-        font-size: 0.95rem !important;
-        white-space: normal !important;
-      }
+        .orario-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+        }
 
-      .logo span {
-        font-size: 0.6rem !important;
-      }
+        .giorni {
+            flex: 0 0 130px;
+            font-weight: 500;
+        }
 
-      .logo img {
-        height: 32px !important;
-      }
+        .orari {
+            flex: 1;
+        }
 
-      .info-grid {
-        grid-template-columns: 1fr !important;
-      }
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
 
-      .tradizioni-grid {
-        grid-template-columns: 1fr !important;
-      }
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.05rem;
+            transition: all var(--transition);
+        }
 
-      .gallery {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-      }
+        .social-icons a:active,
+        .social-icons a:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+            transform: translateY(-4px);
+        }
 
-      .gallery-item {
-        height: 180px !important;
-      }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.55);
+        }
 
-      .hero-borgo {
-        min-height: 220px !important;
-        height: 35vh !important;
-      }
+        .credits {
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 5px;
+            flex-wrap: wrap;
+        }
 
-      .hero-borgo h2 {
-        font-size: 1.8rem !important;
-      }
+        .credits-icon {
+            color: var(--accent);
+            font-size: 1rem;
+        }
 
-      .hero-borgo p {
-        font-size: 0.9rem !important;
-        line-height: 1.5 !important;
-      }
+        .credits-link {
+            color: var(--white) !important;
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            font-weight: 600;
+            transition: all var(--transition);
+        }
 
-      .section-title {
-        font-size: 1.6rem !important;
-      }
-    }
-  </style>
+        .credits-link:active,
+        .credits-link:hover {
+            color: var(--accent) !important;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 28px;
+            }
+
+            .header-content {
+                padding: 16px 0;
+            }
+
+            .logo img {
+                height: 42px;
+            }
+
+            .logo h1 {
+                font-size: 1.15rem;
+            }
+
+            .logo span {
+                font-size: 0.68rem;
+            }
+
+            .hero-borgo {
+                min-height: 300px;
+                height: 45vh;
+                max-height: 480px;
+            }
+
+            .hero-borgo h2 {
+                font-size: 2.4rem;
+            }
+
+            .hero-borgo p {
+                font-size: 1rem;
+                max-width: 550px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 36px;
+            }
+
+            .content-section {
+                flex-direction: row;
+                align-items: stretch;
+                margin-bottom: 32px;
+                min-height: 280px;
+            }
+
+            .content-section.reverse {
+                flex-direction: row-reverse;
+            }
+
+            .content-image {
+                width: 48%;
+                height: auto;
+                min-height: 280px;
+                order: unset;
+            }
+
+            .content-text {
+                width: 52%;
+                padding: 28px 24px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                order: unset;
+            }
+
+            .content-text h3 {
+                font-size: 1.35rem;
+            }
+
+            .content-text p {
+                font-size: 0.9rem;
+            }
+
+            .tradizioni-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .tradizione-card {
+                padding: 24px 18px;
+            }
+
+            .tradizione-card i {
+                font-size: 2rem;
+            }
+
+            .tradizione-card h4 {
+                font-size: 1rem;
+            }
+
+            .tradizione-card p {
+                font-size: 0.8rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+                margin-top: 32px;
+            }
+
+            .gallery-item {
+                border-radius: var(--radius);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .info-utili-card {
+                padding: 26px 22px;
+            }
+
+            .info-utili-card i {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+
+            .header-content {
+                padding: 18px 0;
+            }
+
+            .logo img {
+                height: 45px;
+            }
+
+            .logo h1 {
+                font-size: 1.3rem;
+            }
+
+            .logo span {
+                font-size: 0.7rem;
+            }
+
+            .hero-borgo {
+                min-height: 400px;
+                height: 55vh;
+                max-height: 560px;
+            }
+
+            .hero-borgo h2 {
+                font-size: 3.2rem;
+                letter-spacing: -0.8px;
+            }
+
+            .hero-borgo p {
+                font-size: 1.15rem;
+                max-width: 650px;
+            }
+
+            .section-title {
+                font-size: 2.4rem;
+                margin-bottom: 44px;
+            }
+
+            .content-section {
+                margin-bottom: 40px;
+                min-height: 340px;
+                transition: box-shadow var(--transition-slow);
+            }
+
+            .content-section:hover {
+                box-shadow: var(--shadow-lg);
+            }
+
+            .content-image {
+                width: 46%;
+                min-height: 340px;
+                border-radius: 0;
+            }
+
+            .content-text {
+                width: 54%;
+                padding: 36px 32px;
+            }
+
+            .content-text h3 {
+                font-size: 1.55rem;
+                margin-bottom: 14px;
+            }
+
+            .content-text p {
+                font-size: 0.95rem;
+                line-height: 1.75;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+            }
+
+            .info-grid.contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .info-card {
+                padding: 30px 24px;
+                cursor: pointer;
+            }
+
+            .info-card:hover {
+                transform: translateY(-8px);
+                box-shadow: var(--shadow-hover);
+            }
+
+            .info-card i {
+                font-size: 2.4rem;
+            }
+
+            .info-utili-card {
+                padding: 30px 24px;
+            }
+
+            .info-utili-card i {
+                font-size: 2.4rem;
+            }
+
+            .tradizioni-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 28px;
+            }
+
+            .tradizione-card {
+                padding: 32px 24px;
+                cursor: pointer;
+            }
+
+            .tradizione-card:hover {
+                transform: translateY(-12px);
+                box-shadow: var(--shadow-hover);
+            }
+
+            .tradizione-card:hover::before {
+                transform: scaleX(1);
+            }
+
+            .tradizione-card:hover i {
+                transform: scale(1.1);
+            }
+
+            .tradizione-card i {
+                font-size: 2.8rem;
+            }
+
+            .tradizione-card h4 {
+                font-size: 1.1rem;
+            }
+
+            .tradizione-card p {
+                font-size: 0.85rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);  /* 3 colonne fisse */
+                gap: 24px;
+                margin-top: 40px;
+            }
+
+            .gallery-item {
+                cursor: pointer;
+                border-radius: var(--radius);
+                transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+            }
+
+            .gallery-item:hover {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .gallery-item:hover img {
+                transform: scale(1.1);
+            }
+
+            .gallery-item img {
+                transition: transform 0.6s ease;
+            }
+
+            .btn {
+                padding: 15px 34px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 32px rgba(230, 126, 34, 0.4);
+            }
+
+            .btn:hover::before {
+                left: 100%;
+            }
+
+            .btn:hover i {
+                transform: translateX(5px);
+            }
+
+            footer {
+                padding: 60px 0 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+
+            .footer-col a:hover {
+                color: var(--white);
+            }
+
+            .credits-link:hover {
+                color: var(--accent) !important;
+            }
+
+            .credits {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .hero-borgo {
+                height: 60vh;
+                max-height: 640px;
+            }
+
+            .hero-borgo h2 {
+                font-size: 3.6rem;
+            }
+
+            .hero-borgo p {
+                font-size: 1.2rem;
+                max-width: 700px;
+            }
+
+            .content-text {
+                padding: 40px 36px;
+            }
+
+            .content-text h3 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
   <header>
-    <div class="container header-content">
-      <div class="logo">
-        <img src="../../logo.svg" alt="Logo Repubblica Italiana" />
-        <div>
-          <h1>Polo Tecnico Professionale</h1>
-          <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
-        </div>
-      </div>
-      <div class="back-link">
-        <a href="../../../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a>
-      </div>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../../logo.svg" alt="Logo Repubblica Italiana" />
+                <div>
+                    <h1>Polo Tecnico Professionale</h1>
+                    <span>Marconi · Ipsia Art · Zanotti — Siderno</span>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+<ul class="nav-menu" id="nav-menu">
+    <li><a href="../../../index.html#borghi"><i class="fas fa-arrow-left"></i> Torna alla mappa</a></li>
+    <!-- <li><a href="../../../index.html#home">Home</a></li>
+    <li><a href="../../../index.html#scuola">La scuola</a></li>
+    <li><a href="../../../index.html#corsi">Corsi</a></li>
+    <li><a href="../../../index.html#servizi">Servizi</a></li>
+    <li><a href="../../../index.html#borghi">Scopri il Territorio</a></li> -->
+    <li class="nav-menu-sticky-footer">
+    <div class="drawer-slideshow">
+        <div class="drawer-slide active" style="background-image: url('../../sede-marconi.webp'); background-position: center 100%;"></div>
+        <div class="drawer-slide" style="background-image: url('../../sede-ipsia-siderno.webp'); background-position: center 100%;"></div>
+        <div class="drawer-slide" style="background-image: url('../../sede-ipsia-locri.webp'); background-position: center 160%;"></div>
+        <div class="drawer-overlay"></div>
     </div>
-  </header>
+    <div class="nav-menu-info">
+        <div class="nav-info-title">Polo Tecnico Professionale</div>
+        <div class="nav-info-desc">Marconi · Ipsia · Zanotti</div>
+        <div class="nav-info-tagline">"Costruiamo insieme il tuo futuro"</div>
+        <div class="nav-info-contacts">
+            <p><i class="fas fa-map-marker-alt"></i> Siderno - Locri</p>
+            <p><i class="fas fa-envelope"></i> rcis03100l@istruzione.it</p>
+        </div>
+        <div class="nav-info-socials">
+            <a href="https://www.instagram.com/polo_tecn_profes_sidernolocri/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a>
+        </div>
+    </div>
+</li>
+</ul>
+        </div>
+    </header>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
   <main>
     <!-- HERO SECTION -->
@@ -913,22 +1374,22 @@
     <section>
       <div class="container">
         <div class="info-grid">
-          <div class="info-card">
+          <div class="info-card info-utili-card">
             <i class="fas fa-history"></i>
             <h4>Fondazione</h4>
             <p>X secolo d.C.</p>
           </div>
-          <div class="info-card">
+          <div class="info-card info-utili-card">
             <i class="fas fa-mountain"></i>
             <h4>Altitudine</h4>
             <p>470 m s.l.m.</p>
           </div>
-          <div class="info-card">
+          <div class="info-card info-utili-card">
             <i class="fas fa-users"></i>
             <h4>Abitanti</h4>
             <p>2.426</p>
           </div>
-          <div class="info-card">
+          <div class="info-card info-utili-card">
             <i class="fas fa-star"></i>
             <h4>Riconoscimento</h4>
             <p>"I Borghi più Belli d'Italia"</p>
@@ -1313,39 +1774,112 @@
 
     <!-- FOOTER -->
     <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>
-            <a href="../../../index.html#borghi">← Torna alla mappa dei borghi</a> |
-            <a href="../../../index.html">Home</a>
-          </p>
-          <p>
-            &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art –
-            Zanotti. Tutti i diritti riservati.
-          </p>
-        </div>
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Colonna 1: Scuola e contatti -->
+                    <div class="footer-col">
+                        <h4>Polo Tecnico Professionale</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Viale Sasso Marconi, 89048 Siderno (RC)</p>
+                        <p><i class="fas fa-phone-alt"></i> 0964 048031</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:RCIS03100L@ISTRUZIONE.IT">RCIS03100L@ISTRUZIONE.IT</a></p>
+                        <p><i class="fas fa-envelope-open-text"></i> <a href="mailto:rcis03100l@pec.istruzione.it">rcis03100l@pec.istruzione.it</a></p>
+                        <p><i class="fas fa-globe"></i> <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener">www.iismarconisiderno.edu.it</a></p>
+                        <p><i class="fas fa-user-tie"></i> Dirigente: Gaetano Pedullà</p>
+                    </div>
+
+                    <!-- Colonna 2: Orari segreteria -->
+                    <div class="footer-col">
+                        <h4>Orari Segreteria</h4>
+                        <div class="orario-row">
+                            <span class="giorni">Lunedì - Venerdì</span>
+                            <span class="orari">08:30 - 13:30</span>
+                        </div>
+                        <div class="orario-row">
+                            <span class="giorni">Martedì e Giovedì</span>
+                            <span class="orari">15:00 - 17:00 su appuntamento</span>
+                        </div>
+                        <div class="orario-row">
+                            <span class="giorni">Sabato (periodo iscrizioni)</span>
+                            <span class="orari">09:00 - 12:00</span>
+                        </div>
+                    </div>
+
+                    <!-- Colonna 3: Progetto Rai Marzo 2026 -->
+                    <div class="footer-col">
+                        <h4>Progetto Rai Marzo 2026</h4>
+                        <p style="margin-bottom: 15px">Un'iniziativa degli studenti per raccontare il territorio attraverso i borghi della Locride.</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/polo_tecn_profes_sidernolocri/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener" title="Sito Web"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Polo Tecnico Professionale Marconi – Ipsia Art – Zanotti. Tutti i diritti riservati.
                     <div class="credits">
-                <span class="credits-icon"><i class="fa-solid fa-code"></i></span>
-                Sito Web realizzato da 
-                <a href="https://www.instagram.com/mike_strano/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="credits-link">Michele Strano</a>
+                        <span class="credits-icon"><i class="fa-solid fa-code"></i></span>
+                        Sito Web realizzato da
+                        <a href="https://www.instagram.com/mike_strano/" target="_blank" rel="noopener noreferrer" class="credits-link">Michele Strano</a>
+                    </div>
+                </div>
             </div>
-      </div>
-    </footer>
+        </footer>
   </main>
 
   <script>
-    // Gestione dello scroll: riporta in alto al ricaricamento della pagina
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
+        // Ripristino scroll al caricamento
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+        window.addEventListener("load", function () {
+            window.scrollTo(0, 0);
+        });
 
-    window.addEventListener("load", function () {
-      window.scrollTo(0, 0);
-    });
-  </script>
+        // Toggle menu hamburger
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("nav-menu");
+        const navOverlay = document.getElementById("nav-overlay");
+
+        function openMenu() {
+            hamburger.classList.add("active");
+            navMenu.classList.add("active");
+            navOverlay.classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+            navOverlay.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        hamburger.addEventListener("click", () => {
+            if (navMenu.classList.contains("active")) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        navOverlay.addEventListener("click", closeMenu);
+
+        // Chiudi menu al click su link interni
+        document.querySelectorAll(".nav-menu a[href^='#']").forEach(link => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        // Slideshow nel drawer mobile
+        const drawerSlides = document.querySelectorAll(".drawer-slide");
+        if (drawerSlides.length > 0) {
+            let slideIndex = 0;
+            setInterval(() => {
+                drawerSlides[slideIndex].classList.remove("active");
+                slideIndex = (slideIndex + 1) % drawerSlides.length;
+                drawerSlides[slideIndex].classList.add("active");
+            }, 5000);
+        }
+    </script>
 </body>
 
 </html>

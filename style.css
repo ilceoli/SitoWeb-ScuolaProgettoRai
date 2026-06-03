@@ -1,9 +1,11 @@
-/* ============================================
-           POLO TECNICO PROFESSIONALE - STYLE.CSS
-           Design Elegante e Professionale
-           ============================================ */
+/* 
+   ==========================================================================
+   🏫 POLO TECNICO PROFESSIONALE - STYLE.CSS
+   Fogli di stile per il sito web ufficiale
+   ========================================================================== 
+*/
 
-/* RESET E BASE */
+/* 🛠️ Reset delle impostazioni predefinite del browser e stili base */
 * {
   margin: 0;
   padding: 0;
@@ -24,9 +26,7 @@ body {
   overflow-wrap: break-word;
 }
 
-/* ============================================
-           VARIABILI COLORE - PALETTE REFINED
-           ============================================ */
+/* 🎨 Tavolozza dei colori (palette) e variabili globali */
 :root {
   --primary: #2c3e50;
   --primary-light: #34495e;
@@ -57,18 +57,14 @@ body {
   --transition-slow: 0.5s ease;
 }
 
-/* ============================================
-           LAYOUT GENERALE
-           ============================================ */
+/* 📐 Impostazioni del layout principale e contenitori */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ============================================
-           HEADER E NAVIGAZIONE
-           ============================================ */
+/* 🧭 Intestazione (Header) e barra di navigazione */
 header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px) saturate(180%);
@@ -131,7 +127,7 @@ header.scrolled .header-content {
   margin-top: 1px;
 }
 
-/* ========== ANIMAZIONI DI INGRESSO ========== */
+/* ✨ Animazioni fluide per l'ingresso degli elementi */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -259,7 +255,7 @@ header {
   box-shadow: var(--shadow-sm);
 }
 
-/* NASCONDI GLI ELEMENTI MOBILE MENU INFO E SLIDESHOW SU DESKTOP */
+/* Nasconde i widget aggiuntivi del menu mobile sui dispositivi desktop */
 .nav-menu-info,
 .nav-menu-header-slideshow {
   display: none !important;
@@ -287,7 +283,7 @@ header {
   transform-origin: left center;
 }
 
-/* Overlay scuro per lo sfondo del menu mobile */
+/* Sfondo oscurato (overlay) che compare dietro la navigazione mobile attiva */
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -299,7 +295,7 @@ header {
   -webkit-backdrop-filter: blur(4px);
   opacity: 0;
   pointer-events: none;
-  z-index: 999; /* Sotto l'header (1000) ma sopra il contenuto generale */
+  z-index: 999; /* Si posiziona sotto l'header ma sopra gli altri elementi della pagina */
   transition: opacity 0.4s ease;
 }
 
@@ -308,9 +304,7 @@ header {
   pointer-events: auto;
 }
 
-/* ============================================
-           HERO SECTION - SLIDESHOW CON FADE
-           ============================================ */
+/* 🎭 Hero Section: area principale con slideshow e sfumatura di fondo */
 .hero {
   position: relative;
   height: 100vh;
@@ -457,9 +451,7 @@ header {
   color: inherit;
 }
 
-/* ============================================
-           ANIMAZIONI
-           ============================================ */
+/* 💫 Definizioni dei fotogrammi chiave (keyframes) per le animazioni */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -472,9 +464,7 @@ header {
   }
 }
 
-/* ============================================
-           SEZIONI GENERALI
-           ============================================ */
+/* 📚 Struttura generica per le diverse sezioni di pagina */
 section {
   padding: 100px 0;
   position: relative;
@@ -506,9 +496,7 @@ section:nth-child(even) {
   animation: fadeInUp 0.6s ease-out 0.1s both;
 }
 
-/* ============================================
-   CARD GRID (corsi, borghi)
-   ============================================ */
+/* 🗂️ Disposizione a griglia per le schede dei corsi e dei borghi */
 .borghi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -546,7 +534,7 @@ section:nth-child(even) {
   border: 1px solid rgba(0, 0, 0, 0.04);
   position: relative;
   height: 100%;
-  /* Tutte le card stessa altezza */
+  /* Assicura che tutte le schede abbiano un'altezza uniforme */
   display: flex;
   flex-direction: column;
 }
@@ -615,7 +603,7 @@ section:nth-child(even) {
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* Occupa tutto lo spazio rimanente nella card */
+  /* Estende il contenitore per occupare tutto lo spazio verticale della scheda */
 }
 
 .card-content h3,
@@ -633,7 +621,7 @@ section:nth-child(even) {
   line-height: 1.7;
   font-size: 0.95rem;
   flex: 1;
-  /* Spinge il tag verso il basso */
+  /* Spinge i dettagli ed etichette verso il fondo della scheda */
 }
 
 .tag {
@@ -648,11 +636,11 @@ section:nth-child(even) {
   letter-spacing: 0.5px;
   box-shadow: 0 2px 8px rgba(212, 168, 67, 0.2);
   align-self: flex-start;
-  /* Allineato a sinistra */
+  /* Allineamento degli elementi a sinistra */
   margin-top: auto;
-  /* Spinto in fondo */
+  /* Spinge il pulsante in basso in modo uniforme */
   width: fit-content;
-  /* Larghezza in base al contenuto */
+  /* Regola la larghezza in base al testo effettivo dell'elemento */
 }
 
 .card-footer-info {
@@ -725,7 +713,7 @@ section:nth-child(even) {
   transform: translateX(5px);
 }
 
-/* CORSI - icone */
+/* 🎓 Stili per le icone identificative nelle schede dei corsi */
 .corsi .card-image {
   background: var(--gradient-primary);
   display: flex;
@@ -735,7 +723,7 @@ section:nth-child(even) {
   font-size: 3.5rem;
 }
 
-/* GALLERIA SCUOLA */
+/* 🖼️ Sezione galleria immagini per mostrare la scuola e i laboratori */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -763,7 +751,7 @@ section:nth-child(even) {
   transform: scale(1.15);
 }
 
-/* SERVIZI */
+/* 💼 Layout e dettagli per la presentazione dei servizi scolastici */
 .servizi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -835,7 +823,7 @@ section:nth-child(even) {
   line-height: 1.6;
 }
 
-/* TIMELINE */
+/* ⏳ Linea del tempo (Timeline) per raccontare la storia dell'istituto */
 .timeline {
   margin: 30px 0;
   list-style: none;
@@ -886,7 +874,7 @@ section:nth-child(even) {
   font-size: 1.05rem;
 }
 
-/* STATS */
+/* 📊 Visualizzazione dei numeri chiave dell'istituto (studenti, laboratori, ecc.) */
 .stats-grid {
   display: flex;
   justify-content: space-around;
@@ -947,7 +935,7 @@ section:nth-child(even) {
   letter-spacing: 1px;
 }
 
-/* MAPPA */
+/* 🗺️ Mappa geografica interattiva basata su Leaflet */
 #map {
   height: 500px;
   border-radius: 20px;
@@ -956,7 +944,7 @@ section:nth-child(even) {
   border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-/* FOOTER */
+/* ✉️ Piè di pagina (Footer) con contatti, orari di segreteria e social link */
 footer {
   background: var(--primary-dark);
   color: rgba(255, 255, 255, 0.8);
@@ -975,7 +963,7 @@ footer::before {
   background: var(--gradient-accent);
 }
 
-/* Allineamento orari segreteria */
+/* Allineamento per i giorni e gli orari di apertura della segreteria */
 .orario-row {
   display: flex;
   align-items: baseline;
@@ -987,7 +975,7 @@ footer::before {
 
 .giorni {
   flex: 0 0 140px;
-  /* Larghezza fissa per i giorni */
+  /* Riserva uno spazio fisso per i giorni per allineare gli orari in colonna */
   font-weight: 500;
 }
 
@@ -1002,7 +990,7 @@ footer::before {
   margin-left: 5px;
 }
 
-/* Footer grid a 3 colonne */
+/* Griglia per il piè di pagina organizzata in 3 colonne principali */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1010,7 +998,7 @@ footer::before {
   margin-bottom: 50px;
 }
 
-/* Responsive */
+/* Adattamenti layout per i dispositivi mobili */
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
@@ -1194,9 +1182,7 @@ footer::before {
   align-items: start;
 }
 
-/* ============================================
-           RESPONSIVE
-           ============================================ */
+/* 💻 Regole per rendere il sito adattabile a smartphone e tablet (Responsive) */
 @media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1279,14 +1265,14 @@ footer::before {
     opacity: 0.8;
   }
 
-  /* Hamburger morphing animations */
+  /* Transizione per trasformare le linee dell'hamburger in una "X" */
   .hamburger {
     display: flex;
   }
 
   .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translateY(-2px) translateX(2px);
-    background-color: var(--accent-dark); /* Accent color on active */
+    background-color: var(--accent-dark); /* Cambia colore quando il pulsante è attivo */
   }
 
   .hamburger.active span:nth-child(2) {
@@ -1299,7 +1285,7 @@ footer::before {
     background-color: var(--accent-dark);
   }
 
-  /* Slide-in drawer for navigation */
+  /* Cassetto (drawer) scorrevole per la navigazione sui dispositivi mobili */
   .nav-menu {
     position: fixed;
     top: 0;
@@ -1317,8 +1303,8 @@ footer::before {
     transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     border-radius: 0;
     margin-top: 0;
-    display: flex; /* Always flex but hidden via position */
-    overflow-y: auto; /* Enable scroll on smaller screens */
+    display: flex; /* Usa flexbox per gli elementi all'interno del cassetto */
+    overflow-y: auto; /* Permette lo scorrimento verticale se lo schermo è piccolo */
   }
 
   .nav-menu.active {
@@ -1336,7 +1322,7 @@ footer::before {
     transform: translateX(0);
   }
 
-  /* Staggered entry transitions */
+  /* Effetto di comparsa sequenziale degli elementi del menu (transizione sfalsata) */
   .nav-menu.active li:nth-child(1) { transition-delay: 0.1s; }
   .nav-menu.active li:nth-child(2) { transition-delay: 0.15s; }
   .nav-menu.active li:nth-child(3) { transition-delay: 0.2s; }
@@ -1359,7 +1345,7 @@ footer::before {
   }
 
   .nav-menu a::before {
-    display: none; /* Hide background gradient hover effect inside drawer */
+    display: none; /* Disabilita l'effetto hover di sfondo per le voci del cassetto */
   }
 
   .nav-menu a:hover {
@@ -1418,7 +1404,7 @@ footer::before {
     pointer-events: none;
   }
 
-  /* Stili Mobile per gli Elementi Aggiuntivi nel Drawer */
+  /* Stili per le informazioni di contatto e canali social nel cassetto mobile */
   .nav-menu-divider {
     display: block !important;
     width: 100%;
@@ -1554,7 +1540,7 @@ footer::before {
     letter-spacing: 0.5px !important;
   }
 
-  /* Redesigned mobile grid carousels */
+  /* Layout a scorrimento orizzontale (carosello) per i corsi ed i servizi su mobile */
   section {
     padding: 60px 0 !important;
   }
@@ -1584,7 +1570,7 @@ footer::before {
     display: none !important;
   }
 
-  /* Barra di scorrimento visibile e personalizzata per i Borghi su mobile */
+  /* Stili per visualizzare e personalizzare la barra di scorrimento sui borghi */
   .borghi-grid {
     scrollbar-width: thin;
     scrollbar-color: var(--accent) var(--gray-light);
@@ -1679,9 +1665,7 @@ footer::before {
   }
 }
 
-/* ==========================================================================
-   POPUP MODALE DETTAGLI CORSI
-   ========================================================================== */
+/* 📦 Popup modale per i dettagli dei corsi */
 .course-modal {
   position: fixed;
   top: 0;
@@ -1826,7 +1810,7 @@ footer::before {
   left: 8px;
 }
 
-/* Evidenziazione interattività delle card corsi */
+/* Imposta il puntatore per indicare l'interattività e la cliccabilità delle schede */
 .card-grid .card {
   cursor: pointer;
 }
@@ -1845,7 +1829,7 @@ footer::before {
 }
 
 @media (max-width: 1024px) {
-  /* Carousel Layout for Auto-Scrolling Sections */
+  /* Impostazioni del carosello orizzontale durante lo scorrimento automatico */
   .corsi-carousel,
   .servizi-carousel {
     display: flex !important;
@@ -1870,7 +1854,7 @@ footer::before {
   }
 }
 
-/* Highlight effect for Borgo Card when clicked from Map */
+/* Effetto visivo temporaneo di evidenziazione della scheda borgo selezionata dalla mappa */
 .borgo-card.highlighted-card {
   border-color: var(--accent) !important;
   box-shadow: var(--shadow-hover), 0 0 25px rgba(230, 126, 34, 0.5) !important;
@@ -1878,9 +1862,7 @@ footer::before {
   z-index: 10 !important;
 }
 
-/* ============================================
-   BADGE NOVITÀ — Animated overlay badge
-   ============================================ */
+/* 🌟 Badge "Novità" animato con sfumatura e contorno pulsante */
 .badge-novita {
   position: absolute;
   top: 16px;
@@ -1908,7 +1890,7 @@ footer::before {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Pulsing glow ring behind the badge */
+/* Anello di luce pulsante posizionato dietro il badge novità */
 .badge-novita-pulse {
   position: absolute;
   inset: -3px;
@@ -1928,7 +1910,7 @@ footer::before {
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 }
 
-/* Lift badge slightly on card hover */
+/* Solleva leggermente il badge novità per dare profondità al passaggio del mouse */
 .borgo-card:hover .badge-novita {
   transform: scale(1.08);
   box-shadow:

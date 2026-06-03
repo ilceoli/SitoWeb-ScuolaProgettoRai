@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villa Romana di Casignana - Polo Tecnico Professionale Marconi</title>
     <link rel="icon" type="image/webp" href="../../logo-flavicon.webp">
-    <!-- Google Fonts e Font Awesome -->
+    <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,10 +14,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* ============================================
-           POLO TECNICO PROFESSIONALE - STYLE.CSS
-           Design Elegante e Professionale
-           ============================================ */
+        /* 📌 POLO TECNICO PROFESSIONALE - STYLE.CSS
+           Design Elegante e Professionale */
 
         /* RESET E BASE */
         * {
@@ -38,9 +36,7 @@
             overflow-x: hidden;
         }
 
-        /* ============================================
-           VARIABILI COLORE - PALETTE REFINED
-           ============================================ */
+        /* 📌 VARIABILI COLORE - PALETTE REFINED */
         :root {
             --primary: #2c3e50;
             --primary-light: #34495e;
@@ -67,18 +63,14 @@
             --transition-slow: 0.5s ease;
         }
 
-        /* ============================================
-           LAYOUT GENERALE
-           ============================================ */
+        /* 📌 LAYOUT GENERALE */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* ============================================
-           HEADER E NAVIGAZIONE
-           ============================================ */
+        /* 🧭 Intestazione (Header) e barra di navigazione */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px) saturate(180%);
@@ -149,9 +141,7 @@
             transform: translateX(-5px);
         }
 
-        /* ============================================
-           SEZIONI GENERALI
-           ============================================ */
+        /* 📚 Stili generici per le sezioni della pagina */
         section {
             padding: 100px 0;
             position: relative;
@@ -181,9 +171,7 @@
             line-height: 1.8;
         }
 
-        /* ============================================
-           HERO SECTION
-           ============================================ */
+        /* 🎭 Area principale della pagina (Hero Section) */
         .hero-borgo {
             position: relative;
             height: 60vh;
@@ -229,9 +217,7 @@
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* ============================================
-           CONTENT SECTIONS
-           ============================================ */
+        /* 📌 CONTENT SECTIONS */
         .content-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -273,9 +259,7 @@
             background-position: center;
         }
 
-        /* ============================================
-           INFO CARDS
-           ============================================ */
+        /* 📌 INFO CARDS */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -317,9 +301,7 @@
             line-height: 1.6;
         }
 
-        /* ============================================
-           TRADITIONS GRID
-           ============================================ */
+        /* 📌 TRADITIONS GRID */
         .tradizioni-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -385,9 +367,7 @@
             font-size: 0.95rem;
         }
 
-        /* ============================================
-           GALLERY
-           ============================================ */
+        /* 📌 GALLERY */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -415,9 +395,7 @@
             transform: scale(1.15);
         }
 
-        /* ============================================
-           BUTTONS
-           ============================================ */
+        /* 📌 BUTTONS */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -471,9 +449,7 @@
             margin-top: 40px;
         }
 
-        /* ============================================
-           FOOTER
-           ============================================ */
+        /* ✉️ Piè di pagina (Footer) con contatti e crediti */
         footer {
             background: var(--primary-dark);
             color: rgba(255, 255, 255, 0.8);
@@ -549,9 +525,7 @@
       color: var(--accent) !important;
     }
 
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
+        /* 💻 Regole per la responsività su tablet e smartphone */
         @media (max-width: 768px) {
             .content-section {
                 display: flex;
@@ -592,9 +566,7 @@
             }
         }
 
-        /* ==========================================================================
-           OTTIMIZZAZIONE MOBILE E TABLET (ANDROID, IOS, IPAD)
-           ========================================================================== */
+        /* 📌 OTTIMIZZAZIONE MOBILE E TABLET (ANDROID, IOS, IPAD) */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column !important;
@@ -748,7 +720,7 @@
     </header>
 
     <main>
-        <!-- HERO SECTION -->
+        <!-- 🎭 Area principale (Hero) -->
         <section class="hero-borgo"
             style="background-image: url('immagini/casignana.jpg'); background-size: cover; background-position: center;">
             <div class="hero-overlay"></div>
@@ -759,7 +731,7 @@
             </div>
         </section>
 
-        <!-- INFO CARDS -->
+        <!-- ℹ️ Schede informative -->
         <section>
             <div class="container">
                 <div class="info-grid">
@@ -959,7 +931,7 @@
             </div>
         </section>
 
-        <!-- GALLERIA FOTO -->
+        <!-- 🖼️ Galleria Foto -->
         <section style="background-color: white;">
             <div class="container">
                 <h2 class="section-title">Galleria Fotografica</h2>
@@ -979,7 +951,7 @@
             </div>
         </section>
 
-        <!-- INFO UTILI -->
+        <!-- ℹ️ Info Utili -->
         <section>
             <div class="container">
                 <h2 class="section-title">Info Utili per la Visita</h2>
@@ -1013,7 +985,7 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- ✉️ Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">

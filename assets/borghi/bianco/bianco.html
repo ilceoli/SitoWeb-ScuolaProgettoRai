@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bianco - Polo Tecnico Professionale Marconi</title>
   <link rel="icon" type="image/webp" href="../../logo-flavicon.webp" />
-  <!-- Google Fonts e Font Awesome -->
+  <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -14,9 +14,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-        /* ============================================
-           RESET & VARIABILI
-           ============================================ */
+        /* 🛠️ Reset stili base e variabili globali */
         *,
         *::before,
         *::after {
@@ -81,9 +79,7 @@
             text-decoration: none;
         }
 
-        /* ============================================
-           CONTAINER
-           ============================================ */
+        /* 📌 CONTAINER */
         .container {
             width: 100%;
             max-width: var(--max-width);
@@ -96,9 +92,7 @@
             padding-right: 24px;
         }
 
-        /* ============================================
-           HEADER - MOBILE FIRST CON HAMBURGER
-           ============================================ */
+        /* 📌 HEADER - MOBILE FIRST CON HAMBURGER */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
@@ -418,9 +412,7 @@
     padding: 0 8px;
 }
 
-        /* ============================================
-           SEZIONI - MOBILE FIRST
-           ============================================ */
+        /* 📌 SEZIONI - MOBILE FIRST */
         section {
             padding: 50px 0;
             position: relative;
@@ -451,9 +443,7 @@
             line-height: 1.7;
         }
 
-        /* ============================================
-           HERO - MOBILE FIRST
-           ============================================ */
+        /* 🎭 Area principale della pagina (Hero Section) */
         .hero-borgo {
             position: relative;
             min-height: 240px;
@@ -505,9 +495,7 @@
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
         }
 
-        /* ============================================
-           CONTENT SECTIONS - MOBILE FIRST (CARD)
-           ============================================ */
+        /* 📌 CONTENT SECTIONS - MOBILE FIRST (CARD) */
         .content-section {
             display: flex;
             flex-direction: column;
@@ -561,9 +549,7 @@
             color: var(--text-dark);
         }
 
-        /* ============================================
-        INFO GRID - MOBILE FIRST (OTTIMIZZATA)
-        ============================================ */
+        /* 📌 INFO GRID - MOBILE FIRST (OTTIMIZZATA) */
       .info-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -637,9 +623,7 @@
           line-height: 1.5;
       }
 
-        /* ============================================
-        TRADIZIONI GRID - MOBILE FIRST (OTTIMIZZATA)
-        ============================================ */
+        /* 📌 TRADIZIONI GRID - MOBILE FIRST (OTTIMIZZATA) */
       .tradizioni-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -706,9 +690,7 @@
           font-size: 0.75rem;
       }
 
-        /* ============================================
-        GALLERY - 3 RIGHE x 2 COLONNE (FUNZIONANTE)
-        ============================================ */
+        /* 📌 GALLERY - 3 RIGHE x 2 COLONNE (FUNZIONANTE) */
       .gallery {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -731,9 +713,7 @@
           display: block;
       }
 
-        /* ============================================
-           BUTTONS
-           ============================================ */
+        /* 📌 BUTTONS */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -789,9 +769,7 @@
             margin-top: 32px;
         }
 
-        /* ============================================
-           FOOTER A 3 COLONNE
-           ============================================ */
+        /* ✉️ Piè di pagina (Footer) con contatti e crediti */
         footer {
             background: var(--primary-dark);
             color: rgba(255, 255, 255, 0.8);
@@ -948,9 +926,7 @@
             color: var(--accent) !important;
         }
 
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
+        /* 💻 Regole per la responsività su tablet e smartphone */
         @media (min-width: 640px) {
             .container {
                 padding: 0 28px;
@@ -1353,7 +1329,7 @@
     <div class="nav-overlay" id="nav-overlay"></div>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- 🎭 Area principale (Hero) -->
     <section class="hero-borgo" style="
           background-image: url(&quot;immagini/bianco-chiesavecchia.jpeg&quot;);
           background-size: cover;
@@ -1369,7 +1345,7 @@
       </div>
     </section>
 
-    <!-- INFO CARDS -->
+    <!-- ℹ️ Schede informative -->
     <section>
       <div class="container">
         <div class="info-grid">
@@ -1452,7 +1428,7 @@
       </div>
     </section>
 
-    <!-- 2. STORIA E TRADIZIONI DEL BORGO -->
+    <!-- 💭 Tradizioni e Curiosità -->
     <section style="background-color: white">
       <div class="container">
         <h2 class="section-title">Storia e Tradizioni del Borgo</h2>
@@ -1660,7 +1636,7 @@
       </div>
     </section>
 
-    <!-- 6. TRADIZIONI E CULTURA (card) -->
+    <!-- 💭 Tradizioni e Curiosità -->
     <section style="background-color: white">
       <div class="container">
         <h2 class="section-title">Tradizioni e Cultura</h2>
@@ -1705,7 +1681,7 @@
       </div>
     </section>
 
-    <!-- 7. GALLERIA FOTO -->
+    <!-- 🖼️ Galleria Foto -->
     <section>
       <div class="container">
         <h2 class="section-title">Galleria Fotografica</h2>
@@ -1732,7 +1708,7 @@
       </div>
     </section>
 
-    <!-- 8. INFO UTILI -->
+    <!-- ℹ️ Info Utili -->
     <section style="background-color: white">
       <div class="container">
         <h2 class="section-title">Info Utili</h2>
@@ -1812,11 +1788,11 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ✉️ Footer -->
   <footer>
             <div class="container">
                 <div class="footer-grid">
-                    <!-- Colonna 1: Scuola e contatti -->
+                    
                     <div class="footer-col">
                         <h4>Polo Tecnico Professionale</h4>
                         <p><i class="fas fa-map-marker-alt"></i> Viale Sasso Marconi, 89048 Siderno (RC)</p>
@@ -1827,7 +1803,7 @@
                         <p><i class="fas fa-user-tie"></i> Dirigente: Gaetano Pedullà</p>
                     </div>
 
-                    <!-- Colonna 2: Orari segreteria -->
+                    
                     <div class="footer-col">
                         <h4>Orari Segreteria</h4>
                         <div class="orario-row">
@@ -1844,7 +1820,7 @@
                         </div>
                     </div>
 
-                    <!-- Colonna 3: Progetto Rai Marzo 2026 -->
+                    
                     <div class="footer-col">
                         <h4>Progetto Rai Marzo 2026</h4>
                         <p style="margin-bottom: 15px">Un'iniziativa degli studenti per raccontare il territorio attraverso i borghi della Locride.</p>

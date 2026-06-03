@@ -73,12 +73,9 @@
   <main>
     <!-- HOME / HERO (SLIDESHOW) -->
     <section id="home" class="hero">
-      <!-- Due layer per le immagini (si alternano con fade) -->
       <div class="hero-slideshow-layer" id="heroLayer1"></div>
       <div class="hero-slideshow-layer" id="heroLayer2"></div>
-      <!-- Gradiente di sovrapposizione -->
       <div class="hero-overlay"></div>
-      <!-- Contenuto testuale -->
       <div class="container hero-content">
         <h2>Benvenuti nel nuovo Polo Tecnico Professionale</h2>
         <p>
@@ -124,7 +121,6 @@
         </div>
 
         <div class="scuola-grid">
-          <!-- Colonna sinistra: timeline arricchita -->
           <div>
             <h3 style="
                   color: var(--primary);
@@ -192,9 +188,7 @@
               </li>
             </ul>
           </div>
-          <!-- Colonna destra: foto + box informativo -->
           <div style="display: flex; flex-direction: column; gap: 20px">
-            <!-- Ritratto di Marconi con margine superiore per spostarlo in basso -->
             <div style="
                   background: var(--white);
                   border-radius: 20px;
@@ -230,7 +224,6 @@
                 </p>
               </div>
             </div>
-            <!-- Breve box informativo -->
             <div style="
                   background: linear-gradient(
                     145deg,
@@ -259,7 +252,6 @@
           </div>
         </div>
 
-        <!-- Galleria foto (sostituire con le vostre) -->
         <div class="gallery">
           <div class="gallery-item">
             <img src="assets/sede-marconi.webp" alt="Foto scuola 1" />
@@ -559,7 +551,6 @@
               margin-bottom: 40px;
             "></div>
 
-        <!-- Schede descrittive dei borghi (14 card) -->
         <div class="borghi-grid">
           <!-- Valle delle Grandi Pietre (Pietra Cappa) -->
           <div class="borgo-card" id="borgo-valledellegrandipietre">
@@ -852,7 +843,6 @@
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <!-- Colonna 1: Scuola e contatti -->
         <div class="footer-col">
           <h4>Polo Tecnico Professionale</h4>
           <p>
@@ -860,7 +850,6 @@
             Siderno (RC)
           </p>
           <p><i class="fas fa-phone-alt"></i> 0964 048031</p>
-          <!-- Email ordinaria -->
           <p>
             <i class="fas fa-envelope"></i>
             <a href="mailto:RCIS03100L@ISTRUZIONE.IT" style="
@@ -872,7 +861,6 @@
             </a>
           </p>
 
-          <!-- PEC (già cliccabile) -->
           <p>
             <i class="fas fa-envelope-open-text"></i>
             <a href="mailto:rcis03100l@pec.istruzione.it" target="_blank" rel="noopener noreferrer" style="
@@ -884,7 +872,6 @@
             </a>
           </p>
 
-          <!-- Sito web (già cliccabile) -->
           <p>
             <i class="fas fa-globe"></i>
             <a href="https://www.iismarconisiderno.edu.it" target="_blank" rel="noopener noreferrer" style="
@@ -898,7 +885,6 @@
           <p><i class="fas fa-user-tie"></i> Dirigente: Gaetano Pedullà</p>
         </div>
 
-        <!-- Colonna 2: Orari segreteria (ordinari) -->
         <div class="footer-col">
           <h4>Orari Segreteria</h4>
           <div class="orario-row">
@@ -915,7 +901,6 @@
           </div>
         </div>
 
-        <!-- Colonna 3: Progetto Rai Marzo 2026 -->
         <div class="footer-col">
           <h4>Progetto Rai Marzo 2026</h4>
           <p style="margin-bottom: 15px">
@@ -1254,7 +1239,6 @@
     const layer1 = document.getElementById("heroLayer1");
     const layer2 = document.getElementById("heroLayer2");
 
-    // Array con i percorsi delle immagini (nella cartella images/)
     const images = [
       'url("assets/sede-marconi.webp")',
       'url("assets/sede-ipsia-siderno.webp")',
@@ -1265,35 +1249,28 @@
     let activeLayer = layer1; // layer attualmente visibile
     let nextLayer = layer2; // layer che diventerà visibile
 
-    // Imposta la prima immagine su entrambi i layer
     layer1.style.backgroundImage = images[0];
     layer2.style.backgroundImage = images[1];
-    layer1.classList.add("active"); // mostra il primo layer
+    layer1.classList.add("active");
 
     function changeImageWithFade() {
-      // Prepara il prossimo indice
       currentIndex = (currentIndex + 1) % images.length;
       const nextIndex = (currentIndex + 1) % images.length;
 
-      // Imposta l'immagine sul layer che diventerà attivo
       nextLayer.style.backgroundImage = images[currentIndex];
 
-      // Prepara il layer inattivo con l'immagine successiva (per il prossimo ciclo)
       if (activeLayer === layer1) {
         layer2.style.backgroundImage = images[nextIndex];
       } else {
         layer1.style.backgroundImage = images[nextIndex];
       }
 
-      // Scambia i ruoli: attivo diventa inattivo e viceversa
       activeLayer.classList.remove("active");
       nextLayer.classList.add("active");
 
-      // Aggiorna i riferimenti
       [activeLayer, nextLayer] = [nextLayer, activeLayer];
     }
 
-    // Cambia immagine ogni 5 secondi (5000 ms)
     setInterval(changeImageWithFade, 5000);
 
     // ============================================
@@ -1350,10 +1327,6 @@
         shadowSize: [41, 41],
       }),
 
-      // Esempio per future icone (da sbloccare quando servono)
-      // museum: L.icon({ ... }),
-      // nature: L.icon({ ... }),
-      // ...
     };
 
     var borghi = [
@@ -1519,7 +1492,6 @@
     ];
 
     borghi.forEach(function (borgo) {
-      // Seleziona l'icona in base al tipo, altrimenti usa quella predefinita
       var icona = icone[borgo.tipo] || icone.default;
 
       var marker = L.marker([borgo.lat, borgo.lng], { icon: icona }).addTo(
@@ -1555,20 +1527,9 @@
       marker.bindTooltip(borgo.nome, { permanent: false, direction: "top" });
     });
 
-    // Disabilita il ripristino automatico della posizione di scroll
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
-
-    // // Forza la pagina a partire dall'alto solo se non c'è un hash (es. #borghi)
-    // // o se la pagina viene ricaricata (Refresh)
-    // window.addEventListener("load", function () {
-    //   const isReload =
-    //     performance.getEntriesByType("navigation")[0]?.type === "reload";
-    //   if (isReload || !window.location.hash) {
-    //     window.scrollTo(0, 0);
-    //   }
-    // });
 
     // ==========================================================================
     // AUTO-SCROLL CAROUSELS (Courses and Services)
